@@ -4,7 +4,7 @@
 		<router-link class="nv_item" to="/login">登录</router-link>
 		<router-link class="nv_item" to="/createtopic">发布话题</router-link>
 		<router-link class="nv_item" to="/about">关于</router-link>
-		<router-link class="nv_item" to="/about">Games</router-link>
+		<a class="nv_item" href="../../games/index.html">Games</a>
 	</div>
 </template>
 <script>
@@ -100,7 +100,8 @@
 	.nav .nv_item:active {
 	  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4) inset, 0 1px 0 rgba(255, 255, 255, 0.1);
 	}
-	.nav .nv_item.highlight {
+	.nav .nv_item.highlight,
+	.nav .nv_item.router-link-active {
 	  background: -moz-linear-gradient(center top, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.44) 100%) repeat scroll 0 0 transparent;
 	  color: #e9e9e9;
 	}

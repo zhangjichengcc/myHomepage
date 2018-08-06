@@ -14825,7 +14825,7 @@ webpackJsonp([0,9],[
 	  }, [_vm._v("关于")]), _vm._v(" "), _c('a', {
 	    staticClass: "nv_item",
 	    attrs: {
-	      "href": "../../games/index.html"
+	      "href": "../../myHomepage/games/index.html"
 	    }
 	  }, [_vm._v("Games")])], 1)
 	},staticRenderFns: []}

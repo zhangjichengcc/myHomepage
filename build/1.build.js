@@ -17,7 +17,7 @@ webpackJsonp([1,9],[
 	  /* script */
 	  __webpack_require__(15),
 	  /* template */
-	  __webpack_require__(57),
+	  __webpack_require__(58),
 	  /* scopeId */
 	  null,
 	  /* cssModules */
@@ -82,7 +82,7 @@ webpackJsonp([1,9],[
 
 	var _header2 = _interopRequireDefault(_header);
 
-	var _returnTop = __webpack_require__(51);
+	var _returnTop = __webpack_require__(52);
 
 	var _returnTop2 = _interopRequireDefault(_returnTop);
 
@@ -160,7 +160,6 @@ webpackJsonp([1,9],[
 			window.removeEventListener('scroll', this.scrollArtlist, false);
 		}
 	}; //
-	//
 	//
 	//
 	//
@@ -1690,18 +1689,19 @@ webpackJsonp([1,9],[
 /* 48 */,
 /* 49 */,
 /* 50 */,
-/* 51 */
+/* 51 */,
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	
 	/* styles */
-	__webpack_require__(52)
+	__webpack_require__(53)
 
 	var Component = __webpack_require__(14)(
 	  /* script */
-	  __webpack_require__(55),
-	  /* template */
 	  __webpack_require__(56),
+	  /* template */
+	  __webpack_require__(57),
 	  /* scopeId */
 	  null,
 	  /* cssModules */
@@ -1712,20 +1712,20 @@ webpackJsonp([1,9],[
 
 
 /***/ }),
-/* 52 */
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(53);
+	var content = __webpack_require__(54);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	if(content.locals) module.exports = content.locals;
 	// add the styles to the DOM
 	var update = __webpack_require__(12)("1b5c211c", content, true);
 
 /***/ }),
-/* 53 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(10)();
@@ -1733,19 +1733,19 @@ webpackJsonp([1,9],[
 
 
 	// module
-	exports.push([module.id, ".return-top{position:fixed;width:50px;height:50px;right:15px;bottom:3rem;background:#e1e1e1 url(" + __webpack_require__(54) + ") no-repeat;border-radius:25px;z-index:9}", ""]);
+	exports.push([module.id, ".return-top{position:fixed;width:50px;height:50px;right:15px;bottom:3rem;background:#e1e1e1 url(" + __webpack_require__(55) + ") no-repeat;border-radius:25px;z-index:9}", ""]);
 
 	// exports
 
 
 /***/ }),
-/* 54 */
+/* 55 */
 /***/ (function(module, exports) {
 
 	module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAALGPC/xhBQAAAVVJREFUaAXt101qhEAUBGA7xI0wy5wip0huMFdw72k8yOyydZUj5BTZJATcOl3BBhHBn64yBGpAbBzndX/1HGiLwh8n4AScgBNwAk6gCMoMmqZ56vv+hjmqqrq2bfupmk8GGRHdMAzPWHwI4SNiXlQYCWSG+Bm7cFFiHtitniKw8Fj/ggNjdCc+ah3uYc9LhcwReJTSgjFWYmiQJcT0/4CxEkOBrCFSV5SYbMhWhBqTBdmLUGIOQ44iVJhDkFyEArMbwkKwMbsgbAQTsxmiQrAwmyBqBAOzCjkLkYtZheB9Aps97JOU2/AEwXlhB/D7TjO9Zz5ehcQffEfE+1mItEBgyrJ8xdzx2le6/mfnuq4HHOoFbOmIeg2U+oZQYiQWcUeIYVJKuSOUGIlF3BFimJRS7gglRmKRR2KtxVJx0/cWv5DvtRYn90Un4AScgBNwAk7gnyZwB48Zcqrr/mBXAAAAAElFTkSuQmCC"
 
 /***/ }),
-/* 55 */
+/* 56 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -1785,7 +1785,7 @@ webpackJsonp([1,9],[
 	};
 
 /***/ }),
-/* 56 */
+/* 57 */
 /***/ (function(module, exports) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -1804,11 +1804,11 @@ webpackJsonp([1,9],[
 	},staticRenderFns: []}
 
 /***/ }),
-/* 57 */
+/* 58 */
 /***/ (function(module, exports) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return _c('div', [_c('nv-header'), _vm._v(" "), _c('nv-top')], 1)
+	  return _c('div', [_c('nv-top')], 1)
 	},staticRenderFns: []}
 
 /***/ })

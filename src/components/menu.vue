@@ -87,9 +87,6 @@
 	  user-select: none;
 	  outline: none;
 	}
-	.nav .nv_item:hover {
-	  color: #e9e9e9;
-	}
 	.nav .nv_item:first-child {
 	  border-radius: 6px 0 0 6px;
 	}
@@ -97,12 +94,10 @@
 	  border-radius: 0 6px 6px 0;
 	  border-right: 1px solid #121212;
 	}
-	.nav .nv_item:active {
-	  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4) inset, 0 1px 0 rgba(255, 255, 255, 0.1);
-	}
 	.nav .nv_item.highlight,
-	.nav .nv_item.router-link-active {
+	.nav .nv_item.router-link-exact-active {
+		box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4) inset, 0 1px 0 rgba(255, 255, 255, 0.1);
 	  background: -moz-linear-gradient(center top, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.44) 100%) repeat scroll 0 0 transparent;
-	  color: #e9e9e9;
+	  color: #ccc;
 	}
 </style>

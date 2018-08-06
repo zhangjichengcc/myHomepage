@@ -26,13 +26,21 @@
 	}
 </script>
 <style lang="sass">
-	.fade-enter-active, .fade-leave-active {
-		transition: all .3s ease;
-		transform: translateX(0px);
-	}
-	.fade-enter, .fade-leave-active {
+	.fade-enter-active {
+		transition: all 3s ease;
 		transform: translateX(-100%);
-		opacity: 0;
+	}
+	// .fade-enter, .fade-leave-active {
+	// 	transform: translateX(-100%);
+	// 	opacity: 0;
+	// }
+	.fade-enter-to, .fade-leave-active {
+		transform: translateX(0);
+		// opacity: 0;
+	}
+	.fade-leave-to {
+		transform: translateX(100%);
+		// opacity: 0;
 	}
 	.router {
 		width: 100%;
@@ -42,6 +50,8 @@
 	}
 	.r {
 		width: 100%;
+		height: 100%;
+		padding-top: 52px;
 		position: absolute;
 	}
 </style>

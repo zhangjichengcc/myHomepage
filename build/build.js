@@ -12,15 +12,15 @@ webpackJsonp([0,9],[
 
 	var _router2 = _interopRequireDefault(_router);
 
-	var _store = __webpack_require__(106);
+	var _store = __webpack_require__(107);
 
 	var _store2 = _interopRequireDefault(_store);
 
-	var _App = __webpack_require__(108);
+	var _App = __webpack_require__(109);
 
 	var _App2 = _interopRequireDefault(_App);
 
-	var _index = __webpack_require__(113);
+	var _index = __webpack_require__(114);
 
 	var filters = _interopRequireWildcard(_index);
 
@@ -29,10 +29,10 @@ webpackJsonp([0,9],[
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	//引入css重置文件,基本的样式文件
-	__webpack_require__(114);
+	__webpack_require__(115);
 
 	// 引入px与rem的换算
-	__webpack_require__(115);
+	__webpack_require__(116);
 
 	// 遍历输出a过滤器的模块
 	Object.keys(filters).forEach(function (k) {
@@ -11483,37 +11483,37 @@ webpackJsonp([0,9],[
 	};
 	var about = function about(resolve) {
 	    __webpack_require__.e/* nsure */(2, function () {
-	        resolve(__webpack_require__(58));
+	        resolve(__webpack_require__(59));
 	    });
 	};
 	var login = function login(resolve) {
 	    __webpack_require__.e/* nsure */(3, function () {
-	        resolve(__webpack_require__(64));
+	        resolve(__webpack_require__(65));
 	    });
 	};
 	var article = function article(resolve) {
 	    __webpack_require__.e/* nsure */(4, function () {
-	        resolve(__webpack_require__(74));
+	        resolve(__webpack_require__(75));
 	    });
 	};
 	var userhome = function userhome(resolve) {
 	    __webpack_require__.e/* nsure */(5, function () {
-	        resolve(__webpack_require__(84));
+	        resolve(__webpack_require__(85));
 	    });
 	};
 	var usermessage = function usermessage(resolve) {
 	    __webpack_require__.e/* nsure */(6, function () {
-	        resolve(__webpack_require__(90));
+	        resolve(__webpack_require__(91));
 	    });
 	};
 	var createtopic = function createtopic(resolve) {
 	    __webpack_require__.e/* nsure */(7, function () {
-	        resolve(__webpack_require__(95));
+	        resolve(__webpack_require__(96));
 	    });
 	};
 	var edittopic = function edittopic(resolve) {
 	    __webpack_require__.e/* nsure */(8, function () {
-	        resolve(__webpack_require__(103));
+	        resolve(__webpack_require__(104));
 	    });
 	};
 	var routes = [{
@@ -14595,9 +14595,9 @@ webpackJsonp([0,9],[
 
 	var Component = __webpack_require__(14)(
 	  /* script */
-	  __webpack_require__(44),
+	  __webpack_require__(45),
 	  /* template */
-	  __webpack_require__(50),
+	  __webpack_require__(51),
 	  /* scopeId */
 	  null,
 	  /* cssModules */
@@ -14629,13 +14629,19 @@ webpackJsonp([0,9],[
 
 
 	// module
-	exports.push([module.id, ".header{position:fixed;width:100%;border-bottom:1px solid hsla(0,0%,93%,.37);float:right;z-index:10;padding:10px;box-sizing:border-box;background-color:#222930}", ""]);
+	exports.push([module.id, ".header{position:fixed;width:100%;border-bottom:1px solid hsla(0,0%,93%,.37);float:right;z-index:10;padding:10px;box-sizing:border-box;background-color:#222930}.header .logo{width:200px;height:51px;position:absolute;left:0;top:0;background-image:url(" + __webpack_require__(44) + ");background-repeat:no-repeat;background-size:auto 80px;background-position:0}", ""]);
 
 	// exports
 
 
 /***/ }),
 /* 44 */
+/***/ (function(module, exports) {
+
+	module.exports = "data:image/png;base64,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"
+
+/***/ }),
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -14644,7 +14650,7 @@ webpackJsonp([0,9],[
 		value: true
 	});
 
-	var _menu = __webpack_require__(45);
+	var _menu = __webpack_require__(46);
 
 	var _menu2 = _interopRequireDefault(_menu);
 
@@ -14678,20 +14684,21 @@ webpackJsonp([0,9],[
 	//
 	//
 	//
+	//
 
 /***/ }),
-/* 45 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	
 	/* styles */
-	__webpack_require__(46)
+	__webpack_require__(47)
 
 	var Component = __webpack_require__(14)(
 	  /* script */
-	  __webpack_require__(48),
-	  /* template */
 	  __webpack_require__(49),
+	  /* template */
+	  __webpack_require__(50),
 	  /* scopeId */
 	  null,
 	  /* cssModules */
@@ -14702,20 +14709,20 @@ webpackJsonp([0,9],[
 
 
 /***/ }),
-/* 46 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(47);
+	var content = __webpack_require__(48);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	if(content.locals) module.exports = content.locals;
 	// add the styles to the DOM
 	var update = __webpack_require__(12)("6cd3f05a", content, true);
 
 /***/ }),
-/* 47 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(10)();
@@ -14723,13 +14730,13 @@ webpackJsonp([0,9],[
 
 
 	// module
-	exports.push([module.id, ".nav{float:right;font-size:0}.nav .nv_item{display:inline-block;background:-moz-linear-gradient(center top,rgba(0,0,0,.15) 0,rgba(0,0,0,.34) 100%) repeat scroll 0 0 transparent;border:1px solid #121212;border-right:none;box-shadow:inset 0 2px 3px hsla(0,0%,100%,.05),0 1px 0 hsla(0,0%,100%,.1);color:#777;cursor:pointer;font-size:14px;padding:5px 20px;text-decoration:none;text-shadow:0 -1px #0f0f0f;vertical-align:top;transition:all .5s ease;-webkit-touch-callout:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;outline:none}.nav .nv_item:hover{color:#e9e9e9}.nav .nv_item:first-child{border-radius:6px 0 0 6px}.nav .nv_item:last-child{border-radius:0 6px 6px 0;border-right:1px solid #121212}.nav .nv_item:active{box-shadow:inset 0 2px 3px rgba(0,0,0,.4),0 1px 0 hsla(0,0%,100%,.1)}.nav .nv_item.highlight,.nav .nv_item.router-link-active{background:-moz-linear-gradient(center top,rgba(0,0,0,.25) 0,rgba(0,0,0,.44) 100%) repeat scroll 0 0 transparent;color:#e9e9e9}", ""]);
+	exports.push([module.id, ".nav{float:right;font-size:0}.nav .nv_item{display:inline-block;background:-moz-linear-gradient(center top,rgba(0,0,0,.15) 0,rgba(0,0,0,.34) 100%) repeat scroll 0 0 transparent;border:1px solid #121212;border-right:none;box-shadow:inset 0 2px 3px hsla(0,0%,100%,.05),0 1px 0 hsla(0,0%,100%,.1);color:#777;cursor:pointer;font-size:14px;padding:5px 20px;text-decoration:none;text-shadow:0 -1px #0f0f0f;vertical-align:top;transition:all .5s ease;-webkit-touch-callout:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;outline:none}.nav .nv_item:first-child{border-radius:6px 0 0 6px}.nav .nv_item:last-child{border-radius:0 6px 6px 0;border-right:1px solid #121212}.nav .nv_item.highlight,.nav .nv_item.router-link-exact-active{box-shadow:inset 0 2px 3px rgba(0,0,0,.4),0 1px 0 hsla(0,0%,100%,.1);background:-moz-linear-gradient(center top,rgba(0,0,0,.25) 0,rgba(0,0,0,.44) 100%) repeat scroll 0 0 transparent;color:#ccc}", ""]);
 
 	// exports
 
 
 /***/ }),
-/* 48 */
+/* 49 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -14796,7 +14803,7 @@ webpackJsonp([0,9],[
 	};
 
 /***/ }),
-/* 49 */
+/* 50 */
 /***/ (function(module, exports) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -14831,23 +14838,22 @@ webpackJsonp([0,9],[
 	},staticRenderFns: []}
 
 /***/ }),
-/* 50 */
+/* 51 */
 /***/ (function(module, exports) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('div', [_c('div', {
 	    staticClass: "header"
-	  }, [_c('nv-menu', {
+	  }, [_c('div', {
+	    staticClass: "logo"
+	  }), _vm._v(" "), _c('nv-menu', {
 	    attrs: {
 	      "showm": _vm.menuShow
 	    }
-	  }), _vm._v(" "), _c('div', {
-	    staticClass: "user_img"
-	  }, [_vm._v("aa")])], 1)])
+	  })], 1)])
 	},staticRenderFns: []}
 
 /***/ }),
-/* 51 */,
 /* 52 */,
 /* 53 */,
 /* 54 */,
@@ -14902,7 +14908,8 @@ webpackJsonp([0,9],[
 /* 103 */,
 /* 104 */,
 /* 105 */,
-/* 106 */
+/* 106 */,
+/* 107 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -14915,7 +14922,7 @@ webpackJsonp([0,9],[
 
 	var _vue2 = _interopRequireDefault(_vue);
 
-	var _vuex = __webpack_require__(107);
+	var _vuex = __webpack_require__(108);
 
 	var _vuex2 = _interopRequireDefault(_vuex);
 
@@ -15047,7 +15054,7 @@ webpackJsonp([0,9],[
 	exports.default = store;
 
 /***/ }),
-/* 107 */
+/* 108 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -15986,18 +15993,18 @@ webpackJsonp([0,9],[
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)))
 
 /***/ }),
-/* 108 */
+/* 109 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	
 	/* styles */
-	__webpack_require__(109)
+	__webpack_require__(110)
 
 	var Component = __webpack_require__(14)(
 	  /* script */
-	  __webpack_require__(111),
-	  /* template */
 	  __webpack_require__(112),
+	  /* template */
+	  __webpack_require__(113),
 	  /* scopeId */
 	  null,
 	  /* cssModules */
@@ -16008,20 +16015,20 @@ webpackJsonp([0,9],[
 
 
 /***/ }),
-/* 109 */
+/* 110 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(110);
+	var content = __webpack_require__(111);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	if(content.locals) module.exports = content.locals;
 	// add the styles to the DOM
 	var update = __webpack_require__(12)("5272b69a", content, true);
 
 /***/ }),
-/* 110 */
+/* 111 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(10)();
@@ -16029,13 +16036,13 @@ webpackJsonp([0,9],[
 
 
 	// module
-	exports.push([module.id, ".fade-enter-active,.fade-leave-active{transition:all .3s ease;transform:translateX(0)}.fade-enter,.fade-leave-active{transform:translateX(-100%);opacity:0}.r,.router{width:100%}.r{position:absolute}", ""]);
+	exports.push([module.id, ".fade-enter-active{transition:all 3s ease;transform:translateX(-100%)}.fade-enter-to,.fade-leave-active{transform:translateX(0)}.fade-leave-to{transform:translateX(100%)}.r,.router{width:100%}.r{height:100%;padding-top:52px;position:absolute}", ""]);
 
 	// exports
 
 
 /***/ }),
-/* 111 */
+/* 112 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16069,7 +16076,7 @@ webpackJsonp([0,9],[
 	//
 
 /***/ }),
-/* 112 */
+/* 113 */
 /***/ (function(module, exports) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -16084,7 +16091,7 @@ webpackJsonp([0,9],[
 	},staticRenderFns: []}
 
 /***/ }),
-/* 113 */
+/* 114 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -16168,13 +16175,13 @@ webpackJsonp([0,9],[
 	}
 
 /***/ }),
-/* 114 */
+/* 115 */
 /***/ (function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 115 */
+/* 116 */
 /***/ (function(module, exports) {
 
 	'use strict';

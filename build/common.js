@@ -78,7 +78,7 @@
 /******/ 			script.charset = 'utf-8';
 /******/ 			script.async = true;
 
-/******/ 			script.src = __webpack_require__.p + "" + chunkId + ".build.js?" + {"0":"1b5de1ee619a8de706df","1":"74757b7d5d4a0cb5ff3b","2":"2ab2535f5b13855eef7d","3":"2becc85493c2beba3846","4":"0e4fcd01c733dc56fa9c","5":"1b5fc022ee20a1550e04","6":"07d4ed4d1ca21e129a57","7":"139386896571710f2b81","8":"bdedc0d96d16daf4a9bb"}[chunkId] + "";
+/******/ 			script.src = __webpack_require__.p + "" + chunkId + ".build.js?" + {"0":"77d833b4737b387d2fad","1":"1c5a0924cec6d5750418","2":"b41d1bb9d3cc48512977","3":"f13d55e19dd5c47e26f2","4":"145b3e0dac60ab528c4b","5":"81b59873a46c5fd77fdc","6":"6c03fcf3a2e051f60b1d","7":"89b3f092ec597e48883a","8":"a33a3a191bb82d946c08"}[chunkId] + "";
 /******/ 			head.appendChild(script);
 /******/ 		}
 /******/ 	};
@@ -90,7 +90,7 @@
 /******/ 	__webpack_require__.c = installedModules;
 
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/myHomepage/build/";
+/******/ 	__webpack_require__.p = "/build/";
 /******/ })
 /************************************************************************/
 /******/ ([]);

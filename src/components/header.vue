@@ -1,8 +1,9 @@
 <template>
 	<div>
 		<div class="header">
+			<div class="logo"></div>
 			<nv-menu :showm="menuShow"></nv-menu>
-			<div class="user_img">aa</div>
+			<!-- <div class="user_img">aa</div> -->
 		</div>
 	</div>
 </template>
@@ -41,5 +42,16 @@
 		padding: 10px;
 		box-sizing: border-box;
 		background-color: $bg_main_color;
+		.logo {
+			width: 200px;
+			height: 51px;
+			position: absolute;
+			left: 0;
+			top: 0;
+			background-image: url(../img/logo.png);
+			background-repeat: no-repeat;
+			background-size: auto 80px;
+			background-position: left center;
+		}
 	}
 </style>

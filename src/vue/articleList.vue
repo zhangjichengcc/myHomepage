@@ -1,6 +1,5 @@
 <template>
 	<div>
-		<nv-header></nv-header>
 		<!-- <div class="artlist">
 			<ul class="artlistTab clearfix">
 				<li v-for="(item, index) in itemTab" :class="{'on':initIndex === index}" v-on:click="changeTab(index)">{{item.title}}</li>

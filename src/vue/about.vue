@@ -1,6 +1,5 @@
 <template>
 	<div>
-		<nv-header></nv-header>
 		<div class="about">
 			<img src="../img/old.jpg" alt="">
 			<h2>cwsjoker</h2>

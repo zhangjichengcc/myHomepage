@@ -1,6 +1,5 @@
 <template>
 	<div>
-		<nv-header></nv-header>
 		<tips></tips>
 		<div class="login-con">
 			<h2>登录</h2>

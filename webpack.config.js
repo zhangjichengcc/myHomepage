@@ -37,9 +37,9 @@ module.exports = {
     // 指向异步加载的路径
     // 博客异步加载地址
     // publicPath :  'http://localhost:8080/own/' + 'build/',
-    // publicPath :  'zhangjichengcc.github.io/myHomepage/' + 'build/',
+    publicPath :  'build/',
     // 异步加载地址
-    publicPath : project_publicPath,
+    // publicPath : project_publicPath,
     // 非主文件的命名规则
     chunkFilename: '[id].build.js?[chunkhash]'
   },

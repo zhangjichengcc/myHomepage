@@ -14723,7 +14723,7 @@ webpackJsonp([0,9],[
 
 
 	// module
-	exports.push([module.id, ".nav{float:right;font-size:0}.nav .nv_item{display:inline-block;background:-moz-linear-gradient(center top,rgba(0,0,0,.15) 0,rgba(0,0,0,.34) 100%) repeat scroll 0 0 transparent;border:1px solid #121212;border-right:none;box-shadow:inset 0 2px 3px hsla(0,0%,100%,.05),0 1px 0 hsla(0,0%,100%,.1);color:#777;cursor:pointer;font-size:14px;padding:5px 20px;text-decoration:none;text-shadow:0 -1px #0f0f0f;vertical-align:top;transition:all .5s ease;-webkit-touch-callout:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;outline:none}.nav .nv_item:hover{color:#e9e9e9}.nav .nv_item:first-child{border-radius:6px 0 0 6px}.nav .nv_item:last-child{border-radius:0 6px 6px 0;border-right:1px solid #121212}.nav .nv_item:active{box-shadow:inset 0 2px 3px rgba(0,0,0,.4),0 1px 0 hsla(0,0%,100%,.1)}.nav .nv_item.highlight{background:-moz-linear-gradient(center top,rgba(0,0,0,.25) 0,rgba(0,0,0,.44) 100%) repeat scroll 0 0 transparent;color:#e9e9e9}", ""]);
+	exports.push([module.id, ".nav{float:right;font-size:0}.nav .nv_item{display:inline-block;background:-moz-linear-gradient(center top,rgba(0,0,0,.15) 0,rgba(0,0,0,.34) 100%) repeat scroll 0 0 transparent;border:1px solid #121212;border-right:none;box-shadow:inset 0 2px 3px hsla(0,0%,100%,.05),0 1px 0 hsla(0,0%,100%,.1);color:#777;cursor:pointer;font-size:14px;padding:5px 20px;text-decoration:none;text-shadow:0 -1px #0f0f0f;vertical-align:top;transition:all .5s ease;-webkit-touch-callout:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;outline:none}.nav .nv_item:hover{color:#e9e9e9}.nav .nv_item:first-child{border-radius:6px 0 0 6px}.nav .nv_item:last-child{border-radius:0 6px 6px 0;border-right:1px solid #121212}.nav .nv_item:active{box-shadow:inset 0 2px 3px rgba(0,0,0,.4),0 1px 0 hsla(0,0%,100%,.1)}.nav .nv_item.highlight,.nav .nv_item.router-link-active{background:-moz-linear-gradient(center top,rgba(0,0,0,.25) 0,rgba(0,0,0,.44) 100%) repeat scroll 0 0 transparent;color:#e9e9e9}", ""]);
 
 	// exports
 
@@ -14822,10 +14822,10 @@ webpackJsonp([0,9],[
 	    attrs: {
 	      "to": "/about"
 	    }
-	  }, [_vm._v("关于")]), _vm._v(" "), _c('router-link', {
+	  }, [_vm._v("关于")]), _vm._v(" "), _c('a', {
 	    staticClass: "nv_item",
 	    attrs: {
-	      "to": "/about"
+	      "href": "../../games/index.html"
 	    }
 	  }, [_vm._v("Games")])], 1)
 	},staticRenderFns: []}

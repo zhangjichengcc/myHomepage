@@ -11464,6 +11464,8 @@ webpackJsonp([0,10],[
 	    value: true
 	});
 
+	var _ref;
+
 	var _vue = __webpack_require__(1);
 
 	var _vue2 = _interopRequireDefault(_vue);
@@ -11473,6 +11475,8 @@ webpackJsonp([0,10],[
 	var _vueRouter2 = _interopRequireDefault(_vueRouter);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 	_vue2.default.use(_vueRouter2.default);
 
@@ -11521,16 +11525,14 @@ webpackJsonp([0,10],[
 	        resolve(__webpack_require__(108));
 	    });
 	};
-	var routes = [{
-	    path: '/',
-	    name: 'homePage',
-	    component: home
-	}, {
-	    path: '/login',
+	var routes = [(_ref = {
+	    path: '/'
+	}, _defineProperty(_ref, 'path', '/myHomepage/'), _defineProperty(_ref, 'name', 'homePage'), _defineProperty(_ref, 'component', home), _ref), {
+	    path: '/myHomepage/login',
 	    name: 'login',
 	    component: login
 	}, {
-	    path: '/about',
+	    path: '/myHomepage/about',
 	    name: 'about',
 	    component: about
 	}, {
@@ -11559,7 +11561,8 @@ webpackJsonp([0,10],[
 	}];
 
 	exports.default = new _vueRouter2.default({
-	    // mode: 'history',
+	    // vueRouter 默认为hash模式，可设置为H5的history模式，此时URL和正常的url一样，但需要后台配置路径，或者前端路由前添加空间名称
+	    mode: 'history',
 	    base: __dirname,
 	    routes: routes
 	});

@@ -50,14 +50,15 @@ const edittopic = resolve => {
 }
 const routes = [{
         path: '/',
+        path: '/myHomepage/',
         name: 'homePage',
         component: home
     },{
-        path: '/login',
+        path: '/myHomepage/login',
         name: 'login',
         component: login
     },{
-        path: '/about',
+        path: '/myHomepage/about',
         name: 'about',
         component: about
     },{
@@ -86,7 +87,8 @@ const routes = [{
     }];
 
 export default new Router({
-    // mode: 'history',
+    // vueRouter 默认为hash模式，可设置为H5的history模式，此时URL和正常的url一样，但需要后台配置路径，或者前端路由前添加空间名称
+    mode: 'history',
     base: __dirname,
     routes
 });

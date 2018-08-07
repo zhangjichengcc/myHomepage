@@ -49,35 +49,35 @@ const edittopic = resolve => {
     });
 }
 const routes = [{
-        path: './',
+        path: '/',
         name: 'homePage',
         component: home
     },{
-        path: './login',
+        path: '/login',
         name: 'login',
         component: login
     },{
-        path: './about',
+        path: '/about',
         name: 'about',
         component: about
     },{
-        path: './article/:id',
+        path: '/article/:id',
         name: 'article',
         component: article
     },{
-        path: './userhome/:username',
+        path: '/userhome/:username',
         name: 'userhome',
         component: userhome
     },{
-        path: './usermessage',
+        path: '/usermessage',
         name: 'usermessage',
         component: usermessage
     },{
-        path: './createtopic',
+        path: '/createtopic',
         name: 'createtopic',
         component: createtopic
     },{
-        path: './edittopic/:topicid',
+        path: '/edittopic/:topicid',
         name: 'edittopic',
         component: edittopic
     },{
@@ -86,7 +86,7 @@ const routes = [{
     }];
 
 export default new Router({
-    mode: 'history',
+    // mode: 'history',
     base: __dirname,
     routes
 });

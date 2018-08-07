@@ -3,6 +3,11 @@ import Router from 'vue-router';
 
 Vue.use(Router);
 
+const home = resolve => {
+    require.ensure(['../vue/home.vue'], () => {
+        resolve(require('../vue/home.vue'));
+    });
+};
 const articleList = resolve => {
     require.ensure(['../vue/articleList.vue'], () => {
         resolve(require('../vue/articleList.vue'));
@@ -46,7 +51,7 @@ const edittopic = resolve => {
 const routes = [{
         path: '/',
         name: 'homePage',
-        component: articleList
+        component: home
     },{
         path: '/login',
         name: 'login',

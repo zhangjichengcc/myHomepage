@@ -1,35 +1,19 @@
-webpackJsonp([6,9],[
-/* 0 */,
-/* 1 */,
-/* 2 */,
-/* 3 */,
-/* 4 */,
-/* 5 */,
-/* 6 */,
-/* 7 */,
-/* 8 */,
-/* 9 */,
-/* 10 */,
-/* 11 */,
-/* 12 */,
-/* 13 */,
-/* 14 */,
-/* 15 */,
-/* 16 */
+webpackJsonp([6,10],Array(31).concat([
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(17);
+	module.exports = __webpack_require__(32);
 
 /***/ }),
-/* 17 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(18);
-	var bind = __webpack_require__(19);
-	var Axios = __webpack_require__(20);
-	var defaults = __webpack_require__(21);
+	var utils = __webpack_require__(33);
+	var bind = __webpack_require__(34);
+	var Axios = __webpack_require__(35);
+	var defaults = __webpack_require__(36);
 
 	/**
 	 * Create an instance of Axios
@@ -62,15 +46,15 @@ webpackJsonp([6,9],[
 	};
 
 	// Expose Cancel & CancelToken
-	axios.Cancel = __webpack_require__(38);
-	axios.CancelToken = __webpack_require__(39);
-	axios.isCancel = __webpack_require__(35);
+	axios.Cancel = __webpack_require__(53);
+	axios.CancelToken = __webpack_require__(54);
+	axios.isCancel = __webpack_require__(50);
 
 	// Expose all/spread
 	axios.all = function all(promises) {
 	  return Promise.all(promises);
 	};
-	axios.spread = __webpack_require__(40);
+	axios.spread = __webpack_require__(55);
 
 	module.exports = axios;
 
@@ -79,12 +63,12 @@ webpackJsonp([6,9],[
 
 
 /***/ }),
-/* 18 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var bind = __webpack_require__(19);
+	var bind = __webpack_require__(34);
 
 	/*global toString:true*/
 
@@ -384,7 +368,7 @@ webpackJsonp([6,9],[
 
 
 /***/ }),
-/* 19 */
+/* 34 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -401,17 +385,17 @@ webpackJsonp([6,9],[
 
 
 /***/ }),
-/* 20 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var defaults = __webpack_require__(21);
-	var utils = __webpack_require__(18);
-	var InterceptorManager = __webpack_require__(32);
-	var dispatchRequest = __webpack_require__(33);
-	var isAbsoluteURL = __webpack_require__(36);
-	var combineURLs = __webpack_require__(37);
+	var defaults = __webpack_require__(36);
+	var utils = __webpack_require__(33);
+	var InterceptorManager = __webpack_require__(47);
+	var dispatchRequest = __webpack_require__(48);
+	var isAbsoluteURL = __webpack_require__(51);
+	var combineURLs = __webpack_require__(52);
 
 	/**
 	 * Create a new instance of Axios
@@ -492,13 +476,13 @@ webpackJsonp([6,9],[
 
 
 /***/ }),
-/* 21 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
 
-	var utils = __webpack_require__(18);
-	var normalizeHeaderName = __webpack_require__(22);
+	var utils = __webpack_require__(33);
+	var normalizeHeaderName = __webpack_require__(37);
 
 	var PROTECTION_PREFIX = /^\)\]\}',?\n/;
 	var DEFAULT_CONTENT_TYPE = {
@@ -515,10 +499,10 @@ webpackJsonp([6,9],[
 	  var adapter;
 	  if (typeof XMLHttpRequest !== 'undefined') {
 	    // For browsers use XHR adapter
-	    adapter = __webpack_require__(23);
+	    adapter = __webpack_require__(38);
 	  } else if (typeof process !== 'undefined') {
 	    // For node use HTTP adapter
-	    adapter = __webpack_require__(23);
+	    adapter = __webpack_require__(38);
 	  }
 	  return adapter;
 	}
@@ -592,12 +576,12 @@ webpackJsonp([6,9],[
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)))
 
 /***/ }),
-/* 22 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(18);
+	var utils = __webpack_require__(33);
 
 	module.exports = function normalizeHeaderName(headers, normalizedName) {
 	  utils.forEach(headers, function processHeader(value, name) {
@@ -610,18 +594,18 @@ webpackJsonp([6,9],[
 
 
 /***/ }),
-/* 23 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
 
-	var utils = __webpack_require__(18);
-	var settle = __webpack_require__(24);
-	var buildURL = __webpack_require__(27);
-	var parseHeaders = __webpack_require__(28);
-	var isURLSameOrigin = __webpack_require__(29);
-	var createError = __webpack_require__(25);
-	var btoa = (typeof window !== 'undefined' && window.btoa && window.btoa.bind(window)) || __webpack_require__(30);
+	var utils = __webpack_require__(33);
+	var settle = __webpack_require__(39);
+	var buildURL = __webpack_require__(42);
+	var parseHeaders = __webpack_require__(43);
+	var isURLSameOrigin = __webpack_require__(44);
+	var createError = __webpack_require__(40);
+	var btoa = (typeof window !== 'undefined' && window.btoa && window.btoa.bind(window)) || __webpack_require__(45);
 
 	module.exports = function xhrAdapter(config) {
 	  return new Promise(function dispatchXhrRequest(resolve, reject) {
@@ -717,7 +701,7 @@ webpackJsonp([6,9],[
 	    // This is only done if running in a standard browser environment.
 	    // Specifically not if we're in a web worker, or react-native.
 	    if (utils.isStandardBrowserEnv()) {
-	      var cookies = __webpack_require__(31);
+	      var cookies = __webpack_require__(46);
 
 	      // Add xsrf header
 	      var xsrfValue = (config.withCredentials || isURLSameOrigin(config.url)) && config.xsrfCookieName ?
@@ -794,12 +778,12 @@ webpackJsonp([6,9],[
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)))
 
 /***/ }),
-/* 24 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var createError = __webpack_require__(25);
+	var createError = __webpack_require__(40);
 
 	/**
 	 * Resolve or reject a Promise based on response status.
@@ -825,12 +809,12 @@ webpackJsonp([6,9],[
 
 
 /***/ }),
-/* 25 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var enhanceError = __webpack_require__(26);
+	var enhanceError = __webpack_require__(41);
 
 	/**
 	 * Create an Error with the specified message, config, error code, and response.
@@ -848,7 +832,7 @@ webpackJsonp([6,9],[
 
 
 /***/ }),
-/* 26 */
+/* 41 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -873,12 +857,12 @@ webpackJsonp([6,9],[
 
 
 /***/ }),
-/* 27 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(18);
+	var utils = __webpack_require__(33);
 
 	function encode(val) {
 	  return encodeURIComponent(val).
@@ -947,12 +931,12 @@ webpackJsonp([6,9],[
 
 
 /***/ }),
-/* 28 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(18);
+	var utils = __webpack_require__(33);
 
 	/**
 	 * Parse headers into an object
@@ -990,12 +974,12 @@ webpackJsonp([6,9],[
 
 
 /***/ }),
-/* 29 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(18);
+	var utils = __webpack_require__(33);
 
 	module.exports = (
 	  utils.isStandardBrowserEnv() ?
@@ -1064,7 +1048,7 @@ webpackJsonp([6,9],[
 
 
 /***/ }),
-/* 30 */
+/* 45 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -1106,12 +1090,12 @@ webpackJsonp([6,9],[
 
 
 /***/ }),
-/* 31 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(18);
+	var utils = __webpack_require__(33);
 
 	module.exports = (
 	  utils.isStandardBrowserEnv() ?
@@ -1165,12 +1149,12 @@ webpackJsonp([6,9],[
 
 
 /***/ }),
-/* 32 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(18);
+	var utils = __webpack_require__(33);
 
 	function InterceptorManager() {
 	  this.handlers = [];
@@ -1223,15 +1207,15 @@ webpackJsonp([6,9],[
 
 
 /***/ }),
-/* 33 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(18);
-	var transformData = __webpack_require__(34);
-	var isCancel = __webpack_require__(35);
-	var defaults = __webpack_require__(21);
+	var utils = __webpack_require__(33);
+	var transformData = __webpack_require__(49);
+	var isCancel = __webpack_require__(50);
+	var defaults = __webpack_require__(36);
 
 	/**
 	 * Throws a `Cancel` if cancellation has been requested.
@@ -1308,12 +1292,12 @@ webpackJsonp([6,9],[
 
 
 /***/ }),
-/* 34 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(18);
+	var utils = __webpack_require__(33);
 
 	/**
 	 * Transform the data for a request or a response
@@ -1334,7 +1318,7 @@ webpackJsonp([6,9],[
 
 
 /***/ }),
-/* 35 */
+/* 50 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -1345,7 +1329,7 @@ webpackJsonp([6,9],[
 
 
 /***/ }),
-/* 36 */
+/* 51 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -1365,7 +1349,7 @@ webpackJsonp([6,9],[
 
 
 /***/ }),
-/* 37 */
+/* 52 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -1383,7 +1367,7 @@ webpackJsonp([6,9],[
 
 
 /***/ }),
-/* 38 */
+/* 53 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -1408,12 +1392,12 @@ webpackJsonp([6,9],[
 
 
 /***/ }),
-/* 39 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var Cancel = __webpack_require__(38);
+	var Cancel = __webpack_require__(53);
 
 	/**
 	 * A `CancelToken` is an object that can be used to request cancellation of an operation.
@@ -1471,7 +1455,7 @@ webpackJsonp([6,9],[
 
 
 /***/ }),
-/* 40 */
+/* 55 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -1504,21 +1488,6 @@ webpackJsonp([6,9],[
 
 
 /***/ }),
-/* 41 */,
-/* 42 */,
-/* 43 */,
-/* 44 */,
-/* 45 */,
-/* 46 */,
-/* 47 */,
-/* 48 */,
-/* 49 */,
-/* 50 */,
-/* 51 */,
-/* 52 */,
-/* 53 */,
-/* 54 */,
-/* 55 */,
 /* 56 */,
 /* 57 */,
 /* 58 */,
@@ -1551,26 +1520,19 @@ webpackJsonp([6,9],[
 /* 85 */,
 /* 86 */,
 /* 87 */,
-/* 88 */
-/***/ (function(module, exports) {
-
-	module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD4AAAA+CAYAAABzwahEAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpCQTU5MkRBMzVEMTYxMUU2OTQ2NkM0NDE1RTg2RjQxRiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpCQTU5MkRBNDVEMTYxMUU2OTQ2NkM0NDE1RTg2RjQxRiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkJBNTkyREExNUQxNjExRTY5NDY2QzQ0MTVFODZGNDFGIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkJBNTkyREEyNUQxNjExRTY5NDY2QzQ0MTVFODZGNDFGIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+VlHDsAAABGZJREFUeNrkm2doFEEUxyeWGHsPdgOJMTYiWLAXbKhBxfLBggohGhUUg4qIghXsLUKsiIkKISKoH2ygWKLYiTVqsGGsxBJLTEyM/8e+g/Pwttztzu5eHvwgl5vb3f/O7Mx7b96GlZeXi4poVTx/5OXl+WtTCUwBM0AXEAHywSmwHjxxi9iYmJh/RKlZNXAMHAC9WTRZc5AI7oGJbuxxLeHbQILK9+EgA/R07VD/j7Xh4a1llcFa0B9U59FQy+t7mkS+gHeg2A3CqafDdB6nH/gE6mu0ewvugkvgCHjsxKEeZfBY9XW0aQqGgdUgF5wHPZwm/LuE8w8AV8FufkwcITxb4nUkgeughROEnwFPJYrvyDc72m7hpWA6+C1RfCtwGkTavY7HgqqS551odprC7RLehycdO4xm+q12CG8MsmzobW+bBcbKFk493cQBDlYaaCBL+BjGCRbJEaDlwmlC2eKweCKR4wBLhU8NwFWVYTvNnuW9hVNAMt+hUWQcSLFKOC1f7R0cQi8DLa0QPtrhuYMaYLMVwnu7IHEyHgwyW3iccIelCvUEimHh9VwivB2YY3WQ4lRbzm61KcJLXSScRucqs4R/dVmvU9amc6A/9p4kXoOGLhJOnZYulJxdEfgBaDvoBrhvRPgLEO+yXu/E+NpLsIdXgEKtoX5ThI61FkoKm/L2I7WEZ4vQM8opnOCkhl/hF8HnEBRPwdcOMNCf8DJwUISmkc7tag5MKt+AULNXYKWacNpAyAghwcU8yZGbm6Xlsi4VcvbNrLbjLJji+J96fPV832HhMqPSlOGcX3huNEihSohHLhNMo3QxOzSnAo3OSsBMF4k+DNqCdXztQYWlVLWwz+GCc0BfMBm8MTMeXwQ+OlAwOVqzhVJ+dtmKRATVtSxwkGAqJNollMKktGB8Dj0ZGFrXzzlA9BXu4WRQYIYrp+cuJwv7SrWoTIx2eCjvf8dMH1aPkUe3QrJgSoVt5Nk6gztAyBZOtkEoNWoy7Ayvxwv9JRJkCi81umQEYC+EUgxAtXC5Vp7ISGK+GRhq0XX8EkpZKO2FF/lpEwW6CqWQsKYIslTEiPAJwpo8/FGh7IS+1Gg3WCh5NI9JE55gsmCKBeaBs3ZlJvTeoF4mnfMbO0XxBkU38nk0pDzjFNfWMEF0OrvB7wP4bXefSVBKj8cGeZ7bPGKmqYiuq/J7qoEf4fX5mizhzQM8fgGHt92EsuPhz8YJJS+W8p9RSKXeh4TymojHMmUN9VoGj1vGwcRSoZ2yXgLW8N+beMI7zQFSLGdTIrzaP2AHR4rwEgPHpPz8XI6V9Ri90EOFwp4qSirkTfLTtpBj7zJZQ/2Ljjbk1U0SSvF9joFroJ2OITrW8VscqOQIE0xvjz9U+Y56i4pyKI0baHb2Aq8ck9llpdr12uADC87kG/RHtst6g4dZHZ//n+Rn0oyCfnJV9zKOcWCoV/d7fX4GRvESI/MtBluis1UcMdFM3YGHnmstrKK+VPtXgAEAvqzQGmJXJEEAAAAASUVORK5CYII="
-
-/***/ }),
-/* 89 */,
-/* 90 */,
-/* 91 */
+/* 88 */,
+/* 89 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	
 	/* styles */
-	__webpack_require__(92)
+	__webpack_require__(90)
 
-	var Component = __webpack_require__(14)(
+	var Component = __webpack_require__(13)(
 	  /* script */
-	  __webpack_require__(94),
+	  __webpack_require__(93),
 	  /* template */
-	  __webpack_require__(95),
+	  __webpack_require__(94),
 	  /* scopeId */
 	  null,
 	  /* cssModules */
@@ -1581,20 +1543,20 @@ webpackJsonp([6,9],[
 
 
 /***/ }),
-/* 92 */
+/* 90 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(93);
+	var content = __webpack_require__(91);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	if(content.locals) module.exports = content.locals;
 	// add the styles to the DOM
-	var update = __webpack_require__(12)("692344c7", content, true);
+	var update = __webpack_require__(11)("f7562e26", content, true);
 
 /***/ }),
-/* 93 */
+/* 91 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(10)();
@@ -1602,13 +1564,19 @@ webpackJsonp([6,9],[
 
 
 	// module
-	exports.push([module.id, ".message{overflow:hidden;margin:0 5px;padding:4rem 0 2rem}.message .passmessage,.message .unread{margin-top:5px}.message .passmessage .passmessage-title,.message .passmessage .unread-title,.message .unread .passmessage-title,.message .unread .unread-title{background:#fff;padding:10px;color:#80bd01;font-size:14px}.message .passmessage .passmessage-box,.message .passmessage .unread-box,.message .unread .passmessage-box,.message .unread .unread-box{margin-top:5px;padding-top:10px;background:#fff;opacity:.8}.message .passmessage .passmessage-box .passmessage-item,.message .passmessage .passmessage-box .unread-item,.message .passmessage .unread-box .passmessage-item,.message .passmessage .unread-box .unread-item,.message .unread .passmessage-box .passmessage-item,.message .unread .passmessage-box .unread-item,.message .unread .unread-box .passmessage-item,.message .unread .unread-box .unread-item{position:relative;padding:10px;background:#fff;border-bottom:1px solid #e1e1e1}.message .passmessage .passmessage-box .passmessage-item em,.message .passmessage .passmessage-box .unread-item em,.message .passmessage .unread-box .passmessage-item em,.message .passmessage .unread-box .unread-item em,.message .unread .passmessage-box .passmessage-item em,.message .unread .passmessage-box .unread-item em,.message .unread .unread-box .passmessage-item em,.message .unread .unread-box .unread-item em{position:absolute;right:10px;bottom:10px}.message .passmessage .passmessage-box .nodata,.message .passmessage .unread-box .nodata,.message .unread .passmessage-box .nodata,.message .unread .unread-box .nodata{position:relative;padding-top:40px;color:#a8b5c3;font-size:16px;text-align:center;line-height:40px}.message .passmessage .passmessage-box .nodata .nodataimg,.message .passmessage .unread-box .nodata .nodataimg,.message .unread .passmessage-box .nodata .nodataimg,.message .unread .unread-box .nodata .nodataimg{position:absolute;width:40px;height:40px;left:0;top:0;right:0;margin:auto;background:url(" + __webpack_require__(88) + ") no-repeat;background-size:100%}", ""]);
+	exports.push([module.id, ".userhome{overflow:hidden;margin:0 5px;padding:4rem 0 2rem}.userhome .userInfo .userInfoTitle{border-radius:7px 7px 0 0;background:#fff;padding:10px;color:#80bd01;font-size:14px}.userhome .userInfo .userInfoBox{margin-top:5px;padding:10px;background:#fff;opacity:.8}.userhome .userInfo .userInfoBox .useravatar{margin:0 auto}.userhome .userInfo .userInfoBox .useravatar img{display:block;width:80px;height:80px;margin:0 auto;border-radius:40px}.userhome .userInfo .userInfoBox .userbase .name{color:#a8b5c3;font-size:22px;text-align:center;line-height:40px}.userhome .userInfo .userInfoBox .userbase .baseinfo{color:#a8b5c3;font-size:16px;text-align:center}.userhome .userInfo .userInfoBox .userbase .baseinfo span{margin-right:20px}.userhome .userCollect,.userhome .userReplies,.userhome .userTopics{margin-top:5px}.userhome .userCollect .userCollectTitle,.userhome .userCollect .userRepliesTitle,.userhome .userCollect .userTopicsTitle,.userhome .userReplies .userCollectTitle,.userhome .userReplies .userRepliesTitle,.userhome .userReplies .userTopicsTitle,.userhome .userTopics .userCollectTitle,.userhome .userTopics .userRepliesTitle,.userhome .userTopics .userTopicsTitle{background:#fff;padding:10px;color:#80bd01;font-size:14px}.userhome .userCollect .userCollectBox,.userhome .userCollect .userRepliesBox,.userhome .userCollect .userTopicsBox,.userhome .userReplies .userCollectBox,.userhome .userReplies .userRepliesBox,.userhome .userReplies .userTopicsBox,.userhome .userTopics .userCollectBox,.userhome .userTopics .userRepliesBox,.userhome .userTopics .userTopicsBox{margin-top:5px;padding-top:10px;background:#fff;opacity:.8}.userhome .userCollect .userCollectBox .collectitem,.userhome .userCollect .userCollectBox .repliesitem,.userhome .userCollect .userCollectBox .topicsitem,.userhome .userCollect .userRepliesBox .collectitem,.userhome .userCollect .userRepliesBox .repliesitem,.userhome .userCollect .userRepliesBox .topicsitem,.userhome .userCollect .userTopicsBox .collectitem,.userhome .userCollect .userTopicsBox .repliesitem,.userhome .userCollect .userTopicsBox .topicsitem,.userhome .userReplies .userCollectBox .collectitem,.userhome .userReplies .userCollectBox .repliesitem,.userhome .userReplies .userCollectBox .topicsitem,.userhome .userReplies .userRepliesBox .collectitem,.userhome .userReplies .userRepliesBox .repliesitem,.userhome .userReplies .userRepliesBox .topicsitem,.userhome .userReplies .userTopicsBox .collectitem,.userhome .userReplies .userTopicsBox .repliesitem,.userhome .userReplies .userTopicsBox .topicsitem,.userhome .userTopics .userCollectBox .collectitem,.userhome .userTopics .userCollectBox .repliesitem,.userhome .userTopics .userCollectBox .topicsitem,.userhome .userTopics .userRepliesBox .collectitem,.userhome .userTopics .userRepliesBox .repliesitem,.userhome .userTopics .userRepliesBox .topicsitem,.userhome .userTopics .userTopicsBox .collectitem,.userhome .userTopics .userTopicsBox .repliesitem,.userhome .userTopics .userTopicsBox .topicsitem{position:relative;padding:10px;background:#fff;border-bottom:1px solid #e1e1e1}.userhome .userCollect .userCollectBox .collectitem .avatar,.userhome .userCollect .userCollectBox .repliesitem .avatar,.userhome .userCollect .userCollectBox .topicsitem .avatar,.userhome .userCollect .userRepliesBox .collectitem .avatar,.userhome .userCollect .userRepliesBox .repliesitem .avatar,.userhome .userCollect .userRepliesBox .topicsitem .avatar,.userhome .userCollect .userTopicsBox .collectitem .avatar,.userhome .userCollect .userTopicsBox .repliesitem .avatar,.userhome .userCollect .userTopicsBox .topicsitem .avatar,.userhome .userReplies .userCollectBox .collectitem .avatar,.userhome .userReplies .userCollectBox .repliesitem .avatar,.userhome .userReplies .userCollectBox .topicsitem .avatar,.userhome .userReplies .userRepliesBox .collectitem .avatar,.userhome .userReplies .userRepliesBox .repliesitem .avatar,.userhome .userReplies .userRepliesBox .topicsitem .avatar,.userhome .userReplies .userTopicsBox .collectitem .avatar,.userhome .userReplies .userTopicsBox .repliesitem .avatar,.userhome .userReplies .userTopicsBox .topicsitem .avatar,.userhome .userTopics .userCollectBox .collectitem .avatar,.userhome .userTopics .userCollectBox .repliesitem .avatar,.userhome .userTopics .userCollectBox .topicsitem .avatar,.userhome .userTopics .userRepliesBox .collectitem .avatar,.userhome .userTopics .userRepliesBox .repliesitem .avatar,.userhome .userTopics .userRepliesBox .topicsitem .avatar,.userhome .userTopics .userTopicsBox .collectitem .avatar,.userhome .userTopics .userTopicsBox .repliesitem .avatar,.userhome .userTopics .userTopicsBox .topicsitem .avatar{display:block;float:left;width:2rem;height:2rem}.userhome .userCollect .userCollectBox .collectitem .avatar img,.userhome .userCollect .userCollectBox .repliesitem .avatar img,.userhome .userCollect .userCollectBox .topicsitem .avatar img,.userhome .userCollect .userRepliesBox .collectitem .avatar img,.userhome .userCollect .userRepliesBox .repliesitem .avatar img,.userhome .userCollect .userRepliesBox .topicsitem .avatar img,.userhome .userCollect .userTopicsBox .collectitem .avatar img,.userhome .userCollect .userTopicsBox .repliesitem .avatar img,.userhome .userCollect .userTopicsBox .topicsitem .avatar img,.userhome .userReplies .userCollectBox .collectitem .avatar img,.userhome .userReplies .userCollectBox .repliesitem .avatar img,.userhome .userReplies .userCollectBox .topicsitem .avatar img,.userhome .userReplies .userRepliesBox .collectitem .avatar img,.userhome .userReplies .userRepliesBox .repliesitem .avatar img,.userhome .userReplies .userRepliesBox .topicsitem .avatar img,.userhome .userReplies .userTopicsBox .collectitem .avatar img,.userhome .userReplies .userTopicsBox .repliesitem .avatar img,.userhome .userReplies .userTopicsBox .topicsitem .avatar img,.userhome .userTopics .userCollectBox .collectitem .avatar img,.userhome .userTopics .userCollectBox .repliesitem .avatar img,.userhome .userTopics .userCollectBox .topicsitem .avatar img,.userhome .userTopics .userRepliesBox .collectitem .avatar img,.userhome .userTopics .userRepliesBox .repliesitem .avatar img,.userhome .userTopics .userRepliesBox .topicsitem .avatar img,.userhome .userTopics .userTopicsBox .collectitem .avatar img,.userhome .userTopics .userTopicsBox .repliesitem .avatar img,.userhome .userTopics .userTopicsBox .topicsitem .avatar img{display:inline-block;width:100%;height:100%}.userhome .userCollect .userCollectBox .collectitem .art-inf,.userhome .userCollect .userCollectBox .repliesitem .art-inf,.userhome .userCollect .userCollectBox .topicsitem .art-inf,.userhome .userCollect .userRepliesBox .collectitem .art-inf,.userhome .userCollect .userRepliesBox .repliesitem .art-inf,.userhome .userCollect .userRepliesBox .topicsitem .art-inf,.userhome .userCollect .userTopicsBox .collectitem .art-inf,.userhome .userCollect .userTopicsBox .repliesitem .art-inf,.userhome .userCollect .userTopicsBox .topicsitem .art-inf,.userhome .userReplies .userCollectBox .collectitem .art-inf,.userhome .userReplies .userCollectBox .repliesitem .art-inf,.userhome .userReplies .userCollectBox .topicsitem .art-inf,.userhome .userReplies .userRepliesBox .collectitem .art-inf,.userhome .userReplies .userRepliesBox .repliesitem .art-inf,.userhome .userReplies .userRepliesBox .topicsitem .art-inf,.userhome .userReplies .userTopicsBox .collectitem .art-inf,.userhome .userReplies .userTopicsBox .repliesitem .art-inf,.userhome .userReplies .userTopicsBox .topicsitem .art-inf,.userhome .userTopics .userCollectBox .collectitem .art-inf,.userhome .userTopics .userCollectBox .repliesitem .art-inf,.userhome .userTopics .userCollectBox .topicsitem .art-inf,.userhome .userTopics .userRepliesBox .collectitem .art-inf,.userhome .userTopics .userRepliesBox .repliesitem .art-inf,.userhome .userTopics .userRepliesBox .topicsitem .art-inf,.userhome .userTopics .userTopicsBox .collectitem .art-inf,.userhome .userTopics .userTopicsBox .repliesitem .art-inf,.userhome .userTopics .userTopicsBox .topicsitem .art-inf{position:relative;float:left;width:80%;height:2rem;margin-left:15px}.userhome .userCollect .userCollectBox .collectitem .art-inf a,.userhome .userCollect .userCollectBox .repliesitem .art-inf a,.userhome .userCollect .userCollectBox .topicsitem .art-inf a,.userhome .userCollect .userRepliesBox .collectitem .art-inf a,.userhome .userCollect .userRepliesBox .repliesitem .art-inf a,.userhome .userCollect .userRepliesBox .topicsitem .art-inf a,.userhome .userCollect .userTopicsBox .collectitem .art-inf a,.userhome .userCollect .userTopicsBox .repliesitem .art-inf a,.userhome .userCollect .userTopicsBox .topicsitem .art-inf a,.userhome .userReplies .userCollectBox .collectitem .art-inf a,.userhome .userReplies .userCollectBox .repliesitem .art-inf a,.userhome .userReplies .userCollectBox .topicsitem .art-inf a,.userhome .userReplies .userRepliesBox .collectitem .art-inf a,.userhome .userReplies .userRepliesBox .repliesitem .art-inf a,.userhome .userReplies .userRepliesBox .topicsitem .art-inf a,.userhome .userReplies .userTopicsBox .collectitem .art-inf a,.userhome .userReplies .userTopicsBox .repliesitem .art-inf a,.userhome .userReplies .userTopicsBox .topicsitem .art-inf a,.userhome .userTopics .userCollectBox .collectitem .art-inf a,.userhome .userTopics .userCollectBox .repliesitem .art-inf a,.userhome .userTopics .userCollectBox .topicsitem .art-inf a,.userhome .userTopics .userRepliesBox .collectitem .art-inf a,.userhome .userTopics .userRepliesBox .repliesitem .art-inf a,.userhome .userTopics .userRepliesBox .topicsitem .art-inf a,.userhome .userTopics .userTopicsBox .collectitem .art-inf a,.userhome .userTopics .userTopicsBox .repliesitem .art-inf a,.userhome .userTopics .userTopicsBox .topicsitem .art-inf a{display:inline-block;overflow:hidden;width:80%;height:2rem;color:#000;font-size:1rem;line-height:2rem;white-space:nowrap;text-overflow:ellipsis}.userhome .userCollect .userCollectBox .collectitem .art-inf span,.userhome .userCollect .userCollectBox .repliesitem .art-inf span,.userhome .userCollect .userCollectBox .topicsitem .art-inf span,.userhome .userCollect .userRepliesBox .collectitem .art-inf span,.userhome .userCollect .userRepliesBox .repliesitem .art-inf span,.userhome .userCollect .userRepliesBox .topicsitem .art-inf span,.userhome .userCollect .userTopicsBox .collectitem .art-inf span,.userhome .userCollect .userTopicsBox .repliesitem .art-inf span,.userhome .userCollect .userTopicsBox .topicsitem .art-inf span,.userhome .userReplies .userCollectBox .collectitem .art-inf span,.userhome .userReplies .userCollectBox .repliesitem .art-inf span,.userhome .userReplies .userCollectBox .topicsitem .art-inf span,.userhome .userReplies .userRepliesBox .collectitem .art-inf span,.userhome .userReplies .userRepliesBox .repliesitem .art-inf span,.userhome .userReplies .userRepliesBox .topicsitem .art-inf span,.userhome .userReplies .userTopicsBox .collectitem .art-inf span,.userhome .userReplies .userTopicsBox .repliesitem .art-inf span,.userhome .userReplies .userTopicsBox .topicsitem .art-inf span,.userhome .userTopics .userCollectBox .collectitem .art-inf span,.userhome .userTopics .userCollectBox .repliesitem .art-inf span,.userhome .userTopics .userCollectBox .topicsitem .art-inf span,.userhome .userTopics .userRepliesBox .collectitem .art-inf span,.userhome .userTopics .userRepliesBox .repliesitem .art-inf span,.userhome .userTopics .userRepliesBox .topicsitem .art-inf span,.userhome .userTopics .userTopicsBox .collectitem .art-inf span,.userhome .userTopics .userTopicsBox .repliesitem .art-inf span,.userhome .userTopics .userTopicsBox .topicsitem .art-inf span{display:inline-block}.userhome .userCollect .userCollectBox .collectitem .art-inf .last-time,.userhome .userCollect .userCollectBox .repliesitem .art-inf .last-time,.userhome .userCollect .userCollectBox .topicsitem .art-inf .last-time,.userhome .userCollect .userRepliesBox .collectitem .art-inf .last-time,.userhome .userCollect .userRepliesBox .repliesitem .art-inf .last-time,.userhome .userCollect .userRepliesBox .topicsitem .art-inf .last-time,.userhome .userCollect .userTopicsBox .collectitem .art-inf .last-time,.userhome .userCollect .userTopicsBox .repliesitem .art-inf .last-time,.userhome .userCollect .userTopicsBox .topicsitem .art-inf .last-time,.userhome .userReplies .userCollectBox .collectitem .art-inf .last-time,.userhome .userReplies .userCollectBox .repliesitem .art-inf .last-time,.userhome .userReplies .userCollectBox .topicsitem .art-inf .last-time,.userhome .userReplies .userRepliesBox .collectitem .art-inf .last-time,.userhome .userReplies .userRepliesBox .repliesitem .art-inf .last-time,.userhome .userReplies .userRepliesBox .topicsitem .art-inf .last-time,.userhome .userReplies .userTopicsBox .collectitem .art-inf .last-time,.userhome .userReplies .userTopicsBox .repliesitem .art-inf .last-time,.userhome .userReplies .userTopicsBox .topicsitem .art-inf .last-time,.userhome .userTopics .userCollectBox .collectitem .art-inf .last-time,.userhome .userTopics .userCollectBox .repliesitem .art-inf .last-time,.userhome .userTopics .userCollectBox .topicsitem .art-inf .last-time,.userhome .userTopics .userRepliesBox .collectitem .art-inf .last-time,.userhome .userTopics .userRepliesBox .repliesitem .art-inf .last-time,.userhome .userTopics .userRepliesBox .topicsitem .art-inf .last-time,.userhome .userTopics .userTopicsBox .collectitem .art-inf .last-time,.userhome .userTopics .userTopicsBox .repliesitem .art-inf .last-time,.userhome .userTopics .userTopicsBox .topicsitem .art-inf .last-time{position:absolute;right:0;bottom:0;font-size:12px;padding:2px 4px}.userhome .userCollect .userCollectBox .nodata,.userhome .userCollect .userRepliesBox .nodata,.userhome .userCollect .userTopicsBox .nodata,.userhome .userReplies .userCollectBox .nodata,.userhome .userReplies .userRepliesBox .nodata,.userhome .userReplies .userTopicsBox .nodata,.userhome .userTopics .userCollectBox .nodata,.userhome .userTopics .userRepliesBox .nodata,.userhome .userTopics .userTopicsBox .nodata{position:relative;padding-top:40px;color:#a8b5c3;font-size:16px;text-align:center;line-height:40px}.userhome .userCollect .userCollectBox .nodata .nodataimg,.userhome .userCollect .userRepliesBox .nodata .nodataimg,.userhome .userCollect .userTopicsBox .nodata .nodataimg,.userhome .userReplies .userCollectBox .nodata .nodataimg,.userhome .userReplies .userRepliesBox .nodata .nodataimg,.userhome .userReplies .userTopicsBox .nodata .nodataimg,.userhome .userTopics .userCollectBox .nodata .nodataimg,.userhome .userTopics .userRepliesBox .nodata .nodataimg,.userhome .userTopics .userTopicsBox .nodata .nodataimg{position:absolute;width:40px;height:40px;left:0;top:0;right:0;margin:auto;background:url(" + __webpack_require__(92) + ") no-repeat;background-size:100%}", ""]);
 
 	// exports
 
 
 /***/ }),
-/* 94 */
+/* 92 */
+/***/ (function(module, exports) {
+
+	module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD4AAAA+CAYAAABzwahEAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpCQTU5MkRBMzVEMTYxMUU2OTQ2NkM0NDE1RTg2RjQxRiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpCQTU5MkRBNDVEMTYxMUU2OTQ2NkM0NDE1RTg2RjQxRiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkJBNTkyREExNUQxNjExRTY5NDY2QzQ0MTVFODZGNDFGIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkJBNTkyREEyNUQxNjExRTY5NDY2QzQ0MTVFODZGNDFGIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+VlHDsAAABGZJREFUeNrkm2doFEEUxyeWGHsPdgOJMTYiWLAXbKhBxfLBggohGhUUg4qIghXsLUKsiIkKISKoH2ygWKLYiTVqsGGsxBJLTEyM/8e+g/Pwttztzu5eHvwgl5vb3f/O7Mx7b96GlZeXi4poVTx/5OXl+WtTCUwBM0AXEAHywSmwHjxxi9iYmJh/RKlZNXAMHAC9WTRZc5AI7oGJbuxxLeHbQILK9+EgA/R07VD/j7Xh4a1llcFa0B9U59FQy+t7mkS+gHeg2A3CqafDdB6nH/gE6mu0ewvugkvgCHjsxKEeZfBY9XW0aQqGgdUgF5wHPZwm/LuE8w8AV8FufkwcITxb4nUkgeughROEnwFPJYrvyDc72m7hpWA6+C1RfCtwGkTavY7HgqqS551odprC7RLehycdO4xm+q12CG8MsmzobW+bBcbKFk493cQBDlYaaCBL+BjGCRbJEaDlwmlC2eKweCKR4wBLhU8NwFWVYTvNnuW9hVNAMt+hUWQcSLFKOC1f7R0cQi8DLa0QPtrhuYMaYLMVwnu7IHEyHgwyW3iccIelCvUEimHh9VwivB2YY3WQ4lRbzm61KcJLXSScRucqs4R/dVmvU9amc6A/9p4kXoOGLhJOnZYulJxdEfgBaDvoBrhvRPgLEO+yXu/E+NpLsIdXgEKtoX5ThI61FkoKm/L2I7WEZ4vQM8opnOCkhl/hF8HnEBRPwdcOMNCf8DJwUISmkc7tag5MKt+AULNXYKWacNpAyAghwcU8yZGbm6Xlsi4VcvbNrLbjLJji+J96fPV832HhMqPSlOGcX3huNEihSohHLhNMo3QxOzSnAo3OSsBMF4k+DNqCdXztQYWlVLWwz+GCc0BfMBm8MTMeXwQ+OlAwOVqzhVJ+dtmKRATVtSxwkGAqJNollMKktGB8Dj0ZGFrXzzlA9BXu4WRQYIYrp+cuJwv7SrWoTIx2eCjvf8dMH1aPkUe3QrJgSoVt5Nk6gztAyBZOtkEoNWoy7Ayvxwv9JRJkCi81umQEYC+EUgxAtXC5Vp7ISGK+GRhq0XX8EkpZKO2FF/lpEwW6CqWQsKYIslTEiPAJwpo8/FGh7IS+1Gg3WCh5NI9JE55gsmCKBeaBs3ZlJvTeoF4mnfMbO0XxBkU38nk0pDzjFNfWMEF0OrvB7wP4bXefSVBKj8cGeZ7bPGKmqYiuq/J7qoEf4fX5mizhzQM8fgGHt92EsuPhz8YJJS+W8p9RSKXeh4TymojHMmUN9VoGj1vGwcRSoZ2yXgLW8N+beMI7zQFSLGdTIrzaP2AHR4rwEgPHpPz8XI6V9Ri90EOFwp4qSirkTfLTtpBj7zJZQ/2Ljjbk1U0SSvF9joFroJ2OITrW8VscqOQIE0xvjz9U+Y56i4pyKI0baHb2Aq8ck9llpdr12uADC87kG/RHtst6g4dZHZ//n+Rn0oyCfnJV9zKOcWCoV/d7fX4GRvESI/MtBluis1UcMdFM3YGHnmstrKK+VPtXgAEAvqzQGmJXJEEAAAAASUVORK5CYII="
+
+/***/ }),
+/* 93 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1617,11 +1585,11 @@ webpackJsonp([6,9],[
 		value: true
 	});
 
-	var _axios = __webpack_require__(16);
+	var _axios = __webpack_require__(31);
 
 	var _axios2 = _interopRequireDefault(_axios);
 
-	var _header = __webpack_require__(41);
+	var _header = __webpack_require__(15);
 
 	var _header2 = _interopRequireDefault(_header);
 
@@ -1666,117 +1634,108 @@ webpackJsonp([6,9],[
 	//
 	//
 	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
 
 	exports.default = {
 		data: function data() {
 			return {
-				hasnot_read_messages: [], //未读消息条数
-				has_read_messages: [] //已读消息条数
+				user_name: '',
+				user_avatar: '',
+				score: 0,
+				create_at: '',
+				topicsShow: false,
+				recent_topics: [],
+				repliesShow: false,
+				recent_replies: [],
+				collectShow: false,
+				topic_collect: []
 			};
 		},
-		mounted: function mounted() {
-			var _this = this;
-
-			if (this.loginStatus) {
-				// 获取当前用户的已读和未读消息
-				var rqdata = {
-					'accesstoken': this.userInfo.accesstoken
-				};
-				_axios2.default.get('https://cnodejs.org/api/v1/messages', {
-					params: rqdata
-				}).then(function (response) {
-					var d = response.data;
-					if (d.success) {
-						var _iteratorNormalCompletion = true;
-						var _didIteratorError = false;
-						var _iteratorError = undefined;
-
-						try {
-							for (var _iterator = d.data.has_read_messages[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-								var i = _step.value;
-
-								if (i.type === 'at') {
-									i['text_desc'] = '@中你';
-								} else if (i.type === 'reply') {
-									i['text_desc'] = '回复你';
-								}
-							}
-						} catch (err) {
-							_didIteratorError = true;
-							_iteratorError = err;
-						} finally {
-							try {
-								if (!_iteratorNormalCompletion && _iterator.return) {
-									_iterator.return();
-								}
-							} finally {
-								if (_didIteratorError) {
-									throw _iteratorError;
-								}
-							}
-						}
-
-						_this.has_read_messages = d.data.has_read_messages;
-						var _iteratorNormalCompletion2 = true;
-						var _didIteratorError2 = false;
-						var _iteratorError2 = undefined;
-
-						try {
-							for (var _iterator2 = d.data.hasnot_read_messages[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
-								var _i = _step2.value;
-
-								if (_i.type === 'at') {
-									_i['text_desc'] = '@中你';
-								} else if (_i.type === 'reply') {
-									_i['text_desc'] = '回复你';
-								}
-							}
-						} catch (err) {
-							_didIteratorError2 = true;
-							_iteratorError2 = err;
-						} finally {
-							try {
-								if (!_iteratorNormalCompletion2 && _iterator2.return) {
-									_iterator2.return();
-								}
-							} finally {
-								if (_didIteratorError2) {
-									throw _iteratorError2;
-								}
-							}
-						}
-
-						_this.hasnot_read_messages = d.data.hasnot_read_messages;
-					}
-				}).catch(function (error) {
-					console.log(error);
-				});
-
-				// 当用户进入页面标记以阅读
-				_axios2.default.post('https://cnodejs.org/api/v1/message/mark_all', {
-					'accesstoken': this.userInfo.accesstoken
-				}).then(function (response) {
-					if (response.data.success) {
-						console.log('标记阅读成功');
-						// 设置未阅读数为0
-						_this.$store.dispatch('setNotMessageCount', 0);
-					}
-				}).catch(function (error) {
-					console.log(error);
-				});
-			} else {
-				// 用户未登录返回登录页面
-				this.$router.push({
-					name: 'login'
-				});
-			}
+		watch: {
+			// 当在userhome内的子路有发生改变时调用
+			$route: 'getUserHome'
 		},
-		computed: {
-			loginStatus: function loginStatus() {
-				return this.$store.getters.getLoginState;
-			},
-			userInfo: function userInfo() {
-				return this.$store.getters.getUserInfo;
+		mounted: function mounted() {
+			this.getUserHome();
+		},
+		methods: {
+			// 用户参与主题
+			getUserHome: function getUserHome() {
+				var _this = this;
+
+				this.user_name = this.$route.params.username;
+				// 获取创建主题列表和参与话题列表
+				_axios2.default.get('https://cnodejs.org/api/v1/user/' + this.user_name).then(function (response) {
+					if (response.data.success) {
+						var d = response.data;
+						_this.user_avatar = d.data.avatar_url;
+						_this.score = d.data.score;
+						_this.create_at = d.data.create_at;
+						_this.recent_topics = d.data.recent_topics;
+						_this.recent_replies = d.data.recent_replies;
+						// 判断创建话题数和参与话题数，如果为0显示文案提示
+						_this.recent_topics.length === 0 ? _this.topicsShow = true : _this.topicsShow = false;
+						_this.recent_replies.length === 0 ? _this.repliesShow = true : _this.repliesShow = false;
+					}
+				}).catch(function (error) {
+					console.log(error);
+				});
+				// 获取收藏主题列表
+				_axios2.default.get('https://cnodejs.org/api/v1/topic_collect/' + this.user_name).then(function (response) {
+					if (response.data.success) {
+						var d = response.data;
+						_this.topic_collect = d.data;
+						_this.topic_collect.length === 0 ? _this.collectShow = true : _this.collectShow = false;
+					}
+				}).catch(function (error) {
+					console.log(error);
+				});
 			}
 		},
 		components: {
@@ -1785,78 +1744,163 @@ webpackJsonp([6,9],[
 	};
 
 /***/ }),
-/* 95 */
+/* 94 */
 /***/ (function(module, exports) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('div', [_c('nv-header'), _vm._v(" "), _c('div', {
-	    staticClass: "message"
+	    staticClass: "userhome"
 	  }, [_c('div', {
-	    staticClass: "unread"
+	    staticClass: "userInfo"
 	  }, [_c('div', {
-	    staticClass: "unread-title"
-	  }, [_vm._v("未读消息")]), _vm._v(" "), _c('div', {
-	    staticClass: "unread-box"
-	  }, [_vm._l((_vm.hasnot_read_messages), function(message) {
+	    staticClass: "userInfoTitle"
+	  }, [_vm._v("个人信息")]), _vm._v(" "), _c('div', {
+	    staticClass: "userInfoBox"
+	  }, [_c('div', {
+	    staticClass: "useravatar"
+	  }, [_c('img', {
+	    attrs: {
+	      "src": _vm.user_avatar
+	    }
+	  })]), _vm._v(" "), _c('div', {
+	    staticClass: "userbase"
+	  }, [_c('p', {
+	    staticClass: "name"
+	  }, [_vm._v(_vm._s(_vm.user_name))]), _vm._v(" "), _c('div', {
+	    staticClass: "baseinfo"
+	  }, [_c('span', {
+	    staticClass: "jifen"
+	  }, [_vm._v("积分：" + _vm._s(_vm.score))]), _vm._v(" "), _c('span', {
+	    staticClass: "lasttime"
+	  }, [_vm._v("注册时间：" + _vm._s(_vm._f("getDateTime")(_vm.create_at)))])])])])]), _vm._v(" "), _c('div', {
+	    staticClass: "userTopics"
+	  }, [_c('div', {
+	    staticClass: "userTopicsTitle"
+	  }, [_vm._v("创建主题")]), _vm._v(" "), _c('div', {
+	    staticClass: "userTopicsBox"
+	  }, [_vm._l((_vm.recent_topics), function(topic) {
 	    return _c('div', {
-	      staticClass: "passmessage-item"
+	      staticClass: "topicsitem clearfix"
 	    }, [_c('router-link', {
-	      attrs: {
-	        "to": {
-	          name: 'userhome',
-	          params: {
-	            username: message.author.loginname
-	          }
-	        }
-	      }
-	    }, [_vm._v(_vm._s(message.author.loginname))]), _vm._v("\n\t\t\t\t\t" + _vm._s(message.text_desc) + "\n\t\t\t\t\t"), _c('router-link', {
 	      attrs: {
 	        "to": {
 	          name: 'article',
 	          params: {
-	            id: message.topic.id
+	            id: topic.id
 	          }
 	        }
 	      }
-	    }, [_vm._v(_vm._s(message.topic.title))]), _vm._v(" "), _c('em', [_vm._v(_vm._s(_vm._f("getLastTime")(message.create_at)))])], 1)
-	  }), _vm._v(" "), (this.hasnot_read_messages.length === 0) ? _c('div', {
+	    }, [_c('a', {
+	      staticClass: "avatar",
+	      attrs: {
+	        "href": "javascript:void(0);"
+	      }
+	    }, [_c('img', {
+	      attrs: {
+	        "src": topic.author.avatar_url,
+	        "alt": topic.author.loginname
+	      }
+	    })]), _vm._v(" "), _c('div', {
+	      staticClass: "art-inf"
+	    }, [_c('a', {
+	      staticClass: "title"
+	    }, [_vm._v(_vm._s(topic.title))]), _vm._v(" "), _c('span', {
+	      staticClass: "last-time"
+	    }, [_vm._v(_vm._s(_vm._f("getLastTime")(topic.last_reply_at)))])])])], 1)
+	  }), _vm._v(" "), (_vm.topicsShow) ? _c('div', {
 	    staticClass: "nodata"
 	  }, [_c('div', {
 	    staticClass: "nodataimg"
-	  }), _vm._v("\n\t\t\t\t\t\t没有新消息\n\t\t\t\t")]) : _vm._e()], 2)]), _vm._v(" "), _c('div', {
-	    staticClass: "passmessage"
+	  }), _vm._v("\n\t\t\t\t\t还没有创建主题\n\t\t\t\t")]) : _vm._e()], 2)]), _vm._v(" "), _c('div', {
+	    staticClass: "userReplies"
 	  }, [_c('div', {
-	    staticClass: "passmessage-title"
-	  }, [_vm._v("过往消息")]), _vm._v(" "), _c('div', {
-	    staticClass: "passmessage-box"
-	  }, [_vm._l((_vm.has_read_messages), function(message) {
+	    staticClass: "userRepliesTitle"
+	  }, [_vm._v("参与主题")]), _vm._v(" "), _c('div', {
+	    staticClass: "userRepliesBox"
+	  }, [_vm._l((_vm.recent_replies), function(replies) {
 	    return _c('div', {
-	      staticClass: "passmessage-item"
+	      staticClass: "repliesitem clearfix"
 	    }, [_c('router-link', {
-	      attrs: {
-	        "to": {
-	          name: 'userhome',
-	          params: {
-	            username: message.author.loginname
-	          }
-	        }
-	      }
-	    }, [_vm._v(_vm._s(message.author.loginname))]), _vm._v("\n\t\t\t\t\t" + _vm._s(message.text_desc) + "\n\t\t\t\t\t"), _c('router-link', {
 	      attrs: {
 	        "to": {
 	          name: 'article',
 	          params: {
-	            id: message.topic.id
+	            id: replies.id
 	          }
 	        }
 	      }
-	    }, [_vm._v(_vm._s(message.topic.title))]), _vm._v(" "), _c('em', [_vm._v(_vm._s(_vm._f("getLastTime")(message.create_at)))])], 1)
-	  }), _vm._v(" "), (this.has_read_messages.length === 0) ? _c('div', {
+	    }, [_c('router-link', {
+	      staticClass: "avatar",
+	      attrs: {
+	        "to": {
+	          name: 'userhome',
+	          params: {
+	            username: replies.author.loginname
+	          }
+	        }
+	      }
+	    }, [_c('img', {
+	      attrs: {
+	        "src": replies.author.avatar_url,
+	        "alt": replies.author.loginname
+	      }
+	    })]), _vm._v(" "), _c('div', {
+	      staticClass: "art-inf"
+	    }, [_c('a', {
+	      staticClass: "title"
+	    }, [_vm._v(_vm._s(replies.title))]), _vm._v(" "), _c('span', {
+	      staticClass: "last-time"
+	    }, [_vm._v(_vm._s(_vm._f("getLastTime")(replies.last_reply_at)))])])], 1)], 1)
+	  }), _vm._v(" "), (_vm.repliesShow) ? _c('div', {
 	    staticClass: "nodata"
 	  }, [_c('div', {
 	    staticClass: "nodataimg"
-	  }), _vm._v("\n\t\t\t\t\t\t没有消息\n\t\t\t\t")]) : _vm._e()], 2)])])], 1)
+	  }), _vm._v("\n\t\t\t\t\t还没有参与主题讨论\n\t\t\t\t")]) : _vm._e()], 2)]), _vm._v(" "), _c('div', {
+	    staticClass: "userCollect"
+	  }, [_c('div', {
+	    staticClass: "userCollectTitle"
+	  }, [_vm._v("收藏主题")]), _vm._v(" "), _c('div', {
+	    staticClass: "userCollectBox"
+	  }, [_vm._l((_vm.topic_collect), function(collect) {
+	    return _c('div', {
+	      staticClass: "collectitem clearfix"
+	    }, [_c('router-link', {
+	      attrs: {
+	        "to": {
+	          name: 'article',
+	          params: {
+	            id: collect.id
+	          }
+	        }
+	      }
+	    }, [_c('router-link', {
+	      staticClass: "avatar",
+	      attrs: {
+	        "to": {
+	          name: 'userhome',
+	          params: {
+	            username: collect.author.loginname
+	          }
+	        }
+	      }
+	    }, [_c('img', {
+	      attrs: {
+	        "src": collect.author.avatar_url,
+	        "alt": collect.author.loginname
+	      }
+	    })]), _vm._v(" "), _c('div', {
+	      staticClass: "art-inf"
+	    }, [_c('a', {
+	      staticClass: "title"
+	    }, [_vm._v(_vm._s(collect.title))]), _vm._v(" "), _c('span', {
+	      staticClass: "last-time"
+	    }, [_vm._v(_vm._s(_vm._f("getLastTime")(collect.last_reply_at)))])])], 1)], 1)
+	  }), _vm._v(" "), (_vm.collectShow) ? _c('div', {
+	    staticClass: "nodata"
+	  }, [_c('div', {
+	    staticClass: "nodataimg"
+	  }), _vm._v("\n\t\t\t\t\t没有收藏主题\n\t\t\t\t")]) : _vm._e()], 2)])])], 1)
 	},staticRenderFns: []}
 
 /***/ })
-]);
+]));

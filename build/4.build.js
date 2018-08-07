@@ -1,35 +1,19 @@
-webpackJsonp([4,9],[
-/* 0 */,
-/* 1 */,
-/* 2 */,
-/* 3 */,
-/* 4 */,
-/* 5 */,
-/* 6 */,
-/* 7 */,
-/* 8 */,
-/* 9 */,
-/* 10 */,
-/* 11 */,
-/* 12 */,
-/* 13 */,
-/* 14 */,
-/* 15 */,
-/* 16 */
+webpackJsonp([4,10],Array(31).concat([
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(17);
+	module.exports = __webpack_require__(32);
 
 /***/ }),
-/* 17 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(18);
-	var bind = __webpack_require__(19);
-	var Axios = __webpack_require__(20);
-	var defaults = __webpack_require__(21);
+	var utils = __webpack_require__(33);
+	var bind = __webpack_require__(34);
+	var Axios = __webpack_require__(35);
+	var defaults = __webpack_require__(36);
 
 	/**
 	 * Create an instance of Axios
@@ -62,15 +46,15 @@ webpackJsonp([4,9],[
 	};
 
 	// Expose Cancel & CancelToken
-	axios.Cancel = __webpack_require__(38);
-	axios.CancelToken = __webpack_require__(39);
-	axios.isCancel = __webpack_require__(35);
+	axios.Cancel = __webpack_require__(53);
+	axios.CancelToken = __webpack_require__(54);
+	axios.isCancel = __webpack_require__(50);
 
 	// Expose all/spread
 	axios.all = function all(promises) {
 	  return Promise.all(promises);
 	};
-	axios.spread = __webpack_require__(40);
+	axios.spread = __webpack_require__(55);
 
 	module.exports = axios;
 
@@ -79,12 +63,12 @@ webpackJsonp([4,9],[
 
 
 /***/ }),
-/* 18 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var bind = __webpack_require__(19);
+	var bind = __webpack_require__(34);
 
 	/*global toString:true*/
 
@@ -384,7 +368,7 @@ webpackJsonp([4,9],[
 
 
 /***/ }),
-/* 19 */
+/* 34 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -401,17 +385,17 @@ webpackJsonp([4,9],[
 
 
 /***/ }),
-/* 20 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var defaults = __webpack_require__(21);
-	var utils = __webpack_require__(18);
-	var InterceptorManager = __webpack_require__(32);
-	var dispatchRequest = __webpack_require__(33);
-	var isAbsoluteURL = __webpack_require__(36);
-	var combineURLs = __webpack_require__(37);
+	var defaults = __webpack_require__(36);
+	var utils = __webpack_require__(33);
+	var InterceptorManager = __webpack_require__(47);
+	var dispatchRequest = __webpack_require__(48);
+	var isAbsoluteURL = __webpack_require__(51);
+	var combineURLs = __webpack_require__(52);
 
 	/**
 	 * Create a new instance of Axios
@@ -492,13 +476,13 @@ webpackJsonp([4,9],[
 
 
 /***/ }),
-/* 21 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
 
-	var utils = __webpack_require__(18);
-	var normalizeHeaderName = __webpack_require__(22);
+	var utils = __webpack_require__(33);
+	var normalizeHeaderName = __webpack_require__(37);
 
 	var PROTECTION_PREFIX = /^\)\]\}',?\n/;
 	var DEFAULT_CONTENT_TYPE = {
@@ -515,10 +499,10 @@ webpackJsonp([4,9],[
 	  var adapter;
 	  if (typeof XMLHttpRequest !== 'undefined') {
 	    // For browsers use XHR adapter
-	    adapter = __webpack_require__(23);
+	    adapter = __webpack_require__(38);
 	  } else if (typeof process !== 'undefined') {
 	    // For node use HTTP adapter
-	    adapter = __webpack_require__(23);
+	    adapter = __webpack_require__(38);
 	  }
 	  return adapter;
 	}
@@ -592,12 +576,12 @@ webpackJsonp([4,9],[
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)))
 
 /***/ }),
-/* 22 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(18);
+	var utils = __webpack_require__(33);
 
 	module.exports = function normalizeHeaderName(headers, normalizedName) {
 	  utils.forEach(headers, function processHeader(value, name) {
@@ -610,18 +594,18 @@ webpackJsonp([4,9],[
 
 
 /***/ }),
-/* 23 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
 
-	var utils = __webpack_require__(18);
-	var settle = __webpack_require__(24);
-	var buildURL = __webpack_require__(27);
-	var parseHeaders = __webpack_require__(28);
-	var isURLSameOrigin = __webpack_require__(29);
-	var createError = __webpack_require__(25);
-	var btoa = (typeof window !== 'undefined' && window.btoa && window.btoa.bind(window)) || __webpack_require__(30);
+	var utils = __webpack_require__(33);
+	var settle = __webpack_require__(39);
+	var buildURL = __webpack_require__(42);
+	var parseHeaders = __webpack_require__(43);
+	var isURLSameOrigin = __webpack_require__(44);
+	var createError = __webpack_require__(40);
+	var btoa = (typeof window !== 'undefined' && window.btoa && window.btoa.bind(window)) || __webpack_require__(45);
 
 	module.exports = function xhrAdapter(config) {
 	  return new Promise(function dispatchXhrRequest(resolve, reject) {
@@ -717,7 +701,7 @@ webpackJsonp([4,9],[
 	    // This is only done if running in a standard browser environment.
 	    // Specifically not if we're in a web worker, or react-native.
 	    if (utils.isStandardBrowserEnv()) {
-	      var cookies = __webpack_require__(31);
+	      var cookies = __webpack_require__(46);
 
 	      // Add xsrf header
 	      var xsrfValue = (config.withCredentials || isURLSameOrigin(config.url)) && config.xsrfCookieName ?
@@ -794,12 +778,12 @@ webpackJsonp([4,9],[
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)))
 
 /***/ }),
-/* 24 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var createError = __webpack_require__(25);
+	var createError = __webpack_require__(40);
 
 	/**
 	 * Resolve or reject a Promise based on response status.
@@ -825,12 +809,12 @@ webpackJsonp([4,9],[
 
 
 /***/ }),
-/* 25 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var enhanceError = __webpack_require__(26);
+	var enhanceError = __webpack_require__(41);
 
 	/**
 	 * Create an Error with the specified message, config, error code, and response.
@@ -848,7 +832,7 @@ webpackJsonp([4,9],[
 
 
 /***/ }),
-/* 26 */
+/* 41 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -873,12 +857,12 @@ webpackJsonp([4,9],[
 
 
 /***/ }),
-/* 27 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(18);
+	var utils = __webpack_require__(33);
 
 	function encode(val) {
 	  return encodeURIComponent(val).
@@ -947,12 +931,12 @@ webpackJsonp([4,9],[
 
 
 /***/ }),
-/* 28 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(18);
+	var utils = __webpack_require__(33);
 
 	/**
 	 * Parse headers into an object
@@ -990,12 +974,12 @@ webpackJsonp([4,9],[
 
 
 /***/ }),
-/* 29 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(18);
+	var utils = __webpack_require__(33);
 
 	module.exports = (
 	  utils.isStandardBrowserEnv() ?
@@ -1064,7 +1048,7 @@ webpackJsonp([4,9],[
 
 
 /***/ }),
-/* 30 */
+/* 45 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -1106,12 +1090,12 @@ webpackJsonp([4,9],[
 
 
 /***/ }),
-/* 31 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(18);
+	var utils = __webpack_require__(33);
 
 	module.exports = (
 	  utils.isStandardBrowserEnv() ?
@@ -1165,12 +1149,12 @@ webpackJsonp([4,9],[
 
 
 /***/ }),
-/* 32 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(18);
+	var utils = __webpack_require__(33);
 
 	function InterceptorManager() {
 	  this.handlers = [];
@@ -1223,15 +1207,15 @@ webpackJsonp([4,9],[
 
 
 /***/ }),
-/* 33 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(18);
-	var transformData = __webpack_require__(34);
-	var isCancel = __webpack_require__(35);
-	var defaults = __webpack_require__(21);
+	var utils = __webpack_require__(33);
+	var transformData = __webpack_require__(49);
+	var isCancel = __webpack_require__(50);
+	var defaults = __webpack_require__(36);
 
 	/**
 	 * Throws a `Cancel` if cancellation has been requested.
@@ -1308,12 +1292,12 @@ webpackJsonp([4,9],[
 
 
 /***/ }),
-/* 34 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(18);
+	var utils = __webpack_require__(33);
 
 	/**
 	 * Transform the data for a request or a response
@@ -1334,7 +1318,7 @@ webpackJsonp([4,9],[
 
 
 /***/ }),
-/* 35 */
+/* 50 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -1345,7 +1329,7 @@ webpackJsonp([4,9],[
 
 
 /***/ }),
-/* 36 */
+/* 51 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -1365,7 +1349,7 @@ webpackJsonp([4,9],[
 
 
 /***/ }),
-/* 37 */
+/* 52 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -1383,7 +1367,7 @@ webpackJsonp([4,9],[
 
 
 /***/ }),
-/* 38 */
+/* 53 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -1408,12 +1392,12 @@ webpackJsonp([4,9],[
 
 
 /***/ }),
-/* 39 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var Cancel = __webpack_require__(38);
+	var Cancel = __webpack_require__(53);
 
 	/**
 	 * A `CancelToken` is an object that can be used to request cancellation of an operation.
@@ -1471,7 +1455,7 @@ webpackJsonp([4,9],[
 
 
 /***/ }),
-/* 40 */
+/* 55 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -1504,21 +1488,6 @@ webpackJsonp([4,9],[
 
 
 /***/ }),
-/* 41 */,
-/* 42 */,
-/* 43 */,
-/* 44 */,
-/* 45 */,
-/* 46 */,
-/* 47 */,
-/* 48 */,
-/* 49 */,
-/* 50 */,
-/* 51 */,
-/* 52 */,
-/* 53 */,
-/* 54 */,
-/* 55 */,
 /* 56 */,
 /* 57 */,
 /* 58 */,
@@ -1539,11 +1508,11 @@ webpackJsonp([4,9],[
 	/* styles */
 	__webpack_require__(70)
 
-	var Component = __webpack_require__(14)(
+	var Component = __webpack_require__(13)(
 	  /* script */
 	  __webpack_require__(72),
 	  /* template */
-	  __webpack_require__(73),
+	  __webpack_require__(78),
 	  /* scopeId */
 	  null,
 	  /* cssModules */
@@ -1564,10 +1533,157 @@ webpackJsonp([4,9],[
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	if(content.locals) module.exports = content.locals;
 	// add the styles to the DOM
-	var update = __webpack_require__(12)("441a3599", content, true);
+	var update = __webpack_require__(11)("7c32847a", content, true);
 
 /***/ }),
 /* 71 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(10)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".login-con{margin:20px 5px 0;padding-top:3.5rem;background:#fff;border-radius:7px;font-size:14px}.login-con h2{padding:10px;background-color:#f6f6f6;border-radius:3px 3px 0 0}.login-con div{padding:10px}.login-con div p{padding:5px 0}.login-con div p input{width:90%;height:30px;padding:5px 10px;border:1px solid #ccc;border-radius:5px}.login-con div span{display:inline-block;padding:5px;margin-right:10px;background:#08c;color:#fff}", ""]);
+
+	// exports
+
+
+/***/ }),
+/* 72 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+
+	var _axios = __webpack_require__(31);
+
+	var _axios2 = _interopRequireDefault(_axios);
+
+	var _header = __webpack_require__(15);
+
+	var _header2 = _interopRequireDefault(_header);
+
+	var _tips = __webpack_require__(73);
+
+	var _tips2 = _interopRequireDefault(_tips);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = {
+		data: function data() {
+			return {
+				strToken: ''
+			};
+		},
+		methods: {
+			login: function login() {
+				var _this = this;
+
+				if (this.strToken.trim() === '') {
+					this.$store.dispatch('setTipShow', true);
+					this.$store.dispatch('setTipContent', 'accessToken不能为空！');
+					return;
+				}
+				var rqdata = {
+					'accesstoken': this.strToken.trim()
+				};
+				_axios2.default.post('https://cnodejs.org/api/v1/accesstoken?accesstoken=' + this.strToken).then(function (response_info) {
+					if (response_info.data.success) {
+						var data = response_info.data;
+						// 登入成功改变isLogin的状态为true
+						_this.$store.dispatch('isLogin');
+						var userInfo = {
+							'name': data.loginname,
+							'avatar': data.avatar_url,
+							'id': data.id,
+							'accesstoken': _this.strToken.trim()
+						};
+						_this.$store.dispatch('setUserInfo', userInfo);
+						// 登录成功记录账户信息存放至localStorage已备下次自动登录
+						localStorage.setItem("cnode_accesstoken", userInfo.accesstoken);
+						localStorage.setItem("cnode_avatar", userInfo.avatar);
+						localStorage.setItem("cnode_id", userInfo.id);
+						localStorage.setItem("cnode_name", userInfo.name);
+						// 获取未读消息，并设置vuex
+						_axios2.default.get('https://cnodejs.org/api/v1/message/count?accesstoken=' + _this.strToken.trim()).then(function (response_count) {
+							if (response_count.data.success) {
+								_this.$store.dispatch('setNotMessageCount', response_count.data.data);
+								window.history.back();
+							}
+						}).catch(function (error) {
+							console.log(error);
+						});
+					} else {
+						// 失败
+					}
+				}).catch(function (error) {
+					console.log(error);
+					_this.$store.dispatch('setTipShow', true);
+					_this.$store.dispatch('setTipContent', '错误的accessToken!');
+				});
+			}
+		},
+		components: {
+			nvHeader: _header2.default,
+			tips: _tips2.default
+		}
+	}; //
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+
+/***/ }),
+/* 73 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	
+	/* styles */
+	__webpack_require__(74)
+
+	var Component = __webpack_require__(13)(
+	  /* script */
+	  __webpack_require__(76),
+	  /* template */
+	  __webpack_require__(77),
+	  /* scopeId */
+	  null,
+	  /* cssModules */
+	  null
+	)
+
+	module.exports = Component.exports
+
+
+/***/ }),
+/* 74 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(75);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	if(content.locals) module.exports = content.locals;
+	// add the styles to the DOM
+	var update = __webpack_require__(11)("441a3599", content, true);
+
+/***/ }),
+/* 75 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(10)();
@@ -1581,7 +1697,7 @@ webpackJsonp([4,9],[
 
 
 /***/ }),
-/* 72 */
+/* 76 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -1617,7 +1733,7 @@ webpackJsonp([4,9],[
 	};
 
 /***/ }),
-/* 73 */
+/* 77 */
 /***/ (function(module, exports) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -1636,715 +1752,37 @@ webpackJsonp([4,9],[
 	},staticRenderFns: []}
 
 /***/ }),
-/* 74 */,
-/* 75 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	
-	/* styles */
-	__webpack_require__(76)
-
-	var Component = __webpack_require__(14)(
-	  /* script */
-	  __webpack_require__(78),
-	  /* template */
-	  __webpack_require__(84),
-	  /* scopeId */
-	  null,
-	  /* cssModules */
-	  null
-	)
-
-	module.exports = Component.exports
-
-
-/***/ }),
-/* 76 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(77);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	if(content.locals) module.exports = content.locals;
-	// add the styles to the DOM
-	var update = __webpack_require__(12)("736d9d8b", content, true);
-
-/***/ }),
-/* 77 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(10)();
-	// imports
-
-
-	// module
-	exports.push([module.id, ".article{overflow:hidden;margin:3rem 5px 0}.article>div{margin-top:10px;background:#fff;border-radius:7px}.article .articlebox{padding:10px}.article .articlebox .articletitle h2{font-size:20px}.article .articlebox .articletitle h2 span{display:inline-block;margin-left:10px;padding:3px 5px;background:#80bd01;color:#000;font-size:12px;border-radius:2px}.article .articlebox .articletitle h2 .on-collection{background:#909090;color:#fff}.article .articlebox .articletitle>div span{display:inlin-block;margin-right:10px;font-size:12px;color:#838383}.article .articlebox .articletitle>div .edit{width:40px;padding:3px 5px;background:#80bd01;color:#000;font-size:12px;border-radius:2px}.article .articlebox .articlecontent{margin-top:10px;font-size:15px;line-height:23px}.article .articlebox .articlecontent img{width:20rem}.article .articlereplies{width:100%;margin-bottom:20px}.article .articlereplies>div{width:100%;padding:10px}.article .articlereplies li{padding:10px;border-top:1px solid #f0f0f0}.article .articlereplies li .author_content{position:relative}.article .articlereplies li .author_content img,.article .articlereplies li .author_content span{float:left;display:inline-block}.article .articlereplies li .author_content span{margin-left:10px;line-height:2rem}.article .articlereplies li .author_content img{width:30px;height:30px}.article .articlereplies li .author_content .re-time{color:#08c}.article .articlereplies li .author_content .replyhandle{position:absolute;right:0;top:0}.article .articlereplies li .author_content .replyhandle em{padding:3px;color:#fff;border-radius:2px}.article .articlereplies li .author_content .replyhandle .upbtn{background:#a1afc9}.article .articlereplies li .author_content .replyhandle .isupbtn{background:#159f5c}.article .articlereplies li .author_content .replyhandle .deletebtn{background:#dd4f43}.article .articlereplies li .author_content .replyhandle .replybtn{background:#ffce42}.article .articlereplies li .repliescon{margin-top:10px}.article .articlereplies li .repliescon .repliescontent{overflow:scroll;background:#f0f0f0;padding:5px 2px;border-radius:5px}.article .recommentbox{width:100%;margin-bottom:20px;padding-top:.3rem}.article .recommentbox p{width:100%;height:1rem;margin-left:5%;color:#08c;font-size:.8rem;line-height:1rem}", ""]);
-
-	// exports
-
-
-/***/ }),
 /* 78 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-
-	var _axios = __webpack_require__(16);
-
-	var _axios2 = _interopRequireDefault(_axios);
-
-	var _header = __webpack_require__(41);
-
-	var _header2 = _interopRequireDefault(_header);
-
-	var _tips = __webpack_require__(69);
-
-	var _tips2 = _interopRequireDefault(_tips);
-
-	var _reply = __webpack_require__(79);
-
-	var _reply2 = _interopRequireDefault(_reply);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-
-	exports.default = {
-		data: function data() {
-			return {
-				art: {
-					'title': '',
-					'content': '',
-					'createtime': '',
-					'author_name': '',
-					'author_avatar': '',
-					'visit_count': 0,
-					'reply_count': 0
-				},
-				conllection: {
-					'is': false,
-					'title': '收藏'
-				},
-				replythisid: ''
-			};
-		},
-		mounted: function mounted() {
-			var _this = this;
-
-			var artid = this.$route.params.id;
-			// 获取文章详情
-			_axios2.default.get('https://cnodejs.org/api/v1/topic/' + artid).then(function (response) {
-				if (response.data.success) {
-					var D = response.data.data;
-					_this.art.title = D.title;
-					_this.art.content = D.content;
-					_this.art.createtime = D.create_at;
-					_this.art.author_name = D.author.loginname;
-					_this.art.author_avatar = D.author.avatar_url;
-					_this.art.visit_count = D.visit_count;
-					_this.art.reply_count = D.reply_count;
-					// 给每一条评论添加一个不点亮的赞效果，添加完属性在赋值
-					var _iteratorNormalCompletion = true;
-					var _didIteratorError = false;
-					var _iteratorError = undefined;
-
-					try {
-						for (var _iterator = D.replies[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-							var replies = _step.value;
-
-							replies.isup = false;
-						}
-					} catch (err) {
-						_didIteratorError = true;
-						_iteratorError = err;
-					} finally {
-						try {
-							if (!_iteratorNormalCompletion && _iterator.return) {
-								_iterator.return();
-							}
-						} finally {
-							if (_didIteratorError) {
-								throw _iteratorError;
-							}
-						}
-					}
-
-					;
-					_this.replies = _this.$store.dispatch('setReplies', D.replies);
-					// 判断本条回复是否自己已点赞
-					if (_this.LoginState) {
-						// 循环评论
-						var _iteratorNormalCompletion2 = true;
-						var _didIteratorError2 = false;
-						var _iteratorError2 = undefined;
-
-						try {
-							for (var _iterator2 = _this.replies[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
-								var repliesItem = _step2.value;
-
-								// 循环评论的回复
-								var _iteratorNormalCompletion3 = true;
-								var _didIteratorError3 = false;
-								var _iteratorError3 = undefined;
-
-								try {
-									for (var _iterator3 = repliesItem.ups[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
-										var repliesItemUps = _step3.value;
-
-										if (repliesItemUps === _this.userInfo.id) {
-											// console.log('已赞');
-											repliesItem.isup = true;
-											break;
-										}
-									}
-								} catch (err) {
-									_didIteratorError3 = true;
-									_iteratorError3 = err;
-								} finally {
-									try {
-										if (!_iteratorNormalCompletion3 && _iterator3.return) {
-											_iterator3.return();
-										}
-									} finally {
-										if (_didIteratorError3) {
-											throw _iteratorError3;
-										}
-									}
-								}
-							}
-						} catch (err) {
-							_didIteratorError2 = true;
-							_iteratorError2 = err;
-						} finally {
-							try {
-								if (!_iteratorNormalCompletion2 && _iterator2.return) {
-									_iterator2.return();
-								}
-							} finally {
-								if (_didIteratorError2) {
-									throw _iteratorError2;
-								}
-							}
-						}
-					}
-				}
-			}).catch(function (error) {
-				console.log(error);
-			});
-			// 更改收藏状态
-			if (this.LoginState) {
-				// 登录状态，判断是否收藏本文章
-				_axios2.default.get('https://cnodejs.org/api/v1/topic_collect/' + this.userInfo.loginname).then(function (response) {
-					if (response.data.success) {
-						var d = response.data;
-						var _iteratorNormalCompletion4 = true;
-						var _didIteratorError4 = false;
-						var _iteratorError4 = undefined;
-
-						try {
-							for (var _iterator4 = d.data[Symbol.iterator](), _step4; !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
-								var i = _step4.value;
-
-								if (artid === i.id) {
-									console.log('用户已收藏文章');
-									_this.conllection.is = true;
-									_this.conllection.title = '取消收藏';
-									break;
-								}
-							}
-						} catch (err) {
-							_didIteratorError4 = true;
-							_iteratorError4 = err;
-						} finally {
-							try {
-								if (!_iteratorNormalCompletion4 && _iterator4.return) {
-									_iterator4.return();
-								}
-							} finally {
-								if (_didIteratorError4) {
-									throw _iteratorError4;
-								}
-							}
-						}
-					}
-				}).catch(function (error) {
-					console.log(error);
-				});
-			}
-			// 主题加载完成自动返回顶部
-			window.scroll(0, 0);
-		},
-		computed: {
-			// 登陆状态
-			LoginState: function LoginState() {
-				return this.$store.getters.getLoginState;
-			},
-
-			// 登陆用户信息
-			userInfo: function userInfo() {
-				return this.$store.getters.getUserInfo;
-			},
-
-			// 获取文章评论
-			replies: function replies() {
-				return this.$store.getters.getReplies;
-			},
-
-			// 获取文章id
-			article_Id: function article_Id() {
-				return this.$route.params.id;
-			}
-		},
-		methods: {
-			// 收藏
-			collect: function collect() {
-				var _this2 = this;
-
-				if (!this.LoginState) {
-					// 未登陆不能进行主题收藏
-					this.$store.dispatch('setTipShow', true);
-					this.$store.dispatch('setTipContent', '您还未登录，不能进行收藏！');
-					return;
-				}
-				if (this.conllection.is) {
-					// 已收藏，进行取消收藏操作
-					_axios2.default.post('https://cnodejs.org/api/v1/topic_collect/de_collect', {
-						accesstoken: this.userInfo.accesstoken,
-						topic_id: this.article_Id
-					}).then(function (response) {
-						if (response.data.success) {
-							_this2.conllection.is = false;
-							_this2.conllection.title = '收藏';
-						}
-					}).catch(function (error) {
-						console.log(error);
-					});
-				} else {
-					// 未收藏，进行收藏操作
-					_axios2.default.post('https://cnodejs.org/api/v1/topic_collect/collect', {
-						accesstoken: this.userInfo.accesstoken,
-						topic_id: this.article_Id
-					}).then(function (response) {
-						if (response.data.success) {
-							_this2.conllection.is = true;
-							_this2.conllection.title = '取消收藏';
-						}
-					}).catch(function (error) {
-						console.log(error);
-					});
-				}
-			},
-			// 编辑文章
-			editTopic: function editTopic() {
-				this.$router.push({ name: 'edittopic', params: { topicid: this.article_Id } });
-			},
-			// 是否能评论
-			replythis: function replythis(id) {
-				if (!this.LoginState) {
-					// 未登陆，不能进行评论,直接去登录页面
-					this.$router.push({ name: 'login' });
-					return;
-				}
-				this.replythisid = id;
-			},
-			deletereply: function deletereply(id) {
-				cnode暂时没有删除的api接口;
-				this.$store.dispatch('setTipShow', true);
-				this.$store.dispatch('setTipContent', '暂时不支持删除评论功能！');
-				return;
-			},
-			// 点赞
-			upreply: function upreply(index, replieId, loginname) {
-				var _this3 = this;
-
-				if (!this.LoginState) {
-					// 用户还没有登录，不能进行点赞功能
-					this.$store.dispatch('setTipShow', true);
-					this.$store.dispatch('setTipContent', '您还未登录，不能进行点赞！');
-					return;
-				}
-				if (loginname === this.userInfo.loginname) {
-					// 不能为自己的评论进行点赞功能
-					this.$store.dispatch('setTipShow', true);
-					this.$store.dispatch('setTipContent', '不能为自己点赞！');
-					return;
-				}
-				_axios2.default.post('https://cnodejs.org/api/v1/reply/' + replieId + '/ups', {
-					accesstoken: this.userInfo.accesstoken
-				}).then(function (response) {
-					if (response.data.success) {
-						var data = response.data;
-						if (data.action === 'up') {
-							// 点赞
-							_this3.replies[index].ups.push('');
-							_this3.replies[index].isup = true;
-						} else {
-							// 取消点赞
-							_this3.replies[index].ups.pop('');
-							_this3.replies[index].isup = false;
-						}
-					}
-				}).catch(function (error) {
-					console.log(error);
-				});
-			},
-			recommentClearId: function recommentClearId() {
-				this.replythisid = '';
-			}
-		},
-		components: {
-			nvHeader: _header2.default,
-			rePly: _reply2.default,
-			tips: _tips2.default
-		}
-	};
-
-/***/ }),
-/* 79 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	
-	/* styles */
-	__webpack_require__(80)
-
-	var Component = __webpack_require__(14)(
-	  /* script */
-	  __webpack_require__(82),
-	  /* template */
-	  __webpack_require__(83),
-	  /* scopeId */
-	  null,
-	  /* cssModules */
-	  null
-	)
-
-	module.exports = Component.exports
-
-
-/***/ }),
-/* 80 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(81);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	if(content.locals) module.exports = content.locals;
-	// add the styles to the DOM
-	var update = __webpack_require__(12)("99ecffc6", content, true);
-
-/***/ }),
-/* 81 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(10)();
-	// imports
-
-
-	// module
-	exports.push([module.id, ".reply-box{padding:.5rem 0}.reply-box .textinp{position:relative;margin-left:5%;height:3.6rem}.reply-box .textinp textarea{position:absolute;left:0;bottom:0;width:85%;height:2.8rem;padding:.2rem;font-size:.8rem;outline:none;resize:none}.reply-box .textsub{margin-left:5%}.reply-box .textsub .rebtn{display:inline-block;margin:5px 0 0;color:#fff;padding:5px 10px;font-size:15px;border-radius:3px;background-color:#08c}", ""]);
-
-	// exports
-
-
-/***/ }),
-/* 82 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-
-	var _axios = __webpack_require__(16);
-
-	var _axios2 = _interopRequireDefault(_axios);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	exports.default = {
-		// 本页面的评论， 回复文章id， 回复某条评论的id， 该评论id，回复某条评论的所有者
-		props: ['replycontent', 'artid', 'replyid', 'replythisid', 'replyto'],
-		data: function data() {
-			return {
-				repliescontent: '',
-				last_text: '<br/><br/>&lt;a href=https://github.com/cwsjoker/Cnode-vue-spa">来自炫酷吊炸天 Cnode</a>'
-			};
-		},
-		mounted: function mounted() {
-			if (this.replyid) {
-				this.repliescontent = '@' + this.replyto + ' ';
-			}
-			this.$refs.textarea.focus();
-		},
-		computed: {
-			// 登陆状态
-			LoginState: function LoginState() {
-				return this.$store.getters.getLoginState;
-			},
-
-			// 登陆用户信息
-			userInfo: function userInfo() {
-				return this.$store.getters.getUserInfo;
-			}
-		},
-		methods: {
-			recomment: function recomment() {
-				var _this = this;
-
-				// 判断是否登录，如果为登录去登录页面
-				if (this.LoginState) {
-					// 判断内容是否为空
-					if (this.repliescontent !== '') {
-						// 回复内容不为空
-						// const arr = window.location.href.split('/');
-						var id = '';
-						this.replyid ? id = this.replyid : id = '';
-						_axios2.default.post('https://cnodejs.org/api/v1/topic/' + this.artid + '/replies', {
-							accesstoken: this.userInfo.accesstoken,
-							content: this.repliescontent + this.last_text,
-							replies: id
-						}).then(function (response) {
-							if (response.data.success) {
-								// 评论成功
-								var time = new Date();
-								_axios2.default.get('https://cnodejs.org/api/v1/topic/' + _this.artid).then(function (response_reply) {
-									if (response_reply.data.success) {
-										var D = response_reply.data.data;
-										_this.$store.dispatch('setReplies', D.replies);
-										_this.repliescontent = '';
-										if (_this.replythisid) {
-											_this.$emit('recomment');
-										}
-									}
-								}).catch(function (error) {
-									console.log(error);
-								});
-							} else {
-								// 提交评论失败
-							}
-						}).catch(function (error) {
-							console.log(error);
-						});
-					} else {
-						// 内容为空
-						this.$store.dispatch('setTipShow', true);
-						this.$store.dispatch('setTipContent', '回复内容不能为空！');
-					}
-				} else {
-					this.$router.push({ name: 'login' });
-				}
-			}
-		}
-	}; //
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-
-/***/ }),
-/* 83 */
 /***/ (function(module, exports) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return _c('div', {
-	    staticClass: "reply-box"
-	  }, [_c('div', {
-	    staticClass: "textinp"
-	  }, [_c('textarea', {
+	  return _c('div', [_c('tips'), _vm._v(" "), _c('div', {
+	    staticClass: "login-con"
+	  }, [_c('h2', [_vm._v("登录")]), _vm._v(" "), _c('div', [_c('p', [_vm._v("Token:")]), _vm._v(" "), _c('p', [_c('input', {
 	    directives: [{
 	      name: "model",
 	      rawName: "v-model",
-	      value: (_vm.repliescontent),
-	      expression: "repliescontent"
+	      value: (_vm.strToken),
+	      expression: "strToken"
 	    }],
-	    ref: "textarea",
 	    attrs: {
-	      "placeholder": "请输入留言"
+	      "type": "text"
 	    },
 	    domProps: {
-	      "value": (_vm.repliescontent)
+	      "value": (_vm.strToken)
 	    },
 	    on: {
 	      "input": function($event) {
 	        if ($event.target.composing) { return; }
-	        _vm.repliescontent = $event.target.value
+	        _vm.strToken = $event.target.value
 	      }
 	    }
-	  })]), _vm._v(" "), _c('div', {
-	    staticClass: "textsub"
-	  }, [_c('span', {
-	    staticClass: "rebtn",
+	  })])]), _vm._v(" "), _c('div', [_c('span', {
 	    on: {
-	      "click": _vm.recomment
+	      "click": _vm.login
 	    }
-	  }, [_vm._v("回复")])])])
-	},staticRenderFns: []}
-
-/***/ }),
-/* 84 */
-/***/ (function(module, exports) {
-
-	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return _c('div', [_c('nv-header'), _vm._v(" "), _c('tips'), _vm._v(" "), _c('div', {
-	    staticClass: "article"
-	  }, [_c('div', {
-	    staticClass: "articlebox"
-	  }, [_c('div', {
-	    staticClass: "articletitle"
-	  }, [_c('h2', [_vm._v(_vm._s(_vm.art.title)), _c('span', {
-	    staticClass: "collection",
-	    class: {
-	      'on-collection': _vm.conllection.is
-	    },
-	    on: {
-	      "click": _vm.collect
-	    }
-	  }, [_vm._v(_vm._s(_vm.conllection.title))])]), _vm._v(" "), _c('div', [_c('span', [_vm._v("发布于" + _vm._s(_vm._f("getLastTime")(_vm.art.createtime)))]), _vm._v(" "), _c('span', [_vm._v("作者" + _vm._s(_vm.art.author_name))]), _vm._v(" "), _c('span', [_vm._v(_vm._s(_vm.art.reply_count) + "次回复")]), _vm._v(" "), _c('span', [_vm._v(_vm._s(_vm.art.visit_count) + "次浏览")]), _vm._v(" "), (_vm.LoginState && _vm.userInfo.loginname === _vm.art.author_name) ? _c('span', {
-	    staticClass: "edit",
-	    on: {
-	      "click": _vm.editTopic
-	    }
-	  }, [_vm._v("编辑")]) : _vm._e()])]), _vm._v(" "), _c('div', {
-	    staticClass: "articlecontent",
-	    domProps: {
-	      "innerHTML": _vm._s(_vm.art.content)
-	    }
-	  })]), _vm._v(" "), _c('div', {
-	    staticClass: "articlereplies"
-	  }, [_c('div', [_vm._v("共有"), _c('span', [_vm._v(_vm._s(_vm.art.reply_count))]), _vm._v("条回复")]), _vm._v(" "), _c('ul', _vm._l((_vm.replies), function(reitem, index) {
-	    return _c('li', [_c('div', {
-	      staticClass: "author_content clearfix"
-	    }, [_c('router-link', {
-	      attrs: {
-	        "to": {
-	          name: 'userhome',
-	          params: {
-	            username: reitem.author.loginname
-	          }
-	        }
-	      }
-	    }, [_c('img', {
-	      attrs: {
-	        "src": reitem.author.avatar_url,
-	        "alt": reitem.author.loginname
-	      }
-	    })]), _vm._v(" "), _c('span', [_vm._v(_vm._s(reitem.author.loginname))]), _vm._v(" "), _c('span', {
-	      staticClass: "re-time"
-	    }, [_vm._v(_vm._s(index + 1) + "楼" + _vm._s(_vm._f("getLastTime")(reitem.create_at)))]), _vm._v(" "), _c('div', {
-	      staticClass: "replyhandle"
-	    }, [_c('em', {
-	      staticClass: "upbtn",
-	      class: {
-	        'isupbtn': reitem.isup
-	      },
-	      on: {
-	        "click": function($event) {
-	          _vm.upreply(index, reitem.id, reitem.author.loginname)
-	        }
-	      }
-	    }, [_vm._v("赞" + _vm._s(reitem.ups.length))]), _vm._v(" "), (_vm.userInfo.loginname === reitem.author.loginname) ? _c('em', {
-	      staticClass: "deletebtn",
-	      on: {
-	        "click": function($event) {
-	          _vm.deletereply(reitem.id)
-	        }
-	      }
-	    }, [_vm._v("删")]) : _vm._e(), _vm._v(" "), _c('em', {
-	      staticClass: "replybtn",
-	      on: {
-	        "click": function($event) {
-	          _vm.replythis(reitem.id)
-	        }
-	      }
-	    }, [_vm._v("回")])])], 1), _vm._v(" "), _c('div', {
-	      staticClass: "repliescon"
-	    }, [_c('div', {
-	      staticClass: "repliescontent",
-	      domProps: {
-	        "innerHTML": _vm._s(reitem.content)
-	      }
-	    })]), _vm._v(" "), (_vm.replythisid === reitem.id) ? _c('re-ply', {
-	      attrs: {
-	        "replycontent": _vm.replies,
-	        "artid": _vm.article_Id,
-	        "replyid": reitem.id,
-	        "replythisid": _vm.replythisid,
-	        "replyto": reitem.author.loginname
-	      },
-	      on: {
-	        "recomment": _vm.recommentClearId
-	      }
-	    }) : _vm._e()], 1)
-	  }))]), _vm._v(" "), _c('div', {
-	    staticClass: "recommentbox"
-	  }, [_c('p', [_vm._v("留下你的足迹:")]), _vm._v(" "), _c('re-ply', {
-	    attrs: {
-	      "replycontent": _vm.replies,
-	      "artid": _vm.article_Id
-	    }
-	  })], 1)])], 1)
+	  }, [_vm._v("登录")])])])], 1)
 	},staticRenderFns: []}
 
 /***/ })
-]);
+]));

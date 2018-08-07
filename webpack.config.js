@@ -36,7 +36,7 @@ module.exports = {
     path: BUILD_PATH,
     filename: '[name].js',
     // 指向异步加载的路径
-    // 博客异步加载地址
+    // github异步加载地址
     // publicPath :  'http://localhost:8080/own/' + 'build/',
     publicPath :  '/myHomepage/build/',
     // 异步加载地址

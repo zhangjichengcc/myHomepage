@@ -11,7 +11,11 @@
 	export default {
 		data : function() {
 			return {
-				
+				global: {
+					userName: 'zhangjichengcc',
+					psd: '39104930',
+					login: false,
+				}
 			}
 		},
 		computed : {
@@ -26,8 +30,16 @@
 	}
 </script>
 <style lang="sass">
+	.r {
+		width: 100%;
+		height: 100%;
+		padding-top: 52px;
+		position: absolute;
+		box-sizing: border-box;
+		transition: transform .3s ease;
+		transform: translateX(0);
+	}
 	.fade-enter-active {
-		transition: all 3s ease;
 		transform: translateX(-100%);
 	}
 	// .fade-enter, .fade-leave-active {
@@ -47,11 +59,5 @@
 		/*transform: translateX(-300px);*/
 		/*position: absolute;*/
 		/*transition: all .9s cubiz-bezier(.55, 0, .1, 1);*/
-	}
-	.r {
-		width: 100%;
-		height: 100%;
-		padding-top: 52px;
-		position: absolute;
 	}
 </style>

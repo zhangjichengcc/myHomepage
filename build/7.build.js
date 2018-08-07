@@ -1,35 +1,19 @@
-webpackJsonp([7,9],[
-/* 0 */,
-/* 1 */,
-/* 2 */,
-/* 3 */,
-/* 4 */,
-/* 5 */,
-/* 6 */,
-/* 7 */,
-/* 8 */,
-/* 9 */,
-/* 10 */,
-/* 11 */,
-/* 12 */,
-/* 13 */,
-/* 14 */,
-/* 15 */,
-/* 16 */
+webpackJsonp([7,10],Array(31).concat([
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(17);
+	module.exports = __webpack_require__(32);
 
 /***/ }),
-/* 17 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(18);
-	var bind = __webpack_require__(19);
-	var Axios = __webpack_require__(20);
-	var defaults = __webpack_require__(21);
+	var utils = __webpack_require__(33);
+	var bind = __webpack_require__(34);
+	var Axios = __webpack_require__(35);
+	var defaults = __webpack_require__(36);
 
 	/**
 	 * Create an instance of Axios
@@ -62,15 +46,15 @@ webpackJsonp([7,9],[
 	};
 
 	// Expose Cancel & CancelToken
-	axios.Cancel = __webpack_require__(38);
-	axios.CancelToken = __webpack_require__(39);
-	axios.isCancel = __webpack_require__(35);
+	axios.Cancel = __webpack_require__(53);
+	axios.CancelToken = __webpack_require__(54);
+	axios.isCancel = __webpack_require__(50);
 
 	// Expose all/spread
 	axios.all = function all(promises) {
 	  return Promise.all(promises);
 	};
-	axios.spread = __webpack_require__(40);
+	axios.spread = __webpack_require__(55);
 
 	module.exports = axios;
 
@@ -79,12 +63,12 @@ webpackJsonp([7,9],[
 
 
 /***/ }),
-/* 18 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var bind = __webpack_require__(19);
+	var bind = __webpack_require__(34);
 
 	/*global toString:true*/
 
@@ -384,7 +368,7 @@ webpackJsonp([7,9],[
 
 
 /***/ }),
-/* 19 */
+/* 34 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -401,17 +385,17 @@ webpackJsonp([7,9],[
 
 
 /***/ }),
-/* 20 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var defaults = __webpack_require__(21);
-	var utils = __webpack_require__(18);
-	var InterceptorManager = __webpack_require__(32);
-	var dispatchRequest = __webpack_require__(33);
-	var isAbsoluteURL = __webpack_require__(36);
-	var combineURLs = __webpack_require__(37);
+	var defaults = __webpack_require__(36);
+	var utils = __webpack_require__(33);
+	var InterceptorManager = __webpack_require__(47);
+	var dispatchRequest = __webpack_require__(48);
+	var isAbsoluteURL = __webpack_require__(51);
+	var combineURLs = __webpack_require__(52);
 
 	/**
 	 * Create a new instance of Axios
@@ -492,13 +476,13 @@ webpackJsonp([7,9],[
 
 
 /***/ }),
-/* 21 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
 
-	var utils = __webpack_require__(18);
-	var normalizeHeaderName = __webpack_require__(22);
+	var utils = __webpack_require__(33);
+	var normalizeHeaderName = __webpack_require__(37);
 
 	var PROTECTION_PREFIX = /^\)\]\}',?\n/;
 	var DEFAULT_CONTENT_TYPE = {
@@ -515,10 +499,10 @@ webpackJsonp([7,9],[
 	  var adapter;
 	  if (typeof XMLHttpRequest !== 'undefined') {
 	    // For browsers use XHR adapter
-	    adapter = __webpack_require__(23);
+	    adapter = __webpack_require__(38);
 	  } else if (typeof process !== 'undefined') {
 	    // For node use HTTP adapter
-	    adapter = __webpack_require__(23);
+	    adapter = __webpack_require__(38);
 	  }
 	  return adapter;
 	}
@@ -592,12 +576,12 @@ webpackJsonp([7,9],[
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)))
 
 /***/ }),
-/* 22 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(18);
+	var utils = __webpack_require__(33);
 
 	module.exports = function normalizeHeaderName(headers, normalizedName) {
 	  utils.forEach(headers, function processHeader(value, name) {
@@ -610,18 +594,18 @@ webpackJsonp([7,9],[
 
 
 /***/ }),
-/* 23 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
 
-	var utils = __webpack_require__(18);
-	var settle = __webpack_require__(24);
-	var buildURL = __webpack_require__(27);
-	var parseHeaders = __webpack_require__(28);
-	var isURLSameOrigin = __webpack_require__(29);
-	var createError = __webpack_require__(25);
-	var btoa = (typeof window !== 'undefined' && window.btoa && window.btoa.bind(window)) || __webpack_require__(30);
+	var utils = __webpack_require__(33);
+	var settle = __webpack_require__(39);
+	var buildURL = __webpack_require__(42);
+	var parseHeaders = __webpack_require__(43);
+	var isURLSameOrigin = __webpack_require__(44);
+	var createError = __webpack_require__(40);
+	var btoa = (typeof window !== 'undefined' && window.btoa && window.btoa.bind(window)) || __webpack_require__(45);
 
 	module.exports = function xhrAdapter(config) {
 	  return new Promise(function dispatchXhrRequest(resolve, reject) {
@@ -717,7 +701,7 @@ webpackJsonp([7,9],[
 	    // This is only done if running in a standard browser environment.
 	    // Specifically not if we're in a web worker, or react-native.
 	    if (utils.isStandardBrowserEnv()) {
-	      var cookies = __webpack_require__(31);
+	      var cookies = __webpack_require__(46);
 
 	      // Add xsrf header
 	      var xsrfValue = (config.withCredentials || isURLSameOrigin(config.url)) && config.xsrfCookieName ?
@@ -794,12 +778,12 @@ webpackJsonp([7,9],[
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)))
 
 /***/ }),
-/* 24 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var createError = __webpack_require__(25);
+	var createError = __webpack_require__(40);
 
 	/**
 	 * Resolve or reject a Promise based on response status.
@@ -825,12 +809,12 @@ webpackJsonp([7,9],[
 
 
 /***/ }),
-/* 25 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var enhanceError = __webpack_require__(26);
+	var enhanceError = __webpack_require__(41);
 
 	/**
 	 * Create an Error with the specified message, config, error code, and response.
@@ -848,7 +832,7 @@ webpackJsonp([7,9],[
 
 
 /***/ }),
-/* 26 */
+/* 41 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -873,12 +857,12 @@ webpackJsonp([7,9],[
 
 
 /***/ }),
-/* 27 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(18);
+	var utils = __webpack_require__(33);
 
 	function encode(val) {
 	  return encodeURIComponent(val).
@@ -947,12 +931,12 @@ webpackJsonp([7,9],[
 
 
 /***/ }),
-/* 28 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(18);
+	var utils = __webpack_require__(33);
 
 	/**
 	 * Parse headers into an object
@@ -990,12 +974,12 @@ webpackJsonp([7,9],[
 
 
 /***/ }),
-/* 29 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(18);
+	var utils = __webpack_require__(33);
 
 	module.exports = (
 	  utils.isStandardBrowserEnv() ?
@@ -1064,7 +1048,7 @@ webpackJsonp([7,9],[
 
 
 /***/ }),
-/* 30 */
+/* 45 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -1106,12 +1090,12 @@ webpackJsonp([7,9],[
 
 
 /***/ }),
-/* 31 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(18);
+	var utils = __webpack_require__(33);
 
 	module.exports = (
 	  utils.isStandardBrowserEnv() ?
@@ -1165,12 +1149,12 @@ webpackJsonp([7,9],[
 
 
 /***/ }),
-/* 32 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(18);
+	var utils = __webpack_require__(33);
 
 	function InterceptorManager() {
 	  this.handlers = [];
@@ -1223,15 +1207,15 @@ webpackJsonp([7,9],[
 
 
 /***/ }),
-/* 33 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(18);
-	var transformData = __webpack_require__(34);
-	var isCancel = __webpack_require__(35);
-	var defaults = __webpack_require__(21);
+	var utils = __webpack_require__(33);
+	var transformData = __webpack_require__(49);
+	var isCancel = __webpack_require__(50);
+	var defaults = __webpack_require__(36);
 
 	/**
 	 * Throws a `Cancel` if cancellation has been requested.
@@ -1308,12 +1292,12 @@ webpackJsonp([7,9],[
 
 
 /***/ }),
-/* 34 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(18);
+	var utils = __webpack_require__(33);
 
 	/**
 	 * Transform the data for a request or a response
@@ -1334,7 +1318,7 @@ webpackJsonp([7,9],[
 
 
 /***/ }),
-/* 35 */
+/* 50 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -1345,7 +1329,7 @@ webpackJsonp([7,9],[
 
 
 /***/ }),
-/* 36 */
+/* 51 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -1365,7 +1349,7 @@ webpackJsonp([7,9],[
 
 
 /***/ }),
-/* 37 */
+/* 52 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -1383,7 +1367,7 @@ webpackJsonp([7,9],[
 
 
 /***/ }),
-/* 38 */
+/* 53 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -1408,12 +1392,12 @@ webpackJsonp([7,9],[
 
 
 /***/ }),
-/* 39 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var Cancel = __webpack_require__(38);
+	var Cancel = __webpack_require__(53);
 
 	/**
 	 * A `CancelToken` is an object that can be used to request cancellation of an operation.
@@ -1471,7 +1455,7 @@ webpackJsonp([7,9],[
 
 
 /***/ }),
-/* 40 */
+/* 55 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -1504,21 +1488,6 @@ webpackJsonp([7,9],[
 
 
 /***/ }),
-/* 41 */,
-/* 42 */,
-/* 43 */,
-/* 44 */,
-/* 45 */,
-/* 46 */,
-/* 47 */,
-/* 48 */,
-/* 49 */,
-/* 50 */,
-/* 51 */,
-/* 52 */,
-/* 53 */,
-/* 54 */,
-/* 55 */,
 /* 56 */,
 /* 57 */,
 /* 58 */,
@@ -1532,110 +1501,11 @@ webpackJsonp([7,9],[
 /* 66 */,
 /* 67 */,
 /* 68 */,
-/* 69 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	
-	/* styles */
-	__webpack_require__(70)
-
-	var Component = __webpack_require__(14)(
-	  /* script */
-	  __webpack_require__(72),
-	  /* template */
-	  __webpack_require__(73),
-	  /* scopeId */
-	  null,
-	  /* cssModules */
-	  null
-	)
-
-	module.exports = Component.exports
-
-
-/***/ }),
-/* 70 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(71);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	if(content.locals) module.exports = content.locals;
-	// add the styles to the DOM
-	var update = __webpack_require__(12)("441a3599", content, true);
-
-/***/ }),
-/* 71 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(10)();
-	// imports
-
-
-	// module
-	exports.push([module.id, ".tips-cover{position:fixed;width:100%;height:100%;top:0;left:0;z-index:10000;background:rgba(0,0,0,.6);transition:opacity 3.2s linear}.tips-cover .alert{position:fixed;z-index:5000;width:85%;top:50%;left:50%;transform:translate(-50%,-50%);background-color:#fafafc;text-align:center;border-radius:3px;overflow:hidden;transition-property:transform,opacity!important}.tips-cover .alert .tipcon{padding:20px;font-size:15px;color:#888}.tips-cover .alert .ok{position:relative;line-height:42px;margin-top:20px;color:#0bb20c;font-size:17px;text-align:center}.tips-cover .alert-transition{opacity:1;webkit-transition-duration:.4s;transition-duration:.4s}.tips-leave{opacity:0}", ""]);
-
-	// exports
-
-
-/***/ }),
-/* 72 */
-/***/ (function(module, exports) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-
-	exports.default = {
-		computed: {
-			tipShow: function tipShow() {
-				return this.$store.getters.getTipShow;
-			},
-			tipShowContent: function tipShowContent() {
-				return this.$store.getters.getTipContent;
-			}
-		},
-		methods: {
-			isHide: function isHide() {
-				this.$store.dispatch('setTipShow', false);
-				this.$store.dispatch('setTipContent', '');
-			}
-		}
-
-	};
-
-/***/ }),
-/* 73 */
-/***/ (function(module, exports) {
-
-	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return (_vm.tipShow) ? _c('div', {
-	    staticClass: "tips-cover"
-	  }, [_c('div', {
-	    staticClass: "alert"
-	  }, [_c('div', {
-	    staticClass: "tipcon"
-	  }, [_vm._v(_vm._s(_vm.tipShowContent))]), _vm._v(" "), _c('div', {
-	    staticClass: "ok",
-	    on: {
-	      "click": _vm.isHide
-	    }
-	  }, [_vm._v("OK")])])]) : _vm._e()
-	},staticRenderFns: []}
-
-/***/ }),
+/* 69 */,
+/* 70 */,
+/* 71 */,
+/* 72 */,
+/* 73 */,
 /* 74 */,
 /* 75 */,
 /* 76 */,
@@ -1654,87 +1524,26 @@ webpackJsonp([7,9],[
 /* 89 */,
 /* 90 */,
 /* 91 */,
-/* 92 */,
+/* 92 */
+/***/ (function(module, exports) {
+
+	module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD4AAAA+CAYAAABzwahEAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpCQTU5MkRBMzVEMTYxMUU2OTQ2NkM0NDE1RTg2RjQxRiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpCQTU5MkRBNDVEMTYxMUU2OTQ2NkM0NDE1RTg2RjQxRiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkJBNTkyREExNUQxNjExRTY5NDY2QzQ0MTVFODZGNDFGIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkJBNTkyREEyNUQxNjExRTY5NDY2QzQ0MTVFODZGNDFGIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+VlHDsAAABGZJREFUeNrkm2doFEEUxyeWGHsPdgOJMTYiWLAXbKhBxfLBggohGhUUg4qIghXsLUKsiIkKISKoH2ygWKLYiTVqsGGsxBJLTEyM/8e+g/Pwttztzu5eHvwgl5vb3f/O7Mx7b96GlZeXi4poVTx/5OXl+WtTCUwBM0AXEAHywSmwHjxxi9iYmJh/RKlZNXAMHAC9WTRZc5AI7oGJbuxxLeHbQILK9+EgA/R07VD/j7Xh4a1llcFa0B9U59FQy+t7mkS+gHeg2A3CqafDdB6nH/gE6mu0ewvugkvgCHjsxKEeZfBY9XW0aQqGgdUgF5wHPZwm/LuE8w8AV8FufkwcITxb4nUkgeughROEnwFPJYrvyDc72m7hpWA6+C1RfCtwGkTavY7HgqqS551odprC7RLehycdO4xm+q12CG8MsmzobW+bBcbKFk493cQBDlYaaCBL+BjGCRbJEaDlwmlC2eKweCKR4wBLhU8NwFWVYTvNnuW9hVNAMt+hUWQcSLFKOC1f7R0cQi8DLa0QPtrhuYMaYLMVwnu7IHEyHgwyW3iccIelCvUEimHh9VwivB2YY3WQ4lRbzm61KcJLXSScRucqs4R/dVmvU9amc6A/9p4kXoOGLhJOnZYulJxdEfgBaDvoBrhvRPgLEO+yXu/E+NpLsIdXgEKtoX5ThI61FkoKm/L2I7WEZ4vQM8opnOCkhl/hF8HnEBRPwdcOMNCf8DJwUISmkc7tag5MKt+AULNXYKWacNpAyAghwcU8yZGbm6Xlsi4VcvbNrLbjLJji+J96fPV832HhMqPSlOGcX3huNEihSohHLhNMo3QxOzSnAo3OSsBMF4k+DNqCdXztQYWlVLWwz+GCc0BfMBm8MTMeXwQ+OlAwOVqzhVJ+dtmKRATVtSxwkGAqJNollMKktGB8Dj0ZGFrXzzlA9BXu4WRQYIYrp+cuJwv7SrWoTIx2eCjvf8dMH1aPkUe3QrJgSoVt5Nk6gztAyBZOtkEoNWoy7Ayvxwv9JRJkCi81umQEYC+EUgxAtXC5Vp7ISGK+GRhq0XX8EkpZKO2FF/lpEwW6CqWQsKYIslTEiPAJwpo8/FGh7IS+1Gg3WCh5NI9JE55gsmCKBeaBs3ZlJvTeoF4mnfMbO0XxBkU38nk0pDzjFNfWMEF0OrvB7wP4bXefSVBKj8cGeZ7bPGKmqYiuq/J7qoEf4fX5mizhzQM8fgGHt92EsuPhz8YJJS+W8p9RSKXeh4TymojHMmUN9VoGj1vGwcRSoZ2yXgLW8N+beMI7zQFSLGdTIrzaP2AHR4rwEgPHpPz8XI6V9Ri90EOFwp4qSirkTfLTtpBj7zJZQ/2Ljjbk1U0SSvF9joFroJ2OITrW8VscqOQIE0xvjz9U+Y56i4pyKI0baHb2Aq8ck9llpdr12uADC87kG/RHtst6g4dZHZ//n+Rn0oyCfnJV9zKOcWCoV/d7fX4GRvESI/MtBluis1UcMdFM3YGHnmstrKK+VPtXgAEAvqzQGmJXJEEAAAAASUVORK5CYII="
+
+/***/ }),
 /* 93 */,
 /* 94 */,
-/* 95 */,
-/* 96 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	var Component = __webpack_require__(14)(
-	  /* script */
-	  __webpack_require__(97),
-	  /* template */
-	  __webpack_require__(103),
-	  /* scopeId */
-	  null,
-	  /* cssModules */
-	  null
-	)
-
-	module.exports = Component.exports
-
-
-/***/ }),
-/* 97 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-
-	var _header = __webpack_require__(41);
-
-	var _header2 = _interopRequireDefault(_header);
-
-	var _topicbox = __webpack_require__(98);
-
-	var _topicbox2 = _interopRequireDefault(_topicbox);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	//
-	//
-	//
-	//
-	//
-	//
-
-	exports.default = {
-		mounted: function mounted() {
-			if (!this.LoginState) {
-				// 未登陆，跳转登陆页
-				this.$router.push({ name: 'login' });
-				return;
-			}
-		},
-		computed: {
-			// 登陆状态
-			LoginState: function LoginState() {
-				return this.$store.getters.getLoginState;
-			}
-		},
-		components: {
-			nvHeader: _header2.default,
-			topicBox: _topicbox2.default
-		}
-	};
-
-/***/ }),
-/* 98 */
+/* 95 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	
 	/* styles */
-	__webpack_require__(99)
+	__webpack_require__(96)
 
-	var Component = __webpack_require__(14)(
+	var Component = __webpack_require__(13)(
 	  /* script */
-	  __webpack_require__(101),
+	  __webpack_require__(98),
 	  /* template */
-	  __webpack_require__(102),
+	  __webpack_require__(99),
 	  /* scopeId */
 	  null,
 	  /* cssModules */
@@ -1745,20 +1554,20 @@ webpackJsonp([7,9],[
 
 
 /***/ }),
-/* 99 */
+/* 96 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(100);
+	var content = __webpack_require__(97);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	if(content.locals) module.exports = content.locals;
 	// add the styles to the DOM
-	var update = __webpack_require__(12)("686cc506", content, true);
+	var update = __webpack_require__(11)("692344c7", content, true);
 
 /***/ }),
-/* 100 */
+/* 97 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(10)();
@@ -1766,13 +1575,13 @@ webpackJsonp([7,9],[
 
 
 	// module
-	exports.push([module.id, ".createtopic-box{overflow:hidden;margin:0 5px;padding-top:4rem}.createtopic-box .createtopic-item{width:90%;height:auto;padding:15px 5%}.createtopic-box .createtopic-item select{width:30%;height:1.5rem;padding-left:20px;font-size:.8rem}.createtopic-box .createtopic-item input{width:100%;height:1.5rem;font-size:.8rem}.createtopic-box .createtopic-item textarea{width:100%;height:6rem;font-size:.8rem}.createtopic-box .createtopic-item .submit{display:inline-block;width:10%;height:1.5rem;background-color:#08c;color:#fff;font-size:.8rem;text-align:center;line-height:1.5rem}", ""]);
+	exports.push([module.id, ".message{overflow:hidden;margin:0 5px;padding:4rem 0 2rem}.message .passmessage,.message .unread{margin-top:5px}.message .passmessage .passmessage-title,.message .passmessage .unread-title,.message .unread .passmessage-title,.message .unread .unread-title{background:#fff;padding:10px;color:#80bd01;font-size:14px}.message .passmessage .passmessage-box,.message .passmessage .unread-box,.message .unread .passmessage-box,.message .unread .unread-box{margin-top:5px;padding-top:10px;background:#fff;opacity:.8}.message .passmessage .passmessage-box .passmessage-item,.message .passmessage .passmessage-box .unread-item,.message .passmessage .unread-box .passmessage-item,.message .passmessage .unread-box .unread-item,.message .unread .passmessage-box .passmessage-item,.message .unread .passmessage-box .unread-item,.message .unread .unread-box .passmessage-item,.message .unread .unread-box .unread-item{position:relative;padding:10px;background:#fff;border-bottom:1px solid #e1e1e1}.message .passmessage .passmessage-box .passmessage-item em,.message .passmessage .passmessage-box .unread-item em,.message .passmessage .unread-box .passmessage-item em,.message .passmessage .unread-box .unread-item em,.message .unread .passmessage-box .passmessage-item em,.message .unread .passmessage-box .unread-item em,.message .unread .unread-box .passmessage-item em,.message .unread .unread-box .unread-item em{position:absolute;right:10px;bottom:10px}.message .passmessage .passmessage-box .nodata,.message .passmessage .unread-box .nodata,.message .unread .passmessage-box .nodata,.message .unread .unread-box .nodata{position:relative;padding-top:40px;color:#a8b5c3;font-size:16px;text-align:center;line-height:40px}.message .passmessage .passmessage-box .nodata .nodataimg,.message .passmessage .unread-box .nodata .nodataimg,.message .unread .passmessage-box .nodata .nodataimg,.message .unread .unread-box .nodata .nodataimg{position:absolute;width:40px;height:40px;left:0;top:0;right:0;margin:auto;background:url(" + __webpack_require__(92) + ") no-repeat;background-size:100%}", ""]);
 
 	// exports
 
 
 /***/ }),
-/* 101 */
+/* 98 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1781,13 +1590,13 @@ webpackJsonp([7,9],[
 		value: true
 	});
 
-	var _axios = __webpack_require__(16);
+	var _axios = __webpack_require__(31);
 
 	var _axios2 = _interopRequireDefault(_axios);
 
-	var _tips = __webpack_require__(69);
+	var _header = __webpack_require__(15);
 
-	var _tips2 = _interopRequireDefault(_tips);
+	var _header2 = _interopRequireDefault(_header);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1814,190 +1623,213 @@ webpackJsonp([7,9],[
 	//
 	//
 	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
 
 	exports.default = {
-		props: ['topicId'],
 		data: function data() {
 			return {
-				topicType: 'share',
-				topicTitle: '',
-				topicContainer: ''
+				hasnot_read_messages: [], //未读消息条数
+				has_read_messages: [] //已读消息条数
 			};
 		},
 		mounted: function mounted() {
 			var _this = this;
 
-			if (this.topicId) {
-				// 修改主题
+			if (this.loginStatus) {
+				// 获取当前用户的已读和未读消息
 				var rqdata = {
-					mdrender: false
+					'accesstoken': this.userInfo.accesstoken
 				};
-				_axios2.default.get('https://cnodejs.org/api/v1/topic/' + this.topicId, {
+				_axios2.default.get('https://cnodejs.org/api/v1/messages', {
 					params: rqdata
 				}).then(function (response) {
-					var data = response.data;
-					if (data.success) {
-						_this.topicType = data.data.tab;
-						_this.topicTitle = data.data.title;
-						_this.topicContainer = data.data.content;
+					var d = response.data;
+					if (d.success) {
+						var _iteratorNormalCompletion = true;
+						var _didIteratorError = false;
+						var _iteratorError = undefined;
+
+						try {
+							for (var _iterator = d.data.has_read_messages[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+								var i = _step.value;
+
+								if (i.type === 'at') {
+									i['text_desc'] = '@中你';
+								} else if (i.type === 'reply') {
+									i['text_desc'] = '回复你';
+								}
+							}
+						} catch (err) {
+							_didIteratorError = true;
+							_iteratorError = err;
+						} finally {
+							try {
+								if (!_iteratorNormalCompletion && _iterator.return) {
+									_iterator.return();
+								}
+							} finally {
+								if (_didIteratorError) {
+									throw _iteratorError;
+								}
+							}
+						}
+
+						_this.has_read_messages = d.data.has_read_messages;
+						var _iteratorNormalCompletion2 = true;
+						var _didIteratorError2 = false;
+						var _iteratorError2 = undefined;
+
+						try {
+							for (var _iterator2 = d.data.hasnot_read_messages[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
+								var _i = _step2.value;
+
+								if (_i.type === 'at') {
+									_i['text_desc'] = '@中你';
+								} else if (_i.type === 'reply') {
+									_i['text_desc'] = '回复你';
+								}
+							}
+						} catch (err) {
+							_didIteratorError2 = true;
+							_iteratorError2 = err;
+						} finally {
+							try {
+								if (!_iteratorNormalCompletion2 && _iterator2.return) {
+									_iterator2.return();
+								}
+							} finally {
+								if (_didIteratorError2) {
+									throw _iteratorError2;
+								}
+							}
+						}
+
+						_this.hasnot_read_messages = d.data.hasnot_read_messages;
 					}
 				}).catch(function (error) {
 					console.log(error);
 				});
-			}
-		},
-		methods: {
-			submitTopic: function submitTopic() {
-				var _this2 = this;
 
-				if (this.LoginState) {
-					var title = this.topicTitle.trim(),
-					    content = this.topicContainer.trim();
-					if (title.length <= 10 || content === '') {
-						this.$store.dispatch('setTipShow', true);
-						this.$store.dispatch('setTipContent', '标题字少10个字以上或内容不能为空。');
-						return;
+				// 当用户进入页面标记以阅读
+				_axios2.default.post('https://cnodejs.org/api/v1/message/mark_all', {
+					'accesstoken': this.userInfo.accesstoken
+				}).then(function (response) {
+					if (response.data.success) {
+						console.log('标记阅读成功');
+						// 设置未阅读数为0
+						_this.$store.dispatch('setNotMessageCount', 0);
 					}
-					var url = '';
-					if (this.topicId) {
-						// 修改
-						url = 'https://cnodejs.org/api/v1/topics/update';
-					} else {
-						// 创建
-						url = 'https://cnodejs.org/api/v1/topics';
-					}
-					_axios2.default.post(url, {
-						'accesstoken': this.userInfo.accesstoken,
-						'title': title,
-						'tab': this.topicType,
-						'content': content,
-						'topic_id': this.topicId
-					}).then(function (response) {
-						var data = response.data;
-						if (data.success) {
-							_this2.$router.push({ name: 'article', params: { id: data.topic_id } });
-						}
-					}).catch(function (error) {
-						console.log(error);
-					});
-				} else {
-					this.$router.push({ name: 'login' });
-				}
+				}).catch(function (error) {
+					console.log(error);
+				});
+			} else {
+				// 用户未登录返回登录页面
+				this.$router.push({
+					name: 'login'
+				});
 			}
 		},
 		computed: {
-			// 登陆状态
-			LoginState: function LoginState() {
+			loginStatus: function loginStatus() {
 				return this.$store.getters.getLoginState;
 			},
-
-			// 登陆用户信息
 			userInfo: function userInfo() {
 				return this.$store.getters.getUserInfo;
 			}
 		},
 		components: {
-			tips: _tips2.default
+			nvHeader: _header2.default
 		}
 	};
 
 /***/ }),
-/* 102 */
+/* 99 */
 /***/ (function(module, exports) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return _c('div', [_c('tips'), _vm._v(" "), _c('div', {
-	    staticClass: "createtopic-box"
+	  return _c('div', [_c('nv-header'), _vm._v(" "), _c('div', {
+	    staticClass: "message"
 	  }, [_c('div', {
-	    staticClass: "createtopic-item"
-	  }, [_c('select', {
-	    directives: [{
-	      name: "model",
-	      rawName: "v-model",
-	      value: (_vm.topicType),
-	      expression: "topicType"
-	    }],
-	    on: {
-	      "change": function($event) {
-	        var $$selectedVal = Array.prototype.filter.call($event.target.options, function(o) {
-	          return o.selected
-	        }).map(function(o) {
-	          var val = "_value" in o ? o._value : o.value;
-	          return val
-	        });
-	        _vm.topicType = $event.target.multiple ? $$selectedVal : $$selectedVal[0]
+	    staticClass: "unread"
+	  }, [_c('div', {
+	    staticClass: "unread-title"
+	  }, [_vm._v("未读消息")]), _vm._v(" "), _c('div', {
+	    staticClass: "unread-box"
+	  }, [_vm._l((_vm.hasnot_read_messages), function(message) {
+	    return _c('div', {
+	      staticClass: "passmessage-item"
+	    }, [_c('router-link', {
+	      attrs: {
+	        "to": {
+	          name: 'userhome',
+	          params: {
+	            username: message.author.loginname
+	          }
+	        }
 	      }
-	    }
-	  }, [_c('option', {
-	    attrs: {
-	      "value": "share"
-	    }
-	  }, [_vm._v("分享")]), _vm._v(" "), _c('option', {
-	    attrs: {
-	      "value": "ask"
-	    }
-	  }, [_vm._v("问答")]), _vm._v(" "), _c('option', {
-	    attrs: {
-	      "value": "jpb"
-	    }
-	  }, [_vm._v("招聘")])])]), _vm._v(" "), _c('div', {
-	    staticClass: "createtopic-item"
-	  }, [_c('input', {
-	    directives: [{
-	      name: "model",
-	      rawName: "v-model",
-	      value: (_vm.topicTitle),
-	      expression: "topicTitle"
-	    }],
-	    attrs: {
-	      "type": "text",
-	      "placeholder": "在此输入话题标题"
-	    },
-	    domProps: {
-	      "value": (_vm.topicTitle)
-	    },
-	    on: {
-	      "input": function($event) {
-	        if ($event.target.composing) { return; }
-	        _vm.topicTitle = $event.target.value
+	    }, [_vm._v(_vm._s(message.author.loginname))]), _vm._v("\n\t\t\t\t\t" + _vm._s(message.text_desc) + "\n\t\t\t\t\t"), _c('router-link', {
+	      attrs: {
+	        "to": {
+	          name: 'article',
+	          params: {
+	            id: message.topic.id
+	          }
+	        }
 	      }
-	    }
-	  })]), _vm._v(" "), _c('div', {
-	    staticClass: "createtopic-item"
-	  }, [_c('textarea', {
-	    directives: [{
-	      name: "model",
-	      rawName: "v-model",
-	      value: (_vm.topicContainer),
-	      expression: "topicContainer"
-	    }],
-	    attrs: {
-	      "placeholder": "在此输入话题内容"
-	    },
-	    domProps: {
-	      "value": (_vm.topicContainer)
-	    },
-	    on: {
-	      "input": function($event) {
-	        if ($event.target.composing) { return; }
-	        _vm.topicContainer = $event.target.value
+	    }, [_vm._v(_vm._s(message.topic.title))]), _vm._v(" "), _c('em', [_vm._v(_vm._s(_vm._f("getLastTime")(message.create_at)))])], 1)
+	  }), _vm._v(" "), (this.hasnot_read_messages.length === 0) ? _c('div', {
+	    staticClass: "nodata"
+	  }, [_c('div', {
+	    staticClass: "nodataimg"
+	  }), _vm._v("\n\t\t\t\t\t\t没有新消息\n\t\t\t\t")]) : _vm._e()], 2)]), _vm._v(" "), _c('div', {
+	    staticClass: "passmessage"
+	  }, [_c('div', {
+	    staticClass: "passmessage-title"
+	  }, [_vm._v("过往消息")]), _vm._v(" "), _c('div', {
+	    staticClass: "passmessage-box"
+	  }, [_vm._l((_vm.has_read_messages), function(message) {
+	    return _c('div', {
+	      staticClass: "passmessage-item"
+	    }, [_c('router-link', {
+	      attrs: {
+	        "to": {
+	          name: 'userhome',
+	          params: {
+	            username: message.author.loginname
+	          }
+	        }
 	      }
-	    }
-	  }), _vm._v(" "), _c('div', [_c('span', {
-	    staticClass: "submit",
-	    on: {
-	      "click": _vm.submitTopic
-	    }
-	  }, [_vm._v("提交")])])])])], 1)
-	},staticRenderFns: []}
-
-/***/ }),
-/* 103 */
-/***/ (function(module, exports) {
-
-	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return _c('div', [_c('nv-header'), _vm._v(" "), _c('topic-box')], 1)
+	    }, [_vm._v(_vm._s(message.author.loginname))]), _vm._v("\n\t\t\t\t\t" + _vm._s(message.text_desc) + "\n\t\t\t\t\t"), _c('router-link', {
+	      attrs: {
+	        "to": {
+	          name: 'article',
+	          params: {
+	            id: message.topic.id
+	          }
+	        }
+	      }
+	    }, [_vm._v(_vm._s(message.topic.title))]), _vm._v(" "), _c('em', [_vm._v(_vm._s(_vm._f("getLastTime")(message.create_at)))])], 1)
+	  }), _vm._v(" "), (this.has_read_messages.length === 0) ? _c('div', {
+	    staticClass: "nodata"
+	  }, [_c('div', {
+	    staticClass: "nodataimg"
+	  }), _vm._v("\n\t\t\t\t\t\t没有消息\n\t\t\t\t")]) : _vm._e()], 2)])])], 1)
 	},staticRenderFns: []}
 
 /***/ })
-]);
+]));

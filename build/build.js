@@ -1,4 +1,4 @@
-webpackJsonp([0,9],[
+webpackJsonp([0,10],[
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -12,15 +12,15 @@ webpackJsonp([0,9],[
 
 	var _router2 = _interopRequireDefault(_router);
 
-	var _store = __webpack_require__(107);
+	var _store = __webpack_require__(111);
 
 	var _store2 = _interopRequireDefault(_store);
 
-	var _App = __webpack_require__(109);
+	var _App = __webpack_require__(113);
 
 	var _App2 = _interopRequireDefault(_App);
 
-	var _index = __webpack_require__(114);
+	var _index = __webpack_require__(118);
 
 	var filters = _interopRequireWildcard(_index);
 
@@ -29,10 +29,10 @@ webpackJsonp([0,9],[
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	//引入css重置文件,基本的样式文件
-	__webpack_require__(115);
+	__webpack_require__(119);
 
 	// 引入px与rem的换算
-	__webpack_require__(116);
+	__webpack_require__(120);
 
 	// 遍历输出a过滤器的模块
 	Object.keys(filters).forEach(function (k) {
@@ -11476,50 +11476,55 @@ webpackJsonp([0,9],[
 
 	_vue2.default.use(_vueRouter2.default);
 
-	var articleList = function articleList(resolve) {
+	var home = function home(resolve) {
 	    __webpack_require__.e/* nsure */(1, function () {
 	        resolve(__webpack_require__(7));
 	    });
 	};
-	var about = function about(resolve) {
+	var articleList = function articleList(resolve) {
 	    __webpack_require__.e/* nsure */(2, function () {
-	        resolve(__webpack_require__(59));
+	        resolve(__webpack_require__(26));
+	    });
+	};
+	var about = function about(resolve) {
+	    __webpack_require__.e/* nsure */(3, function () {
+	        resolve(__webpack_require__(63));
 	    });
 	};
 	var login = function login(resolve) {
-	    __webpack_require__.e/* nsure */(3, function () {
-	        resolve(__webpack_require__(65));
+	    __webpack_require__.e/* nsure */(4, function () {
+	        resolve(__webpack_require__(69));
 	    });
 	};
 	var article = function article(resolve) {
-	    __webpack_require__.e/* nsure */(4, function () {
-	        resolve(__webpack_require__(75));
+	    __webpack_require__.e/* nsure */(5, function () {
+	        resolve(__webpack_require__(79));
 	    });
 	};
 	var userhome = function userhome(resolve) {
-	    __webpack_require__.e/* nsure */(5, function () {
-	        resolve(__webpack_require__(85));
+	    __webpack_require__.e/* nsure */(6, function () {
+	        resolve(__webpack_require__(89));
 	    });
 	};
 	var usermessage = function usermessage(resolve) {
-	    __webpack_require__.e/* nsure */(6, function () {
-	        resolve(__webpack_require__(91));
+	    __webpack_require__.e/* nsure */(7, function () {
+	        resolve(__webpack_require__(95));
 	    });
 	};
 	var createtopic = function createtopic(resolve) {
-	    __webpack_require__.e/* nsure */(7, function () {
-	        resolve(__webpack_require__(96));
+	    __webpack_require__.e/* nsure */(8, function () {
+	        resolve(__webpack_require__(100));
 	    });
 	};
 	var edittopic = function edittopic(resolve) {
-	    __webpack_require__.e/* nsure */(8, function () {
-	        resolve(__webpack_require__(104));
+	    __webpack_require__.e/* nsure */(9, function () {
+	        resolve(__webpack_require__(108));
 	    });
 	};
 	var routes = [{
 	    path: '/',
 	    name: 'homePage',
-	    component: articleList
+	    component: home
 	}, {
 	    path: '/login',
 	    name: 'login',
@@ -14252,8 +14257,7 @@ webpackJsonp([0,9],[
 
 
 /***/ }),
-/* 11 */,
-/* 12 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/*
@@ -14272,7 +14276,7 @@ webpackJsonp([0,9],[
 	  ) }
 	}
 
-	var listToStyles = __webpack_require__(13)
+	var listToStyles = __webpack_require__(12)
 
 	/*
 	type StyleObject = {
@@ -14474,7 +14478,7 @@ webpackJsonp([0,9],[
 
 
 /***/ }),
-/* 13 */
+/* 12 */
 /***/ (function(module, exports) {
 
 	/**
@@ -14507,7 +14511,7 @@ webpackJsonp([0,9],[
 
 
 /***/ }),
-/* 14 */
+/* 13 */
 /***/ (function(module, exports) {
 
 	module.exports = function normalizeComponent (
@@ -14560,44 +14564,19 @@ webpackJsonp([0,9],[
 
 
 /***/ }),
-/* 15 */,
-/* 16 */,
-/* 17 */,
-/* 18 */,
-/* 19 */,
-/* 20 */,
-/* 21 */,
-/* 22 */,
-/* 23 */,
-/* 24 */,
-/* 25 */,
-/* 26 */,
-/* 27 */,
-/* 28 */,
-/* 29 */,
-/* 30 */,
-/* 31 */,
-/* 32 */,
-/* 33 */,
-/* 34 */,
-/* 35 */,
-/* 36 */,
-/* 37 */,
-/* 38 */,
-/* 39 */,
-/* 40 */,
-/* 41 */
+/* 14 */,
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	
 	/* styles */
-	__webpack_require__(42)
+	__webpack_require__(16)
 
-	var Component = __webpack_require__(14)(
+	var Component = __webpack_require__(13)(
 	  /* script */
-	  __webpack_require__(45),
+	  __webpack_require__(18),
 	  /* template */
-	  __webpack_require__(51),
+	  __webpack_require__(24),
 	  /* scopeId */
 	  null,
 	  /* cssModules */
@@ -14608,20 +14587,20 @@ webpackJsonp([0,9],[
 
 
 /***/ }),
-/* 42 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(43);
+	var content = __webpack_require__(17);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	if(content.locals) module.exports = content.locals;
 	// add the styles to the DOM
-	var update = __webpack_require__(12)("d93ce6de", content, true);
+	var update = __webpack_require__(11)("d93ce6de", content, true);
 
 /***/ }),
-/* 43 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(10)();
@@ -14629,19 +14608,13 @@ webpackJsonp([0,9],[
 
 
 	// module
-	exports.push([module.id, ".header{position:fixed;width:100%;border-bottom:1px solid hsla(0,0%,93%,.37);float:right;z-index:10;padding:10px;box-sizing:border-box;background-color:#222930}.header .logo{width:200px;height:51px;position:absolute;left:0;top:0;background-image:url(" + __webpack_require__(44) + ");background-repeat:no-repeat;background-size:auto 80px;background-position:0}", ""]);
+	exports.push([module.id, ".header{position:fixed;width:100%;border-bottom:1px solid hsla(0,0%,93%,.37);float:right;z-index:10;padding:10px;box-sizing:border-box;background-color:#222930}.header .logo{width:200px;height:51px;position:absolute;left:0;top:0}.header .logo svg{display:block;font:46px Montserrat;width:200px;height:51px;letter-spacing:10px;margin:0 auto}.header .logo .text-copy{fill:none;stroke:#fff;stroke-dasharray:6% 29%;stroke-width:2px;stroke-dashoffset:0%;animation:stroke-offset 5.5s infinite linear}.header .logo .text-copy:first-child{stroke:#4d163d;animation-delay:-1}.header .logo .text-copy:nth-child(2){stroke:#840037;animation-delay:-2s}.header .logo .text-copy:nth-child(3){stroke:#bd0034;animation-delay:-3s}.header .logo .text-copy:nth-child(4){stroke:#bd0034;animation-delay:-4s}.header .logo .text-copy:nth-child(5){stroke:#fdb731;animation-delay:-5s}@keyframes stroke-offset{to{stroke-dashoffset:-35%}}", ""]);
 
 	// exports
 
 
 /***/ }),
-/* 44 */
-/***/ (function(module, exports) {
-
-	module.exports = "data:image/png;base64,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"
-
-/***/ }),
-/* 45 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -14650,7 +14623,7 @@ webpackJsonp([0,9],[
 		value: true
 	});
 
-	var _menu = __webpack_require__(46);
+	var _menu = __webpack_require__(19);
 
 	var _menu2 = _interopRequireDefault(_menu);
 
@@ -14685,20 +14658,33 @@ webpackJsonp([0,9],[
 	//
 	//
 	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
 
 /***/ }),
-/* 46 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	
 	/* styles */
-	__webpack_require__(47)
+	__webpack_require__(20)
 
-	var Component = __webpack_require__(14)(
+	var Component = __webpack_require__(13)(
 	  /* script */
-	  __webpack_require__(49),
+	  __webpack_require__(22),
 	  /* template */
-	  __webpack_require__(50),
+	  __webpack_require__(23),
 	  /* scopeId */
 	  null,
 	  /* cssModules */
@@ -14709,20 +14695,20 @@ webpackJsonp([0,9],[
 
 
 /***/ }),
-/* 47 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(48);
+	var content = __webpack_require__(21);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	if(content.locals) module.exports = content.locals;
 	// add the styles to the DOM
-	var update = __webpack_require__(12)("6cd3f05a", content, true);
+	var update = __webpack_require__(11)("6cd3f05a", content, true);
 
 /***/ }),
-/* 48 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(10)();
@@ -14736,7 +14722,7 @@ webpackJsonp([0,9],[
 
 
 /***/ }),
-/* 49 */
+/* 22 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -14803,7 +14789,7 @@ webpackJsonp([0,9],[
 	};
 
 /***/ }),
-/* 50 */
+/* 23 */
 /***/ (function(module, exports) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -14838,7 +14824,7 @@ webpackJsonp([0,9],[
 	},staticRenderFns: []}
 
 /***/ }),
-/* 51 */
+/* 24 */
 /***/ (function(module, exports) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -14846,7 +14832,48 @@ webpackJsonp([0,9],[
 	    staticClass: "header"
 	  }, [_c('div', {
 	    staticClass: "logo"
-	  }), _vm._v(" "), _c('nv-menu', {
+	  }, [_c('svg', {
+	    attrs: {
+	      "viewBox": "0 0 200 51"
+	    }
+	  }, [_c('symbol', {
+	    attrs: {
+	      "id": "s-text"
+	    }
+	  }, [_c('text', {
+	    attrs: {
+	      "text-anchor": "middle",
+	      "x": "70",
+	      "y": "44"
+	    }
+	  }, [_vm._v("ZJC")])]), _vm._v(" "), _c('g', {
+	    staticClass: "g-ants"
+	  }, [_c('use', {
+	    staticClass: "text-copy",
+	    attrs: {
+	      "xlink:href": "#s-text"
+	    }
+	  }), _vm._v(" "), _c('use', {
+	    staticClass: "text-copy",
+	    attrs: {
+	      "xlink:href": "#s-text"
+	    }
+	  }), _vm._v(" "), _c('use', {
+	    staticClass: "text-copy",
+	    attrs: {
+	      "xlink:href": "#s-text"
+	    }
+	  }), _vm._v(" "), _c('use', {
+	    staticClass: "text-copy",
+	    attrs: {
+	      "xlink:href": "#s-text"
+	    }
+	  }), _vm._v(" "), _c('use', {
+	    staticClass: "text-copy",
+	    attrs: {
+	      "xlink:href": "#s-text"
+	    }
+	  })])])]), _vm._v(" "), _c('nv-menu', {
 	    attrs: {
 	      "showm": _vm.menuShow
 	    }
@@ -14854,6 +14881,33 @@ webpackJsonp([0,9],[
 	},staticRenderFns: []}
 
 /***/ }),
+/* 25 */,
+/* 26 */,
+/* 27 */,
+/* 28 */,
+/* 29 */,
+/* 30 */,
+/* 31 */,
+/* 32 */,
+/* 33 */,
+/* 34 */,
+/* 35 */,
+/* 36 */,
+/* 37 */,
+/* 38 */,
+/* 39 */,
+/* 40 */,
+/* 41 */,
+/* 42 */,
+/* 43 */,
+/* 44 */,
+/* 45 */,
+/* 46 */,
+/* 47 */,
+/* 48 */,
+/* 49 */,
+/* 50 */,
+/* 51 */,
 /* 52 */,
 /* 53 */,
 /* 54 */,
@@ -14909,7 +14963,11 @@ webpackJsonp([0,9],[
 /* 104 */,
 /* 105 */,
 /* 106 */,
-/* 107 */
+/* 107 */,
+/* 108 */,
+/* 109 */,
+/* 110 */,
+/* 111 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -14922,7 +14980,7 @@ webpackJsonp([0,9],[
 
 	var _vue2 = _interopRequireDefault(_vue);
 
-	var _vuex = __webpack_require__(108);
+	var _vuex = __webpack_require__(112);
 
 	var _vuex2 = _interopRequireDefault(_vuex);
 
@@ -15054,7 +15112,7 @@ webpackJsonp([0,9],[
 	exports.default = store;
 
 /***/ }),
-/* 108 */
+/* 112 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -15993,18 +16051,18 @@ webpackJsonp([0,9],[
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)))
 
 /***/ }),
-/* 109 */
+/* 113 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	
 	/* styles */
-	__webpack_require__(110)
+	__webpack_require__(114)
 
-	var Component = __webpack_require__(14)(
+	var Component = __webpack_require__(13)(
 	  /* script */
-	  __webpack_require__(112),
+	  __webpack_require__(116),
 	  /* template */
-	  __webpack_require__(113),
+	  __webpack_require__(117),
 	  /* scopeId */
 	  null,
 	  /* cssModules */
@@ -16015,20 +16073,20 @@ webpackJsonp([0,9],[
 
 
 /***/ }),
-/* 110 */
+/* 114 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(111);
+	var content = __webpack_require__(115);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	if(content.locals) module.exports = content.locals;
 	// add the styles to the DOM
-	var update = __webpack_require__(12)("5272b69a", content, true);
+	var update = __webpack_require__(11)("5272b69a", content, true);
 
 /***/ }),
-/* 111 */
+/* 115 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(10)();
@@ -16036,13 +16094,13 @@ webpackJsonp([0,9],[
 
 
 	// module
-	exports.push([module.id, ".fade-enter-active{transition:all 3s ease;transform:translateX(-100%)}.fade-enter-to,.fade-leave-active{transform:translateX(0)}.fade-leave-to{transform:translateX(100%)}.r,.router{width:100%}.r{height:100%;padding-top:52px;position:absolute}", ""]);
+	exports.push([module.id, ".r{width:100%;height:100%;padding-top:52px;position:absolute;box-sizing:border-box;transition:transform .3s ease;transform:translateX(0)}.fade-enter-active{transform:translateX(-100%)}.fade-enter-to,.fade-leave-active{transform:translateX(0)}.fade-leave-to{transform:translateX(100%)}.router{width:100%}", ""]);
 
 	// exports
 
 
 /***/ }),
-/* 112 */
+/* 116 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16051,7 +16109,7 @@ webpackJsonp([0,9],[
 		value: true
 	});
 
-	var _header = __webpack_require__(41);
+	var _header = __webpack_require__(15);
 
 	var _header2 = _interopRequireDefault(_header);
 
@@ -16059,7 +16117,13 @@ webpackJsonp([0,9],[
 
 	exports.default = {
 		data: function data() {
-			return {};
+			return {
+				global: {
+					userName: 'zhangjichengcc',
+					psd: '39104930',
+					login: false
+				}
+			};
 		},
 		computed: {},
 		methods: {},
@@ -16076,7 +16140,7 @@ webpackJsonp([0,9],[
 	//
 
 /***/ }),
-/* 113 */
+/* 117 */
 /***/ (function(module, exports) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -16091,7 +16155,7 @@ webpackJsonp([0,9],[
 	},staticRenderFns: []}
 
 /***/ }),
-/* 114 */
+/* 118 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -16175,13 +16239,13 @@ webpackJsonp([0,9],[
 	}
 
 /***/ }),
-/* 115 */
+/* 119 */
 /***/ (function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 116 */
+/* 120 */
 /***/ (function(module, exports) {
 
 	'use strict';

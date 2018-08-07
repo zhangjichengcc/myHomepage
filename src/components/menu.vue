@@ -4,6 +4,7 @@
 		<router-link class="nv_item" to="/login">登录</router-link>
 		<router-link class="nv_item" to="/createtopic">发布话题</router-link>
 		<router-link class="nv_item" to="/about">关于</router-link>
+		<router-link class="nv_item" to="/undefined">404</router-link>
 		<a class="nv_item" href="../../myHomepage/games/index.html">Games</a>
 	</div>
 </template>

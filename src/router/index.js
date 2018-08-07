@@ -43,6 +43,11 @@ const createtopic = resolve => {
         resolve(require('../vue/createtopic.vue'));
     });
 }
+const undefined = resolve => {
+    require.ensure(['../vue/undefined.vue'], () => {
+        resolve(require('../vue/undefined.vue'));
+    });
+}
 const edittopic = resolve => {
     require.ensure(['../vue/edittopic.vue'], () => {
         resolve(require('../vue/edittopic.vue'));
@@ -80,6 +85,9 @@ const routes = [{
         path: '/edittopic/:topicid',
         name: 'edittopic',
         component: edittopic
+    },{
+        path: '/undefined',
+        component: undefined
     },{
         path: '*',
         component: articleList

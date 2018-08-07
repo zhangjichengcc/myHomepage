@@ -1,4 +1,4 @@
-webpackJsonp([0,10],[
+webpackJsonp([0,11],[
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -12,15 +12,15 @@ webpackJsonp([0,10],[
 
 	var _router2 = _interopRequireDefault(_router);
 
-	var _store = __webpack_require__(111);
+	var _store = __webpack_require__(116);
 
 	var _store2 = _interopRequireDefault(_store);
 
-	var _App = __webpack_require__(113);
+	var _App = __webpack_require__(118);
 
 	var _App2 = _interopRequireDefault(_App);
 
-	var _index = __webpack_require__(118);
+	var _index = __webpack_require__(123);
 
 	var filters = _interopRequireWildcard(_index);
 
@@ -29,10 +29,10 @@ webpackJsonp([0,10],[
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	//引入css重置文件,基本的样式文件
-	__webpack_require__(119);
+	__webpack_require__(124);
 
 	// 引入px与rem的换算
-	__webpack_require__(120);
+	__webpack_require__(125);
 
 	// 遍历输出a过滤器的模块
 	Object.keys(filters).forEach(function (k) {
@@ -11516,9 +11516,14 @@ webpackJsonp([0,10],[
 	        resolve(__webpack_require__(100));
 	    });
 	};
-	var edittopic = function edittopic(resolve) {
+	var undefined = function undefined(resolve) {
 	    __webpack_require__.e/* nsure */(9, function () {
 	        resolve(__webpack_require__(108));
+	    });
+	};
+	var edittopic = function edittopic(resolve) {
+	    __webpack_require__.e/* nsure */(10, function () {
+	        resolve(__webpack_require__(113));
 	    });
 	};
 	var routes = [{
@@ -11553,6 +11558,9 @@ webpackJsonp([0,10],[
 	    path: '/edittopic/:topicid',
 	    name: 'edittopic',
 	    component: edittopic
+	}, {
+	    path: '/undefined',
+	    component: undefined
 	}, {
 	    path: '*',
 	    component: articleList
@@ -14740,6 +14748,7 @@ webpackJsonp([0,10],[
 	//
 	//
 	//
+	//
 
 	exports.default = {
 		props: ['showm'],
@@ -14816,7 +14825,12 @@ webpackJsonp([0,10],[
 	    attrs: {
 	      "to": "/about"
 	    }
-	  }, [_vm._v("关于")]), _vm._v(" "), _c('a', {
+	  }, [_vm._v("关于")]), _vm._v(" "), _c('router-link', {
+	    staticClass: "nv_item",
+	    attrs: {
+	      "to": "/undefined"
+	    }
+	  }, [_vm._v("404")]), _vm._v(" "), _c('a', {
 	    staticClass: "nv_item",
 	    attrs: {
 	      "href": "../../myHomepage/games/index.html"
@@ -14968,7 +14982,12 @@ webpackJsonp([0,10],[
 /* 108 */,
 /* 109 */,
 /* 110 */,
-/* 111 */
+/* 111 */,
+/* 112 */,
+/* 113 */,
+/* 114 */,
+/* 115 */,
+/* 116 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -14981,7 +15000,7 @@ webpackJsonp([0,10],[
 
 	var _vue2 = _interopRequireDefault(_vue);
 
-	var _vuex = __webpack_require__(112);
+	var _vuex = __webpack_require__(117);
 
 	var _vuex2 = _interopRequireDefault(_vuex);
 
@@ -15113,7 +15132,7 @@ webpackJsonp([0,10],[
 	exports.default = store;
 
 /***/ }),
-/* 112 */
+/* 117 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -16052,18 +16071,18 @@ webpackJsonp([0,10],[
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)))
 
 /***/ }),
-/* 113 */
+/* 118 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	
 	/* styles */
-	__webpack_require__(114)
+	__webpack_require__(119)
 
 	var Component = __webpack_require__(13)(
 	  /* script */
-	  __webpack_require__(116),
+	  __webpack_require__(121),
 	  /* template */
-	  __webpack_require__(117),
+	  __webpack_require__(122),
 	  /* scopeId */
 	  null,
 	  /* cssModules */
@@ -16074,20 +16093,20 @@ webpackJsonp([0,10],[
 
 
 /***/ }),
-/* 114 */
+/* 119 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(115);
+	var content = __webpack_require__(120);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	if(content.locals) module.exports = content.locals;
 	// add the styles to the DOM
 	var update = __webpack_require__(11)("5272b69a", content, true);
 
 /***/ }),
-/* 115 */
+/* 120 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(10)();
@@ -16101,7 +16120,7 @@ webpackJsonp([0,10],[
 
 
 /***/ }),
-/* 116 */
+/* 121 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16141,7 +16160,7 @@ webpackJsonp([0,10],[
 	//
 
 /***/ }),
-/* 117 */
+/* 122 */
 /***/ (function(module, exports) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -16156,7 +16175,7 @@ webpackJsonp([0,10],[
 	},staticRenderFns: []}
 
 /***/ }),
-/* 118 */
+/* 123 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -16240,13 +16259,13 @@ webpackJsonp([0,10],[
 	}
 
 /***/ }),
-/* 119 */
+/* 124 */
 /***/ (function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 120 */
+/* 125 */
 /***/ (function(module, exports) {
 
 	'use strict';

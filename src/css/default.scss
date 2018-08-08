@@ -1,2 +1,10 @@
 // 定义全局属性
-$bg_main_color: #222930; 
+$bg_main_color: #222930;
+$placeholder_color: rgba(175, 177, 190, 1);
+
+@mixin cont-center-x {
+	display: block;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}

@@ -59,6 +59,11 @@ module.exports = {
         loader: ExtractTextPlugin.extract("style-loader", "css-loader")
       },
       {
+        test: /\.(woff|svg|eot|ttf)\??.*$/,
+        // loader: 'url-loader?name=fonts/[name].[md5:hash:hex:7].[ext]'
+        loader: 'url?limit=40000'
+      },
+      {
         test: /\.(png|jpg|gif)$/,
         loader: 'url?limit=40000'
       },

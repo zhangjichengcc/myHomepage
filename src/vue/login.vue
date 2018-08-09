@@ -9,8 +9,8 @@
         <span class="log_btn" @click="login">登录</span>
         <span class="log_info">其实登录了也并没什么卵用。。。</span>
       </div>
-      <div class="login_loading">
-      	<div class="loader" style="height: 44px;width: 44px;margin-left: 28px;">
+      <!-- <div class="login_loading">
+      	<div class="loader">
 					<div class="loader-inner ball-clip-rotate-multiple">
 						<div></div>
 						<div></div>
@@ -18,7 +18,7 @@
 					</div>
 				</div>
 				<p>认证中...</p>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>

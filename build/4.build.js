@@ -1543,7 +1543,7 @@ webpackJsonp([4,11],Array(31).concat([
 	exports.i(__webpack_require__(71), "");
 
 	// module
-	exports.push([module.id, "::-webkit-input-placeholder{color:#afb1be}:-moz-placeholder,::-moz-placeholder{color:#afb1be}:-ms-input-placeholder{color:#afb1be}.bg{background-color:#eee;background-image:url(" + __webpack_require__(76) + ");background-position:50%;background-size:cover}.login_con{display:block;position:absolute;left:50%;transform:translateX(-50%);height:440px;top:50%;margin-top:-180px}.login_con .login_main{width:320px;height:440px;padding:20px;box-sizing:border-box;box-shadow:-15px 15px 15px rgba(6,17,47,.7);transition-property:transform,opacity,box-shadow,top,left;transition-duration:.5s;transform-origin:161px 100%;transform:rotateX(0deg);background:linear-gradient(230deg,rgba(53,57,74,0),rgba(0,0,0,.8))}.login_con .login_main .user_icon{display:block;width:90px;height:90px;margin:0 auto;background-color:#eee;background-image:url(" + __webpack_require__(77) + ");background-size:cover;background-position:50%;border-radius:50%}.login_con .login_main .input_item{display:block;position:relative;width:100%;margin-top:10px}.login_con .login_main .input_item>i{position:absolute;font-size:20px;color:#fff;left:8px;top:13px}.login_con .login_main .input_item>input{font-size:16px;box-sizing:border-box;color:#61bfff;width:100%;background-color:hsla(0,0%,100%,.1);padding:10px 35px;border-top:2px solid rgba(57,61,82,0);border-bottom:2px solid rgba(57,61,82,0);border-right:none;border-left:none;border-radius:10px}.login_con .login_main .log_btn{display:inline-block;border-radius:50px;background:transparent;padding:10px 50px;border:2px solid #4fa1d9;color:#4fa1d9;text-transform:uppercase;font-size:11px;transition:all .3s ease;margin-top:70px;cursor:pointer}.login_con .login_main .log_btn:hover{padding:12px 52px}.login_con .login_main .log_info{color:rgba(211,215,247,.45);font-size:10px;display:block;position:absolute;bottom:20px}.login_con .login_loading{box-shadow:0 20px 30px 3px rgba(0,0,0,.55);display:none;background:#35394a;background:linear-gradient(230deg,rgba(53,57,74,0),#000);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=\"rgba(53, 57, 74, 0)\",endColorstr=\"rgb(0, 0, 0)\",GradientType=1);position:absolute;left:0;right:90px;margin:auto;width:100px;color:#fff;text-transform:uppercase;letter-spacing:1px;text-align:center;padding:20px 70px;top:200px;bottom:0;height:70px;opacity:0}", ""]);
+	exports.push([module.id, "::-webkit-input-placeholder{color:#afb1be}:-moz-placeholder,::-moz-placeholder{color:#afb1be}:-ms-input-placeholder{color:#afb1be}@keyframes rotate{0%{transform:rotate(0deg) scale(1)}50%{transform:rotate(180deg) scale(.6)}to{transform:rotate(1turn) scale(1)}}.bg{background-color:#eee;background-image:url(" + __webpack_require__(76) + ");background-position:50%;background-size:cover}.login_con{display:block;position:absolute;left:50%;transform:translateX(-50%);width:640px;height:440px;top:50%;margin-top:-180px}.login_con .login_main{position:absolute;left:160px;width:320px;height:440px;padding:20px;box-sizing:border-box;box-shadow:-15px 15px 15px rgba(6,17,47,.7);transition-property:transform,opacity,box-shadow,top,left;transition-duration:.5s;transform-origin:center;transform:rotateX(0deg);background:linear-gradient(230deg,rgba(53,57,74,0),rgba(0,0,0,.8))}.login_con .login_main .user_icon{display:block;width:90px;height:90px;margin:0 auto;background-color:#eee;background-image:url(" + __webpack_require__(77) + ");background-size:cover;background-position:50%;border-radius:50%}.login_con .login_main .input_item{display:block;position:relative;width:100%;margin-top:10px}.login_con .login_main .input_item>i{position:absolute;font-size:20px;color:#fff;left:8px;top:13px}.login_con .login_main .input_item>input{font-size:16px;box-sizing:border-box;color:#61bfff;width:100%;background-color:hsla(0,0%,100%,.1);padding:10px 35px;border-top:2px solid rgba(57,61,82,0);border-bottom:2px solid rgba(57,61,82,0);border-right:none;border-left:none;border-radius:10px}.login_con .login_main .log_btn{display:inline-block;border-radius:50px;background-color:transparent;padding:10px 50px;border:2px solid #4fa1d9;color:#4fa1d9;text-transform:uppercase;font-size:11px;transition:all .3s ease;margin-top:70px;cursor:pointer}.login_con .login_main .log_btn:hover{color:#fff;background-color:#4fa1d9}.login_con .login_main .log_info{color:rgba(211,215,247,.45);font-size:10px;display:block;position:absolute;bottom:20px}.login_con .login_main.active{transform:skew(-5deg) scale(.5,.2) perspective(100px) rotateX(10deg)}.login_con .login_main.move_left{left:0}.login_con .login_loading{position:absolute;transition:all .3s ease;box-shadow:0 20px 30px 3px rgba(0,0,0,.55);background:#35394a;background:linear-gradient(230deg,rgba(53,57,74,0),#000);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=\"rgba(53, 57, 74, 0)\",endColorstr=\"rgb(0, 0, 0)\",GradientType=1);left:190px;width:100px;height:70px;color:#fff;text-transform:uppercase;letter-spacing:1px;text-align:center;padding:20px 70px;top:176px;opacity:0;font-size:12px}.login_con .login_loading>.loader{height:44px;width:44px;margin-left:28px}.login_con .login_loading>.loader>.loader_inner{position:relative}.login_con .login_loading>.loader>.loader_inner>div{animation-fill-mode:both;position:absolute;left:0;top:0;border:2px solid #fff;border-bottom-color:transparent;border-top-color:transparent;border-radius:100%;height:35px;width:35px;animation:rotate 1s 0s ease-in-out infinite}.login_con .login_loading>.loader>.loader_inner>div:last-child{display:inline-block;top:10px;left:10px;width:15px;height:15px;animation-duration:.5s;border-color:#fff transparent;animation-direction:reverse}.login_con .login_loading.active{left:400px;opacity:1}", ""]);
 
 	// exports
 
@@ -1625,7 +1625,11 @@ webpackJsonp([4,11],Array(31).concat([
 	exports.default = {
 	  data: function data() {
 	    return {
-	      strToken: ''
+	      strToken: '',
+	      classControl: {
+	        active1: false,
+	        active2: false
+	      }
 	    };
 	  },
 	  methods: {
@@ -1674,6 +1678,22 @@ webpackJsonp([4,11],Array(31).concat([
 	        _this.$store.dispatch('setTipShow', true);
 	        _this.$store.dispatch('setTipContent', '错误的accessToken!');
 	      });
+	    },
+	    animate: function animate() {
+	      var _this2 = this;
+
+	      console.log('animate');
+	      var that = this;
+	      this.$set(this.classControl, 'active1', true);
+	      setTimeout(function () {
+	        that.$set(_this2.classControl, 'active2', true);
+	      }, 500);
+	      setTimeout(function () {
+	        that.$set(_this2.classControl, 'active2', false);
+	      }, 2000);
+	      setTimeout(function () {
+	        that.$set(_this2.classControl, 'active1', false);
+	      }, 2500);
 	    }
 	  },
 	  components: {
@@ -1819,7 +1839,10 @@ webpackJsonp([4,11],Array(31).concat([
 	  }, [_c('tips'), _vm._v(" "), _c('div', {
 	    staticClass: "login_con"
 	  }, [_c('div', {
-	    staticClass: "login_main"
+	    staticClass: "login_main",
+	    class: {
+	      active: this.classControl.active1, 'move_left': this.classControl.active2
+	    }
 	  }, [_c('span', {
 	    staticClass: "user_icon"
 	  }), _vm._v(" "), _vm._m(0), _vm._v(" "), _c('span', {
@@ -1838,11 +1861,16 @@ webpackJsonp([4,11],Array(31).concat([
 	  })]), _vm._v(" "), _c('span', {
 	    staticClass: "log_btn",
 	    on: {
-	      "click": _vm.login
+	      "click": _vm.animate
 	    }
 	  }, [_vm._v("登录")]), _vm._v(" "), _c('span', {
 	    staticClass: "log_info"
-	  }, [_vm._v("其实登录了也并没什么卵用。。。")])])])], 1)
+	  }, [_vm._v("其实登录了也并没什么卵用。。。")])]), _vm._v(" "), _c('div', {
+	    staticClass: "login_loading",
+	    class: {
+	      active: this.classControl.active2
+	    }
+	  }, [_vm._m(1), _vm._v(" "), _c('p', [_vm._v("认证中...")])])])], 1)
 	},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('span', {
 	    staticClass: "input_item"
@@ -1855,6 +1883,12 @@ webpackJsonp([4,11],Array(31).concat([
 	      "name": ""
 	    }
 	  })])
+	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('div', {
+	    staticClass: "loader"
+	  }, [_c('div', {
+	    staticClass: "loader_inner"
+	  }, [_c('div'), _vm._v(" "), _c('div'), _vm._v(" "), _c('div')])])
 	}]}
 
 /***/ })

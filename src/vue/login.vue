@@ -2,16 +2,16 @@
   <div class="bg">
     <tips></tips>
     <div class="login_con">
-      <div class="login_main">
+      <div class="login_main" :class="{active: this.classControl.active1, 'move_left': this.classControl.active2}">
         <span class="user_icon"></span>
         <span class="input_item"><i class="icon-user"></i><input placeholder="username" type="" name=""></span>
         <span class="input_item"><i class="icon-lock" :style="{left: '11px'}"></i><input placeholder="password" type="" name=""></span>
-        <span class="log_btn" @click="login">登录</span>
+        <span class="log_btn" @click="animate">登录</span>
         <span class="log_info">其实登录了也并没什么卵用。。。</span>
       </div>
-      <div class="login_loading">
-      	<div class="loader" style="height: 44px;width: 44px;margin-left: 28px;">
-					<div class="loader-inner ball-clip-rotate-multiple">
+      <div class="login_loading" :class="{active: this.classControl.active2}">
+      	<div class="loader">
+					<div class="loader_inner">
 						<div></div>
 						<div></div>
 						<div></div>
@@ -29,7 +29,11 @@
   export default {
     data : function(){
       return {
-        strToken : ''
+        strToken : '',
+        classControl: {
+          active1: false,
+          active2: false, 
+        }
       }
     },
     methods : {
@@ -80,6 +84,20 @@
           this.$store.dispatch('setTipShow', true);
           this.$store.dispatch('setTipContent', '错误的accessToken!');
         })
+      },
+      animate: function() {
+        console.log('animate');
+        const that = this;
+        this.$set(this.classControl, 'active1', true);
+        setTimeout(() => {
+          that.$set(this.classControl, 'active2', true);
+        }, 500);
+        setTimeout(() => {
+          that.$set(this.classControl, 'active2', false);
+        }, 2000)
+        setTimeout(() => {
+          that.$set(this.classControl, 'active1', false);
+        }, 2500)
       }
     },
     components : {
@@ -92,6 +110,7 @@
   @import '../css/default.scss';
   @import '../css/common.scss';
   @import '../css/style.css'; 
+  @import '../css/animate.scss';
   .bg {
     background-color: #eee;
     background-image: url(../img/bg-image.jpg);
@@ -100,11 +119,13 @@
   }
   .login_con {
     @include cont-center-x;
-    // width: 240px;
+    width: 640px;
     height: 440px;
     top: 50%;
     margin-top: -180px;
     .login_main {
+      position: absolute;
+      left: 160px;
       width: 320px;
       height: 440px;
       padding: 20px;
@@ -112,7 +133,7 @@
       box-shadow: -15px 15px 15px rgba(6, 17, 47, 0.7);
       transition-property: transform,opacity,box-shadow,top,left;
       transition-duration: .5s;
-      transform-origin: 161px 100%;
+      transform-origin: center;
       transform: rotateX(0deg);
       background: linear-gradient(230deg, rgba(53, 57, 74, 0) 0%, rgba(0, 0, 0, .8) 100%);
       .user_icon {
@@ -155,7 +176,7 @@
       .log_btn {
       	display: inline-block;
       	border-radius: 50px;
-		    background: transparent;
+		    background-color: transparent;
 		    padding: 10px 50px;
 		    border: 2px solid #4FA1D9;
 		    color: #4FA1D9;
@@ -165,7 +186,8 @@
 		    margin-top: 70px;
 		    cursor: pointer;
 		    &:hover {
-		    	padding: 12px 52px;
+		    	color: #fff;
+          background-color: #4FA1D9;
 		    }
       }
       .log_info {
@@ -175,27 +197,66 @@
 		    position: absolute;
 		    bottom: 20px;
       }
+      &.active {
+        transform: skew(-5deg) scale(0.5, 0.2) perspective(100px) rotateX(10deg);
+      }
+      &.move_left {
+        left: 0;
+      }
     }
     .login_loading {
-    	box-shadow: 0px 20px 30px 3px rgba(0, 0, 0, 0.55);
-	    display: none;
-	    background: #35394a;
-	    background: linear-gradient(230deg, rgba(53, 57, 74, 0) 0%, rgb(0, 0, 0) 100%);
-	    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(53, 57, 74, 0)', endColorstr='rgb(0, 0, 0)',GradientType=1 );
 	    position: absolute;
-	    left: 0;
-	    right: 90px;
-	    margin: auto;
+      transition: all ease .3s;
+      box-shadow: 0px 20px 30px 3px rgba(0, 0, 0, 0.55);
+      background: #35394a;
+      background: linear-gradient(230deg, rgba(53, 57, 74, 0) 0%, rgb(0, 0, 0) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(53, 57, 74, 0)', endColorstr='rgb(0, 0, 0)',GradientType=1 );
+	    left: 190px;
 	    width: 100px;
-	    color: white;
-	    text-transform: uppercase;
-	    letter-spacing: 1px;
-	    text-align: center;
-	    padding: 20px 70px;
-	    top: 200px;
-	    bottom: 0;
 	    height: 70px;
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-align: center;
+      padding: 20px 70px;
+      top: 176px;
 	    opacity: 0;
+      font-size: 12px;
+      >.loader {
+        height: 44px;
+        width: 44px;
+        margin-left: 28px;
+        >.loader_inner {
+          position: relative;
+          >div {
+            animation-fill-mode: both;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            border: 2px solid #fff;
+            border-bottom-color: transparent;
+            border-top-color: transparent;
+            border-radius: 100%;
+            height: 35px;
+            width: 35px;
+            animation: rotate 1s 0s ease-in-out infinite;
+            &:last-child {
+              display: inline-block;
+              top: 10px;
+              left: 10px;
+              width: 15px;
+              height: 15px;
+              animation-duration: 0.5s;
+              border-color: #fff transparent #fff transparent;
+              animation-direction: reverse;
+            }
+          }
+        }
+      }
+      &.active {
+        left: 400px;
+        opacity: 1;
+      }
     }
   }
 </style>

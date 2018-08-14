@@ -6,7 +6,7 @@
         <span class="user_icon"></span>
         <span class="input_item"><i class="icon-user"></i><input placeholder="username" type="" name=""></span>
         <span class="input_item"><i class="icon-lock" :style="{left: '11px'}"></i><input placeholder="password" type="" name=""></span>
-        <span class="log_btn" @click="animate">登录</span>
+        <span class="log_btn" @click="login">登录</span>
         <span class="log_info">其实登录了也并没什么卵用。。。</span>
       </div>
       <div class="login_loading" :class="{active: this.classControl.active2}">
@@ -30,6 +30,7 @@
     data : function(){
       return {
         strToken : '',
+        loadingTime: 5000,
         classControl: {
           active1: false,
           active2: false, 
@@ -38,66 +39,73 @@
     },
     methods : {
       login : function() {
-        if (this.strToken.trim() === '') {
-          this.$store.dispatch('setTipShow', true);
-          this.$store.dispatch('setTipContent', 'accessToken不能为空！');
-          return;
-        }
-        const rqdata = {
-          'accesstoken' : this.strToken.trim()
-        }
-        axios.post('https://cnodejs.org/api/v1/accesstoken?accesstoken='+ this.strToken)
-        .then((response_info) => {
-          if (response_info.data.success) {
-            const data = response_info.data;
-            // 登入成功改变isLogin的状态为true
-            this.$store.dispatch('isLogin');
-            const userInfo = {
-              'name' : data.loginname,
-              'avatar' : data.avatar_url,
-              'id' : data.id,
-              'accesstoken' : this.strToken.trim()
-            }
-            this.$store.dispatch('setUserInfo', userInfo);
-            // 登录成功记录账户信息存放至localStorage已备下次自动登录
-            localStorage.setItem("cnode_accesstoken", userInfo.accesstoken);
-            localStorage.setItem("cnode_avatar", userInfo.avatar);
-            localStorage.setItem("cnode_id", userInfo.id);
-            localStorage.setItem("cnode_name", userInfo.name);
-            // 获取未读消息，并设置vuex
-            axios.get('https://cnodejs.org/api/v1/message/count?accesstoken='+ this.strToken.trim())
-            .then((response_count) => {
-              if (response_count.data.success) {
-                this.$store.dispatch('setNotMessageCount', response_count.data.data);
-                window.history.back();
-              }
-            })
-            .catch(function(error) {
-              console.log(error);
-            });
-          }else{
-            // 失败
-          }
-        })
-        .catch((error) => {
-          console.log(error);
-          this.$store.dispatch('setTipShow', true);
-          this.$store.dispatch('setTipContent', '错误的accessToken!');
-        })
+        // if (this.strToken.trim() === '') {
+        //   this.$store.dispatch('setTipShow', true);
+        //   this.$store.dispatch('setTipContent', 'accessToken不能为空！');
+        //   return;
+        // }
+        // const rqdata = {
+        //   'accesstoken' : this.strToken.trim()
+        // }
+        // axios.post('https://cnodejs.org/api/v1/accesstoken?accesstoken='+ this.strToken)
+        // .then((response_info) => {
+        //   if (response_info.data.success) {
+        //     const data = response_info.data;
+        //     // 登入成功改变isLogin的状态为true
+        //     this.$store.dispatch('isLogin');
+        //     const userInfo = {
+        //       'name' : data.loginname,
+        //       'avatar' : data.avatar_url,
+        //       'id' : data.id,
+        //       'accesstoken' : this.strToken.trim()
+        //     }
+        //     this.$store.dispatch('setUserInfo', userInfo);
+        //     // 登录成功记录账户信息存放至localStorage已备下次自动登录
+        //     localStorage.setItem("cnode_accesstoken", userInfo.accesstoken);
+        //     localStorage.setItem("cnode_avatar", userInfo.avatar);
+        //     localStorage.setItem("cnode_id", userInfo.id);
+        //     localStorage.setItem("cnode_name", userInfo.name);
+        //     // 获取未读消息，并设置vuex
+        //     axios.get('https://cnodejs.org/api/v1/message/count?accesstoken='+ this.strToken.trim())
+        //     .then((response_count) => {
+        //       if (response_count.data.success) {
+        //         this.$store.dispatch('setNotMessageCount', response_count.data.data);
+        //         window.history.back();
+        //       }
+        //     })
+        //     .catch(function(error) {
+        //       console.log(error);
+        //     });
+        //   }else{
+        //     // 失败
+        //   }
+        // })
+        // .catch((error) => {
+        //   console.log(error);
+        //   this.$store.dispatch('setTipShow', true);
+        //   this.$store.dispatch('setTipContent', '错误的accessToken!');
+        // })
+        const that = this;
+        setTimeout(that.animate(1), 5000);
+        this.animate(0);
       },
-      animate: function() {
+      animate: function(key) {
+        const { loadingTime } = this;
         console.log('animate');
         const that = this;
-        this.$set(this.classControl, 'active1', true);
-        setTimeout(() => {
-          that.$set(this.classControl, 'active2', true);
-        }, 500);
-        setTimeout(() => {
-          that.$set(this.classControl, 'active2', false);
-        }, 2000)
-        setTimeout(() => {
-          that.$set(this.classControl, 'active1', false);
-        }, 2500)
+        if (key) { 
+          this.$set(this.classControl, 'active1', true);
+          const timer = setTimeout(() => {
+            that.$set(this.classControl, 'active2', true);
+          }, 500);
+          clearTimeout(timer);
+        } else {
+          this.$set(this.classControl, 'active2', false);
+          const timer = setTimeout(() => {
+            that.$set(this.classControl, 'active1', false);
+          }, 500);
+          clearTimeout(timer);
+        }
       }
     },
     components : {

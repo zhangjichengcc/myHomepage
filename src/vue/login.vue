@@ -124,7 +124,7 @@
     },
     components : {
       nvHeader,
-      tips
+      tips,
     }
   }
 </script>

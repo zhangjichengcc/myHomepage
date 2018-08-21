@@ -3,8 +3,8 @@
     <tips></tips>
     <div class="login_con">
       <div class="login_main" :class="{active: this.classControl.active1, 'move_left': this.classControl.active2}">
-        <span class="user_icon"></span>
-        <span class="input_item"><i class="icon-user"></i><input placeholder="username" type="" name=""></span>
+        <span class="user_icon" :class="{'admin': this.classControl.adminName}"></span>
+        <span class="input_item"><i class="icon-user"></i><input placeholder="username" @keyup="inputUserName" v-model="params.userName" type="" name=""></span>
         <span class="input_item"><i class="icon-lock" :style="{left: '11px'}"></i><input placeholder="password" type="" name=""></span>
         <span class="log_btn" @click="login">登录</span>
         <span class="log_info">其实登录了也并没什么卵用。。。</span>
@@ -33,8 +33,12 @@
         loadingTime: 5000,
         classControl: {
           active1: false,
-          active2: false, 
-        }
+          active2: false,
+          adminName: false,
+        },
+        params: {
+          userName: null,
+        },
       }
     },
     methods : {
@@ -86,31 +90,41 @@
         //   this.$store.dispatch('setTipContent', '错误的accessToken!');
         // })
         const that = this;
-        setTimeout(that.animate(1), 5000);
-        this.animate(0);
+        this.animate(1);
+        setTimeout(() => {that.animate(0)}, 5000);
+      },
+      inputUserName: function() {
+        const { userName } = this.params;
+        if (userName === 'admin') {
+          this.$set(this.classControl, 'adminName', true);
+        } else {
+          this.$set(this.classControl, 'adminName', false);
+        };
       },
       animate: function(key) {
         const { loadingTime } = this;
         console.log('animate');
         const that = this;
         if (key) { 
+          console.log('a', key)
           this.$set(this.classControl, 'active1', true);
           const timer = setTimeout(() => {
             that.$set(this.classControl, 'active2', true);
+            clearTimeout(timer);
           }, 500);
-          clearTimeout(timer);
         } else {
+          console.log('b', key)
           this.$set(this.classControl, 'active2', false);
           const timer = setTimeout(() => {
             that.$set(this.classControl, 'active1', false);
+            clearTimeout(timer);
           }, 500);
-          clearTimeout(timer);
         }
       }
     },
     components : {
       nvHeader,
-      tips
+      tips,
     }
   }
 </script>
@@ -133,6 +147,7 @@
     margin-top: -180px;
     .login_main {
       position: absolute;
+      z-index: 1;
       left: 160px;
       width: 320px;
       height: 440px;
@@ -146,6 +161,7 @@
       background: linear-gradient(230deg, rgba(53, 57, 74, 0) 0%, rgba(0, 0, 0, .8) 100%);
       .user_icon {
         display: block;
+        transition: all ease .3s;
         width: 90px;
         height: 90px;
         margin: 0 auto;
@@ -154,6 +170,9 @@
         background-size: cover;
     		background-position: center;
         border-radius: 50%;
+        &.admin {
+          background-image: url(../img/adminIcon.png);
+        }
       }
       .input_item {
   			display: block;

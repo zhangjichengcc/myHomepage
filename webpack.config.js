@@ -9,10 +9,11 @@ var vue = require("vue-loader");
 var project_publicPath = '/build/';
 console.log(project_publicPath, process.env.NODE_ENV)
 
-//定义了一些文件夹的路径
+//定义一些文件夹的路径
 var ROOT_PATH = path.resolve(__dirname);
 var APP_PATH = path.resolve(ROOT_PATH, 'src/main.js');
 var BUILD_PATH = path.resolve(ROOT_PATH, 'build');
+var SRC_PATH = path.resolve(ROOT_PATH, 'src');
 
 var plugins = [
   //压缩js 
@@ -38,9 +39,9 @@ module.exports = {
     // 指向异步加载的路径
     // github异步加载地址
     // publicPath :  'http://localhost:8080/own/' + 'build/',
-    publicPath :  '/myHomepage/build/',
+    // publicPath :  '/myHomepage/build/',
     // 异步加载地址
-    // publicPath : project_publicPath,
+    publicPath : project_publicPath,
     // 非主文件的命名规则
     chunkFilename: '[id].build.js?[chunkhash]'
   },
@@ -82,9 +83,12 @@ module.exports = {
     // 告诉babel你要解析的语言
     presets: ['es2015']
   },
+  // 文件设置别名
   resolve: {
     alias: {
-      'vue$': 'vue/dist/vue.js'
+      'vue$': 'vue/dist/vue.js',
+      '@plagin': path.resolve(SRC_PATH, 'plagin'),
+      '@mock': path.resolve(SRC_PATH, 'mock')
     }
   },
   devServer: {
@@ -92,6 +96,9 @@ module.exports = {
     hot: true,
     inline: true,
     progress: true,
+    host: 'localhost',
+    port: 8080,
+    open: true,  // 配置启动后自动调起浏览器
   },
   plugins: plugins
 };

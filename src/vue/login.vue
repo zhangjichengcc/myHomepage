@@ -3,8 +3,8 @@
     <tips></tips>
     <div class="login_con">
       <div class="login_main" :class="{active: this.classControl.active1, 'move_left': this.classControl.active2}">
-        <span class="user_icon" :class="{'admin': this.classControl.adminName}"></span>
-        <span class="input_item"><i class="icon-user"></i><input placeholder="username" @keyup="inputUserName" v-model="params.userName" type="" name=""></span>
+        <span class="user_icon" :style="{ backgroundImage: `url(${require('../img/userIcon.jpg')})` }"></span>
+        <span class="input_item"><i class="icon-user"></i><input placeholder="username" @keyup="inputUserName" v-model="display.userName" type="" name=""></span>
         <span class="input_item"><i class="icon-lock" :style="{left: '11px'}"></i><input placeholder="password" type="" name=""></span>
         <span class="log_btn" @click="login">登录</span>
         <span class="log_info">其实登录了也并没什么卵用。。。</span>
@@ -26,6 +26,9 @@
   import axios from 'axios';
   import nvHeader from '../components/header.vue';
   import tips from '../components/tips.vue';
+  // 导入登陆信息
+  import { userLoginInfo } from '@mock/login.js';
+
   export default {
     data : function(){
       return {
@@ -36,10 +39,21 @@
           active2: false,
           adminName: false,
         },
-        params: {
+        userInfo: {
           userName: null,
+          userPsd: null,
+          icon: null,
+        },
+        display: {
+          loginInfo: null,
+          userPsd: null,
+          icon: null,
         },
       }
+    },
+    created: function () {
+      global.vm = this;
+      console.log(userLoginInfo);
     },
     methods : {
       login : function() {
@@ -94,12 +108,18 @@
         setTimeout(() => {that.animate(0)}, 5000);
       },
       inputUserName: function() {
-        const { userName } = this.params;
-        if (userName === 'admin') {
-          this.$set(this.classControl, 'adminName', true);
-        } else {
-          this.$set(this.classControl, 'adminName', false);
-        };
+        const { userName } = this.display;
+        for (let key in userLoginInfo) {
+          const item = userLoginInfo[key];
+          if (userName === item.userName) {
+            this.$set(this, 'userInfo', item);
+          }
+        }
+        // if (userName === 'admin') {
+        //   this.$set(this.classControl, 'adminName', true);
+        // } else {
+        //   this.$set(this.classControl, 'adminName', false);
+        // };
       },
       animate: function(key) {
         const { loadingTime } = this;
@@ -121,6 +141,15 @@
           }, 500);
         }
       }
+    },
+    computed: {
+      userIcon: function() {
+        const { icon } = this.userInfo;
+        if (!icon) return '../img/userIcon.jpg';
+        // debugger
+        return icon;
+        // return `url('${require(icon)}')`;
+      },
     },
     components : {
       nvHeader,
@@ -170,6 +199,7 @@
         background-size: cover;
     		background-position: center;
         border-radius: 50%;
+        box-shadow: -5px 6px 15px rgba(6, 17, 47, 0.7);
         &.admin {
           background-image: url(../img/adminIcon.png);
         }

@@ -74,3 +74,12 @@ revert: 回滚到上一个版本
 └── webpack.js  	   // Webpack 配置文件
 </pre>
 
+
+
+webpack 配置
+
+###npm指令别名
+  在package.json文件中添加下面代码
+  "scripts": {
+    "start": "webpack-dev-server"
+  }

@@ -3,7 +3,8 @@
     <tips></tips>
     <div class="login_con">
       <div class="login_main" :class="{active: this.classControl.active1, 'move_left': this.classControl.active2}">
-        <span class="user_icon" :style="{ backgroundImage: `url(${require('../img/userIcon.jpg')})` }"></span>
+        <span class="user_icon" :style="{ backgroundImage: `url(${userIcon})` }"></span>
+        <!-- <span class="user_icon" :style="{ backgroundImage: `url(${require('../img/userIcon.jpg')})` }"></span> -->
         <span class="input_item"><i class="icon-user"></i><input placeholder="username" @keyup="inputUserName" v-model="display.userName" type="" name=""></span>
         <span class="input_item"><i class="icon-lock" :style="{left: '11px'}"></i><input placeholder="password" type="" name=""></span>
         <span class="log_btn" @click="login">登录</span>
@@ -147,8 +148,9 @@
         const { icon } = this.userInfo;
         if (!icon) return '../img/userIcon.jpg';
         // debugger
-        return icon;
-        // return `url('${require(icon)}')`;
+        // return icon;
+        const a = "userIcon.jpg";
+        return require(`../img/${a}`);
       },
     },
     components : {

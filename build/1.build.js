@@ -33,7 +33,7 @@ webpackJsonp([1,11],{
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	if(content.locals) module.exports = content.locals;
 	// add the styles to the DOM
-	var update = __webpack_require__(11)("de606a8e", content, true);
+	var update = __webpack_require__(11)("06356ba0", content, true);
 
 /***/ }),
 

@@ -3,7 +3,7 @@
     <tips></tips>
     <div class="login_con">
       <div class="login_main" :class="{active: this.classControl.active1, 'move_left': this.classControl.active2}">
-        <span class="user_icon" :style="{ backgroundImage: `url(${userIcon})` }"></span>
+        <span class="user_icon" :style="{ backgroundImage: userIcon }"></span>
         <!-- <span class="user_icon" :style="{ backgroundImage: `url(${require('../img/userIcon.jpg')})` }"></span> -->
         <span class="input_item"><i class="icon-user"></i><input placeholder="username" @keyup="inputUserName" v-model="display.userName" type="" name=""></span>
         <span class="input_item"><i class="icon-lock" :style="{left: '11px'}"></i><input placeholder="password" type="" name=""></span>
@@ -29,6 +29,7 @@
   import tips from '../components/tips.vue';
   // 导入登陆信息
   import { userLoginInfo } from '@mock/login.js';
+  import { backgroundImgUrl } from '@plagin/utils.js';
 
   export default {
     data : function(){
@@ -114,8 +115,10 @@
           const item = userLoginInfo[key];
           if (userName === item.userName) {
             this.$set(this, 'userInfo', item);
+            return;
           }
         }
+        this.$set(this, 'userInfo', {});
         // if (userName === 'admin') {
         //   this.$set(this.classControl, 'adminName', true);
         // } else {
@@ -146,11 +149,8 @@
     computed: {
       userIcon: function() {
         const { icon } = this.userInfo;
-        if (!icon) return '../img/userIcon.jpg';
-        // debugger
-        // return icon;
-        const a = "userIcon.jpg";
-        return require(`../img/${a}`);
+        if (!icon) return '';
+        return `url(${require(`../img/${icon}`)})`;
       },
     },
     components : {

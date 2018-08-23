@@ -48,6 +48,11 @@ const undefined = resolve => {
         resolve(require('../vue/undefined.vue'));
     });
 }
+const disboard = resolve => {
+    require.ensure(['../vue/disboard.vue'], () => {
+        resolve(require('../vue/disboard.vue'));
+    });
+}
 const edittopic = resolve => {
     require.ensure(['../vue/edittopic.vue'], () => {
         resolve(require('../vue/edittopic.vue'));
@@ -88,6 +93,10 @@ const routes = [{
     },{
         path: '/undefined',
         component: undefined
+    },{
+        path: '/disboard',
+        name: 'disboard',
+        component: disboard
     },{
         path: '*',
         component: articleList

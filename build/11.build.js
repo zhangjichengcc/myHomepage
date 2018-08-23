@@ -1,4 +1,4 @@
-webpackJsonp([6,12],{
+webpackJsonp([11,12],{
 
 /***/ 31:
 /***/ (function(module, exports, __webpack_require__) {
@@ -1514,25 +1514,18 @@ webpackJsonp([6,12],{
 
 /***/ }),
 
-/***/ 94:
-/***/ (function(module, exports) {
-
-	module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD4AAAA+CAYAAABzwahEAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpCQTU5MkRBMzVEMTYxMUU2OTQ2NkM0NDE1RTg2RjQxRiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpCQTU5MkRBNDVEMTYxMUU2OTQ2NkM0NDE1RTg2RjQxRiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkJBNTkyREExNUQxNjExRTY5NDY2QzQ0MTVFODZGNDFGIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkJBNTkyREEyNUQxNjExRTY5NDY2QzQ0MTVFODZGNDFGIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+VlHDsAAABGZJREFUeNrkm2doFEEUxyeWGHsPdgOJMTYiWLAXbKhBxfLBggohGhUUg4qIghXsLUKsiIkKISKoH2ygWKLYiTVqsGGsxBJLTEyM/8e+g/Pwttztzu5eHvwgl5vb3f/O7Mx7b96GlZeXi4poVTx/5OXl+WtTCUwBM0AXEAHywSmwHjxxi9iYmJh/RKlZNXAMHAC9WTRZc5AI7oGJbuxxLeHbQILK9+EgA/R07VD/j7Xh4a1llcFa0B9U59FQy+t7mkS+gHeg2A3CqafDdB6nH/gE6mu0ewvugkvgCHjsxKEeZfBY9XW0aQqGgdUgF5wHPZwm/LuE8w8AV8FufkwcITxb4nUkgeughROEnwFPJYrvyDc72m7hpWA6+C1RfCtwGkTavY7HgqqS551odprC7RLehycdO4xm+q12CG8MsmzobW+bBcbKFk493cQBDlYaaCBL+BjGCRbJEaDlwmlC2eKweCKR4wBLhU8NwFWVYTvNnuW9hVNAMt+hUWQcSLFKOC1f7R0cQi8DLa0QPtrhuYMaYLMVwnu7IHEyHgwyW3iccIelCvUEimHh9VwivB2YY3WQ4lRbzm61KcJLXSScRucqs4R/dVmvU9amc6A/9p4kXoOGLhJOnZYulJxdEfgBaDvoBrhvRPgLEO+yXu/E+NpLsIdXgEKtoX5ThI61FkoKm/L2I7WEZ4vQM8opnOCkhl/hF8HnEBRPwdcOMNCf8DJwUISmkc7tag5MKt+AULNXYKWacNpAyAghwcU8yZGbm6Xlsi4VcvbNrLbjLJji+J96fPV832HhMqPSlOGcX3huNEihSohHLhNMo3QxOzSnAo3OSsBMF4k+DNqCdXztQYWlVLWwz+GCc0BfMBm8MTMeXwQ+OlAwOVqzhVJ+dtmKRATVtSxwkGAqJNollMKktGB8Dj0ZGFrXzzlA9BXu4WRQYIYrp+cuJwv7SrWoTIx2eCjvf8dMH1aPkUe3QrJgSoVt5Nk6gztAyBZOtkEoNWoy7Ayvxwv9JRJkCi81umQEYC+EUgxAtXC5Vp7ISGK+GRhq0XX8EkpZKO2FF/lpEwW6CqWQsKYIslTEiPAJwpo8/FGh7IS+1Gg3WCh5NI9JE55gsmCKBeaBs3ZlJvTeoF4mnfMbO0XxBkU38nk0pDzjFNfWMEF0OrvB7wP4bXefSVBKj8cGeZ7bPGKmqYiuq/J7qoEf4fX5mizhzQM8fgGHt92EsuPhz8YJJS+W8p9RSKXeh4TymojHMmUN9VoGj1vGwcRSoZ2yXgLW8N+beMI7zQFSLGdTIrzaP2AHR4rwEgPHpPz8XI6V9Ri90EOFwp4qSirkTfLTtpBj7zJZQ/2Ljjbk1U0SSvF9joFroJ2OITrW8VscqOQIE0xvjz9U+Y56i4pyKI0baHb2Aq8ck9llpdr12uADC87kG/RHtst6g4dZHZ//n+Rn0oyCfnJV9zKOcWCoV/d7fX4GRvESI/MtBluis1UcMdFM3YGHnmstrKK+VPtXgAEAvqzQGmJXJEEAAAAASUVORK5CYII="
-
-/***/ }),
-
-/***/ 107:
+/***/ 80:
 /***/ (function(module, exports, __webpack_require__) {
 
 	
 	/* styles */
-	__webpack_require__(108)
+	__webpack_require__(81)
 
 	var Component = __webpack_require__(13)(
 	  /* script */
-	  __webpack_require__(110),
+	  __webpack_require__(83),
 	  /* template */
-	  __webpack_require__(111),
+	  __webpack_require__(84),
 	  /* scopeId */
 	  null,
 	  /* cssModules */
@@ -1544,21 +1537,21 @@ webpackJsonp([6,12],{
 
 /***/ }),
 
-/***/ 108:
+/***/ 81:
 /***/ (function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(109);
+	var content = __webpack_require__(82);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	if(content.locals) module.exports = content.locals;
 	// add the styles to the DOM
-	var update = __webpack_require__(11)("70c4e4a6", content, true);
+	var update = __webpack_require__(11)("102bf75a", content, true);
 
 /***/ }),
 
-/***/ 109:
+/***/ 82:
 /***/ (function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(10)();
@@ -1566,14 +1559,123 @@ webpackJsonp([6,12],{
 
 
 	// module
-	exports.push([module.id, ".userhome{overflow:hidden;margin:0 5px;padding:4rem 0 2rem}.userhome .userInfo .userInfoTitle{border-radius:7px 7px 0 0;background:#fff;padding:10px;color:#80bd01;font-size:14px}.userhome .userInfo .userInfoBox{margin-top:5px;padding:10px;background:#fff;opacity:.8}.userhome .userInfo .userInfoBox .useravatar{margin:0 auto}.userhome .userInfo .userInfoBox .useravatar img{display:block;width:80px;height:80px;margin:0 auto;border-radius:40px}.userhome .userInfo .userInfoBox .userbase .name{color:#a8b5c3;font-size:22px;text-align:center;line-height:40px}.userhome .userInfo .userInfoBox .userbase .baseinfo{color:#a8b5c3;font-size:16px;text-align:center}.userhome .userInfo .userInfoBox .userbase .baseinfo span{margin-right:20px}.userhome .userCollect,.userhome .userReplies,.userhome .userTopics{margin-top:5px}.userhome .userCollect .userCollectTitle,.userhome .userCollect .userRepliesTitle,.userhome .userCollect .userTopicsTitle,.userhome .userReplies .userCollectTitle,.userhome .userReplies .userRepliesTitle,.userhome .userReplies .userTopicsTitle,.userhome .userTopics .userCollectTitle,.userhome .userTopics .userRepliesTitle,.userhome .userTopics .userTopicsTitle{background:#fff;padding:10px;color:#80bd01;font-size:14px}.userhome .userCollect .userCollectBox,.userhome .userCollect .userRepliesBox,.userhome .userCollect .userTopicsBox,.userhome .userReplies .userCollectBox,.userhome .userReplies .userRepliesBox,.userhome .userReplies .userTopicsBox,.userhome .userTopics .userCollectBox,.userhome .userTopics .userRepliesBox,.userhome .userTopics .userTopicsBox{margin-top:5px;padding-top:10px;background:#fff;opacity:.8}.userhome .userCollect .userCollectBox .collectitem,.userhome .userCollect .userCollectBox .repliesitem,.userhome .userCollect .userCollectBox .topicsitem,.userhome .userCollect .userRepliesBox .collectitem,.userhome .userCollect .userRepliesBox .repliesitem,.userhome .userCollect .userRepliesBox .topicsitem,.userhome .userCollect .userTopicsBox .collectitem,.userhome .userCollect .userTopicsBox .repliesitem,.userhome .userCollect .userTopicsBox .topicsitem,.userhome .userReplies .userCollectBox .collectitem,.userhome .userReplies .userCollectBox .repliesitem,.userhome .userReplies .userCollectBox .topicsitem,.userhome .userReplies .userRepliesBox .collectitem,.userhome .userReplies .userRepliesBox .repliesitem,.userhome .userReplies .userRepliesBox .topicsitem,.userhome .userReplies .userTopicsBox .collectitem,.userhome .userReplies .userTopicsBox .repliesitem,.userhome .userReplies .userTopicsBox .topicsitem,.userhome .userTopics .userCollectBox .collectitem,.userhome .userTopics .userCollectBox .repliesitem,.userhome .userTopics .userCollectBox .topicsitem,.userhome .userTopics .userRepliesBox .collectitem,.userhome .userTopics .userRepliesBox .repliesitem,.userhome .userTopics .userRepliesBox .topicsitem,.userhome .userTopics .userTopicsBox .collectitem,.userhome .userTopics .userTopicsBox .repliesitem,.userhome .userTopics .userTopicsBox .topicsitem{position:relative;padding:10px;background:#fff;border-bottom:1px solid #e1e1e1}.userhome .userCollect .userCollectBox .collectitem .avatar,.userhome .userCollect .userCollectBox .repliesitem .avatar,.userhome .userCollect .userCollectBox .topicsitem .avatar,.userhome .userCollect .userRepliesBox .collectitem .avatar,.userhome .userCollect .userRepliesBox .repliesitem .avatar,.userhome .userCollect .userRepliesBox .topicsitem .avatar,.userhome .userCollect .userTopicsBox .collectitem .avatar,.userhome .userCollect .userTopicsBox .repliesitem .avatar,.userhome .userCollect .userTopicsBox .topicsitem .avatar,.userhome .userReplies .userCollectBox .collectitem .avatar,.userhome .userReplies .userCollectBox .repliesitem .avatar,.userhome .userReplies .userCollectBox .topicsitem .avatar,.userhome .userReplies .userRepliesBox .collectitem .avatar,.userhome .userReplies .userRepliesBox .repliesitem .avatar,.userhome .userReplies .userRepliesBox .topicsitem .avatar,.userhome .userReplies .userTopicsBox .collectitem .avatar,.userhome .userReplies .userTopicsBox .repliesitem .avatar,.userhome .userReplies .userTopicsBox .topicsitem .avatar,.userhome .userTopics .userCollectBox .collectitem .avatar,.userhome .userTopics .userCollectBox .repliesitem .avatar,.userhome .userTopics .userCollectBox .topicsitem .avatar,.userhome .userTopics .userRepliesBox .collectitem .avatar,.userhome .userTopics .userRepliesBox .repliesitem .avatar,.userhome .userTopics .userRepliesBox .topicsitem .avatar,.userhome .userTopics .userTopicsBox .collectitem .avatar,.userhome .userTopics .userTopicsBox .repliesitem .avatar,.userhome .userTopics .userTopicsBox .topicsitem .avatar{display:block;float:left;width:2rem;height:2rem}.userhome .userCollect .userCollectBox .collectitem .avatar img,.userhome .userCollect .userCollectBox .repliesitem .avatar img,.userhome .userCollect .userCollectBox .topicsitem .avatar img,.userhome .userCollect .userRepliesBox .collectitem .avatar img,.userhome .userCollect .userRepliesBox .repliesitem .avatar img,.userhome .userCollect .userRepliesBox .topicsitem .avatar img,.userhome .userCollect .userTopicsBox .collectitem .avatar img,.userhome .userCollect .userTopicsBox .repliesitem .avatar img,.userhome .userCollect .userTopicsBox .topicsitem .avatar img,.userhome .userReplies .userCollectBox .collectitem .avatar img,.userhome .userReplies .userCollectBox .repliesitem .avatar img,.userhome .userReplies .userCollectBox .topicsitem .avatar img,.userhome .userReplies .userRepliesBox .collectitem .avatar img,.userhome .userReplies .userRepliesBox .repliesitem .avatar img,.userhome .userReplies .userRepliesBox .topicsitem .avatar img,.userhome .userReplies .userTopicsBox .collectitem .avatar img,.userhome .userReplies .userTopicsBox .repliesitem .avatar img,.userhome .userReplies .userTopicsBox .topicsitem .avatar img,.userhome .userTopics .userCollectBox .collectitem .avatar img,.userhome .userTopics .userCollectBox .repliesitem .avatar img,.userhome .userTopics .userCollectBox .topicsitem .avatar img,.userhome .userTopics .userRepliesBox .collectitem .avatar img,.userhome .userTopics .userRepliesBox .repliesitem .avatar img,.userhome .userTopics .userRepliesBox .topicsitem .avatar img,.userhome .userTopics .userTopicsBox .collectitem .avatar img,.userhome .userTopics .userTopicsBox .repliesitem .avatar img,.userhome .userTopics .userTopicsBox .topicsitem .avatar img{display:inline-block;width:100%;height:100%}.userhome .userCollect .userCollectBox .collectitem .art-inf,.userhome .userCollect .userCollectBox .repliesitem .art-inf,.userhome .userCollect .userCollectBox .topicsitem .art-inf,.userhome .userCollect .userRepliesBox .collectitem .art-inf,.userhome .userCollect .userRepliesBox .repliesitem .art-inf,.userhome .userCollect .userRepliesBox .topicsitem .art-inf,.userhome .userCollect .userTopicsBox .collectitem .art-inf,.userhome .userCollect .userTopicsBox .repliesitem .art-inf,.userhome .userCollect .userTopicsBox .topicsitem .art-inf,.userhome .userReplies .userCollectBox .collectitem .art-inf,.userhome .userReplies .userCollectBox .repliesitem .art-inf,.userhome .userReplies .userCollectBox .topicsitem .art-inf,.userhome .userReplies .userRepliesBox .collectitem .art-inf,.userhome .userReplies .userRepliesBox .repliesitem .art-inf,.userhome .userReplies .userRepliesBox .topicsitem .art-inf,.userhome .userReplies .userTopicsBox .collectitem .art-inf,.userhome .userReplies .userTopicsBox .repliesitem .art-inf,.userhome .userReplies .userTopicsBox .topicsitem .art-inf,.userhome .userTopics .userCollectBox .collectitem .art-inf,.userhome .userTopics .userCollectBox .repliesitem .art-inf,.userhome .userTopics .userCollectBox .topicsitem .art-inf,.userhome .userTopics .userRepliesBox .collectitem .art-inf,.userhome .userTopics .userRepliesBox .repliesitem .art-inf,.userhome .userTopics .userRepliesBox .topicsitem .art-inf,.userhome .userTopics .userTopicsBox .collectitem .art-inf,.userhome .userTopics .userTopicsBox .repliesitem .art-inf,.userhome .userTopics .userTopicsBox .topicsitem .art-inf{position:relative;float:left;width:80%;height:2rem;margin-left:15px}.userhome .userCollect .userCollectBox .collectitem .art-inf a,.userhome .userCollect .userCollectBox .repliesitem .art-inf a,.userhome .userCollect .userCollectBox .topicsitem .art-inf a,.userhome .userCollect .userRepliesBox .collectitem .art-inf a,.userhome .userCollect .userRepliesBox .repliesitem .art-inf a,.userhome .userCollect .userRepliesBox .topicsitem .art-inf a,.userhome .userCollect .userTopicsBox .collectitem .art-inf a,.userhome .userCollect .userTopicsBox .repliesitem .art-inf a,.userhome .userCollect .userTopicsBox .topicsitem .art-inf a,.userhome .userReplies .userCollectBox .collectitem .art-inf a,.userhome .userReplies .userCollectBox .repliesitem .art-inf a,.userhome .userReplies .userCollectBox .topicsitem .art-inf a,.userhome .userReplies .userRepliesBox .collectitem .art-inf a,.userhome .userReplies .userRepliesBox .repliesitem .art-inf a,.userhome .userReplies .userRepliesBox .topicsitem .art-inf a,.userhome .userReplies .userTopicsBox .collectitem .art-inf a,.userhome .userReplies .userTopicsBox .repliesitem .art-inf a,.userhome .userReplies .userTopicsBox .topicsitem .art-inf a,.userhome .userTopics .userCollectBox .collectitem .art-inf a,.userhome .userTopics .userCollectBox .repliesitem .art-inf a,.userhome .userTopics .userCollectBox .topicsitem .art-inf a,.userhome .userTopics .userRepliesBox .collectitem .art-inf a,.userhome .userTopics .userRepliesBox .repliesitem .art-inf a,.userhome .userTopics .userRepliesBox .topicsitem .art-inf a,.userhome .userTopics .userTopicsBox .collectitem .art-inf a,.userhome .userTopics .userTopicsBox .repliesitem .art-inf a,.userhome .userTopics .userTopicsBox .topicsitem .art-inf a{display:inline-block;overflow:hidden;width:80%;height:2rem;color:#000;font-size:1rem;line-height:2rem;white-space:nowrap;text-overflow:ellipsis}.userhome .userCollect .userCollectBox .collectitem .art-inf span,.userhome .userCollect .userCollectBox .repliesitem .art-inf span,.userhome .userCollect .userCollectBox .topicsitem .art-inf span,.userhome .userCollect .userRepliesBox .collectitem .art-inf span,.userhome .userCollect .userRepliesBox .repliesitem .art-inf span,.userhome .userCollect .userRepliesBox .topicsitem .art-inf span,.userhome .userCollect .userTopicsBox .collectitem .art-inf span,.userhome .userCollect .userTopicsBox .repliesitem .art-inf span,.userhome .userCollect .userTopicsBox .topicsitem .art-inf span,.userhome .userReplies .userCollectBox .collectitem .art-inf span,.userhome .userReplies .userCollectBox .repliesitem .art-inf span,.userhome .userReplies .userCollectBox .topicsitem .art-inf span,.userhome .userReplies .userRepliesBox .collectitem .art-inf span,.userhome .userReplies .userRepliesBox .repliesitem .art-inf span,.userhome .userReplies .userRepliesBox .topicsitem .art-inf span,.userhome .userReplies .userTopicsBox .collectitem .art-inf span,.userhome .userReplies .userTopicsBox .repliesitem .art-inf span,.userhome .userReplies .userTopicsBox .topicsitem .art-inf span,.userhome .userTopics .userCollectBox .collectitem .art-inf span,.userhome .userTopics .userCollectBox .repliesitem .art-inf span,.userhome .userTopics .userCollectBox .topicsitem .art-inf span,.userhome .userTopics .userRepliesBox .collectitem .art-inf span,.userhome .userTopics .userRepliesBox .repliesitem .art-inf span,.userhome .userTopics .userRepliesBox .topicsitem .art-inf span,.userhome .userTopics .userTopicsBox .collectitem .art-inf span,.userhome .userTopics .userTopicsBox .repliesitem .art-inf span,.userhome .userTopics .userTopicsBox .topicsitem .art-inf span{display:inline-block}.userhome .userCollect .userCollectBox .collectitem .art-inf .last-time,.userhome .userCollect .userCollectBox .repliesitem .art-inf .last-time,.userhome .userCollect .userCollectBox .topicsitem .art-inf .last-time,.userhome .userCollect .userRepliesBox .collectitem .art-inf .last-time,.userhome .userCollect .userRepliesBox .repliesitem .art-inf .last-time,.userhome .userCollect .userRepliesBox .topicsitem .art-inf .last-time,.userhome .userCollect .userTopicsBox .collectitem .art-inf .last-time,.userhome .userCollect .userTopicsBox .repliesitem .art-inf .last-time,.userhome .userCollect .userTopicsBox .topicsitem .art-inf .last-time,.userhome .userReplies .userCollectBox .collectitem .art-inf .last-time,.userhome .userReplies .userCollectBox .repliesitem .art-inf .last-time,.userhome .userReplies .userCollectBox .topicsitem .art-inf .last-time,.userhome .userReplies .userRepliesBox .collectitem .art-inf .last-time,.userhome .userReplies .userRepliesBox .repliesitem .art-inf .last-time,.userhome .userReplies .userRepliesBox .topicsitem .art-inf .last-time,.userhome .userReplies .userTopicsBox .collectitem .art-inf .last-time,.userhome .userReplies .userTopicsBox .repliesitem .art-inf .last-time,.userhome .userReplies .userTopicsBox .topicsitem .art-inf .last-time,.userhome .userTopics .userCollectBox .collectitem .art-inf .last-time,.userhome .userTopics .userCollectBox .repliesitem .art-inf .last-time,.userhome .userTopics .userCollectBox .topicsitem .art-inf .last-time,.userhome .userTopics .userRepliesBox .collectitem .art-inf .last-time,.userhome .userTopics .userRepliesBox .repliesitem .art-inf .last-time,.userhome .userTopics .userRepliesBox .topicsitem .art-inf .last-time,.userhome .userTopics .userTopicsBox .collectitem .art-inf .last-time,.userhome .userTopics .userTopicsBox .repliesitem .art-inf .last-time,.userhome .userTopics .userTopicsBox .topicsitem .art-inf .last-time{position:absolute;right:0;bottom:0;font-size:12px;padding:2px 4px}.userhome .userCollect .userCollectBox .nodata,.userhome .userCollect .userRepliesBox .nodata,.userhome .userCollect .userTopicsBox .nodata,.userhome .userReplies .userCollectBox .nodata,.userhome .userReplies .userRepliesBox .nodata,.userhome .userReplies .userTopicsBox .nodata,.userhome .userTopics .userCollectBox .nodata,.userhome .userTopics .userRepliesBox .nodata,.userhome .userTopics .userTopicsBox .nodata{position:relative;padding-top:40px;color:#a8b5c3;font-size:16px;text-align:center;line-height:40px}.userhome .userCollect .userCollectBox .nodata .nodataimg,.userhome .userCollect .userRepliesBox .nodata .nodataimg,.userhome .userCollect .userTopicsBox .nodata .nodataimg,.userhome .userReplies .userCollectBox .nodata .nodataimg,.userhome .userReplies .userRepliesBox .nodata .nodataimg,.userhome .userReplies .userTopicsBox .nodata .nodataimg,.userhome .userTopics .userCollectBox .nodata .nodataimg,.userhome .userTopics .userRepliesBox .nodata .nodataimg,.userhome .userTopics .userTopicsBox .nodata .nodataimg{position:absolute;width:40px;height:40px;left:0;top:0;right:0;margin:auto;background:url(" + __webpack_require__(94) + ") no-repeat;background-size:100%}", ""]);
+	exports.push([module.id, ".tips-cover{position:fixed;width:100%;height:100%;top:0;left:0;z-index:10000;background:rgba(0,0,0,.6);transition:opacity 3.2s linear}.tips-cover .alert{position:fixed;z-index:5000;width:85%;top:50%;left:50%;transform:translate(-50%,-50%);background-color:#fafafc;text-align:center;border-radius:3px;overflow:hidden;transition-property:transform,opacity!important}.tips-cover .alert .tipcon{padding:20px;font-size:15px;color:#888}.tips-cover .alert .ok{position:relative;line-height:42px;margin-top:20px;color:#0bb20c;font-size:17px;text-align:center}.tips-cover .alert-transition{opacity:1;webkit-transition-duration:.4s;transition-duration:.4s}.tips-leave{opacity:0}", ""]);
 
 	// exports
 
 
 /***/ }),
 
-/***/ 110:
+/***/ 83:
+/***/ (function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+
+	exports.default = {
+		computed: {
+			tipShow: function tipShow() {
+				return this.$store.getters.getTipShow;
+			},
+			tipShowContent: function tipShowContent() {
+				return this.$store.getters.getTipContent;
+			}
+		},
+		methods: {
+			isHide: function isHide() {
+				this.$store.dispatch('setTipShow', false);
+				this.$store.dispatch('setTipContent', '');
+			}
+		}
+
+	};
+
+/***/ }),
+
+/***/ 84:
+/***/ (function(module, exports) {
+
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return (_vm.tipShow) ? _c('div', {
+	    staticClass: "tips-cover"
+	  }, [_c('div', {
+	    staticClass: "alert"
+	  }, [_c('div', {
+	    staticClass: "tipcon"
+	  }, [_vm._v(_vm._s(_vm.tipShowContent))]), _vm._v(" "), _c('div', {
+	    staticClass: "ok",
+	    on: {
+	      "click": _vm.isHide
+	    }
+	  }, [_vm._v("OK")])])]) : _vm._e()
+	},staticRenderFns: []}
+
+/***/ }),
+
+/***/ 119:
+/***/ (function(module, exports, __webpack_require__) {
+
+	
+	/* styles */
+	__webpack_require__(120)
+
+	var Component = __webpack_require__(13)(
+	  /* script */
+	  __webpack_require__(122),
+	  /* template */
+	  __webpack_require__(123),
+	  /* scopeId */
+	  null,
+	  /* cssModules */
+	  null
+	)
+
+	module.exports = Component.exports
+
+
+/***/ }),
+
+/***/ 120:
+/***/ (function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(121);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	if(content.locals) module.exports = content.locals;
+	// add the styles to the DOM
+	var update = __webpack_require__(11)("248ebc84", content, true);
+
+/***/ }),
+
+/***/ 121:
+/***/ (function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(10)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".createtopic-box{overflow:hidden;margin:0 5px;padding-top:4rem}.createtopic-box .createtopic-item{width:90%;height:auto;padding:15px 5%}.createtopic-box .createtopic-item select{width:30%;height:1.5rem;padding-left:20px;font-size:.8rem}.createtopic-box .createtopic-item input{width:100%;height:1.5rem;font-size:.8rem}.createtopic-box .createtopic-item textarea{width:100%;height:6rem;font-size:.8rem}.createtopic-box .createtopic-item .submit{display:inline-block;width:10%;height:1.5rem;background-color:#08c;color:#fff;font-size:.8rem;text-align:center;line-height:1.5rem}", ""]);
+
+	// exports
+
+
+/***/ }),
+
+/***/ 122:
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1586,9 +1688,9 @@ webpackJsonp([6,12],{
 
 	var _axios2 = _interopRequireDefault(_axios);
 
-	var _header = __webpack_require__(15);
+	var _tips = __webpack_require__(80);
 
-	var _header2 = _interopRequireDefault(_header);
+	var _tips2 = _interopRequireDefault(_tips);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1615,63 +1717,224 @@ webpackJsonp([6,12],{
 	//
 	//
 	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
+
+	exports.default = {
+		props: ['topicId'],
+		data: function data() {
+			return {
+				topicType: 'share',
+				topicTitle: '',
+				topicContainer: ''
+			};
+		},
+		mounted: function mounted() {
+			var _this = this;
+
+			if (this.topicId) {
+				// 修改主题
+				var rqdata = {
+					mdrender: false
+				};
+				_axios2.default.get('https://cnodejs.org/api/v1/topic/' + this.topicId, {
+					params: rqdata
+				}).then(function (response) {
+					var data = response.data;
+					if (data.success) {
+						_this.topicType = data.data.tab;
+						_this.topicTitle = data.data.title;
+						_this.topicContainer = data.data.content;
+					}
+				}).catch(function (error) {
+					console.log(error);
+				});
+			}
+		},
+		methods: {
+			submitTopic: function submitTopic() {
+				var _this2 = this;
+
+				if (this.LoginState) {
+					var title = this.topicTitle.trim(),
+					    content = this.topicContainer.trim();
+					if (title.length <= 10 || content === '') {
+						this.$store.dispatch('setTipShow', true);
+						this.$store.dispatch('setTipContent', '标题字少10个字以上或内容不能为空。');
+						return;
+					}
+					var url = '';
+					if (this.topicId) {
+						// 修改
+						url = 'https://cnodejs.org/api/v1/topics/update';
+					} else {
+						// 创建
+						url = 'https://cnodejs.org/api/v1/topics';
+					}
+					_axios2.default.post(url, {
+						'accesstoken': this.userInfo.accesstoken,
+						'title': title,
+						'tab': this.topicType,
+						'content': content,
+						'topic_id': this.topicId
+					}).then(function (response) {
+						var data = response.data;
+						if (data.success) {
+							_this2.$router.push({ name: 'article', params: { id: data.topic_id } });
+						}
+					}).catch(function (error) {
+						console.log(error);
+					});
+				} else {
+					this.$router.push({ name: 'login' });
+				}
+			}
+		},
+		computed: {
+			// 登陆状态
+			LoginState: function LoginState() {
+				return this.$store.getters.getLoginState;
+			},
+
+			// 登陆用户信息
+			userInfo: function userInfo() {
+				return this.$store.getters.getUserInfo;
+			}
+		},
+		components: {
+			tips: _tips2.default
+		}
+	};
+
+/***/ }),
+
+/***/ 123:
+/***/ (function(module, exports) {
+
+	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+	  return _c('div', [_c('tips'), _vm._v(" "), _c('div', {
+	    staticClass: "createtopic-box"
+	  }, [_c('div', {
+	    staticClass: "createtopic-item"
+	  }, [_c('select', {
+	    directives: [{
+	      name: "model",
+	      rawName: "v-model",
+	      value: (_vm.topicType),
+	      expression: "topicType"
+	    }],
+	    on: {
+	      "change": function($event) {
+	        var $$selectedVal = Array.prototype.filter.call($event.target.options, function(o) {
+	          return o.selected
+	        }).map(function(o) {
+	          var val = "_value" in o ? o._value : o.value;
+	          return val
+	        });
+	        _vm.topicType = $event.target.multiple ? $$selectedVal : $$selectedVal[0]
+	      }
+	    }
+	  }, [_c('option', {
+	    attrs: {
+	      "value": "share"
+	    }
+	  }, [_vm._v("分享")]), _vm._v(" "), _c('option', {
+	    attrs: {
+	      "value": "ask"
+	    }
+	  }, [_vm._v("问答")]), _vm._v(" "), _c('option', {
+	    attrs: {
+	      "value": "jpb"
+	    }
+	  }, [_vm._v("招聘")])])]), _vm._v(" "), _c('div', {
+	    staticClass: "createtopic-item"
+	  }, [_c('input', {
+	    directives: [{
+	      name: "model",
+	      rawName: "v-model",
+	      value: (_vm.topicTitle),
+	      expression: "topicTitle"
+	    }],
+	    attrs: {
+	      "type": "text",
+	      "placeholder": "在此输入话题标题"
+	    },
+	    domProps: {
+	      "value": (_vm.topicTitle)
+	    },
+	    on: {
+	      "input": function($event) {
+	        if ($event.target.composing) { return; }
+	        _vm.topicTitle = $event.target.value
+	      }
+	    }
+	  })]), _vm._v(" "), _c('div', {
+	    staticClass: "createtopic-item"
+	  }, [_c('textarea', {
+	    directives: [{
+	      name: "model",
+	      rawName: "v-model",
+	      value: (_vm.topicContainer),
+	      expression: "topicContainer"
+	    }],
+	    attrs: {
+	      "placeholder": "在此输入话题内容"
+	    },
+	    domProps: {
+	      "value": (_vm.topicContainer)
+	    },
+	    on: {
+	      "input": function($event) {
+	        if ($event.target.composing) { return; }
+	        _vm.topicContainer = $event.target.value
+	      }
+	    }
+	  }), _vm._v(" "), _c('div', [_c('span', {
+	    staticClass: "submit",
+	    on: {
+	      "click": _vm.submitTopic
+	    }
+	  }, [_vm._v("提交")])])])])], 1)
+	},staticRenderFns: []}
+
+/***/ }),
+
+/***/ 616:
+/***/ (function(module, exports, __webpack_require__) {
+
+	var Component = __webpack_require__(13)(
+	  /* script */
+	  __webpack_require__(617),
+	  /* template */
+	  __webpack_require__(618),
+	  /* scopeId */
+	  null,
+	  /* cssModules */
+	  null
+	)
+
+	module.exports = Component.exports
+
+
+/***/ }),
+
+/***/ 617:
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+
+	var _header = __webpack_require__(15);
+
+	var _header2 = _interopRequireDefault(_header);
+
+	var _topicbox = __webpack_require__(119);
+
+	var _topicbox2 = _interopRequireDefault(_topicbox);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 	//
 	//
 	//
@@ -1680,224 +1943,41 @@ webpackJsonp([6,12],{
 	//
 
 	exports.default = {
-		data: function data() {
-			return {
-				user_name: '',
-				user_avatar: '',
-				score: 0,
-				create_at: '',
-				topicsShow: false,
-				recent_topics: [],
-				repliesShow: false,
-				recent_replies: [],
-				collectShow: false,
-				topic_collect: []
-			};
-		},
-		watch: {
-			// 当在userhome内的子路有发生改变时调用
-			$route: 'getUserHome'
-		},
 		mounted: function mounted() {
-			this.getUserHome();
+			if (!this.LoginState) {
+				// 未登陆，跳转登陆页
+				this.$router.push({ name: 'login' });
+				return;
+			}
 		},
-		methods: {
-			// 用户参与主题
-			getUserHome: function getUserHome() {
-				var _this = this;
+		computed: {
+			// 登陆状态
+			LoginState: function LoginState() {
+				return this.$store.getters.getLoginState;
+			},
 
-				this.user_name = this.$route.params.username;
-				// 获取创建主题列表和参与话题列表
-				_axios2.default.get('https://cnodejs.org/api/v1/user/' + this.user_name).then(function (response) {
-					if (response.data.success) {
-						var d = response.data;
-						_this.user_avatar = d.data.avatar_url;
-						_this.score = d.data.score;
-						_this.create_at = d.data.create_at;
-						_this.recent_topics = d.data.recent_topics;
-						_this.recent_replies = d.data.recent_replies;
-						// 判断创建话题数和参与话题数，如果为0显示文案提示
-						_this.recent_topics.length === 0 ? _this.topicsShow = true : _this.topicsShow = false;
-						_this.recent_replies.length === 0 ? _this.repliesShow = true : _this.repliesShow = false;
-					}
-				}).catch(function (error) {
-					console.log(error);
-				});
-				// 获取收藏主题列表
-				_axios2.default.get('https://cnodejs.org/api/v1/topic_collect/' + this.user_name).then(function (response) {
-					if (response.data.success) {
-						var d = response.data;
-						_this.topic_collect = d.data;
-						_this.topic_collect.length === 0 ? _this.collectShow = true : _this.collectShow = false;
-					}
-				}).catch(function (error) {
-					console.log(error);
-				});
+			// 获取主题id
+			topicid: function topicid() {
+				return this.$route.params.topicid;
 			}
 		},
 		components: {
-			nvHeader: _header2.default
+			nvHeader: _header2.default,
+			topicBox: _topicbox2.default
 		}
 	};
 
 /***/ }),
 
-/***/ 111:
+/***/ 618:
 /***/ (function(module, exports) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return _c('div', [_c('nv-header'), _vm._v(" "), _c('div', {
-	    staticClass: "userhome"
-	  }, [_c('div', {
-	    staticClass: "userInfo"
-	  }, [_c('div', {
-	    staticClass: "userInfoTitle"
-	  }, [_vm._v("个人信息")]), _vm._v(" "), _c('div', {
-	    staticClass: "userInfoBox"
-	  }, [_c('div', {
-	    staticClass: "useravatar"
-	  }, [_c('img', {
+	  return _c('div', [_c('nv-header'), _vm._v(" "), _c('topic-box', {
 	    attrs: {
-	      "src": _vm.user_avatar
+	      "topicId": _vm.topicid
 	    }
-	  })]), _vm._v(" "), _c('div', {
-	    staticClass: "userbase"
-	  }, [_c('p', {
-	    staticClass: "name"
-	  }, [_vm._v(_vm._s(_vm.user_name))]), _vm._v(" "), _c('div', {
-	    staticClass: "baseinfo"
-	  }, [_c('span', {
-	    staticClass: "jifen"
-	  }, [_vm._v("积分：" + _vm._s(_vm.score))]), _vm._v(" "), _c('span', {
-	    staticClass: "lasttime"
-	  }, [_vm._v("注册时间：" + _vm._s(_vm._f("getDateTime")(_vm.create_at)))])])])])]), _vm._v(" "), _c('div', {
-	    staticClass: "userTopics"
-	  }, [_c('div', {
-	    staticClass: "userTopicsTitle"
-	  }, [_vm._v("创建主题")]), _vm._v(" "), _c('div', {
-	    staticClass: "userTopicsBox"
-	  }, [_vm._l((_vm.recent_topics), function(topic) {
-	    return _c('div', {
-	      staticClass: "topicsitem clearfix"
-	    }, [_c('router-link', {
-	      attrs: {
-	        "to": {
-	          name: 'article',
-	          params: {
-	            id: topic.id
-	          }
-	        }
-	      }
-	    }, [_c('a', {
-	      staticClass: "avatar",
-	      attrs: {
-	        "href": "javascript:void(0);"
-	      }
-	    }, [_c('img', {
-	      attrs: {
-	        "src": topic.author.avatar_url,
-	        "alt": topic.author.loginname
-	      }
-	    })]), _vm._v(" "), _c('div', {
-	      staticClass: "art-inf"
-	    }, [_c('a', {
-	      staticClass: "title"
-	    }, [_vm._v(_vm._s(topic.title))]), _vm._v(" "), _c('span', {
-	      staticClass: "last-time"
-	    }, [_vm._v(_vm._s(_vm._f("getLastTime")(topic.last_reply_at)))])])])], 1)
-	  }), _vm._v(" "), (_vm.topicsShow) ? _c('div', {
-	    staticClass: "nodata"
-	  }, [_c('div', {
-	    staticClass: "nodataimg"
-	  }), _vm._v("\n\t\t\t\t\t还没有创建主题\n\t\t\t\t")]) : _vm._e()], 2)]), _vm._v(" "), _c('div', {
-	    staticClass: "userReplies"
-	  }, [_c('div', {
-	    staticClass: "userRepliesTitle"
-	  }, [_vm._v("参与主题")]), _vm._v(" "), _c('div', {
-	    staticClass: "userRepliesBox"
-	  }, [_vm._l((_vm.recent_replies), function(replies) {
-	    return _c('div', {
-	      staticClass: "repliesitem clearfix"
-	    }, [_c('router-link', {
-	      attrs: {
-	        "to": {
-	          name: 'article',
-	          params: {
-	            id: replies.id
-	          }
-	        }
-	      }
-	    }, [_c('router-link', {
-	      staticClass: "avatar",
-	      attrs: {
-	        "to": {
-	          name: 'userhome',
-	          params: {
-	            username: replies.author.loginname
-	          }
-	        }
-	      }
-	    }, [_c('img', {
-	      attrs: {
-	        "src": replies.author.avatar_url,
-	        "alt": replies.author.loginname
-	      }
-	    })]), _vm._v(" "), _c('div', {
-	      staticClass: "art-inf"
-	    }, [_c('a', {
-	      staticClass: "title"
-	    }, [_vm._v(_vm._s(replies.title))]), _vm._v(" "), _c('span', {
-	      staticClass: "last-time"
-	    }, [_vm._v(_vm._s(_vm._f("getLastTime")(replies.last_reply_at)))])])], 1)], 1)
-	  }), _vm._v(" "), (_vm.repliesShow) ? _c('div', {
-	    staticClass: "nodata"
-	  }, [_c('div', {
-	    staticClass: "nodataimg"
-	  }), _vm._v("\n\t\t\t\t\t还没有参与主题讨论\n\t\t\t\t")]) : _vm._e()], 2)]), _vm._v(" "), _c('div', {
-	    staticClass: "userCollect"
-	  }, [_c('div', {
-	    staticClass: "userCollectTitle"
-	  }, [_vm._v("收藏主题")]), _vm._v(" "), _c('div', {
-	    staticClass: "userCollectBox"
-	  }, [_vm._l((_vm.topic_collect), function(collect) {
-	    return _c('div', {
-	      staticClass: "collectitem clearfix"
-	    }, [_c('router-link', {
-	      attrs: {
-	        "to": {
-	          name: 'article',
-	          params: {
-	            id: collect.id
-	          }
-	        }
-	      }
-	    }, [_c('router-link', {
-	      staticClass: "avatar",
-	      attrs: {
-	        "to": {
-	          name: 'userhome',
-	          params: {
-	            username: collect.author.loginname
-	          }
-	        }
-	      }
-	    }, [_c('img', {
-	      attrs: {
-	        "src": collect.author.avatar_url,
-	        "alt": collect.author.loginname
-	      }
-	    })]), _vm._v(" "), _c('div', {
-	      staticClass: "art-inf"
-	    }, [_c('a', {
-	      staticClass: "title"
-	    }, [_vm._v(_vm._s(collect.title))]), _vm._v(" "), _c('span', {
-	      staticClass: "last-time"
-	    }, [_vm._v(_vm._s(_vm._f("getLastTime")(collect.last_reply_at)))])])], 1)], 1)
-	  }), _vm._v(" "), (_vm.collectShow) ? _c('div', {
-	    staticClass: "nodata"
-	  }, [_c('div', {
-	    staticClass: "nodataimg"
-	  }), _vm._v("\n\t\t\t\t\t没有收藏主题\n\t\t\t\t")]) : _vm._e()], 2)])])], 1)
+	  })], 1)
 	},staticRenderFns: []}
 
 /***/ })

@@ -1,4 +1,4 @@
-webpackJsonp([0,11],{
+webpackJsonp([0,12],{
 
 /***/ 0:
 /***/ (function(module, exports, __webpack_require__) {
@@ -13,15 +13,15 @@ webpackJsonp([0,11],{
 
 	var _router2 = _interopRequireDefault(_router);
 
-	var _store = __webpack_require__(133);
+	var _store = __webpack_require__(619);
 
 	var _store2 = _interopRequireDefault(_store);
 
-	var _App = __webpack_require__(135);
+	var _App = __webpack_require__(621);
 
 	var _App2 = _interopRequireDefault(_App);
 
-	var _index = __webpack_require__(140);
+	var _index = __webpack_require__(626);
 
 	var filters = _interopRequireWildcard(_index);
 
@@ -30,10 +30,10 @@ webpackJsonp([0,11],{
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	//引入css重置文件,基本的样式文件
-	__webpack_require__(141);
+	__webpack_require__(627);
 
 	// 引入px与rem的换算
-	__webpack_require__(142);
+	__webpack_require__(628);
 
 	// 遍历输出a过滤器的模块
 	Object.keys(filters).forEach(function (k) {
@@ -11527,9 +11527,14 @@ webpackJsonp([0,11],{
 	        resolve(__webpack_require__(125));
 	    });
 	};
-	var edittopic = function edittopic(resolve) {
+	var disboard = function disboard(resolve) {
 	    __webpack_require__.e/* nsure */(10, function () {
 	        resolve(__webpack_require__(130));
+	    });
+	};
+	var edittopic = function edittopic(resolve) {
+	    __webpack_require__.e/* nsure */(11, function () {
+	        resolve(__webpack_require__(616));
 	    });
 	};
 	var routes = [{
@@ -11567,6 +11572,10 @@ webpackJsonp([0,11],{
 	}, {
 	    path: '/undefined',
 	    component: undefined
+	}, {
+	    path: '/disboard',
+	    name: 'disboard',
+	    component: disboard
 	}, {
 	    path: '*',
 	    component: articleList
@@ -14764,6 +14773,7 @@ webpackJsonp([0,11],{
 	//
 	//
 	//
+	//
 
 	exports.default = {
 		props: ['showm'],
@@ -14832,6 +14842,11 @@ webpackJsonp([0,11],{
 	      "to": "/login"
 	    }
 	  }, [_vm._v("登录")]), _vm._v(" "), _c('router-link', {
+	    staticClass: "nv_item",
+	    attrs: {
+	      "to": "/disboard"
+	    }
+	  }, [_vm._v("仪表盘")]), _vm._v(" "), _c('router-link', {
 	    staticClass: "nv_item",
 	    attrs: {
 	      "to": "/createtopic"
@@ -14914,7 +14929,7 @@ webpackJsonp([0,11],{
 
 /***/ }),
 
-/***/ 133:
+/***/ 619:
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -14927,7 +14942,7 @@ webpackJsonp([0,11],{
 
 	var _vue2 = _interopRequireDefault(_vue);
 
-	var _vuex = __webpack_require__(134);
+	var _vuex = __webpack_require__(620);
 
 	var _vuex2 = _interopRequireDefault(_vuex);
 
@@ -15060,7 +15075,7 @@ webpackJsonp([0,11],{
 
 /***/ }),
 
-/***/ 134:
+/***/ 620:
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -16000,18 +16015,18 @@ webpackJsonp([0,11],{
 
 /***/ }),
 
-/***/ 135:
+/***/ 621:
 /***/ (function(module, exports, __webpack_require__) {
 
 	
 	/* styles */
-	__webpack_require__(136)
+	__webpack_require__(622)
 
 	var Component = __webpack_require__(13)(
 	  /* script */
-	  __webpack_require__(138),
+	  __webpack_require__(624),
 	  /* template */
-	  __webpack_require__(139),
+	  __webpack_require__(625),
 	  /* scopeId */
 	  null,
 	  /* cssModules */
@@ -16023,13 +16038,13 @@ webpackJsonp([0,11],{
 
 /***/ }),
 
-/***/ 136:
+/***/ 622:
 /***/ (function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(137);
+	var content = __webpack_require__(623);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	if(content.locals) module.exports = content.locals;
 	// add the styles to the DOM
@@ -16037,7 +16052,7 @@ webpackJsonp([0,11],{
 
 /***/ }),
 
-/***/ 137:
+/***/ 623:
 /***/ (function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(10)();
@@ -16052,7 +16067,7 @@ webpackJsonp([0,11],{
 
 /***/ }),
 
-/***/ 138:
+/***/ 624:
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16093,7 +16108,7 @@ webpackJsonp([0,11],{
 
 /***/ }),
 
-/***/ 139:
+/***/ 625:
 /***/ (function(module, exports) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -16109,7 +16124,7 @@ webpackJsonp([0,11],{
 
 /***/ }),
 
-/***/ 140:
+/***/ 626:
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -16194,14 +16209,14 @@ webpackJsonp([0,11],{
 
 /***/ }),
 
-/***/ 141:
+/***/ 627:
 /***/ (function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 142:
+/***/ 628:
 /***/ (function(module, exports) {
 
 	'use strict';

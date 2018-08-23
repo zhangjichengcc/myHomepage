@@ -2,6 +2,7 @@
 	<div class="nav">
 		<router-link class="nv_item" to="/">首页</router-link>
 		<router-link class="nv_item" to="/login">登录</router-link>
+		<router-link class="nv_item" to="/disboard">仪表盘</router-link>
 		<router-link class="nv_item" to="/createtopic">发布话题</router-link>
 		<router-link class="nv_item" to="/about">关于</router-link>
 		<router-link class="nv_item" to="/undefined">404</router-link>

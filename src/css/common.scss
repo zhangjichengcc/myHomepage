@@ -1,4 +1,6 @@
 @import './default.scss';
+// @import './style.css';
+@import '../plagin/global.scss';
 ::-webkit-input-placeholder {
   /* WebKit browsers */
   color: $placeholder_color;

@@ -160,9 +160,8 @@
   }
 </script>
 <style lang="sass">
-  @import '../css/default.scss';
   @import '../css/common.scss';
-  @import '../css/style.css'; 
+  // @import '../css/style.css';
   @import '../css/animate.scss';
   .bg {
     background-color: #eee;

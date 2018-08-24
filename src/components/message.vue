@@ -1,10 +1,7 @@
 <template>
-	<div v-if="tipShow" class="tips-cover">
-		<div class="alert">
-			<div class="tipcon">{{tipShowContent}}</div>
-			<div class="ok" @click="isHide">OK</div>
-		</div>
-	</div>
+	<transition name="fade" class="vm_alert">
+    <div>adfasdfasdf</div>
+  </transition>
 </template>
 <script>
 	export default {
@@ -14,7 +11,7 @@
 			},
 			tipShowContent() {
 				return this.$store.getters.getTipContent;
-			}
+			},
 		},
 		methods : {
 			isHide : function() {
@@ -22,7 +19,6 @@
 				this.$store.dispatch('setTipContent', '');
 			}
 		}
-
 	}
 </script>
 <style lang="sass">

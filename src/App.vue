@@ -1,13 +1,14 @@
 <template>
 	<div>
-		<nv-header></nv-header>
+		<vm-header />
 		<transition name="fade" class="router">
-			<router-view class="r"></router-view>
+			<router-view class="r" />
 		</transition>
+		<div id="vm_message" />
 	</div>
 </template>
 <script>
-	import nvHeader from './components/header.vue';
+	import vmHeader from './components/header.vue';
 	export default {
 		data : function() {
 			return {
@@ -25,11 +26,13 @@
 			
 		},
 		components : {
-			nvHeader,
+			vmHeader,
 		}
 	}
 </script>
 <style lang="sass">
+	@import './css/common.scss';
+	@import './css/style.css';
 	.r {
 		width: 100%;
 		height: 100%;

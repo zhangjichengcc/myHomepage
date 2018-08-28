@@ -5,8 +5,8 @@
       <div class="login_main" :class="{active: this.classControl.active1, 'move_left': this.classControl.active2}">
         <span class="user_icon" :style="{ backgroundImage: userIcon }"></span>
         <!-- <span class="user_icon" :style="{ backgroundImage: `url(${require('../img/userIcon.jpg')})` }"></span> -->
-        <span class="input_item"><i class="icon-user"></i><input placeholder="username" @keyup="inputUserName" v-model="display.userName" type="" name=""></span>
-        <span class="input_item"><i class="icon-lock" :style="{left: '11px'}"></i><input placeholder="password" v-model="display.userPsd" type="" name=""></span>
+        <span class="input_item"><i class="icon-user" /><input placeholder="username" @keyup="inputUserName" v-model="display.userName" type="" name=""></span>
+        <span class="input_item"><i class="icon-lock" :style="{left: '11px'}" /><input placeholder="password" v-model="display.userPsd" type="" name=""><i class="icon-eye" /></span>
         <span class="log_btn" @click="login">登录</span>
         <span class="getPsd_btn" @click="getPsd">忘记密码</span>
         <span class="log_info">其实登录了也并没什么卵用。。。</span>

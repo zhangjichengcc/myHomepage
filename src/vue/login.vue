@@ -6,8 +6,9 @@
         <span class="user_icon" :style="{ backgroundImage: userIcon }"></span>
         <!-- <span class="user_icon" :style="{ backgroundImage: `url(${require('../img/userIcon.jpg')})` }"></span> -->
         <span class="input_item"><i class="icon-user"></i><input placeholder="username" @keyup="inputUserName" v-model="display.userName" type="" name=""></span>
-        <span class="input_item"><i class="icon-lock" :style="{left: '11px'}"></i><input placeholder="password" type="" name=""></span>
+        <span class="input_item"><i class="icon-lock" :style="{left: '11px'}"></i><input placeholder="password" v-model="display.userPsd" type="" name=""></span>
         <span class="log_btn" @click="login">登录</span>
+        <span class="getPsd_btn" @click="getPsd">忘记密码</span>
         <span class="log_info">其实登录了也并没什么卵用。。。</span>
       </div>
       <div class="login_loading" :class="{active: this.classControl.active2}">
@@ -20,6 +21,9 @@
 				</div>
 				<p>认证中...</p>
       </div>
+      <div class="psd_getter">
+        aaa
+      </div>
     </div>
   </div>
 </template>
@@ -27,9 +31,9 @@
   import axios from 'axios';
   import nvHeader from '../components/header.vue';
   import tips from '../components/tips.vue';
+  import { message } from '../plagin/global.js'
   // 导入登陆信息
   import { userLoginInfo } from '@mock/login.js';
-  import { backgroundImgUrl } from '@plagin/utils.js';
 
   export default {
     data : function(){
@@ -41,13 +45,15 @@
           active2: false,
           adminName: false,
         },
+        // 请求满足的登陆数据
         userInfo: {
           userName: null,
           userPsd: null,
           icon: null,
         },
+        // 记录输入的登陆数据
         display: {
-          loginInfo: null,
+          userName: null,
           userPsd: null,
           icon: null,
         },
@@ -55,10 +61,49 @@
     },
     created: function () {
       global.vm = this;
+      global.m = message;
       console.log(userLoginInfo);
     },
     methods : {
       login : function() {
+        const { userInfo, display } = this;
+        const infoArr = [['用户名不能为空！','密码不能为空！'], '该用户名不存在！', '密码错误！', '登陆成功！'];
+        const that = this;
+        let infoKey = 0;
+        if (display.userName && display.userPsd) {
+          if (!userInfo.userName) {
+            infoKey = 1;
+          } else {
+            if (display.userPsd === userInfo.userPsd) {
+              infoKey = 3;
+            } else {
+              infoKey = 2;
+            }
+          }
+        // 当用户名或密码为空时不做校验，直接拦截 
+        } else {
+          if (display.userName) {
+            message.warning(infoArr[infoKey][1]);
+          } else {            
+            message.warning(infoArr[infoKey][0]);
+          }
+          return;
+        }
+        this.animate(1);
+        setTimeout(() => {
+          that.animate(0);
+          if (infoKey === 1) {
+            message.error(infoArr[infoKey]);
+          } else if (infoKey === 2) {
+            message.error(infoArr[infoKey]);
+          } else if (infoKey === 3) {
+            message.success(infoArr[infoKey]);
+          } else {
+            message.warning('未知错误！');
+          }
+        }, 5000);
+
+
         // if (this.strToken.trim() === '') {
         //   this.$store.dispatch('setTipShow', true);
         //   this.$store.dispatch('setTipContent', 'accessToken不能为空！');
@@ -105,9 +150,6 @@
         //   this.$store.dispatch('setTipShow', true);
         //   this.$store.dispatch('setTipContent', '错误的accessToken!');
         // })
-        const that = this;
-        this.animate(1);
-        setTimeout(() => {that.animate(0)}, 5000);
       },
       inputUserName: function() {
         const { userName } = this.display;
@@ -125,8 +167,7 @@
         //   this.$set(this.classControl, 'adminName', false);
         // };
       },
-      animate: function(key) {
-        const { loadingTime } = this;
+      animate: function(key, loadingTime = 5000) {
         console.log('animate');
         const that = this;
         if (key) { 
@@ -144,6 +185,9 @@
             clearTimeout(timer);
           }, 500);
         }
+      },
+      getPsd() {
+
       }
     },
     computed: {
@@ -247,6 +291,11 @@
 		    	color: #fff;
           background-color: #4FA1D9;
 		    }
+      }
+      .getPsd_btn {
+        font-size: 12px;
+        color: #ddd;
+        cursor: pointer;
       }
       .log_info {
       	color: rgba(211, 215, 247, 0.45);

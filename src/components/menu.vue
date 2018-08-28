@@ -6,7 +6,18 @@
 		<router-link class="nv_item" to="/createtopic">发布话题</router-link>
 		<router-link class="nv_item" to="/about">关于</router-link>
 		<router-link class="nv_item" to="/undefined">404</router-link>
-		<a class="nv_item" href="../../myHomepage/games/index.html">Games</a>
+		<div class="nv_item" v-enter>
+			<span>Games</span>
+			<div class="link_body">
+				<router-link class="link_child" to="/login">登录</router-link>
+				<a class="nv_item" href="../../myHomepage/games/index.html">射箭</a>
+				<router-link class="link_child" to="/undefined">射箭</router-link>
+				<router-link class="link_child" to="/undefined">404</router-link>
+				<router-link class="link_child" to="/undefined">404</router-link>
+				<router-link class="link_child" to="/undefined">404</router-link>
+			</div>
+		</div>
+		<!-- <a class="nv_item" href="../../myHomepage/games/index.html">Games</a> -->
 	</div>
 </template>
 <script>
@@ -55,7 +66,21 @@
 				this.$store.dispatch('signOut');
 				this.$store.dispatch('setUserInfo', userInfo);
 			}
-		}
+		},
+		directives: {
+	    enter: {
+	      inserted: function (el) {
+	        el.onmouseenter = () => {
+	        	console.log('aaaa');
+	        	el.children[1].setAttribute('class', 'link_body active');
+	        }
+	        el.onmouseleave = () => {
+	        	console.log('aaaa');
+	        	el.children[1].setAttribute('class', 'link_body');
+	        }
+	      }
+	    }
+	  }
 	}
 </script>
 <style lang="sass">
@@ -65,6 +90,7 @@
 	}
 	.nav .nv_item {
 	  display: inline-block;
+	  position: relative;
 	  background: -moz-linear-gradient(center top, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.34) 100%) repeat scroll 0 0 transparent;
 	  border: 1px solid #121212;
 	  border-right: none;
@@ -88,6 +114,36 @@
 	  -ms-user-select: none;
 	  user-select: none;
 	  outline: none;
+	  .link_body {
+	  	position: absolute;
+	    width: 100%;
+	    left: 0;
+	    text-align: center;
+	    background-color: #222930;
+	    border: 1px solid #121212;
+	    border-top: 0;
+	    color: #777;
+		  border-radius: 0 0 4px 4px;
+		  box-shadow: -1px 2px 3px rgba(255, 255, 255, 0.05) inset, 1px 1px 0 rgba(255, 255, 255, 0.1);
+		  top: 0px;
+    	transform: translateY(-100%);
+    	transition: all ease .3s;
+    	opacity: 0;
+    	&.active {
+    		transform: translateY(0);
+	    	top: 31px;
+    		opacity: 1;
+    	}
+	    .link_child {
+	    	color: #777;
+	    	display: block;
+		    padding: 5px;
+		    border-bottom: 1px solid #121212;
+		    &:last-child {
+		    	border-bottom: 0;
+		    }
+	    }
+	  }
 	}
 	.nav .nv_item:first-child {
 	  border-radius: 6px 0 0 6px;

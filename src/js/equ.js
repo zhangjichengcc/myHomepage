@@ -1,3 +1,7 @@
+/**
+ * create by zhangjicheng
+ * 换算单位，rem <-> px
+ **/
 (function() {
 	window.onresize = infinite;
 	var html = document.documentElement;

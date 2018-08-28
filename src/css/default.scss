@@ -2,9 +2,24 @@
 $bg_main_color: #222930;
 $placeholder_color: rgba(175, 177, 190, 1);
 
+// 主题色
+$green: #52c41a;
+$orange: #faad14;
+$red: #f5222d;
+
+// 弹框
+$mask_bg: rgba(204, 204, 204, 0.49);
+
+@import './animate.scss';
+
+// 元素居中
 @mixin cont-center-x {
 	display: block;
 	position: absolute;
 	left: 50%;
 	transform: translateX(-50%);
+}
+// 元素旋转 params: time(旋转周期)
+@mixin turn-around($time) {
+	animation:turn $time linear infinite;
 }

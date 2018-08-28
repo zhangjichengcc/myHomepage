@@ -25,13 +25,20 @@
     vertical-align: middle;
     padding-right: 8px;
     &.icon-wink2 {
-    	color: #52c41a;
+    	color: $green;
     }
     &.icon-neutral2 {
-    	color: #faad14;
+    	color: $orange;
     }
     &.icon-crying2 {
-    	color: #f5222d;
+      color: $red;
+    }
+    &.icon-spinner2 {
+      color: rgba(15, 15, 15, 0.5);
+      &:before {
+        display: block;
+        @include turn-around(2s);
+      }
     }
   }
   &.active {
@@ -39,5 +46,17 @@
   	opacity: 1;
   	-webkit-transform: translate(-50%, 0);
   	transform: translate(-50%, 0);
+  }
+}
+
+#vm_mask {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  background-color: $mask_bg;
+  display: none;
+  &.active {
+    display: block;
   }
 }

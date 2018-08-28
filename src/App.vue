@@ -5,6 +5,7 @@
 			<router-view class="r" />
 		</transition>
 		<div id="vm_message" />
+		<div id="vm_mask" />
 	</div>
 </template>
 <script>

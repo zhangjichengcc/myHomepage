@@ -1,3 +1,7 @@
+/** 
+ * create by zhangjicheng
+ * 2018.08.28
+ **/
 var path = require('path');
 var webpack = require('webpack');
 var WebpackDevServer = require('webpack-dev-server');

@@ -33,7 +33,7 @@ webpackJsonp([9,12],{
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	if(content.locals) module.exports = content.locals;
 	// add the styles to the DOM
-	var update = __webpack_require__(11)("d7843562", content, true);
+	var update = __webpack_require__(11)("02260db8", content, true);
 
 /***/ }),
 
@@ -55,10 +55,10 @@ webpackJsonp([9,12],{
 /***/ 122:
 /***/ (function(module, exports) {
 
-	"use strict";
+	/* WEBPACK VAR INJECTION */(function(global) {"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
-	  value: true
+	   value: true
 	});
 	//
 	//
@@ -67,8 +67,13 @@ webpackJsonp([9,12],{
 	//
 
 	exports.default = {
-	  components: {}
+	   created: function created() {
+	      // for debug
+	      global.vm = this;
+	   },
+	   components: {}
 	};
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ }),
 

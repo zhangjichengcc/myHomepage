@@ -5,6 +5,10 @@
 </template>
 <script>
   export default {
+  	created: function () {
+      // for debug
+      global.vm = this;
+    },
     components : {
     }
   }

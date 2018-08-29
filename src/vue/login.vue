@@ -4,9 +4,8 @@
     <div class="login_con">
       <div class="login_main" :class="{active: this.classControl.active1, 'move_left': this.classControl.active2}">
         <span class="user_icon" :style="{ backgroundImage: userIcon }"></span>
-        <!-- <span class="user_icon" :style="{ backgroundImage: `url(${require('../img/userIcon.jpg')})` }"></span> -->
         <span class="input_item"><i class="icon-user" /><input placeholder="username" @keyup="inputUserName" v-model="display.userName" type="" name=""></span>
-        <span class="input_item"><i class="icon-lock" :style="{left: '11px'}" /><input placeholder="password" v-model="display.userPsd" type="" name=""><i class="icon-eye" /></span>
+        <span class="input_item"><i class="icon-lock" :style="{left: '11px'}" /><input placeholder="password" @keyup.enter="login" v-model="display.userPsd" type="" name=""><i class="icon-eye" /></span>
         <span class="log_btn" @click="login">登录</span>
         <span class="getPsd_btn" @click="getPsd">忘记密码</span>
         <span class="log_info">其实登录了也并没什么卵用。。。</span>
@@ -39,7 +38,7 @@
     data : function(){
       return {
         strToken : '',
-        loadingTime: 5000,
+        loadingTime: 3000,
         classControl: {
           active1: false,
           active2: false,
@@ -60,9 +59,8 @@
       }
     },
     created: function () {
+      // for debug
       global.vm = this;
-      global.m = message;
-      console.log(userLoginInfo);
     },
     methods : {
       login : function() {
@@ -98,6 +96,7 @@
             message.error(infoArr[infoKey]);
           } else if (infoKey === 3) {
             message.success(infoArr[infoKey]);
+            this.loginSuc();
           } else {
             message.warning('未知错误！');
           }
@@ -151,6 +150,19 @@
         //   this.$store.dispatch('setTipContent', '错误的accessToken!');
         // })
       },
+      loginSuc: function() {
+        const { userInfo } = this;
+        const now = new Date().getTime();
+        const params = {
+          userName: userInfo.userName || null,
+          userPsd: userInfo.userPsd || null,
+          icon: userInfo.icon || null,
+          id: now,
+        }
+        this.$store.dispatch('isLogin');
+        this.$store.dispatch('setUserInfo', params);
+        this.$router.push('noPage');
+      },
       inputUserName: function() {
         const { userName } = this.display;
         for (let key in userLoginInfo) {
@@ -167,18 +179,17 @@
         //   this.$set(this.classControl, 'adminName', false);
         // };
       },
-      animate: function(key, loadingTime = 5000) {
+      // 登陆验证动画
+      animate: function(key, loadingTime = 3000) {
         console.log('animate');
         const that = this;
         if (key) { 
-          console.log('a', key)
           this.$set(this.classControl, 'active1', true);
           const timer = setTimeout(() => {
             that.$set(this.classControl, 'active2', true);
             clearTimeout(timer);
           }, 500);
         } else {
-          console.log('b', key)
           this.$set(this.classControl, 'active2', false);
           const timer = setTimeout(() => {
             that.$set(this.classControl, 'active1', false);
@@ -194,6 +205,7 @@
       userIcon: function() {
         const { icon } = this.userInfo;
         if (!icon) return '';
+        // require 语法要求参数必须为字符串拼接
         return `url(${require(`../img/${icon}`)})`;
       },
     },
@@ -205,7 +217,6 @@
 </script>
 <style lang="sass">
   @import '../css/common.scss';
-  // @import '../css/style.css';
   @import '../css/animate.scss';
   .bg {
     background-color: #eee;

@@ -43,9 +43,9 @@ const createtopic = resolve => {
         resolve(require('../vue/createtopic.vue'));
     });
 }
-const undefined = resolve => {
-    require.ensure(['../vue/undefined.vue'], () => {
-        resolve(require('../vue/undefined.vue'));
+const noPage = resolve => {
+    require.ensure(['../vue/noPage.vue'], () => {
+        resolve(require('../vue/noPage.vue'));
     });
 }
 const disboard = resolve => {
@@ -91,8 +91,9 @@ const routes = [{
         name: 'edittopic',
         component: edittopic
     },{
-        path: '/undefined',
-        component: undefined
+        path: '/noPage',
+        name: 'noPage',
+        component: noPage
     },{
         path: '/disboard',
         name: 'disboard',
@@ -106,5 +107,12 @@ export default new Router({
     // vueRouter 默认为hash模式，可设置为H5的history模式，此时URL和正常的url一样，但需要后台配置路径，或者前端路由前添加空间名称
     // mode: 'history',
     base: __dirname,
-    routes
+    routes,
+    scrollBehavior (to, from, savedPosition) {
+      if (savedPosition) {
+        return savedPosition;
+      } else {
+        return { x: 0, y: 0 };
+      }
+    },
 });

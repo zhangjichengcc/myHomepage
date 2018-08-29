@@ -5,7 +5,7 @@
 		<router-link class="nv_item" to="/disboard">仪表盘</router-link>
 		<router-link class="nv_item" to="/createtopic">发布话题</router-link>
 		<router-link class="nv_item" to="/about">关于</router-link>
-		<router-link class="nv_item" to="/undefined">404</router-link>
+		<router-link class="nv_item" to="/noPage">404</router-link>
 		<div class="nv_item" v-enter>
 			<span>Games</span>
 			<div class="link_body">

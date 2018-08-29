@@ -1610,7 +1610,7 @@ webpackJsonp([4,12],Array(29).concat([
 	  data: function data() {
 	    return {
 	      strToken: '',
-	      loadingTime: 5000,
+	      loadingTime: 3000,
 	      classControl: {
 	        active1: false,
 	        active2: false,
@@ -1631,12 +1631,13 @@ webpackJsonp([4,12],Array(29).concat([
 	    };
 	  },
 	  created: function created() {
+	    // for debug
 	    global.vm = this;
-	    global.m = _global.message;
-	    console.log(_login.userLoginInfo);
 	  },
 	  methods: {
 	    login: function login() {
+	      var _this = this;
+
 	      var userInfo = this.userInfo,
 	          display = this.display;
 
@@ -1671,6 +1672,7 @@ webpackJsonp([4,12],Array(29).concat([
 	          _global.message.error(infoArr[infoKey]);
 	        } else if (infoKey === 3) {
 	          _global.message.success(infoArr[infoKey]);
+	          _this.loginSuc();
 	        } else {
 	          _global.message.warning('未知错误！');
 	        }
@@ -1723,6 +1725,20 @@ webpackJsonp([4,12],Array(29).concat([
 	      //   this.$store.dispatch('setTipContent', '错误的accessToken!');
 	      // })
 	    },
+	    loginSuc: function loginSuc() {
+	      var userInfo = this.userInfo;
+
+	      var now = new Date().getTime();
+	      var params = {
+	        userName: userInfo.userName || null,
+	        userPsd: userInfo.userPsd || null,
+	        icon: userInfo.icon || null,
+	        id: now
+	      };
+	      this.$store.dispatch('isLogin');
+	      this.$store.dispatch('setUserInfo', params);
+	      this.$router.push('noPage');
+	    },
 	    inputUserName: function inputUserName() {
 	      var userName = this.display.userName;
 
@@ -1740,25 +1756,24 @@ webpackJsonp([4,12],Array(29).concat([
 	      //   this.$set(this.classControl, 'adminName', false);
 	      // };
 	    },
+	    // 登陆验证动画
 	    animate: function animate(key) {
-	      var _this = this;
+	      var _this2 = this;
 
-	      var loadingTime = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 5000;
+	      var loadingTime = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 3000;
 
 	      console.log('animate');
 	      var that = this;
 	      if (key) {
-	        console.log('a', key);
 	        this.$set(this.classControl, 'active1', true);
 	        var timer = setTimeout(function () {
-	          that.$set(_this.classControl, 'active2', true);
+	          that.$set(_this2.classControl, 'active2', true);
 	          clearTimeout(timer);
 	        }, 500);
 	      } else {
-	        console.log('b', key);
 	        this.$set(this.classControl, 'active2', false);
 	        var _timer = setTimeout(function () {
-	          that.$set(_this.classControl, 'active1', false);
+	          that.$set(_this2.classControl, 'active1', false);
 	          clearTimeout(_timer);
 	        }, 500);
 	      }
@@ -1770,6 +1785,7 @@ webpackJsonp([4,12],Array(29).concat([
 	      var icon = this.userInfo.icon;
 
 	      if (!icon) return '';
+	      // require 语法要求参数必须为字符串拼接
 	      return 'url(' + __webpack_require__(82)("./" + icon) + ')';
 	    }
 	  },
@@ -1779,7 +1795,6 @@ webpackJsonp([4,12],Array(29).concat([
 	  }
 	};
 	// 导入登陆信息
-	//
 	//
 	//
 	//
@@ -2042,8 +2057,74 @@ webpackJsonp([4,12],Array(29).concat([
 
 	var mask = new Mask();
 
+	//device 设备类型判断
+	var device = {
+		getType: function getType(o) {
+			return Object.prototype.toString.call(o).slice(8, -1);
+		},
+
+		isIos: function isIos() {
+			var u = navigator.userAgent;
+			if (u.indexOf('Android') > -1 || u.indexOf('Linux') > -1) {
+				//安卓手机
+				// return "Android";
+				return false;
+			} else if (u.indexOf('iPhone') > -1) {
+				//苹果手机
+				// return "iPhone";
+				return true;
+			} else if (u.indexOf('iPad') > -1) {
+				//iPad
+				// return "iPad";
+				return false;
+			} else if (u.indexOf('Windows Phone') > -1) {
+				//winphone手机
+				// return "Windows Phone";
+				return false;
+			} else {
+				return false;
+			}
+		},
+
+		isPC: function isPC() {
+			//是否为PC端
+			var userAgentInfo = navigator.userAgent;
+			var Agents = ["Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod"];
+			var flag = true;
+			for (var v = 0; v < Agents.length; v++) {
+				if (userAgentInfo.indexOf(Agents[v]) > 0) {
+					flag = false;
+					break;
+				}
+			}
+			return flag;
+		},
+
+		browserType: function browserType() {
+			var userAgent = navigator.userAgent; //取得浏览器的userAgent字符串
+			var isOpera = userAgent.indexOf("Opera") > -1; //判断是否Opera浏览器
+			var isIE = userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1 && !isOpera; //判断是否IE浏览器
+			var isEdge = userAgent.indexOf("Edge") > -1; //判断是否IE的Edge浏览器
+			var isFF = userAgent.indexOf("Firefox") > -1; //判断是否Firefox浏览器
+			var isSafari = userAgent.indexOf("Safari") > -1 && userAgent.indexOf("Chrome") == -1; //判断是否Safari浏览器
+			var isChrome = userAgent.indexOf("Chrome") > -1 && userAgent.indexOf("Safari") > -1; //判断Chrome浏览器
+			if (isIE) {
+				var reIE = new RegExp("MSIE (\\d+\\.\\d+);");
+				reIE.test(userAgent);
+				var fIEVersion = parseFloat(RegExp["$1"]);
+				if (fIEVersion == 7) return "IE7";else if (fIEVersion == 8) return "IE8";else if (fIEVersion == 9) return "IE9";else if (fIEVersion == 10) return "IE10";else if (fIEVersion == 11) return "IE11";else return "IE7以下"; //IE版本过低
+			}
+			if (isFF) return "FF";
+			if (isOpera) return "Opera";
+			if (isEdge) return "Edge";
+			if (isSafari) return "Safari";
+			if (isChrome) return "Chrome";
+		}
+	};
+
 	exports.message = message;
 	exports.mask = mask;
+	exports.device = device;
 
 /***/ }),
 /* 81 */
@@ -2211,11 +2292,17 @@ webpackJsonp([4,12],Array(29).concat([
 	      "value": (_vm.display.userPsd)
 	    },
 	    on: {
+	      "keyup": function($event) {
+	        if (!('button' in $event) && _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")) { return null; }
+	        return _vm.login($event)
+	      },
 	      "input": function($event) {
 	        if ($event.target.composing) { return; }
 	        _vm.$set(_vm.display, "userPsd", $event.target.value)
 	      }
 	    }
+	  }), _c('i', {
+	    staticClass: "icon-eye"
 	  })]), _vm._v(" "), _c('span', {
 	    staticClass: "log_btn",
 	    on: {

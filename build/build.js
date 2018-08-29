@@ -30,10 +30,14 @@ webpackJsonp([0,12],{
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	//引入css重置文件,基本的样式文件
+	// 引入状态管理
 	__webpack_require__(631);
 
 	// 引入px与rem的换算
+	// 引入路由
 	__webpack_require__(632);
+	// 引入全局方法
+	__webpack_require__(633);
 
 	// 遍历输出a过滤器的模块
 	Object.keys(filters).forEach(function (k) {
@@ -11522,7 +11526,7 @@ webpackJsonp([0,12],{
 	        resolve(__webpack_require__(111));
 	    });
 	};
-	var undefined = function undefined(resolve) {
+	var noPage = function noPage(resolve) {
 	    __webpack_require__.e/* nsure */(9, function () {
 	        resolve(__webpack_require__(119));
 	    });
@@ -11570,8 +11574,9 @@ webpackJsonp([0,12],{
 	    name: 'edittopic',
 	    component: edittopic
 	}, {
-	    path: '/undefined',
-	    component: undefined
+	    path: '/noPage',
+	    name: 'noPage',
+	    component: noPage
 	}, {
 	    path: '/disboard',
 	    name: 'disboard',
@@ -11585,7 +11590,14 @@ webpackJsonp([0,12],{
 	    // vueRouter 默认为hash模式，可设置为H5的history模式，此时URL和正常的url一样，但需要后台配置路径，或者前端路由前添加空间名称
 	    // mode: 'history',
 	    base: __dirname,
-	    routes: routes
+	    routes: routes,
+	    scrollBehavior: function scrollBehavior(to, from, savedPosition) {
+	        if (savedPosition) {
+	            return savedPosition;
+	        } else {
+	            return { x: 0, y: 0 };
+	        }
+	    }
 	});
 	/* WEBPACK VAR INJECTION */}.call(exports, "/"))
 
@@ -14884,7 +14896,7 @@ webpackJsonp([0,12],{
 	  }, [_vm._v("关于")]), _vm._v(" "), _c('router-link', {
 	    staticClass: "nv_item",
 	    attrs: {
-	      "to": "/undefined"
+	      "to": "/noPage"
 	    }
 	  }, [_vm._v("404")]), _vm._v(" "), _c('div', {
 	    directives: [{
@@ -15006,28 +15018,42 @@ webpackJsonp([0,12],{
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+	/**
+	 * create by zhangjicheng
+	 * vuex 状态管理器声明
+	 **/
 	_vue2.default.use(_vuex2.default);
+	// const moduleA = {
+	//   state: { ... },
+	//   mutations: { ... },
+	//   actions: { ... },
+	//   getters: { ... }
+	// }
 
+	// const moduleB = {
+	//   state: { ... },
+	//   mutations: { ... },
+	//   actions: { ... }
+	// }
 	var store = new _vuex2.default.Store({
+		// 模块，允许将臃肿的state分割为多个模块
+		modules: {
+			// a: moduleA,
+			// b: moduleB
+		},
+		// 单一状态树
 		state: {
 			// 页面打开默认设置登录状态为否
 			isLogin: false,
 			// 保存登录信息
 			userInfo: {
-				'loginname': '',
-				'avatar': '',
-				'id': '',
-				'accesstoken': ''
-			},
-			// alert框提示内容
-			tipContent: '',
-			// alert框显示状态
-			tipShow: false,
-			// 用户未读消息条数
-			message_count: 0,
-			// 文章评论
-			replies: []
+				userName: '',
+				userIcon: '',
+				userPsd: '',
+				id: ''
+			}
 		},
+		// 提交的是 mutation，而不是直接变更状态；可以包含任意异步操作
 		actions: {
 			isLogin: function isLogin(_ref) {
 				var commit = _ref.commit;
@@ -15043,28 +15069,9 @@ webpackJsonp([0,12],{
 				var commit = _ref3.commit;
 
 				commit('SETUSERINFO', userInfo);
-			},
-			setTipContent: function setTipContent(_ref4, content) {
-				var commit = _ref4.commit;
-
-				commit('SETTIPCONTENT', content);
-			},
-			setTipShow: function setTipShow(_ref5, status) {
-				var commit = _ref5.commit;
-
-				commit('SETTIPSHOW', status);
-			},
-			setNotMessageCount: function setNotMessageCount(_ref6, count) {
-				var commit = _ref6.commit;
-
-				commit('SETNOTMESSAGECOUNT', count);
-			},
-			setReplies: function setReplies(_ref7, replies) {
-				var commit = _ref7.commit;
-
-				commit('SETREPLIES', replies);
 			}
 		},
+		// 修改状态的方法
 		mutations: {
 			// 设置登录
 			ISLOGIN: function ISLOGIN(state) {
@@ -15078,53 +15085,19 @@ webpackJsonp([0,12],{
 
 			// 设置登录用户信息
 			SETUSERINFO: function SETUSERINFO(state, userInfo) {
-				state.userInfo.loginname = userInfo.name;
-				state.userInfo.avatar = userInfo.avatar;
+				state.userInfo.userName = userInfo.userName;
+				state.userInfo.userIcon = userInfo.icon;
+				state.userInfo.userPsd = userInfo.userPsd;
 				state.userInfo.id = userInfo.id;
-				state.userInfo.accesstoken = userInfo.accesstoken;
-			},
-
-			// 设置tips弹窗的提示信息
-			SETTIPCONTENT: function SETTIPCONTENT(state, content) {
-				state.tipContent = content;
-			},
-
-			// 设置tips弹窗的显示隐藏状态
-			SETTIPSHOW: function SETTIPSHOW(state, status) {
-				state.tipShow = status;
-			},
-
-			// 设置未读消息条数
-			SETNOTMESSAGECOUNT: function SETNOTMESSAGECOUNT(state, count) {
-				state.message_count = count;
-			},
-
-			// 设置当前文章评论
-			SETREPLIES: function SETREPLIES(state, replies) {
-				state.replies = replies;
 			}
 		},
+		// 派生状态，类似vue的计算属性
 		getters: {
 			getLoginState: function getLoginState(state) {
 				return state.isLogin;
 			},
 			getUserInfo: function getUserInfo(state) {
 				return state.userInfo;
-			},
-			getUserInfoAccesstoken: function getUserInfoAccesstoken(state, getters) {
-				return getters.getUserInfo.accesstoken;
-			},
-			getTipShow: function getTipShow(state) {
-				return state.tipShow;
-			},
-			getTipContent: function getTipContent(state) {
-				return state.tipContent;
-			},
-			getNotMessageCount: function getNotMessageCount(state) {
-				return state.message_count;
-			},
-			getReplies: function getReplies(state) {
-				return state.replies;
 			}
 		}
 	});
@@ -16118,7 +16091,7 @@ webpackJsonp([0,12],{
 	exports.i(__webpack_require__(623), "");
 
 	// module
-	exports.push([module.id, "@keyframes rotate{0%{transform:rotate(0deg) scale(1)}50%{transform:rotate(180deg) scale(.6)}to{transform:rotate(1turn) scale(1)}}@keyframes turn{0%{transform:rotate(0deg)}50%{transform:rotate(180deg)}to{transform:rotate(1turn)}}#vm_message{transition:all .3s ease;padding:0 16px;height:37px;line-height:37px;border-radius:4px;box-shadow:0 4px 12px rgba(0,0,0,.15);background:#fff;display:inline-block;pointer-events:all;z-index:1000;position:fixed;left:50%;top:10px;transform:translate(-50%,-150%);font-size:13px;color:#898989;opacity:0}#vm_message>i{display:inline-block;font-size:20px;vertical-align:middle;padding-right:8px}#vm_message>i.icon-wink2{color:#52c41a}#vm_message>i.icon-neutral2{color:#faad14}#vm_message>i.icon-crying2{color:#f5222d}#vm_message>i.icon-spinner2{color:hsla(0,0%,6%,.5)}#vm_message>i.icon-spinner2:before{display:block;animation:turn 2s linear infinite}#vm_message.active{top:10px;opacity:1;transform:translate(-50%)}#vm_mask{position:fixed;width:100%;height:100%;z-index:1000;background-color:hsla(0,0%,80%,.49);display:none}#vm_mask.active{display:block}::-webkit-input-placeholder{color:#afb1be}:-moz-placeholder,::-moz-placeholder{color:#afb1be}:-ms-input-placeholder{color:#afb1be}.r{width:100%;height:100%;padding-top:52px;position:absolute;box-sizing:border-box;transition:transform .3s ease;transform:translateX(0)}.fade-enter-active{transform:translateX(-100%)}.fade-enter-to,.fade-leave-active{transform:translateX(0)}.fade-leave-to{transform:translateX(100%)}.router{width:100%}", ""]);
+	exports.push([module.id, "@keyframes rotate{0%{transform:rotate(0deg) scale(1)}50%{transform:rotate(180deg) scale(.6)}to{transform:rotate(1turn) scale(1)}}@keyframes turn{0%{transform:rotate(0deg)}50%{transform:rotate(180deg)}to{transform:rotate(1turn)}}#vm_message{transition:all .3s ease;padding:0 16px;height:37px;line-height:37px;border-radius:4px;box-shadow:0 4px 12px rgba(0,0,0,.15);background:#fff;display:inline-block;pointer-events:all;z-index:1000;position:fixed;left:50%;top:10px;transform:translate(-50%,-150%);font-size:13px;color:#898989;opacity:0}#vm_message>i{display:inline-block;font-size:20px;vertical-align:middle;padding-right:8px}#vm_message>i.icon-wink2{color:#52c41a}#vm_message>i.icon-neutral2{color:#faad14}#vm_message>i.icon-crying2{color:#f5222d}#vm_message>i.icon-spinner2{color:hsla(0,0%,6%,.5)}#vm_message>i.icon-spinner2:before{display:block;animation:turn 2s linear infinite}#vm_message.active{top:10px;opacity:1;transform:translate(-50%)}#vm_mask{position:fixed;width:100%;height:100%;z-index:1000;background-color:hsla(0,0%,80%,.49);display:none}#vm_mask.active{display:block}::-webkit-input-placeholder{color:#afb1be}:-moz-placeholder,::-moz-placeholder{color:#afb1be}:-ms-input-placeholder{color:#afb1be}.r{width:100%;min-height:100vh;padding-top:52px;position:relative;box-sizing:border-box;transform:translateX(0);transition:transform .3s ease}.fade-enter-active{opacity:0}.fade-enter-to,.fade-leave-active{opacity:1}.fade-leave-to{opacity:0}.router{width:100%}.slide-left-enter-active,.slide-right-leave-to{position:absolute;transform:translateX(100%)}.slide-left-enter-to,.slide-left-leave-active,.slide-right-enter-to,.slide-right-leave-active{position:absolute;transform:translateX(0)}.slide-left-leave-to,.slide-right-enter-active{position:absolute;transform:translateX(-100%)}", ""]);
 
 	// exports
 
@@ -16171,7 +16144,7 @@ webpackJsonp([0,12],{
 /***/ 628:
 /***/ (function(module, exports, __webpack_require__) {
 
-	'use strict';
+	/* WEBPACK VAR INJECTION */(function(global) {'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 		value: true
@@ -16183,6 +16156,18 @@ webpackJsonp([0,12],{
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+	// 路由名称排序，用于生成过渡动画
+	var routerArr = ['homePage', 'login', 'disboard', 'shejiao', 'about', 'noPage', 'games']; //
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+
 	exports.default = {
 		data: function data() {
 			return {
@@ -16190,24 +16175,38 @@ webpackJsonp([0,12],{
 					userName: 'zhangjichengcc',
 					psd: '39104930',
 					login: false
-				}
+				},
+				transitionName: 'fade'
 			};
 		},
+		created: function created() {
+			// for debug
+			global.APP = this;
+		},
+
 		computed: {},
 		methods: {},
+		watch: {
+			// 监听路由变化，动态改变过渡动画
+			$route: function $route(to, from) {
+				var f_idx = routerArr.indexOf(from.name);
+				var t_idx = routerArr.indexOf(to.name);
+				if (t_idx < 0) {
+					this.$set(this, 'transitionName', 'fade');
+					return;
+				}
+				if (t_idx > f_idx) {
+					this.$set(this, 'transitionName', 'slide-left');
+				} else {
+					this.$set(this, 'transitionName', 'slide-right');
+				}
+			}
+		},
 		components: {
 			vmHeader: _header2.default
 		}
-	}; //
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
+	};
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ }),
 
@@ -16218,7 +16217,7 @@ webpackJsonp([0,12],{
 	  return _c('div', [_c('vm-header'), _vm._v(" "), _c('transition', {
 	    staticClass: "router",
 	    attrs: {
-	      "name": "fade"
+	      "name": _vm.transitionName
 	    }
 	  }, [_c('router-view', {
 	    staticClass: "r"
@@ -16351,6 +16350,92 @@ webpackJsonp([0,12],{
 		}
 		infinite();
 	})();
+
+/***/ }),
+
+/***/ 633:
+/***/ (function(module, exports) {
+
+	'use strict';
+
+	/**
+	 * create by zhangjicheng
+	 * 定义全局方法 预加载
+	 **/
+
+	// 时间方法
+	var date = new function () {
+		var now = new Date();
+		/**
+	  * 格式化时间
+	  * create by zhangjicheng 2018/01/29
+	  * @param  {time} 时间
+	  * @param  {cFormat} 格式
+	  * @return {String} 字符串
+	  *
+	  * @example _getDate('formatDate'||'date'||'time', {Date} ,'y-m-d h:i:s') // -> 2018-01-29 00:00:00
+	  */
+		var _getDate = function _getDate(type, time, cFormat) {
+			if (['formatDate', 'date', 'time'].indexOf(type) < 0) return;
+			var _this = time || now;
+			var _cFormat = {
+				'formatDate': 'y-m-d h:i:s',
+				'date': 'y-m-d',
+				'time': 'h:i:s'
+			};
+			var _type = {
+				'formatDate': {
+					'y': _this.getFullYear(),
+					'm': _this.getMonth() + 1,
+					'd': _this.getDate(),
+					'h': _this.getHours(),
+					'i': _this.getMinutes(),
+					's': _this.getSeconds()
+				},
+				'date': {
+					'y': _this.getFullYear(),
+					'm': _this.getMonth() + 1,
+					'd': _this.getDate()
+				},
+				'time': {
+					'h': _this.getHours(),
+					'i': _this.getMinutes(),
+					's': _this.getSeconds()
+				}
+			};
+			var _fmt = _type[type];
+			var _format = cFormat || _cFormat[type];
+			for (var i in _fmt) {
+				var _t = _fmt[i].toString().replace(/^([0-9]{1})$/, '0$1');
+				_format = _format.replace(i, _t);
+			}
+			return _format;
+		};
+		var _addDay = function _addDay(time, days) {
+			if (!time) return;
+			return new Date(time.getTime() + days * 24 * 60 * 60 * 1e3);
+		};
+		return {
+			_getDate: _getDate,
+			_addDay: _addDay
+		};
+	}();
+	Date.prototype.$formatDate = function (cFormat) {
+		console.log('@param  {cFormat} 格式, "y-m-d h:i:s"');
+		return date._getDate('formatDate', this, cFormat);
+	};
+	Date.prototype.$getDate = function (cFormat) {
+		console.log('@param  {cFormat} 格式, "y-m-d"');
+		return date._getDate('date', this, cFormat);
+	};
+	Date.prototype.$getTime = function (cFormat) {
+		console.log('@param  {cFormat} 格式, "h:i:s"');
+		return date._getDate('time', this, cFormat);
+	};
+	Date.prototype.$addDay = function (days) {
+		console.log('@param  {days} 天数');
+		return date._addDay(this, days);
+	};
 
 /***/ })
 

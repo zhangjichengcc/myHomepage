@@ -15,11 +15,11 @@
 	export default {
 		data : function() {
 			return {
-				global: {
-					userName: 'zhangjichengcc',
-					psd: '39104930',
-					login: false,
-				},
+				// global: {
+				// 	userName: 'zhangjichengcc',
+				// 	psd: '39104930',
+				// 	// login: false,
+				// },
 				transitionName: 'fade',
 			}
 		},

@@ -16,8 +16,8 @@
 			}
 		},
 		created: function(){
-			global.vue = this;
-			this.$set(this.$data, '_login', this.$parent.$data.global.login);
+			// For Debug
+			global.vm = this;
 		},
 		computed: {
 			

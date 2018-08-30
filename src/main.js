@@ -11,6 +11,8 @@ require('./css/reset.css');
 require('./js/equ.js');
 // 引入全局方法
 require('./plagin/methods.js');
+// 引入全局自定义指令
+require('./plagin/directive.js');
 
 // 遍历输出a过滤器的模块
 Object.keys(filters).forEach(k => Vue.filter(k, filters[k]));

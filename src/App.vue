@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div id="vm_body">
 		<vm-header />
 		<transition :name="transitionName" class="router">
 			<router-view class="r" />

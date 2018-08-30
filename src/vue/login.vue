@@ -2,15 +2,22 @@
   <div class="bg">
     <tips></tips>
     <div class="login_con">
-      <div class="login_main" :class="{active: this.classControl.active1, 'move_left': this.classControl.active2}">
+      <div class="login_main" :class="{active: classControl.active1, 'move_left': classControl.active2}">
         <span class="user_icon" :style="{ backgroundImage: userIcon }"></span>
-        <span class="input_item"><i class="icon-user" /><input v-focus placeholder="username" @keyup="inputUserName" v-model="display.userName" type="" name=""></span>
-        <span class="input_item"><i class="icon-lock" :style="{left: '11px'}" /><input placeholder="password" @keyup.enter="login" v-model="display.userPsd" type="" name=""><i class="icon-eye" /></span>
+        <span class="input_item">
+          <i class="icon-user" />
+          <input v-focus placeholder="username" @keyup="inputUserName" v-model="display.userName" type="" name="">
+        </span>
+        <span class="input_item">
+          <i class="icon-lock" :style="{left: '11px'}" />
+          <input placeholder="password" @keyup.enter="login" v-model="display.userPsd" :type="showPsd ? '' : 'password'" name="">
+          <i :class="['icon_eye', showPsd ? 'icon-eye' : 'icon-eye-blocked']" @mouseenter="checkShowPsd(1)" @mouseleave="checkShowPsd(0)"/>
+        </span>
         <span class="log_btn" @click="login">登录</span>
         <span class="getPsd_btn" @click="getPsd">忘记密码</span>
-        <span class="log_info">其实登录了也并没什么卵用。。。</span>
+        <span class="log_info" @click="psdAlert">其实登录了也并没什么卵用。。。</span>
       </div>
-      <div class="login_loading" :class="{active: this.classControl.active2}">
+      <div class="login_loading" :class="{active: classControl.active2}">
       	<div class="loader">
 					<div class="loader_inner">
 						<div></div>
@@ -56,6 +63,9 @@
           userPsd: null,
           icon: null,
         },
+        // 默认密码不可见
+        showPsd: false,
+        test: '',
       }
     },
     created: function () {
@@ -199,6 +209,18 @@
       },
       getPsd() {
 
+      },
+      // 是否显示密码
+      checkShowPsd: function(v) {
+        this.$set(this, 'showPsd', !!v);
+        this.$nextTick();
+      },
+      // 密码提示
+      psdAlert() {
+        console.log(userLoginInfo);
+        const { visitor } = userLoginInfo;
+        const cont = `用户名：${visitor.userName}，密码：${visitor.userPsd}`;
+        message.success(cont, 5000);
       }
     },
     computed: {
@@ -208,6 +230,10 @@
         // require 语法要求参数必须为字符串拼接
         return `url(${require(`../img/${icon}`)})`;
       },
+      displayPsd() {}
+    },
+    watch: {
+
     },
     components : {
       nvHeader,
@@ -271,6 +297,13 @@
 			    color: #fff;
 			    left: 8px;
     			top: 13px;
+          &.icon_eye {
+            left: auto;
+            right: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            top: 17px;
+          }
       	}
       	>input {
       		font-size: 16px;
@@ -314,6 +347,7 @@
 		    display: block;
 		    position: absolute;
 		    bottom: 20px;
+        cursor: help;
       }
       &.active {
         transform: skew(-5deg) scale(0.5, 0.2) perspective(100px) rotateX(10deg);

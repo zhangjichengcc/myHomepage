@@ -60,3 +60,39 @@
     display: block;
   }
 }
+
+#vm_alert {
+  display: block;
+  position: absolute;
+  width: 440px;
+  padding: 8px 15px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, -100%);
+  border-width: 1px;
+  border-style: solid;
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.65);
+  opacity: 0;
+  transition: all ease .15s;
+  >.close_btn {
+    font-size: 10px;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+    position: absolute;
+  }
+  &.active {
+    opacity: 1;
+    top: 30%;
+    transform: translate(-50%);
+  }
+  &.info {
+    background-color: rgb(230, 247, 255);
+    border-color: rgb(145, 213, 255);
+    border-image: initial;
+  }
+}

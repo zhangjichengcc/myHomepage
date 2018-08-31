@@ -1844,6 +1844,7 @@ webpackJsonp([4,12],Array(29).concat([
 	//
 	//
 	//
+	//
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ }),
@@ -2072,7 +2073,32 @@ webpackJsonp([4,12],Array(29).concat([
 	    staticClass: "input_item"
 	  }, [_c('i', {
 	    staticClass: "icon-user"
-	  }), _vm._v(" "), _c('input', {
+	  }), _vm._v(" "), (_vm.$store.state.isPC) ? _c('input', {
+	    directives: [{
+	      name: "focus",
+	      rawName: "v-focus"
+	    }, {
+	      name: "model",
+	      rawName: "v-model",
+	      value: (_vm.display.userName),
+	      expression: "display.userName"
+	    }],
+	    attrs: {
+	      "placeholder": "username",
+	      "type": "",
+	      "name": ""
+	    },
+	    domProps: {
+	      "value": (_vm.display.userName)
+	    },
+	    on: {
+	      "keyup": _vm.inputUserName,
+	      "input": function($event) {
+	        if ($event.target.composing) { return; }
+	        _vm.$set(_vm.display, "userName", $event.target.value)
+	      }
+	    }
+	  }) : _c('input', {
 	    directives: [{
 	      name: "focus",
 	      rawName: "v-focus"

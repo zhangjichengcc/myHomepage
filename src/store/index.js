@@ -28,6 +28,7 @@ const store = new Vuex.Store({
 	state: {
 		// 页面打开默认设置登录状态为否
 		isLogin : false,
+		isPC: true,
 		// 保存登录信息
 		userInfo : {
 			userName: '',
@@ -47,6 +48,9 @@ const store = new Vuex.Store({
 		setUserInfo({commit}, userInfo) {
 			commit('SETUSERINFO', userInfo);
 		},
+		setDevice({commit}, bol) {
+			commit('SETDEVICE', bol);
+		}
 	},
 	// 修改状态的方法
 	mutations: {
@@ -65,6 +69,10 @@ const store = new Vuex.Store({
 			state.userInfo.userPsd = userInfo.userPsd;
 			state.userInfo.id = userInfo.id;
 		},
+		// 设置当前设备
+		SETDEVICE (state, bol) {
+			state.isPC = bol;
+		}
 	},
 	// 派生状态，类似vue的计算属性
 	getters: {

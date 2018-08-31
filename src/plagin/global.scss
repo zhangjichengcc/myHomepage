@@ -1,9 +1,7 @@
 // 全局方法样式
 #vm_message {
 	transition: all ease .3s;
-	padding: 0 16px;
-	height: 37px;
-	line-height: 37px;
+	padding: 10px  ;
   border-radius: 4px;
   -webkit-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -19,11 +17,16 @@
   font-size: 13px;
   color: #898989;
   opacity: 0;
+  &.with_icon {
+    padding-left: 40px;
+  }
   >i {
   	display: inline-block;
     font-size: 20px;
     vertical-align: middle;
-    padding-right: 8px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
     &.icon-wink2 {
     	color: $green;
     }
@@ -78,6 +81,7 @@
   color: rgba(0, 0, 0, 0.65);
   opacity: 0;
   transition: all ease .15s;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
   >.close_btn {
     font-size: 10px;
     top: 5px;
@@ -90,9 +94,46 @@
     top: 30%;
     transform: translate(-50%);
   }
+  &.icon {
+    padding-left: 50px;
+    min-height: 47px;
+    >.icon_flg {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      font-size: 26px;
+    }
+  }
   &.info {
     background-color: rgb(230, 247, 255);
     border-color: rgb(145, 213, 255);
     border-image: initial;
+    >.icon_flg {
+      color: rgb(24, 144, 255);
+    }
+  }
+  &.success {
+    background-color: rgb(246, 255, 237);
+    border-color: rgb(183, 235, 143);
+    border-image: initial;
+    >.icon_flg {
+      color: rgb(82, 196, 26);
+    }
+  }
+  &.error {
+    background-color: rgb(255, 241, 240);
+    border-color: rgb(255, 163, 158);
+    border-image: initial;
+    >.icon_flg {
+      color: rgb(245, 34, 45);
+    }
+  }
+  &.warn {
+    background-color: rgb(255, 251, 230);
+    border-color: rgb(255, 229, 143);
+    border-image: initial;
+    >.icon_flg {
+      color: rgb(250, 173, 20);
+    }
   }
 }

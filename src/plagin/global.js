@@ -31,9 +31,9 @@ class Message{
     delay && this._setTime(delay);
     const msgDom = document.getElementById('vm_message');
     msgDom.innerHTML = `${this._icon}${this._title}`;
-    msgDom.setAttribute('class', 'active');
+    msgDom.setAttribute('class', `${this._icon ? 'with_icon' : ''} active`);
     setTimeout(() => {
-      msgDom.setAttribute('class', '');
+      msgDom.setAttribute('class', this._icon ? 'with_icon' : '');
     }, this._delay);
   }
   info(title, delay) {
@@ -66,9 +66,13 @@ class Alert{
   	this._bodyDom = null;
   	this._conDom = null;
   	this._iconObj = {
-  		info: 'icon-hipster',
+  		info: 'icon-hipster2',
+  		success: 'icon-wink2',
+  		error: 'icon-crying2',
+  		warn: 'icon-neutral2',
   	};
   	this._type = 'info';
+  	this._icon = '';
   }
   _show(message, type = 'info', icon ) {
   	if(this._conDom) {
@@ -81,38 +85,35 @@ class Alert{
   	this._bodyDom = document.getElementById('vm_body');
   	this._conDom = document.createElement('dev');
   	this._type = type;
+  	this._icon = icon ? 'icon' : '';
   	this._conDom.setAttribute('id', 'vm_alert');
-  	this._conDom.setAttribute('class', this._type);
+  	this._conDom.setAttribute('class', `${this._type} ${this._icon}`);
   	setTimeout(function(){
-  		that._conDom.setAttribute('class', `${that._type} active`);
+  		that._conDom.setAttribute('class', `${that._type} ${that._icon} active`);
   	}, 10);
   	this._conDom.innerHTML = icon ? `<i class="icon-cross close_btn"></i><i class="${this._iconObj[type]} icon_flg"></i><span>${this._message}</span>` : `<i class="icon-cross close_btn"></i><span>${this._message}</span>`;
   	this._conDom.children[0].onclick = this.close.bind(this);
   	this._bodyDom.appendChild(this._conDom);
   }
-  info(message, icon) {
-  	if (icon) {
-  		this._show(message, 'info', 1);
-  	} else {
-  		this._show(message, 'info', 0);
-  	}
+  info(message, useIcon = 0) {
+		this._show(message, 'info', useIcon);
   }
-  success() {
-
+  success(message, useIcon = 0) {
+  	this._show(message, 'success', useIcon);
   }
-  error() {
-
+  error(message, useIcon = 0) {
+  	this._show(message, 'error', useIcon);
   }
-  warning() {
-
+  warning(message, useIcon = 0) {
+  	this._show(message, 'warn', useIcon);
   }
-  close() {
+  close(message, useIcon) {
   	const that = this;
   	if (!that._conDom) {
   		console.warn('当前无可关闭弹窗！');
   		return;
   	}
-  	this._conDom.setAttribute('class', this._type);
+  	this._conDom.setAttribute('class', `${this._type} ${this._icon}`);
   	setTimeout(function(){
   		that._bodyDom.removeChild(that._conDom);
   		that._conDom = null;
@@ -207,4 +208,5 @@ export {
   message,
   mask,
   device,
+  $alert,
 }

@@ -74,8 +74,8 @@ webpackJsonp([1,12],{
 			};
 		},
 		created: function created() {
-			global.vue = this;
-			this.$set(this.$data, '_login', this.$parent.$data.global.login);
+			// For Debug
+			global.vm = this;
 		},
 		computed: {},
 		methods: {},

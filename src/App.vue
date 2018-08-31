@@ -1,7 +1,7 @@
 <template>
 	<div id="vm_body" :class="[$store.state.isPC ? 'pc_view' : 'mobile_view']">
 		<vm-header v-if="$store.state.isPC" />
-		<vm-mobile-header />
+		<vm-mobile-header v-else />
 		<transition :name="transitionName" class="router">
 			<router-view class="r" />
 		</transition>

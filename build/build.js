@@ -16822,7 +16822,7 @@ webpackJsonp([0,12],{
 	    attrs: {
 	      "id": "vm_body"
 	    }
-	  }, [(_vm.$store.state.isPC) ? _c('vm-header') : _vm._e(), _vm._v(" "), _c('vm-mobile-header'), _vm._v(" "), _c('transition', {
+	  }, [(_vm.$store.state.isPC) ? _c('vm-header') : _c('vm-mobile-header'), _vm._v(" "), _c('transition', {
 	    staticClass: "router",
 	    attrs: {
 	      "name": _vm.transitionName

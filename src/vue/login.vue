@@ -38,7 +38,7 @@
   import axios from 'axios';
   import nvHeader from '../components/header.vue';
   import tips from '../components/tips.vue';
-  import { message } from '../plagin/global.js'
+  import { message } from '../plagin/global.js';
   // 导入登陆信息
   import { userLoginInfo } from '@mock/login.js';
 

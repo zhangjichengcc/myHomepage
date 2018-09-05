@@ -76,3 +76,13 @@ Date.prototype.$addDay = function(days){
 	console.log('@param  {days} 天数');
 	return date._addDay(this, days);
 };
+
+// dom =>> string
+const nodeToString = function(node) {
+  let tmpNode = document.createElement( "div" );
+  tmpNode.appendChild( node.cloneNode( true ) );
+  const str = tmpNode.innerHTML;
+  tmpNode = node = null; // prevent memory leaks in IE
+  return str;
+}
+global.$nodeToString = nodeToString;

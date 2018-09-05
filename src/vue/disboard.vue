@@ -1,29 +1,25 @@
 <template>
   <div id="page_disboard" class="page_con">
-    <vm-message></vm-message>
     <div @click="getImg">click</div>
-     <a :href="downLoadUrl" download="test.png">点击下载</a>
     <div id="charts_pie" class="charts_pie" style="width: 600px;height:400px;" />
     <!-- <div id="charts_radar" class="charts_radar" style="width: 600px;height:400px;" />
     <div id="charts_line_bar" class="charts_line_bar" style="width: 600px;height:400px;" /> -->
-    <transition name="modal">
-      <div class="vm_modal" v-show="modalVisibal" @click.self="modalCancel">
-        <div class="vm_modal_body"></div>
-      </div>
-    </transition>
+    <vm-modal :show="modalVisibal" :handCancel="modalCancel" :render="modalDom" />
+    <div @click="getImg"><i class="icon-camera"></i></div>
   </div>
 </template>
 <script>
   import echarts from 'echarts';
   import html2canvas from 'html2canvas';
   import { message } from '../plagin/global.js'
-  import vmMessage from '../components/message.vue';
+  import vmModal from '../components/modal.vue';
   import { mkCanvas } from '../plagin/utils.js';
   export default {
     data : function(){
       return {
+        modalDom: '',
+        modalVisibal: false,
         downLoadUrl: '',
-        modalVisibal: true,
       }
     },
     created: function () {
@@ -264,65 +260,61 @@
       //   };
       //   myChart.setOption(option);
       // },
+      setModelDom: function(url) {
+        const dom = '<div><img src='+url+' class="modal_img"><a class="load_img_btn" href='+this.downLoadUrl+' download="charts.png"><i class="icon-download3"></i>点击下载</a></div>';
+        return dom;
+      },
       getImg: function() {
-        this.$set(this, 'modalVisibal', true);
         const that = this;
-        html2canvas(document.getElementById('page_disboard')).then(function(canvas) {
-          // document.body.appendChild(canvas);
-          canvas.id = "mycanvas";
-          //生成base64图片数据    
-          var dataUrl = canvas.toDataURL();    
-          var newImg = document.createElement("img");    
-          newImg.src =  dataUrl;    
-          document.body.appendChild(newImg);
-          console.log(newImg);
-          that.$set(that, 'downLoadUrl', dataUrl);
-        });
-      }
+        const { modalDom } = this;
+        if(!modalDom) {
+          html2canvas(document.getElementById('page_disboard')).then(function(canvas) {
+            // document.body.appendChild(canvas);
+            canvas.id = "mycanvas";
+            //生成base64图片数据    
+            var dataUrl = canvas.toDataURL();    
+            // var newImg = document.createElement("img");    
+            // newImg.src =  dataUrl;    
+            // document.body.appendChild(newImg);
+            // console.log(newImg);
+            that.$set(that, 'downLoadUrl', dataUrl);
+            that.$set(that, 'modalDom', that.setModelDom(dataUrl));
+            that.$set(that, 'modalVisibal', true);
+          });
+        } else {
+          that.$set(that, 'modalVisibal', true);
+        }
+      },
     },
     computed: {
       userIcon: function() {
       },
     },
     components : {
-      vmMessage,
+      vmModal,
     }
   }
 </script>
 <style lang="sass">
   // @import '../css/default.scss';
-  // @import '../css/common.scss';
+  @import '../css/common.scss';
   // @import '../css/style.css';
-  .vm_modal {
-    position: fixed;
-    overflow: auto;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    font-size: 14px;
-    background-color: rgba(0, 0, 0, .65);
-    opacity: 1;
-    transform: scale(1);
+  .load_img_btn {
+    display: block;
+    float: right;
+    padding: 5px;
+    color: $font-color;
     transition: all ease .3s;
-    &.modal-leave-to,
-    &.modal-enter- {
-      opacity: 0;
-      transform: scale(0);
+    &:hover {
+      color: $orange;
     }
-    >.vm_modal_body {
-      width: 80%;
-      height: 40px;
-      left: 50%;
-      top: 50%;
-      background-color: #fff;
-      transform: translate(-50%, -50%);
-      position: absolute;
-      border-radius: 4px;
-      box-shadow: 0 4px 12px rgba(0,0,0,.15);
-      padding: 15px;
-      box-sizing: border-box;
+    >.icon-download3 {
+      display: inline-block;
+      padding-right: 5px;
     }
+  }
+  .modal_img {
+    width: 100%;
+    box-shadow: 1px 1px 7px 1px #eee;
   }
 </style>

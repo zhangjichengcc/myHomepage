@@ -1,7 +1,16 @@
 <template>
-  <div id="page_disboard" class="page_con">
+  <div id="page_disboard" class="page_con" style="background-color: #000; font-size: 14px;" >
     <div @click="getImg">click</div>
-    <div id="charts_pie" class="charts_pie" style="width: 600px;height:400px;" />
+    <div id="charts_pie" class="charts_pie" style="width: 600px;height:400px; background-color: #000;" />
+    <table border="1" style="border-color: #fff;">
+      <tbody>
+        <tr>
+          <td>aaaaa</td>
+          <td>aaaaa</td>
+          <td>啊手动阀手动阀</td>
+        </tr>
+      </tbody>
+    </table>
     <!-- <div id="charts_radar" class="charts_radar" style="width: 600px;height:400px;" />
     <div id="charts_line_bar" class="charts_line_bar" style="width: 600px;height:400px;" /> -->
     <vm-modal :show="modalVisibal" :handCancel="modalCancel" :render="modalDom" />
@@ -267,9 +276,35 @@
       getImg: function() {
         const that = this;
         const { modalDom } = this;
+
+        const shareContent = document.getElementById('page_disboard');//需要截图的包裹的（原生的）DOM 对象
+        const width = shareContent.offsetWidth; //获取dom 宽度
+        const height = shareContent.offsetHeight; //获取dom 高度
+        const canvas = document.createElement("canvas"); //创建一个canvas节点
+        const scale = 2; //定义任意放大倍数 支持小数
+        canvas.width = width * scale; //定义canvas 宽度 * 缩放
+        canvas.height = height * scale; //定义canvas高度 *缩放
+        canvas.getContext("2d").scale(scale, scale); //获取context,设置scale 
+        const opts = {
+            scale: scale, // 添加的scale 参数
+            canvas: canvas, //自定义 canvas
+            // logging: true, //日志开关，便于查看html2canvas的内部执行流程
+            width: width, //dom 原始宽度
+            height: height,
+            useCORS: true // 【重要】开启跨域配置
+        };
+
         if(!modalDom) {
-          html2canvas(document.getElementById('page_disboard')).then(function(canvas) {
+          html2canvas(shareContent, opts).then(function(canvas) {
             // document.body.appendChild(canvas);
+
+            const context = canvas.getContext('2d');
+            // 【重要】关闭抗锯齿
+            context.mozImageSmoothingEnabled = false;
+            context.webkitImageSmoothingEnabled = false;
+            context.msImageSmoothingEnabled = false;
+            context.imageSmoothingEnabled = false;
+
             canvas.id = "mycanvas";
             //生成base64图片数据    
             var dataUrl = canvas.toDataURL();    

@@ -8,10 +8,11 @@ var WebpackDevServer = require('webpack-dev-server');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var vue = require("vue-loader");
 
-// 配置异步加载地址
-// var project_publicPath = process.env.NODE_ENV === 'production' ? __dirname + '/build/' : '/build/';
-var project_publicPath = '/build/';
-console.log(project_publicPath, process.env.NODE_ENV)
+// 配置异步加载地址 production /build/ development
+// var project_publicPath = process.env.NODE_ENV === 'production' ? __dirname + '/build/' : '/build/';'
+var project_publicPath = process.env.NODE_ENV === 'production' ? '/myHomepage/build/' : '/build/';
+// var project_publicPath = '/build/';
+console.log('project_publicPath', project_publicPath, 'process.env.NODE_ENV', process.env.NODE_ENV);
 
 //定义一些文件夹的路径
 var ROOT_PATH = path.resolve(__dirname);

@@ -126,7 +126,7 @@
 				display: block;
 				width: 100%;
 				height: 100%;
-				background-color: rgba(0, 0, 0, .2);
+				background-color: rgba(0, 0, 0, .3);
 			}
 			.banner_body {
 				position: absolute;
@@ -142,7 +142,7 @@
 					background-size: cover;
 					background-position: center;
 					background-repeat: no-repeat;
-					box-shadow: rgba(0,0,0,.3) 1px 1px 10px 3px;
+					box-shadow: rgba(0, 0, 0, .3) 1px 1px 10px 3px;
 					border-radius: 50%;
 				}
 				.banner_info {

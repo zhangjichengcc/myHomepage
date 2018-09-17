@@ -91,6 +91,7 @@
 		}
 		.mobile_view {
 			padding-top: 0;
+			padding-bottom: 45px;
 		}
 	}
 	.fade-enter-active {

@@ -2152,9 +2152,6 @@ webpackJsonp([4,12],[
 	    }
 	  }) : _c('input', {
 	    directives: [{
-	      name: "focus",
-	      rawName: "v-focus"
-	    }, {
 	      name: "model",
 	      rawName: "v-model",
 	      value: (_vm.display.userName),

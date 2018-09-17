@@ -7,7 +7,7 @@
         <span class="input_item">
           <i class="icon-user" />
           <input v-if="$store.state.isPC" v-focus placeholder="username" @keyup="inputUserName" v-model="display.userName" type="" name="">
-          <input v-else v-focus placeholder="username" @keyup="inputUserName" v-model="display.userName" type="" name="">
+          <input v-else placeholder="username" @keyup="inputUserName" v-model="display.userName" type="" name="">
         </span>
         <span class="input_item">
           <i class="icon-lock" :style="{left: '11px'}" />

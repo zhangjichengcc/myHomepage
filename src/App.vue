@@ -1,9 +1,9 @@
 <template>
 	<div id="vm_body" :class="[$store.state.isPC ? 'pc_view' : 'mobile_view']">
 		<vm-header v-if="$store.state.isPC" />
-		<vm-mobile-header v-else />
+		<!-- <vm-mobile-header v-else /> -->
 		<transition :name="transitionName" class="router">
-			<router-view class="r" />
+			<router-view :class="['r', $store.state.isPC ? 'pc_view' : 'mobile_view']" />
 		</transition>
 		<vm-footer v-if="!$store.state.isPC" />
 		<div id="vm_message" />
@@ -36,9 +36,9 @@
 		mounted() {
 			const _this = this;
 			this.initDevice();
-			window.onresize = function() {
-				_this.initDevice();
-			}
+			// window.onresize = function() {
+			// 	_this.initDevice();
+			// }
 		},
 
 		computed : {
@@ -82,11 +82,16 @@
 	.r {
 		width: 100%;
 		min-height: 100vh;
-		padding-top: 52px;
 		position: relative;
 		box-sizing: border-box;
 		transform: translateX(0);
 		transition: transform .3s ease;
+		.pc_view {
+			padding-top: 52px;
+		}
+		.mobile_view {
+			padding-top: 0;
+		}
 	}
 	.fade-enter-active {
 		opacity: 0;

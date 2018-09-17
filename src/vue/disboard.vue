@@ -276,7 +276,6 @@
       getImg: function() {
         const that = this;
         const { modalDom } = this;
-
         const shareContent = document.getElementById('page_disboard');//需要截图的包裹的（原生的）DOM 对象
         const width = shareContent.offsetWidth; //获取dom 宽度
         const height = shareContent.offsetHeight; //获取dom 高度
@@ -286,11 +285,11 @@
         canvas.height = height * scale; //定义canvas高度 *缩放
         canvas.getContext("2d").scale(scale, scale); //获取context,设置scale 
         const opts = {
-            scale: scale, // 添加的scale 参数
-            canvas: canvas, //自定义 canvas
+            scale, // 添加的scale 参数
+            canvas, //自定义 canvas
             // logging: true, //日志开关，便于查看html2canvas的内部执行流程
-            width: width, //dom 原始宽度
-            height: height,
+            width, //dom 原始宽度
+            height,
             useCORS: true // 【重要】开启跨域配置
         };
 

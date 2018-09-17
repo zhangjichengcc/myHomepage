@@ -19,6 +19,7 @@
 	</div>
 </template>
 <script>
+	// import { device, message, $alert } from './plagin/global.js';
 	export default {
 		data: function() {
 			return {
@@ -50,6 +51,7 @@
     left: 0;
 		background-color: #fff;
 		font-size: 0;
+		border-top: #eee solid 1px;
 		>a {
 			color: $font-color;
 			display: inline-block;

@@ -86,10 +86,10 @@
 		box-sizing: border-box;
 		transform: translateX(0);
 		transition: transform .3s ease;
-		.pc_view {
+		&.pc_view {
 			padding-top: 52px;
 		}
-		.mobile_view {
+		&.mobile_view {
 			padding-top: 0;
 			padding-bottom: 45px;
 		}

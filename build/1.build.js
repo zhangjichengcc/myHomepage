@@ -13,9 +13,9 @@ webpackJsonp([1,12],[
 	/* styles */
 	__webpack_require__(8)
 
-	var Component = __webpack_require__(15)(
+	var Component = __webpack_require__(14)(
 	  /* script */
-	  __webpack_require__(16),
+	  __webpack_require__(15),
 	  /* template */
 	  __webpack_require__(18),
 	  /* scopeId */
@@ -38,7 +38,7 @@ webpackJsonp([1,12],[
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	if(content.locals) module.exports = content.locals;
 	// add the styles to the DOM
-	var update = __webpack_require__(13)("06356ba0", content, true);
+	var update = __webpack_require__(12)("33c5c8ef", content, true);
 
 /***/ }),
 /* 9 */
@@ -46,10 +46,10 @@ webpackJsonp([1,12],[
 
 	exports = module.exports = __webpack_require__(10)();
 	// imports
-	exports.i(__webpack_require__(11), "");
+
 
 	// module
-	exports.push([module.id, ".home_pc .banner{text-align:center;padding:40px 0}.home_pc .banner p{width:80%;color:hsla(0,0%,93%,.53);text-transform:uppercase;letter-spacing:1px;display:inline-block;border:4px double hsla(0,0%,100%,.25);border-width:4px 0;padding:30px 0}.home_pc .banner p span{font:700 3em Oswald,sans-serif;letter-spacing:0;padding:.25em 0 .325em;display:block;margin:0 auto;text-shadow:0 0 80px hsla(0,0%,100%,.5);background:url(http://f.cl.ly/items/010q3E1u3p2Q0j1L1S1o/animated_text_fill.png) repeat-y;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;-webkit-animation:aitf 80s linear infinite;-webkit-transform:translateZ(0);-webkit-backface-visibility:hidden}.mobile_view{background-color:#fff}.home_mobile .banner{width:100%;height:65vw;position:absolute;background-image:url(" + __webpack_require__(12) + ");background-repeat:no-repeat;background-size:cover;background-position:50%}.home_mobile .banner:before{content:\"\";display:block;width:100%;height:100%;background-color:rgba(0,0,0,.3)}.home_mobile .banner .banner_body{position:absolute;width:100%;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center}.home_mobile .banner .banner_body .user_icon{display:inline-block;width:20vw;height:20vw;background-size:cover;background-position:50%;background-repeat:no-repeat;box-shadow:1px 1px 10px 3px rgba(0,0,0,.3);border-radius:50%}.home_mobile .banner .banner_body .banner_info{display:block;text-align:center;color:#fff}.home_mobile .banner .banner_body .banner_info .u_name{display:block;padding:13px 0 3px}.home_mobile .banner .banner_body .banner_info .banner_info_point{display:inline-block;width:5px;height:5px;background-color:#fff;border-radius:50%;margin:0 5px;vertical-align:middle}.home_mobile .banner .banner_body .banner_info span{display:inline-block}.home_mobile .swiper-container{width:100%;height:210px;height:56vw}.home_mobile .swiper-slide{text-align:center;font-size:18px;background:#fff;display:-ms-flexbox;display:flex;-ms-flex-pack:center;justify-content:center;-ms-flex-align:center;align-items:center;background-repeat:no-repeat;background-size:cover;background-position:50%}", ""]);
+	exports.push([module.id, ".home_pc .banner{position:relative;height:50vw;max-height:70vh;background-color:#000;text-align:center}.home_pc .banner .banner_bg{height:100%}.home_pc .banner .banner_title{width:60%;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%)}.home_pc .banner .banner_title .user_icon{width:3rem;height:3rem;position:relative;display:inline-block;background-size:cover;background-position:50%;background-repeat:no-repeat;border:3px solid hsla(0,0%,100%,.3);border-radius:5px}.home_pc .banner .banner_title .user_icon:after,.home_pc .banner .banner_title .user_icon:before{content:\"\";display:blick;position:absolute;width:30%;height:30%}.home_pc .banner .banner_title .user_icon:before{top:-10px;left:-10px;border-top:3px solid rgba(54,191,196,.7);border-left:3px solid rgba(54,191,196,.7)}.home_pc .banner .banner_title .user_icon:after{right:-10px;bottom:-10px;border-right:3px solid rgba(54,191,196,.7);border-bottom:3px solid rgba(54,191,196,.7)}.home_pc .banner .banner_title p{text-align:center;font-size:1.1rem}.home_pc .banner .banner_title p:nth-child(2):after,.home_pc .banner .banner_title p:nth-child(2):before{content:\"\";display:inline-block;width:2rem;height:3px;vertical-align:middle;background-color:#fff;margin:0 5px}.home_pc .banner .banner_title p:nth-child(3){font-size:1.2rem}.mobile_view{background-color:#fff}.home_mobile .banner{width:100%;height:65vw;position:absolute;background-image:url(" + __webpack_require__(11) + ");background-repeat:no-repeat;background-size:cover;background-position:50%}.home_mobile .banner:before{content:\"\";display:block;width:100%;height:100%;background-color:rgba(0,0,0,.3)}.home_mobile .banner .banner_body{position:absolute;width:100%;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center}.home_mobile .banner .banner_body .user_icon{display:inline-block;width:20vw;height:20vw;background-size:cover;background-position:50%;background-repeat:no-repeat;box-shadow:1px 1px 10px 3px rgba(0,0,0,.3);border-radius:50%}.home_mobile .banner .banner_body .banner_info{display:block;text-align:center;color:#fff}.home_mobile .banner .banner_body .banner_info .u_name{display:block;padding:13px 0 3px}.home_mobile .banner .banner_body .banner_info .banner_info_point{display:inline-block;width:5px;height:5px;background-color:#fff;border-radius:50%;margin:0 5px;vertical-align:middle}.home_mobile .banner .banner_body .banner_info span{display:inline-block}.home_mobile .swiper-container{width:100%;height:210px;height:56vw}.home_mobile .swiper-slide{text-align:center;font-size:18px;background:#fff;display:-ms-flexbox;display:flex;-ms-flex-pack:center;justify-content:center;-ms-flex-align:center;align-items:center;background-repeat:no-repeat;background-size:cover;background-position:50%}", ""]);
 
 	// exports
 
@@ -59,27 +59,13 @@ webpackJsonp([1,12],[
 /* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(10)();
-	// imports
-
-
-	// module
-	exports.push([module.id, ".swiper-container{margin:0 auto;position:relative;overflow:hidden;list-style:none;padding:0;z-index:1}.swiper-container-no-flexbox .swiper-slide{float:left}.swiper-container-vertical>.swiper-wrapper{-ms-flex-direction:column;flex-direction:column}.swiper-wrapper{position:relative;width:100%;height:100%;z-index:1;display:-ms-flexbox;display:flex;transition-property:transform;box-sizing:content-box}.swiper-container-android .swiper-slide,.swiper-wrapper{transform:translateZ(0)}.swiper-container-multirow>.swiper-wrapper{-ms-flex-wrap:wrap;flex-wrap:wrap}.swiper-container-free-mode>.swiper-wrapper{transition-timing-function:ease-out;margin:0 auto}.swiper-slide{-ms-flex-negative:0;flex-shrink:0;width:100%;height:100%;position:relative;transition-property:transform}.swiper-invisible-blank-slide{visibility:hidden}.swiper-container-autoheight,.swiper-container-autoheight .swiper-slide{height:auto}.swiper-container-autoheight .swiper-wrapper{-ms-flex-align:start;align-items:flex-start;transition-property:transform,height}.swiper-container-3d{perspective:1200px}.swiper-container-3d .swiper-cube-shadow,.swiper-container-3d .swiper-slide,.swiper-container-3d .swiper-slide-shadow-bottom,.swiper-container-3d .swiper-slide-shadow-left,.swiper-container-3d .swiper-slide-shadow-right,.swiper-container-3d .swiper-slide-shadow-top,.swiper-container-3d .swiper-wrapper{transform-style:preserve-3d}.swiper-container-3d .swiper-slide-shadow-bottom,.swiper-container-3d .swiper-slide-shadow-left,.swiper-container-3d .swiper-slide-shadow-right,.swiper-container-3d .swiper-slide-shadow-top{position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:none;z-index:10}.swiper-container-3d .swiper-slide-shadow-left{background-image:linear-gradient(270deg,rgba(0,0,0,.5),transparent)}.swiper-container-3d .swiper-slide-shadow-right{background-image:linear-gradient(90deg,rgba(0,0,0,.5),transparent)}.swiper-container-3d .swiper-slide-shadow-top{background-image:linear-gradient(0deg,rgba(0,0,0,.5),transparent)}.swiper-container-3d .swiper-slide-shadow-bottom{background-image:linear-gradient(180deg,rgba(0,0,0,.5),transparent)}.swiper-container-wp8-horizontal,.swiper-container-wp8-horizontal>.swiper-wrapper{-ms-touch-action:pan-y;touch-action:pan-y}.swiper-container-wp8-vertical,.swiper-container-wp8-vertical>.swiper-wrapper{-ms-touch-action:pan-x;touch-action:pan-x}.swiper-button-next,.swiper-button-prev{position:absolute;top:50%;width:27px;height:44px;margin-top:-22px;z-index:10;cursor:pointer;background-size:27px 44px;background-position:50%;background-repeat:no-repeat}.swiper-button-next.swiper-button-disabled,.swiper-button-prev.swiper-button-disabled{opacity:.35;cursor:auto;pointer-events:none}.swiper-button-prev,.swiper-container-rtl .swiper-button-next{background-image:url(\"data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 44'%3E%3Cpath d='M0 22L22 0l2.1 2.1L4.2 22l19.9 19.9L22 44 0 22z' fill='%23007aff'/%3E%3C/svg%3E\");left:10px;right:auto}.swiper-button-next,.swiper-container-rtl .swiper-button-prev{background-image:url(\"data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 44'%3E%3Cpath d='M27 22L5 44l-2.1-2.1L22.8 22 2.9 2.1 5 0l22 22z' fill='%23007aff'/%3E%3C/svg%3E\");right:10px;left:auto}.swiper-button-prev.swiper-button-white,.swiper-container-rtl .swiper-button-next.swiper-button-white{background-image:url(\"data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 44'%3E%3Cpath d='M0 22L22 0l2.1 2.1L4.2 22l19.9 19.9L22 44 0 22z' fill='%23fff'/%3E%3C/svg%3E\")}.swiper-button-next.swiper-button-white,.swiper-container-rtl .swiper-button-prev.swiper-button-white{background-image:url(\"data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 44'%3E%3Cpath d='M27 22L5 44l-2.1-2.1L22.8 22 2.9 2.1 5 0l22 22z' fill='%23fff'/%3E%3C/svg%3E\")}.swiper-button-prev.swiper-button-black,.swiper-container-rtl .swiper-button-next.swiper-button-black{background-image:url(\"data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 44'%3E%3Cpath d='M0 22L22 0l2.1 2.1L4.2 22l19.9 19.9L22 44 0 22z'/%3E%3C/svg%3E\")}.swiper-button-next.swiper-button-black,.swiper-container-rtl .swiper-button-prev.swiper-button-black{background-image:url(\"data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 44'%3E%3Cpath d='M27 22L5 44l-2.1-2.1L22.8 22 2.9 2.1 5 0l22 22z'/%3E%3C/svg%3E\")}.swiper-button-lock{display:none}.swiper-pagination{position:absolute;text-align:center;transition:opacity .3s;transform:translateZ(0);z-index:10}.swiper-pagination.swiper-pagination-hidden{opacity:0}.swiper-container-horizontal>.swiper-pagination-bullets,.swiper-pagination-custom,.swiper-pagination-fraction{bottom:10px;left:0;width:100%}.swiper-pagination-bullets-dynamic{overflow:hidden;font-size:0}.swiper-pagination-bullets-dynamic .swiper-pagination-bullet{transform:scale(.33);position:relative}.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active,.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-main{transform:scale(1)}.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev{transform:scale(.66)}.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev-prev{transform:scale(.33)}.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next{transform:scale(.66)}.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next-next{transform:scale(.33)}.swiper-pagination-bullet{width:8px;height:8px;display:inline-block;border-radius:100%;background:#000;opacity:.2}button.swiper-pagination-bullet{border:none;margin:0;padding:0;box-shadow:none;-webkit-appearance:none;-moz-appearance:none;appearance:none}.swiper-pagination-clickable .swiper-pagination-bullet{cursor:pointer}.swiper-pagination-bullet-active{opacity:1;background:#007aff}.swiper-container-vertical>.swiper-pagination-bullets{right:10px;top:50%;transform:translate3d(0,-50%,0)}.swiper-container-vertical>.swiper-pagination-bullets .swiper-pagination-bullet{margin:6px 0;display:block}.swiper-container-vertical>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic{top:50%;transform:translateY(-50%);width:8px}.swiper-container-vertical>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet{display:inline-block;transition:top .2s,-webkit-transform .2s;transition:transform .2s,top .2s;transition:transform .2s,top .2s,-webkit-transform .2s}.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet{margin:0 4px}.swiper-container-horizontal>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic{left:50%;transform:translateX(-50%);white-space:nowrap}.swiper-container-horizontal>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet{transition:left .2s,-webkit-transform .2s;transition:transform .2s,left .2s;transition:transform .2s,left .2s,-webkit-transform .2s}.swiper-container-horizontal.swiper-container-rtl>.swiper-pagination-bullets-dynamic .swiper-pagination-bullet{transition:right .2s,-webkit-transform .2s;transition:transform .2s,right .2s;transition:transform .2s,right .2s,-webkit-transform .2s}.swiper-pagination-progressbar{background:rgba(0,0,0,.25);position:absolute}.swiper-pagination-progressbar .swiper-pagination-progressbar-fill{background:#007aff;position:absolute;left:0;top:0;width:100%;height:100%;transform:scale(0);transform-origin:left top}.swiper-container-rtl .swiper-pagination-progressbar .swiper-pagination-progressbar-fill{transform-origin:right top}.swiper-container-horizontal>.swiper-pagination-progressbar,.swiper-container-vertical>.swiper-pagination-progressbar.swiper-pagination-progressbar-opposite{width:100%;height:4px;left:0;top:0}.swiper-container-horizontal>.swiper-pagination-progressbar.swiper-pagination-progressbar-opposite,.swiper-container-vertical>.swiper-pagination-progressbar{width:4px;height:100%;left:0;top:0}.swiper-pagination-white .swiper-pagination-bullet-active{background:#fff}.swiper-pagination-progressbar.swiper-pagination-white{background:hsla(0,0%,100%,.25)}.swiper-pagination-progressbar.swiper-pagination-white .swiper-pagination-progressbar-fill{background:#fff}.swiper-pagination-black .swiper-pagination-bullet-active{background:#000}.swiper-pagination-progressbar.swiper-pagination-black{background:rgba(0,0,0,.25)}.swiper-pagination-progressbar.swiper-pagination-black .swiper-pagination-progressbar-fill{background:#000}.swiper-pagination-lock{display:none}.swiper-scrollbar{border-radius:10px;position:relative;-ms-touch-action:none;background:rgba(0,0,0,.1)}.swiper-container-horizontal>.swiper-scrollbar{position:absolute;left:1%;bottom:3px;z-index:50;height:5px;width:98%}.swiper-container-vertical>.swiper-scrollbar{position:absolute;right:3px;top:1%;z-index:50;width:5px;height:98%}.swiper-scrollbar-drag{height:100%;width:100%;position:relative;background:rgba(0,0,0,.5);border-radius:10px;left:0;top:0}.swiper-scrollbar-cursor-drag{cursor:move}.swiper-scrollbar-lock{display:none}.swiper-zoom-container{width:100%;height:100%;display:-ms-flexbox;display:flex;-ms-flex-pack:center;justify-content:center;-ms-flex-align:center;align-items:center;text-align:center}.swiper-zoom-container>canvas,.swiper-zoom-container>img,.swiper-zoom-container>svg{max-width:100%;max-height:100%;-o-object-fit:contain;object-fit:contain}.swiper-slide-zoomed{cursor:move}.swiper-lazy-preloader{width:42px;height:42px;position:absolute;left:50%;top:50%;margin-left:-21px;margin-top:-21px;z-index:10;transform-origin:50%;animation:swiper-preloader-spin 1s steps(12) infinite}.swiper-lazy-preloader:after{display:block;content:\"\";width:100%;height:100%;background-image:url(\"data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cdefs%3E%3Cpath id='a' stroke='%236c6c6c' stroke-width='11' stroke-linecap='round' d='M60 7v20'/%3E%3C/defs%3E%3Cuse xlink:href='%23a' opacity='.27'/%3E%3Cuse xlink:href='%23a' opacity='.27' transform='rotate(30 60 60)'/%3E%3Cuse xlink:href='%23a' opacity='.27' transform='rotate(60 60 60)'/%3E%3Cuse xlink:href='%23a' opacity='.27' transform='rotate(90 60 60)'/%3E%3Cuse xlink:href='%23a' opacity='.27' transform='rotate(120 60 60)'/%3E%3Cuse xlink:href='%23a' opacity='.27' transform='rotate(150 60 60)'/%3E%3Cuse xlink:href='%23a' opacity='.37' transform='rotate(180 60 60)'/%3E%3Cuse xlink:href='%23a' opacity='.46' transform='rotate(210 60 60)'/%3E%3Cuse xlink:href='%23a' opacity='.56' transform='rotate(240 60 60)'/%3E%3Cuse xlink:href='%23a' opacity='.66' transform='rotate(270 60 60)'/%3E%3Cuse xlink:href='%23a' opacity='.75' transform='rotate(300 60 60)'/%3E%3Cuse xlink:href='%23a' opacity='.85' transform='rotate(330 60 60)'/%3E%3C/svg%3E\");background-position:50%;background-size:100%;background-repeat:no-repeat}.swiper-lazy-preloader-white:after{background-image:url(\"data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cdefs%3E%3Cpath id='a' stroke='%23fff' stroke-width='11' stroke-linecap='round' d='M60 7v20'/%3E%3C/defs%3E%3Cuse xlink:href='%23a' opacity='.27'/%3E%3Cuse xlink:href='%23a' opacity='.27' transform='rotate(30 60 60)'/%3E%3Cuse xlink:href='%23a' opacity='.27' transform='rotate(60 60 60)'/%3E%3Cuse xlink:href='%23a' opacity='.27' transform='rotate(90 60 60)'/%3E%3Cuse xlink:href='%23a' opacity='.27' transform='rotate(120 60 60)'/%3E%3Cuse xlink:href='%23a' opacity='.27' transform='rotate(150 60 60)'/%3E%3Cuse xlink:href='%23a' opacity='.37' transform='rotate(180 60 60)'/%3E%3Cuse xlink:href='%23a' opacity='.46' transform='rotate(210 60 60)'/%3E%3Cuse xlink:href='%23a' opacity='.56' transform='rotate(240 60 60)'/%3E%3Cuse xlink:href='%23a' opacity='.66' transform='rotate(270 60 60)'/%3E%3Cuse xlink:href='%23a' opacity='.75' transform='rotate(300 60 60)'/%3E%3Cuse xlink:href='%23a' opacity='.85' transform='rotate(330 60 60)'/%3E%3C/svg%3E\")}@keyframes swiper-preloader-spin{to{transform:rotate(1turn)}}.swiper-container .swiper-notification{position:absolute;left:0;top:0;pointer-events:none;opacity:0;z-index:-1000}.swiper-container-fade.swiper-container-free-mode .swiper-slide{transition-timing-function:ease-out}.swiper-container-fade .swiper-slide{pointer-events:none;transition-property:opacity}.swiper-container-fade .swiper-slide .swiper-slide{pointer-events:none}.swiper-container-fade .swiper-slide-active,.swiper-container-fade .swiper-slide-active .swiper-slide-active{pointer-events:auto}.swiper-container-cube{overflow:visible}.swiper-container-cube .swiper-slide{pointer-events:none;-webkit-backface-visibility:hidden;backface-visibility:hidden;z-index:1;visibility:hidden;transform-origin:0 0;width:100%;height:100%}.swiper-container-cube .swiper-slide .swiper-slide{pointer-events:none}.swiper-container-cube.swiper-container-rtl .swiper-slide{transform-origin:100% 0}.swiper-container-cube .swiper-slide-active,.swiper-container-cube .swiper-slide-active .swiper-slide-active{pointer-events:auto}.swiper-container-cube .swiper-slide-active,.swiper-container-cube .swiper-slide-next,.swiper-container-cube .swiper-slide-next+.swiper-slide,.swiper-container-cube .swiper-slide-prev{pointer-events:auto;visibility:visible}.swiper-container-cube .swiper-slide-shadow-bottom,.swiper-container-cube .swiper-slide-shadow-left,.swiper-container-cube .swiper-slide-shadow-right,.swiper-container-cube .swiper-slide-shadow-top{z-index:0;-webkit-backface-visibility:hidden;backface-visibility:hidden}.swiper-container-cube .swiper-cube-shadow{position:absolute;left:0;bottom:0;width:100%;height:100%;background:#000;opacity:.6;filter:blur(50px);z-index:0}.swiper-container-flip{overflow:visible}.swiper-container-flip .swiper-slide{pointer-events:none;-webkit-backface-visibility:hidden;backface-visibility:hidden;z-index:1}.swiper-container-flip .swiper-slide .swiper-slide{pointer-events:none}.swiper-container-flip .swiper-slide-active,.swiper-container-flip .swiper-slide-active .swiper-slide-active{pointer-events:auto}.swiper-container-flip .swiper-slide-shadow-bottom,.swiper-container-flip .swiper-slide-shadow-left,.swiper-container-flip .swiper-slide-shadow-right,.swiper-container-flip .swiper-slide-shadow-top{z-index:0;-webkit-backface-visibility:hidden;backface-visibility:hidden}.swiper-container-coverflow .swiper-wrapper{-ms-perspective:1200px}", ""]);
-
-	// exports
-
-
-/***/ }),
-/* 12 */
-/***/ (function(module, exports, __webpack_require__) {
-
 	module.exports = __webpack_require__.p + "4860ccaa8c50b5b001e25b782a96a645.jpg";
 
 /***/ }),
+/* 12 */,
 /* 13 */,
 /* 14 */,
-/* 15 */,
-/* 16 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {'use strict';
@@ -88,11 +74,51 @@ webpackJsonp([1,12],[
 		value: true
 	});
 
-	var _swiperMin = __webpack_require__(17);
+	var _swiperMin = __webpack_require__(16);
 
 	var _swiperMin2 = _interopRequireDefault(_swiperMin);
 
+	var _particles = __webpack_require__(17);
+
+	var _particles2 = _interopRequireDefault(_particles);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
+	//
 
 	exports.default = {
 		data: function data() {
@@ -108,6 +134,7 @@ webpackJsonp([1,12],[
 		},
 		mounted: function mounted() {
 			// this.initSwiper();
+			this.initBanner();
 		},
 		computed: {},
 		methods: {
@@ -126,45 +153,126 @@ webpackJsonp([1,12],[
 					}
 				});
 				this.$set(this, 'swiper', mySwiper);
+			},
+			initBanner: function initBanner() {
+				particlesJS('particles-banner', {
+					"particles": {
+						"number": {
+							"value": 200, //数量
+							"density": {
+								"enable": true, //启用粒子的稀密程度
+								"value_area": 800 //区域散布密度大小
+							}
+						},
+						"color": {
+							"value": "#fff" //原子的颜色
+						},
+						"shape": {
+							"type": "circle", //原子的形状 "circle" ,"edge" ,"triangle" ,"polygon" ,"star" ,"image" ,["circle", "triangle", "image"]
+							"stroke": {
+								"width": 0, //原子的宽度
+								"color": "#362cff" //原子颜色
+							},
+							"polygon": {
+								"nb_sides": 5 // 原子的多边形边数
+							},
+							"image": {
+								"src": "img/github.svg", // 原子的图片可以使用自定义图片 "assets/img/yop.svg" , "http://mywebsite.com/assets/img/yop.png"
+								"width": 100, //图片宽度
+								"height": 100 //图片高度
+							}
+						},
+						"opacity": {
+							"value": 1, //不透明度
+							"random": true, //随机不透明度
+							"anim": {
+								"enable": true, //渐变动画
+								"speed": 1, // 渐变动画速度
+								"opacity_min": 0, //渐变动画不透明度
+								"sync": true
+							}
+						},
+						"size": {
+							"value": 10, //原子大小
+							"random": true, // 原子大小随机
+							"anim": {
+								"enable": false, // 原子渐变
+								"speed": 4, //原子渐变速度
+								"size_min": 0.3,
+								"sync": false
+							}
+						},
+						"line_linked": {
+							"enable": false, //连接线
+							"distance": 150, //连接线距离
+							"color": "#ffffff", //连接线颜色
+							"opacity": 0.4, //连接线不透明度
+							"width": 1 //连接线的宽度
+						},
+						"move": {
+							"enable": true, //原子移动
+							"speed": 1, //原子移动速度
+							"direction": "none", //原子移动方向   "none" ,"top" ,"top-right" ,"right" ,"bottom-right" ,"bottom" ,"bottom-left" ,"left" ,"top-left"
+							"random": true, //移动随机方向
+							"straight": false, //直接移动
+							"out_mode": "out", //是否移动出画布
+							"bounce": false, //是否跳动移动
+							"attract": {
+								"enable": false, // 原子之间吸引
+								"rotateX": 600, //原子之间吸引X水平距离
+								"rotateY": 600 //原子之间吸引Y水平距离
+							}
+						}
+					},
+					"interactivity": {
+						"detect_on": "canvas", //原子之间互动检测 "canvas", "window"
+						"events": {
+							"onhover": {
+								"enable": true, //悬停
+								"mode": "bubble" //悬停模式      "grab"抓取临近的,"bubble"泡沫球效果,"repulse"击退效果,["grab", "bubble"]
+							},
+							"onclick": {
+								"enable": false, //点击效果
+								"mode": "repulse" //点击效果模式   "push" ,"remove" ,"bubble" ,"repulse" ,["push", "repulse"]
+							},
+							"resize": true // 互动事件调整
+						},
+						"modes": {
+							"grab": {
+								"distance": 100, //原子互动抓取距离
+								"line_linked": {
+									"opacity": 0.8 //原子互动抓取距离连线不透明度
+								}
+							},
+							"bubble": {
+								"distance": 250, //原子抓取泡沫效果之间的距离
+								"size": 4, // 原子抓取泡沫效果之间的大小
+								"duration": 2, //原子抓取泡沫效果之间的持续事件
+								"opacity": 1, //原子抓取泡沫效果透明度
+								"speed": 3
+							},
+							"repulse": {
+								"distance": 400, //击退效果距离
+								"duration": 0.4 //击退效果持续事件
+							},
+							"push": {
+								"particles_nb": 4 //粒子推出的数量
+							},
+							"remove": {
+								"particles_nb": 2
+							}
+						}
+					},
+					"retina_detect": true
+				});
 			}
 		},
 		components: {}
-	}; //
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
-	//
+	};
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ }),
-/* 17 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;"use strict";
@@ -2079,13 +2187,1573 @@ webpackJsonp([1,12],[
 	//# sourceMappingURL=swiper.min.js.map
 
 /***/ }),
+/* 17 */
+/***/ (function(module, exports) {
+
+	/* -----------------------------------------------
+	/* Author : Vincent Garreau  - vincentgarreau.com
+	/* MIT license: http://opensource.org/licenses/MIT
+	/* Demo / Generator : vincentgarreau.com/particles.js
+	/* GitHub : github.com/VincentGarreau/particles.js
+	/* How to use? : Check the GitHub README
+	/* v2.0.0
+	/* ----------------------------------------------- */
+
+	var pJS = function(tag_id, params){
+
+	  var canvas_el = document.querySelector('#'+tag_id+' > .particles-js-canvas-el');
+
+	  /* particles.js variables with default values */
+	  this.pJS = {
+	    canvas: {
+	      el: canvas_el,
+	      w: canvas_el.offsetWidth,
+	      h: canvas_el.offsetHeight
+	    },
+	    particles: {
+	      number: {
+	        value: 400,
+	        density: {
+	          enable: true,
+	          value_area: 800
+	        }
+	      },
+	      color: {
+	        value: '#fff'
+	      },
+	      shape: {
+	        type: 'circle',
+	        stroke: {
+	          width: 0,
+	          color: '#ff0000'
+	        },
+	        polygon: {
+	          nb_sides: 5
+	        },
+	        image: {
+	          src: '',
+	          width: 100,
+	          height: 100
+	        }
+	      },
+	      opacity: {
+	        value: 1,
+	        random: false,
+	        anim: {
+	          enable: false,
+	          speed: 2,
+	          opacity_min: 0,
+	          sync: false
+	        }
+	      },
+	      size: {
+	        value: 20,
+	        random: false,
+	        anim: {
+	          enable: false,
+	          speed: 20,
+	          size_min: 0,
+	          sync: false
+	        }
+	      },
+	      line_linked: {
+	        enable: true,
+	        distance: 100,
+	        color: '#fff',
+	        opacity: 1,
+	        width: 1
+	      },
+	      move: {
+	        enable: true,
+	        speed: 2,
+	        direction: 'none',
+	        random: false,
+	        straight: false,
+	        out_mode: 'out',
+	        bounce: false,
+	        attract: {
+	          enable: false,
+	          rotateX: 3000,
+	          rotateY: 3000
+	        }
+	      },
+	      array: []
+	    },
+	    interactivity: {
+	      detect_on: 'canvas',
+	      events: {
+	        onhover: {
+	          enable: true,
+	          mode: 'grab'
+	        },
+	        onclick: {
+	          enable: true,
+	          mode: 'push'
+	        },
+	        resize: true
+	      },
+	      modes: {
+	        grab:{
+	          distance: 100,
+	          line_linked:{
+	            opacity: 1
+	          }
+	        },
+	        bubble:{
+	          distance: 200,
+	          size: 80,
+	          duration: 0.4
+	        },
+	        repulse:{
+	          distance: 200,
+	          duration: 0.4
+	        },
+	        push:{
+	          particles_nb: 4
+	        },
+	        remove:{
+	          particles_nb: 2
+	        }
+	      },
+	      mouse:{}
+	    },
+	    retina_detect: false,
+	    fn: {
+	      interact: {},
+	      modes: {},
+	      vendors:{}
+	    },
+	    tmp: {}
+	  };
+
+	  var pJS = this.pJS;
+
+	  /* params settings */
+	  if(params){
+	    Object.deepExtend(pJS, params);
+	  }
+
+	  pJS.tmp.obj = {
+	    size_value: pJS.particles.size.value,
+	    size_anim_speed: pJS.particles.size.anim.speed,
+	    move_speed: pJS.particles.move.speed,
+	    line_linked_distance: pJS.particles.line_linked.distance,
+	    line_linked_width: pJS.particles.line_linked.width,
+	    mode_grab_distance: pJS.interactivity.modes.grab.distance,
+	    mode_bubble_distance: pJS.interactivity.modes.bubble.distance,
+	    mode_bubble_size: pJS.interactivity.modes.bubble.size,
+	    mode_repulse_distance: pJS.interactivity.modes.repulse.distance
+	  };
+
+
+	  pJS.fn.retinaInit = function(){
+
+	    if(pJS.retina_detect && window.devicePixelRatio > 1){
+	      pJS.canvas.pxratio = window.devicePixelRatio; 
+	      pJS.tmp.retina = true;
+	    } 
+	    else{
+	      pJS.canvas.pxratio = 1;
+	      pJS.tmp.retina = false;
+	    }
+
+	    pJS.canvas.w = pJS.canvas.el.offsetWidth * pJS.canvas.pxratio;
+	    pJS.canvas.h = pJS.canvas.el.offsetHeight * pJS.canvas.pxratio;
+
+	    pJS.particles.size.value = pJS.tmp.obj.size_value * pJS.canvas.pxratio;
+	    pJS.particles.size.anim.speed = pJS.tmp.obj.size_anim_speed * pJS.canvas.pxratio;
+	    pJS.particles.move.speed = pJS.tmp.obj.move_speed * pJS.canvas.pxratio;
+	    pJS.particles.line_linked.distance = pJS.tmp.obj.line_linked_distance * pJS.canvas.pxratio;
+	    pJS.interactivity.modes.grab.distance = pJS.tmp.obj.mode_grab_distance * pJS.canvas.pxratio;
+	    pJS.interactivity.modes.bubble.distance = pJS.tmp.obj.mode_bubble_distance * pJS.canvas.pxratio;
+	    pJS.particles.line_linked.width = pJS.tmp.obj.line_linked_width * pJS.canvas.pxratio;
+	    pJS.interactivity.modes.bubble.size = pJS.tmp.obj.mode_bubble_size * pJS.canvas.pxratio;
+	    pJS.interactivity.modes.repulse.distance = pJS.tmp.obj.mode_repulse_distance * pJS.canvas.pxratio;
+
+	  };
+
+
+
+	  /* ---------- pJS functions - canvas ------------ */
+
+	  pJS.fn.canvasInit = function(){
+	    pJS.canvas.ctx = pJS.canvas.el.getContext('2d');
+	  };
+
+	  pJS.fn.canvasSize = function(){
+
+	    pJS.canvas.el.width = pJS.canvas.w;
+	    pJS.canvas.el.height = pJS.canvas.h;
+
+	    if(pJS && pJS.interactivity.events.resize){
+
+	      window.addEventListener('resize', function(){
+
+	          pJS.canvas.w = pJS.canvas.el.offsetWidth;
+	          pJS.canvas.h = pJS.canvas.el.offsetHeight;
+
+	          /* resize canvas */
+	          if(pJS.tmp.retina){
+	            pJS.canvas.w *= pJS.canvas.pxratio;
+	            pJS.canvas.h *= pJS.canvas.pxratio;
+	          }
+
+	          pJS.canvas.el.width = pJS.canvas.w;
+	          pJS.canvas.el.height = pJS.canvas.h;
+
+	          /* repaint canvas on anim disabled */
+	          if(!pJS.particles.move.enable){
+	            pJS.fn.particlesEmpty();
+	            pJS.fn.particlesCreate();
+	            pJS.fn.particlesDraw();
+	            pJS.fn.vendors.densityAutoParticles();
+	          }
+
+	        /* density particles enabled */
+	        pJS.fn.vendors.densityAutoParticles();
+
+	      });
+
+	    }
+
+	  };
+
+
+	  pJS.fn.canvasPaint = function(){
+	    pJS.canvas.ctx.fillRect(0, 0, pJS.canvas.w, pJS.canvas.h);
+	  };
+
+	  pJS.fn.canvasClear = function(){
+	    pJS.canvas.ctx.clearRect(0, 0, pJS.canvas.w, pJS.canvas.h);
+	  };
+
+
+	  /* --------- pJS functions - particles ----------- */
+
+	  pJS.fn.particle = function(color, opacity, position){
+
+	    /* size */
+	    this.radius = (pJS.particles.size.random ? Math.random() : 1) * pJS.particles.size.value;
+	    if(pJS.particles.size.anim.enable){
+	      this.size_status = false;
+	      this.vs = pJS.particles.size.anim.speed / 100;
+	      if(!pJS.particles.size.anim.sync){
+	        this.vs = this.vs * Math.random();
+	      }
+	    }
+
+	    /* position */
+	    this.x = position ? position.x : Math.random() * pJS.canvas.w;
+	    this.y = position ? position.y : Math.random() * pJS.canvas.h;
+
+	    /* check position  - into the canvas */
+	    if(this.x > pJS.canvas.w - this.radius*2) this.x = this.x - this.radius;
+	    else if(this.x < this.radius*2) this.x = this.x + this.radius;
+	    if(this.y > pJS.canvas.h - this.radius*2) this.y = this.y - this.radius;
+	    else if(this.y < this.radius*2) this.y = this.y + this.radius;
+
+	    /* check position - avoid overlap */
+	    if(pJS.particles.move.bounce){
+	      pJS.fn.vendors.checkOverlap(this, position);
+	    }
+
+	    /* color */
+	    this.color = {};
+	    if(typeof(color.value) == 'object'){
+
+	      if(color.value instanceof Array){
+	        var color_selected = color.value[Math.floor(Math.random() * pJS.particles.color.value.length)];
+	        this.color.rgb = hexToRgb(color_selected);
+	      }else{
+	        if(color.value.r != undefined && color.value.g != undefined && color.value.b != undefined){
+	          this.color.rgb = {
+	            r: color.value.r,
+	            g: color.value.g,
+	            b: color.value.b
+	          }
+	        }
+	        if(color.value.h != undefined && color.value.s != undefined && color.value.l != undefined){
+	          this.color.hsl = {
+	            h: color.value.h,
+	            s: color.value.s,
+	            l: color.value.l
+	          }
+	        }
+	      }
+
+	    }
+	    else if(color.value == 'random'){
+	      this.color.rgb = {
+	        r: (Math.floor(Math.random() * (255 - 0 + 1)) + 0),
+	        g: (Math.floor(Math.random() * (255 - 0 + 1)) + 0),
+	        b: (Math.floor(Math.random() * (255 - 0 + 1)) + 0)
+	      }
+	    }
+	    else if(typeof(color.value) == 'string'){
+	      this.color = color;
+	      this.color.rgb = hexToRgb(this.color.value);
+	    }
+
+	    /* opacity */
+	    this.opacity = (pJS.particles.opacity.random ? Math.random() : 1) * pJS.particles.opacity.value;
+	    if(pJS.particles.opacity.anim.enable){
+	      this.opacity_status = false;
+	      this.vo = pJS.particles.opacity.anim.speed / 100;
+	      if(!pJS.particles.opacity.anim.sync){
+	        this.vo = this.vo * Math.random();
+	      }
+	    }
+
+	    /* animation - velocity for speed */
+	    var velbase = {}
+	    switch(pJS.particles.move.direction){
+	      case 'top':
+	        velbase = { x:0, y:-1 };
+	      break;
+	      case 'top-right':
+	        velbase = { x:0.5, y:-0.5 };
+	      break;
+	      case 'right':
+	        velbase = { x:1, y:-0 };
+	      break;
+	      case 'bottom-right':
+	        velbase = { x:0.5, y:0.5 };
+	      break;
+	      case 'bottom':
+	        velbase = { x:0, y:1 };
+	      break;
+	      case 'bottom-left':
+	        velbase = { x:-0.5, y:1 };
+	      break;
+	      case 'left':
+	        velbase = { x:-1, y:0 };
+	      break;
+	      case 'top-left':
+	        velbase = { x:-0.5, y:-0.5 };
+	      break;
+	      default:
+	        velbase = { x:0, y:0 };
+	      break;
+	    }
+
+	    if(pJS.particles.move.straight){
+	      this.vx = velbase.x;
+	      this.vy = velbase.y;
+	      if(pJS.particles.move.random){
+	        this.vx = this.vx * (Math.random());
+	        this.vy = this.vy * (Math.random());
+	      }
+	    }else{
+	      this.vx = velbase.x + Math.random()-0.5;
+	      this.vy = velbase.y + Math.random()-0.5;
+	    }
+
+	    // var theta = 2.0 * Math.PI * Math.random();
+	    // this.vx = Math.cos(theta);
+	    // this.vy = Math.sin(theta);
+
+	    this.vx_i = this.vx;
+	    this.vy_i = this.vy;
+
+	    
+
+	    /* if shape is image */
+
+	    var shape_type = pJS.particles.shape.type;
+	    if(typeof(shape_type) == 'object'){
+	      if(shape_type instanceof Array){
+	        var shape_selected = shape_type[Math.floor(Math.random() * shape_type.length)];
+	        this.shape = shape_selected;
+	      }
+	    }else{
+	      this.shape = shape_type;
+	    }
+
+	    if(this.shape == 'image'){
+	      var sh = pJS.particles.shape;
+	      this.img = {
+	        src: sh.image.src,
+	        ratio: sh.image.width / sh.image.height
+	      }
+	      if(!this.img.ratio) this.img.ratio = 1;
+	      if(pJS.tmp.img_type == 'svg' && pJS.tmp.source_svg != undefined){
+	        pJS.fn.vendors.createSvgImg(this);
+	        if(pJS.tmp.pushing){
+	          this.img.loaded = false;
+	        }
+	      }
+	    }
+
+	    
+
+	  };
+
+
+	  pJS.fn.particle.prototype.draw = function() {
+
+	    var p = this;
+
+	    if(p.radius_bubble != undefined){
+	      var radius = p.radius_bubble; 
+	    }else{
+	      var radius = p.radius;
+	    }
+
+	    if(p.opacity_bubble != undefined){
+	      var opacity = p.opacity_bubble;
+	    }else{
+	      var opacity = p.opacity;
+	    }
+
+	    if(p.color.rgb){
+	      var color_value = 'rgba('+p.color.rgb.r+','+p.color.rgb.g+','+p.color.rgb.b+','+opacity+')';
+	    }else{
+	      var color_value = 'hsla('+p.color.hsl.h+','+p.color.hsl.s+'%,'+p.color.hsl.l+'%,'+opacity+')';
+	    }
+
+	    pJS.canvas.ctx.fillStyle = color_value;
+	    pJS.canvas.ctx.beginPath();
+
+	    switch(p.shape){
+
+	      case 'circle':
+	        pJS.canvas.ctx.arc(p.x, p.y, radius, 0, Math.PI * 2, false);
+	      break;
+
+	      case 'edge':
+	        pJS.canvas.ctx.rect(p.x-radius, p.y-radius, radius*2, radius*2);
+	      break;
+
+	      case 'triangle':
+	        pJS.fn.vendors.drawShape(pJS.canvas.ctx, p.x-radius, p.y+radius / 1.66, radius*2, 3, 2);
+	      break;
+
+	      case 'polygon':
+	        pJS.fn.vendors.drawShape(
+	          pJS.canvas.ctx,
+	          p.x - radius / (pJS.particles.shape.polygon.nb_sides/3.5), // startX
+	          p.y - radius / (2.66/3.5), // startY
+	          radius*2.66 / (pJS.particles.shape.polygon.nb_sides/3), // sideLength
+	          pJS.particles.shape.polygon.nb_sides, // sideCountNumerator
+	          1 // sideCountDenominator
+	        );
+	      break;
+
+	      case 'star':
+	        pJS.fn.vendors.drawShape(
+	          pJS.canvas.ctx,
+	          p.x - radius*2 / (pJS.particles.shape.polygon.nb_sides/4), // startX
+	          p.y - radius / (2*2.66/3.5), // startY
+	          radius*2*2.66 / (pJS.particles.shape.polygon.nb_sides/3), // sideLength
+	          pJS.particles.shape.polygon.nb_sides, // sideCountNumerator
+	          2 // sideCountDenominator
+	        );
+	      break;
+
+	      case 'image':
+
+	        function draw(){
+	          pJS.canvas.ctx.drawImage(
+	            img_obj,
+	            p.x-radius,
+	            p.y-radius,
+	            radius*2,
+	            radius*2 / p.img.ratio
+	          );
+	        }
+
+	        if(pJS.tmp.img_type == 'svg'){
+	          var img_obj = p.img.obj;
+	        }else{
+	          var img_obj = pJS.tmp.img_obj;
+	        }
+
+	        if(img_obj){
+	          draw();
+	        }
+
+	      break;
+
+	    }
+
+	    pJS.canvas.ctx.closePath();
+
+	    if(pJS.particles.shape.stroke.width > 0){
+	      pJS.canvas.ctx.strokeStyle = pJS.particles.shape.stroke.color;
+	      pJS.canvas.ctx.lineWidth = pJS.particles.shape.stroke.width;
+	      pJS.canvas.ctx.stroke();
+	    }
+	    
+	    pJS.canvas.ctx.fill();
+	    
+	  };
+
+
+	  pJS.fn.particlesCreate = function(){
+	    for(var i = 0; i < pJS.particles.number.value; i++) {
+	      pJS.particles.array.push(new pJS.fn.particle(pJS.particles.color, pJS.particles.opacity.value));
+	    }
+	  };
+
+	  pJS.fn.particlesUpdate = function(){
+
+	    for(var i = 0; i < pJS.particles.array.length; i++){
+
+	      /* the particle */
+	      var p = pJS.particles.array[i];
+
+	      // var d = ( dx = pJS.interactivity.mouse.click_pos_x - p.x ) * dx + ( dy = pJS.interactivity.mouse.click_pos_y - p.y ) * dy;
+	      // var f = -BANG_SIZE / d;
+	      // if ( d < BANG_SIZE ) {
+	      //     var t = Math.atan2( dy, dx );
+	      //     p.vx = f * Math.cos(t);
+	      //     p.vy = f * Math.sin(t);
+	      // }
+
+	      /* move the particle */
+	      if(pJS.particles.move.enable){
+	        var ms = pJS.particles.move.speed/2;
+	        p.x += p.vx * ms;
+	        p.y += p.vy * ms;
+	      }
+
+	      /* change opacity status */
+	      if(pJS.particles.opacity.anim.enable) {
+	        if(p.opacity_status == true) {
+	          if(p.opacity >= pJS.particles.opacity.value) p.opacity_status = false;
+	          p.opacity += p.vo;
+	        }else {
+	          if(p.opacity <= pJS.particles.opacity.anim.opacity_min) p.opacity_status = true;
+	          p.opacity -= p.vo;
+	        }
+	        if(p.opacity < 0) p.opacity = 0;
+	      }
+
+	      /* change size */
+	      if(pJS.particles.size.anim.enable){
+	        if(p.size_status == true){
+	          if(p.radius >= pJS.particles.size.value) p.size_status = false;
+	          p.radius += p.vs;
+	        }else{
+	          if(p.radius <= pJS.particles.size.anim.size_min) p.size_status = true;
+	          p.radius -= p.vs;
+	        }
+	        if(p.radius < 0) p.radius = 0;
+	      }
+
+	      /* change particle position if it is out of canvas */
+	      if(pJS.particles.move.out_mode == 'bounce'){
+	        var new_pos = {
+	          x_left: p.radius,
+	          x_right:  pJS.canvas.w,
+	          y_top: p.radius,
+	          y_bottom: pJS.canvas.h
+	        }
+	      }else{
+	        var new_pos = {
+	          x_left: -p.radius,
+	          x_right: pJS.canvas.w + p.radius,
+	          y_top: -p.radius,
+	          y_bottom: pJS.canvas.h + p.radius
+	        }
+	      }
+
+	      if(p.x - p.radius > pJS.canvas.w){
+	        p.x = new_pos.x_left;
+	        p.y = Math.random() * pJS.canvas.h;
+	      }
+	      else if(p.x + p.radius < 0){
+	        p.x = new_pos.x_right;
+	        p.y = Math.random() * pJS.canvas.h;
+	      }
+	      if(p.y - p.radius > pJS.canvas.h){
+	        p.y = new_pos.y_top;
+	        p.x = Math.random() * pJS.canvas.w;
+	      }
+	      else if(p.y + p.radius < 0){
+	        p.y = new_pos.y_bottom;
+	        p.x = Math.random() * pJS.canvas.w;
+	      }
+
+	      /* out of canvas modes */
+	      switch(pJS.particles.move.out_mode){
+	        case 'bounce':
+	          if (p.x + p.radius > pJS.canvas.w) p.vx = -p.vx;
+	          else if (p.x - p.radius < 0) p.vx = -p.vx;
+	          if (p.y + p.radius > pJS.canvas.h) p.vy = -p.vy;
+	          else if (p.y - p.radius < 0) p.vy = -p.vy;
+	        break;
+	      }
+
+	      /* events */
+	      if(isInArray('grab', pJS.interactivity.events.onhover.mode)){
+	        pJS.fn.modes.grabParticle(p);
+	      }
+
+	      if(isInArray('bubble', pJS.interactivity.events.onhover.mode) || isInArray('bubble', pJS.interactivity.events.onclick.mode)){
+	        pJS.fn.modes.bubbleParticle(p);
+	      }
+
+	      if(isInArray('repulse', pJS.interactivity.events.onhover.mode) || isInArray('repulse', pJS.interactivity.events.onclick.mode)){
+	        pJS.fn.modes.repulseParticle(p);
+	      }
+
+	      /* interaction auto between particles */
+	      if(pJS.particles.line_linked.enable || pJS.particles.move.attract.enable){
+	        for(var j = i + 1; j < pJS.particles.array.length; j++){
+	          var p2 = pJS.particles.array[j];
+
+	          /* link particles */
+	          if(pJS.particles.line_linked.enable){
+	            pJS.fn.interact.linkParticles(p,p2);
+	          }
+
+	          /* attract particles */
+	          if(pJS.particles.move.attract.enable){
+	            pJS.fn.interact.attractParticles(p,p2);
+	          }
+
+	          /* bounce particles */
+	          if(pJS.particles.move.bounce){
+	            pJS.fn.interact.bounceParticles(p,p2);
+	          }
+
+	        }
+	      }
+
+
+	    }
+
+	  };
+
+	  pJS.fn.particlesDraw = function(){
+
+	    /* clear canvas */
+	    pJS.canvas.ctx.clearRect(0, 0, pJS.canvas.w, pJS.canvas.h);
+
+	    /* update each particles param */
+	    pJS.fn.particlesUpdate();
+
+	    /* draw each particle */
+	    for(var i = 0; i < pJS.particles.array.length; i++){
+	      var p = pJS.particles.array[i];
+	      p.draw();
+	    }
+
+	  };
+
+	  pJS.fn.particlesEmpty = function(){
+	    pJS.particles.array = [];
+	  };
+
+	  pJS.fn.particlesRefresh = function(){
+
+	    /* init all */
+	    cancelRequestAnimFrame(pJS.fn.checkAnimFrame);
+	    cancelRequestAnimFrame(pJS.fn.drawAnimFrame);
+	    pJS.tmp.source_svg = undefined;
+	    pJS.tmp.img_obj = undefined;
+	    pJS.tmp.count_svg = 0;
+	    pJS.fn.particlesEmpty();
+	    pJS.fn.canvasClear();
+	    
+	    /* restart */
+	    pJS.fn.vendors.start();
+
+	  };
+
+
+	  /* ---------- pJS functions - particles interaction ------------ */
+
+	  pJS.fn.interact.linkParticles = function(p1, p2){
+
+	    var dx = p1.x - p2.x,
+	        dy = p1.y - p2.y,
+	        dist = Math.sqrt(dx*dx + dy*dy);
+
+	    /* draw a line between p1 and p2 if the distance between them is under the config distance */
+	    if(dist <= pJS.particles.line_linked.distance){
+
+	      var opacity_line = pJS.particles.line_linked.opacity - (dist / (1/pJS.particles.line_linked.opacity)) / pJS.particles.line_linked.distance;
+
+	      if(opacity_line > 0){        
+	        
+	        /* style */
+	        var color_line = pJS.particles.line_linked.color_rgb_line;
+	        pJS.canvas.ctx.strokeStyle = 'rgba('+color_line.r+','+color_line.g+','+color_line.b+','+opacity_line+')';
+	        pJS.canvas.ctx.lineWidth = pJS.particles.line_linked.width;
+	        //pJS.canvas.ctx.lineCap = 'round'; /* performance issue */
+	        
+	        /* path */
+	        pJS.canvas.ctx.beginPath();
+	        pJS.canvas.ctx.moveTo(p1.x, p1.y);
+	        pJS.canvas.ctx.lineTo(p2.x, p2.y);
+	        pJS.canvas.ctx.stroke();
+	        pJS.canvas.ctx.closePath();
+
+	      }
+
+	    }
+
+	  };
+
+
+	  pJS.fn.interact.attractParticles  = function(p1, p2){
+
+	    /* condensed particles */
+	    var dx = p1.x - p2.x,
+	        dy = p1.y - p2.y,
+	        dist = Math.sqrt(dx*dx + dy*dy);
+
+	    if(dist <= pJS.particles.line_linked.distance){
+
+	      var ax = dx/(pJS.particles.move.attract.rotateX*1000),
+	          ay = dy/(pJS.particles.move.attract.rotateY*1000);
+
+	      p1.vx -= ax;
+	      p1.vy -= ay;
+
+	      p2.vx += ax;
+	      p2.vy += ay;
+
+	    }
+	    
+
+	  }
+
+
+	  pJS.fn.interact.bounceParticles = function(p1, p2){
+
+	    var dx = p1.x - p2.x,
+	        dy = p1.y - p2.y,
+	        dist = Math.sqrt(dx*dx + dy*dy),
+	        dist_p = p1.radius+p2.radius;
+
+	    if(dist <= dist_p){
+	      p1.vx = -p1.vx;
+	      p1.vy = -p1.vy;
+
+	      p2.vx = -p2.vx;
+	      p2.vy = -p2.vy;
+	    }
+
+	  }
+
+
+	  /* ---------- pJS functions - modes events ------------ */
+
+	  pJS.fn.modes.pushParticles = function(nb, pos){
+
+	    pJS.tmp.pushing = true;
+
+	    for(var i = 0; i < nb; i++){
+	      pJS.particles.array.push(
+	        new pJS.fn.particle(
+	          pJS.particles.color,
+	          pJS.particles.opacity.value,
+	          {
+	            'x': pos ? pos.pos_x : Math.random() * pJS.canvas.w,
+	            'y': pos ? pos.pos_y : Math.random() * pJS.canvas.h
+	          }
+	        )
+	      )
+	      if(i == nb-1){
+	        if(!pJS.particles.move.enable){
+	          pJS.fn.particlesDraw();
+	        }
+	        pJS.tmp.pushing = false;
+	      }
+	    }
+
+	  };
+
+
+	  pJS.fn.modes.removeParticles = function(nb){
+
+	    pJS.particles.array.splice(0, nb);
+	    if(!pJS.particles.move.enable){
+	      pJS.fn.particlesDraw();
+	    }
+
+	  };
+
+
+	  pJS.fn.modes.bubbleParticle = function(p){
+
+	    /* on hover event */
+	    if(pJS.interactivity.events.onhover.enable && isInArray('bubble', pJS.interactivity.events.onhover.mode)){
+
+	      var dx_mouse = p.x - pJS.interactivity.mouse.pos_x,
+	          dy_mouse = p.y - pJS.interactivity.mouse.pos_y,
+	          dist_mouse = Math.sqrt(dx_mouse*dx_mouse + dy_mouse*dy_mouse),
+	          ratio = 1 - dist_mouse / pJS.interactivity.modes.bubble.distance;
+
+	      function init(){
+	        p.opacity_bubble = p.opacity;
+	        p.radius_bubble = p.radius;
+	      }
+
+	      /* mousemove - check ratio */
+	      if(dist_mouse <= pJS.interactivity.modes.bubble.distance){
+
+	        if(ratio >= 0 && pJS.interactivity.status == 'mousemove'){
+	          
+	          /* size */
+	          if(pJS.interactivity.modes.bubble.size != pJS.particles.size.value){
+
+	            if(pJS.interactivity.modes.bubble.size > pJS.particles.size.value){
+	              var size = p.radius + (pJS.interactivity.modes.bubble.size*ratio);
+	              if(size >= 0){
+	                p.radius_bubble = size;
+	              }
+	            }else{
+	              var dif = p.radius - pJS.interactivity.modes.bubble.size,
+	                  size = p.radius - (dif*ratio);
+	              if(size > 0){
+	                p.radius_bubble = size;
+	              }else{
+	                p.radius_bubble = 0;
+	              }
+	            }
+
+	          }
+
+	          /* opacity */
+	          if(pJS.interactivity.modes.bubble.opacity != pJS.particles.opacity.value){
+
+	            if(pJS.interactivity.modes.bubble.opacity > pJS.particles.opacity.value){
+	              var opacity = pJS.interactivity.modes.bubble.opacity*ratio;
+	              if(opacity > p.opacity && opacity <= pJS.interactivity.modes.bubble.opacity){
+	                p.opacity_bubble = opacity;
+	              }
+	            }else{
+	              var opacity = p.opacity - (pJS.particles.opacity.value-pJS.interactivity.modes.bubble.opacity)*ratio;
+	              if(opacity < p.opacity && opacity >= pJS.interactivity.modes.bubble.opacity){
+	                p.opacity_bubble = opacity;
+	              }
+	            }
+
+	          }
+
+	        }
+
+	      }else{
+	        init();
+	      }
+
+
+	      /* mouseleave */
+	      if(pJS.interactivity.status == 'mouseleave'){
+	        init();
+	      }
+	    
+	    }
+
+	    /* on click event */
+	    else if(pJS.interactivity.events.onclick.enable && isInArray('bubble', pJS.interactivity.events.onclick.mode)){
+
+
+	      if(pJS.tmp.bubble_clicking){
+	        var dx_mouse = p.x - pJS.interactivity.mouse.click_pos_x,
+	            dy_mouse = p.y - pJS.interactivity.mouse.click_pos_y,
+	            dist_mouse = Math.sqrt(dx_mouse*dx_mouse + dy_mouse*dy_mouse),
+	            time_spent = (new Date().getTime() - pJS.interactivity.mouse.click_time)/1000;
+
+	        if(time_spent > pJS.interactivity.modes.bubble.duration){
+	          pJS.tmp.bubble_duration_end = true;
+	        }
+
+	        if(time_spent > pJS.interactivity.modes.bubble.duration*2){
+	          pJS.tmp.bubble_clicking = false;
+	          pJS.tmp.bubble_duration_end = false;
+	        }
+	      }
+
+
+	      function process(bubble_param, particles_param, p_obj_bubble, p_obj, id){
+
+	        if(bubble_param != particles_param){
+
+	          if(!pJS.tmp.bubble_duration_end){
+	            if(dist_mouse <= pJS.interactivity.modes.bubble.distance){
+	              if(p_obj_bubble != undefined) var obj = p_obj_bubble;
+	              else var obj = p_obj;
+	              if(obj != bubble_param){
+	                var value = p_obj - (time_spent * (p_obj - bubble_param) / pJS.interactivity.modes.bubble.duration);
+	                if(id == 'size') p.radius_bubble = value;
+	                if(id == 'opacity') p.opacity_bubble = value;
+	              }
+	            }else{
+	              if(id == 'size') p.radius_bubble = undefined;
+	              if(id == 'opacity') p.opacity_bubble = undefined;
+	            }
+	          }else{
+	            if(p_obj_bubble != undefined){
+	              var value_tmp = p_obj - (time_spent * (p_obj - bubble_param) / pJS.interactivity.modes.bubble.duration),
+	                  dif = bubble_param - value_tmp;
+	                  value = bubble_param + dif;
+	              if(id == 'size') p.radius_bubble = value;
+	              if(id == 'opacity') p.opacity_bubble = value;
+	            }
+	          }
+
+	        }
+
+	      }
+
+	      if(pJS.tmp.bubble_clicking){
+	        /* size */
+	        process(pJS.interactivity.modes.bubble.size, pJS.particles.size.value, p.radius_bubble, p.radius, 'size');
+	        /* opacity */
+	        process(pJS.interactivity.modes.bubble.opacity, pJS.particles.opacity.value, p.opacity_bubble, p.opacity, 'opacity');
+	      }
+
+	    }
+
+	  };
+
+
+	  pJS.fn.modes.repulseParticle = function(p){
+
+	    if(pJS.interactivity.events.onhover.enable && isInArray('repulse', pJS.interactivity.events.onhover.mode) && pJS.interactivity.status == 'mousemove') {
+
+	      var dx_mouse = p.x - pJS.interactivity.mouse.pos_x,
+	          dy_mouse = p.y - pJS.interactivity.mouse.pos_y,
+	          dist_mouse = Math.sqrt(dx_mouse*dx_mouse + dy_mouse*dy_mouse);
+
+	      var normVec = {x: dx_mouse/dist_mouse, y: dy_mouse/dist_mouse},
+	          repulseRadius = pJS.interactivity.modes.repulse.distance,
+	          velocity = 100,
+	          repulseFactor = clamp((1/repulseRadius)*(-1*Math.pow(dist_mouse/repulseRadius,2)+1)*repulseRadius*velocity, 0, 50);
+	      
+	      var pos = {
+	        x: p.x + normVec.x * repulseFactor,
+	        y: p.y + normVec.y * repulseFactor
+	      }
+
+	      if(pJS.particles.move.out_mode == 'bounce'){
+	        if(pos.x - p.radius > 0 && pos.x + p.radius < pJS.canvas.w) p.x = pos.x;
+	        if(pos.y - p.radius > 0 && pos.y + p.radius < pJS.canvas.h) p.y = pos.y;
+	      }else{
+	        p.x = pos.x;
+	        p.y = pos.y;
+	      }
+	    
+	    }
+
+
+	    else if(pJS.interactivity.events.onclick.enable && isInArray('repulse', pJS.interactivity.events.onclick.mode)) {
+
+	      if(!pJS.tmp.repulse_finish){
+	        pJS.tmp.repulse_count++;
+	        if(pJS.tmp.repulse_count == pJS.particles.array.length){
+	          pJS.tmp.repulse_finish = true;
+	        }
+	      }
+
+	      if(pJS.tmp.repulse_clicking){
+
+	        var repulseRadius = Math.pow(pJS.interactivity.modes.repulse.distance/6, 3);
+
+	        var dx = pJS.interactivity.mouse.click_pos_x - p.x,
+	            dy = pJS.interactivity.mouse.click_pos_y - p.y,
+	            d = dx*dx + dy*dy;
+
+	        var force = -repulseRadius / d * 1;
+
+	        function process(){
+
+	          var f = Math.atan2(dy,dx);
+	          p.vx = force * Math.cos(f);
+	          p.vy = force * Math.sin(f);
+
+	          if(pJS.particles.move.out_mode == 'bounce'){
+	            var pos = {
+	              x: p.x + p.vx,
+	              y: p.y + p.vy
+	            }
+	            if (pos.x + p.radius > pJS.canvas.w) p.vx = -p.vx;
+	            else if (pos.x - p.radius < 0) p.vx = -p.vx;
+	            if (pos.y + p.radius > pJS.canvas.h) p.vy = -p.vy;
+	            else if (pos.y - p.radius < 0) p.vy = -p.vy;
+	          }
+
+	        }
+
+	        // default
+	        if(d <= repulseRadius){
+	          process();
+	        }
+
+	        // bang - slow motion mode
+	        // if(!pJS.tmp.repulse_finish){
+	        //   if(d <= repulseRadius){
+	        //     process();
+	        //   }
+	        // }else{
+	        //   process();
+	        // }
+	        
+
+	      }else{
+
+	        if(pJS.tmp.repulse_clicking == false){
+
+	          p.vx = p.vx_i;
+	          p.vy = p.vy_i;
+	        
+	        }
+
+	      }
+
+	    }
+
+	  }
+
+
+	  pJS.fn.modes.grabParticle = function(p){
+
+	    if(pJS.interactivity.events.onhover.enable && pJS.interactivity.status == 'mousemove'){
+
+	      var dx_mouse = p.x - pJS.interactivity.mouse.pos_x,
+	          dy_mouse = p.y - pJS.interactivity.mouse.pos_y,
+	          dist_mouse = Math.sqrt(dx_mouse*dx_mouse + dy_mouse*dy_mouse);
+
+	      /* draw a line between the cursor and the particle if the distance between them is under the config distance */
+	      if(dist_mouse <= pJS.interactivity.modes.grab.distance){
+
+	        var opacity_line = pJS.interactivity.modes.grab.line_linked.opacity - (dist_mouse / (1/pJS.interactivity.modes.grab.line_linked.opacity)) / pJS.interactivity.modes.grab.distance;
+
+	        if(opacity_line > 0){
+
+	          /* style */
+	          var color_line = pJS.particles.line_linked.color_rgb_line;
+	          pJS.canvas.ctx.strokeStyle = 'rgba('+color_line.r+','+color_line.g+','+color_line.b+','+opacity_line+')';
+	          pJS.canvas.ctx.lineWidth = pJS.particles.line_linked.width;
+	          //pJS.canvas.ctx.lineCap = 'round'; /* performance issue */
+	          
+	          /* path */
+	          pJS.canvas.ctx.beginPath();
+	          pJS.canvas.ctx.moveTo(p.x, p.y);
+	          pJS.canvas.ctx.lineTo(pJS.interactivity.mouse.pos_x, pJS.interactivity.mouse.pos_y);
+	          pJS.canvas.ctx.stroke();
+	          pJS.canvas.ctx.closePath();
+
+	        }
+
+	      }
+
+	    }
+
+	  };
+
+
+
+	  /* ---------- pJS functions - vendors ------------ */
+
+	  pJS.fn.vendors.eventsListeners = function(){
+
+	    /* events target element */
+	    if(pJS.interactivity.detect_on == 'window'){
+	      pJS.interactivity.el = window;
+	    }else{
+	      pJS.interactivity.el = pJS.canvas.el;
+	    }
+
+
+	    /* detect mouse pos - on hover / click event */
+	    if(pJS.interactivity.events.onhover.enable || pJS.interactivity.events.onclick.enable){
+
+	      /* el on mousemove */
+	      pJS.interactivity.el.addEventListener('mousemove', function(e){
+
+	        if(pJS.interactivity.el == window){
+	          var pos_x = e.clientX,
+	              pos_y = e.clientY;
+	        }
+	        else{
+	          var pos_x = e.offsetX || e.clientX,
+	              pos_y = e.offsetY || e.clientY;
+	        }
+
+	        pJS.interactivity.mouse.pos_x = pos_x;
+	        pJS.interactivity.mouse.pos_y = pos_y;
+
+	        if(pJS.tmp.retina){
+	          pJS.interactivity.mouse.pos_x *= pJS.canvas.pxratio;
+	          pJS.interactivity.mouse.pos_y *= pJS.canvas.pxratio;
+	        }
+
+	        pJS.interactivity.status = 'mousemove';
+
+	      });
+
+	      /* el on onmouseleave */
+	      pJS.interactivity.el.addEventListener('mouseleave', function(e){
+
+	        pJS.interactivity.mouse.pos_x = null;
+	        pJS.interactivity.mouse.pos_y = null;
+	        pJS.interactivity.status = 'mouseleave';
+
+	      });
+
+	    }
+
+	    /* on click event */
+	    if(pJS.interactivity.events.onclick.enable){
+
+	      pJS.interactivity.el.addEventListener('click', function(){
+
+	        pJS.interactivity.mouse.click_pos_x = pJS.interactivity.mouse.pos_x;
+	        pJS.interactivity.mouse.click_pos_y = pJS.interactivity.mouse.pos_y;
+	        pJS.interactivity.mouse.click_time = new Date().getTime();
+
+	        if(pJS.interactivity.events.onclick.enable){
+
+	          switch(pJS.interactivity.events.onclick.mode){
+
+	            case 'push':
+	              if(pJS.particles.move.enable){
+	                pJS.fn.modes.pushParticles(pJS.interactivity.modes.push.particles_nb, pJS.interactivity.mouse);
+	              }else{
+	                if(pJS.interactivity.modes.push.particles_nb == 1){
+	                  pJS.fn.modes.pushParticles(pJS.interactivity.modes.push.particles_nb, pJS.interactivity.mouse);
+	                }
+	                else if(pJS.interactivity.modes.push.particles_nb > 1){
+	                  pJS.fn.modes.pushParticles(pJS.interactivity.modes.push.particles_nb);
+	                }
+	              }
+	            break;
+
+	            case 'remove':
+	              pJS.fn.modes.removeParticles(pJS.interactivity.modes.remove.particles_nb);
+	            break;
+
+	            case 'bubble':
+	              pJS.tmp.bubble_clicking = true;
+	            break;
+
+	            case 'repulse':
+	              pJS.tmp.repulse_clicking = true;
+	              pJS.tmp.repulse_count = 0;
+	              pJS.tmp.repulse_finish = false;
+	              setTimeout(function(){
+	                pJS.tmp.repulse_clicking = false;
+	              }, pJS.interactivity.modes.repulse.duration*1000)
+	            break;
+
+	          }
+
+	        }
+
+	      });
+	        
+	    }
+
+
+	  };
+
+	  pJS.fn.vendors.densityAutoParticles = function(){
+
+	    if(pJS.particles.number.density.enable){
+
+	      /* calc area */
+	      var area = pJS.canvas.el.width * pJS.canvas.el.height / 1000;
+	      if(pJS.tmp.retina){
+	        area = area/(pJS.canvas.pxratio*2);
+	      }
+
+	      /* calc number of particles based on density area */
+	      var nb_particles = area * pJS.particles.number.value / pJS.particles.number.density.value_area;
+
+	      /* add or remove X particles */
+	      var missing_particles = pJS.particles.array.length - nb_particles;
+	      if(missing_particles < 0) pJS.fn.modes.pushParticles(Math.abs(missing_particles));
+	      else pJS.fn.modes.removeParticles(missing_particles);
+
+	    }
+
+	  };
+
+
+	  pJS.fn.vendors.checkOverlap = function(p1, position){
+	    for(var i = 0; i < pJS.particles.array.length; i++){
+	      var p2 = pJS.particles.array[i];
+
+	      var dx = p1.x - p2.x,
+	          dy = p1.y - p2.y,
+	          dist = Math.sqrt(dx*dx + dy*dy);
+
+	      if(dist <= p1.radius + p2.radius){
+	        p1.x = position ? position.x : Math.random() * pJS.canvas.w;
+	        p1.y = position ? position.y : Math.random() * pJS.canvas.h;
+	        pJS.fn.vendors.checkOverlap(p1);
+	      }
+	    }
+	  };
+
+
+	  pJS.fn.vendors.createSvgImg = function(p){
+
+	    /* set color to svg element */
+	    var svgXml = pJS.tmp.source_svg,
+	        rgbHex = /#([0-9A-F]{3,6})/gi,
+	        coloredSvgXml = svgXml.replace(rgbHex, function (m, r, g, b) {
+	          if(p.color.rgb){
+	            var color_value = 'rgba('+p.color.rgb.r+','+p.color.rgb.g+','+p.color.rgb.b+','+p.opacity+')';
+	          }else{
+	            var color_value = 'hsla('+p.color.hsl.h+','+p.color.hsl.s+'%,'+p.color.hsl.l+'%,'+p.opacity+')';
+	          }
+	          return color_value;
+	        });
+
+	    /* prepare to create img with colored svg */
+	    var svg = new Blob([coloredSvgXml], {type: 'image/svg+xml;charset=utf-8'}),
+	        DOMURL = window.URL || window.webkitURL || window,
+	        url = DOMURL.createObjectURL(svg);
+
+	    /* create particle img obj */
+	    var img = new Image();
+	    img.addEventListener('load', function(){
+	      p.img.obj = img;
+	      p.img.loaded = true;
+	      DOMURL.revokeObjectURL(url);
+	      pJS.tmp.count_svg++;
+	    });
+	    img.src = url;
+
+	  };
+
+
+	  pJS.fn.vendors.destroypJS = function(){
+	    cancelAnimationFrame(pJS.fn.drawAnimFrame);
+	    canvas_el.remove();
+	    pJSDom = null;
+	  };
+
+
+	  pJS.fn.vendors.drawShape = function(c, startX, startY, sideLength, sideCountNumerator, sideCountDenominator){
+
+	    // By Programming Thomas - https://programmingthomas.wordpress.com/2013/04/03/n-sided-shapes/
+	    var sideCount = sideCountNumerator * sideCountDenominator;
+	    var decimalSides = sideCountNumerator / sideCountDenominator;
+	    var interiorAngleDegrees = (180 * (decimalSides - 2)) / decimalSides;
+	    var interiorAngle = Math.PI - Math.PI * interiorAngleDegrees / 180; // convert to radians
+	    c.save();
+	    c.beginPath();
+	    c.translate(startX, startY);
+	    c.moveTo(0,0);
+	    for (var i = 0; i < sideCount; i++) {
+	      c.lineTo(sideLength,0);
+	      c.translate(sideLength,0);
+	      c.rotate(interiorAngle);
+	    }
+	    //c.stroke();
+	    c.fill();
+	    c.restore();
+
+	  };
+
+	  pJS.fn.vendors.exportImg = function(){
+	    window.open(pJS.canvas.el.toDataURL('image/png'), '_blank');
+	  };
+
+
+	  pJS.fn.vendors.loadImg = function(type){
+
+	    pJS.tmp.img_error = undefined;
+
+	    if(pJS.particles.shape.image.src != ''){
+
+	      if(type == 'svg'){
+
+	        var xhr = new XMLHttpRequest();
+	        xhr.open('GET', pJS.particles.shape.image.src);
+	        xhr.onreadystatechange = function (data) {
+	          if(xhr.readyState == 4){
+	            if(xhr.status == 200){
+	              pJS.tmp.source_svg = data.currentTarget.response;
+	              pJS.fn.vendors.checkBeforeDraw();
+	            }else{
+	              console.log('Error pJS - Image not found');
+	              pJS.tmp.img_error = true;
+	            }
+	          }
+	        }
+	        xhr.send();
+
+	      }else{
+
+	        var img = new Image();
+	        img.addEventListener('load', function(){
+	          pJS.tmp.img_obj = img;
+	          pJS.fn.vendors.checkBeforeDraw();
+	        });
+	        img.src = pJS.particles.shape.image.src;
+
+	      }
+
+	    }else{
+	      console.log('Error pJS - No image.src');
+	      pJS.tmp.img_error = true;
+	    }
+
+	  };
+
+
+	  pJS.fn.vendors.draw = function(){
+
+	    if(pJS.particles.shape.type == 'image'){
+
+	      if(pJS.tmp.img_type == 'svg'){
+
+	        if(pJS.tmp.count_svg >= pJS.particles.number.value){
+	          pJS.fn.particlesDraw();
+	          if(!pJS.particles.move.enable) cancelRequestAnimFrame(pJS.fn.drawAnimFrame);
+	          else pJS.fn.drawAnimFrame = requestAnimFrame(pJS.fn.vendors.draw);
+	        }else{
+	          //console.log('still loading...');
+	          if(!pJS.tmp.img_error) pJS.fn.drawAnimFrame = requestAnimFrame(pJS.fn.vendors.draw);
+	        }
+
+	      }else{
+
+	        if(pJS.tmp.img_obj != undefined){
+	          pJS.fn.particlesDraw();
+	          if(!pJS.particles.move.enable) cancelRequestAnimFrame(pJS.fn.drawAnimFrame);
+	          else pJS.fn.drawAnimFrame = requestAnimFrame(pJS.fn.vendors.draw);
+	        }else{
+	          if(!pJS.tmp.img_error) pJS.fn.drawAnimFrame = requestAnimFrame(pJS.fn.vendors.draw);
+	        }
+
+	      }
+
+	    }else{
+	      pJS.fn.particlesDraw();
+	      if(!pJS.particles.move.enable) cancelRequestAnimFrame(pJS.fn.drawAnimFrame);
+	      else pJS.fn.drawAnimFrame = requestAnimFrame(pJS.fn.vendors.draw);
+	    }
+
+	  };
+
+
+	  pJS.fn.vendors.checkBeforeDraw = function(){
+
+	    // if shape is image
+	    if(pJS.particles.shape.type == 'image'){
+
+	      if(pJS.tmp.img_type == 'svg' && pJS.tmp.source_svg == undefined){
+	        pJS.tmp.checkAnimFrame = requestAnimFrame(check);
+	      }else{
+	        //console.log('images loaded! cancel check');
+	        cancelRequestAnimFrame(pJS.tmp.checkAnimFrame);
+	        if(!pJS.tmp.img_error){
+	          pJS.fn.vendors.init();
+	          pJS.fn.vendors.draw();
+	        }
+	        
+	      }
+
+	    }else{
+	      pJS.fn.vendors.init();
+	      pJS.fn.vendors.draw();
+	    }
+
+	  };
+
+
+	  pJS.fn.vendors.init = function(){
+
+	    /* init canvas + particles */
+	    pJS.fn.retinaInit();
+	    pJS.fn.canvasInit();
+	    pJS.fn.canvasSize();
+	    pJS.fn.canvasPaint();
+	    pJS.fn.particlesCreate();
+	    pJS.fn.vendors.densityAutoParticles();
+
+	    /* particles.line_linked - convert hex colors to rgb */
+	    pJS.particles.line_linked.color_rgb_line = hexToRgb(pJS.particles.line_linked.color);
+
+	  };
+
+
+	  pJS.fn.vendors.start = function(){
+
+	    if(isInArray('image', pJS.particles.shape.type)){
+	      pJS.tmp.img_type = pJS.particles.shape.image.src.substr(pJS.particles.shape.image.src.length - 3);
+	      pJS.fn.vendors.loadImg(pJS.tmp.img_type);
+	    }else{
+	      pJS.fn.vendors.checkBeforeDraw();
+	    }
+
+	  };
+
+
+
+
+	  /* ---------- pJS - start ------------ */
+
+
+	  pJS.fn.vendors.eventsListeners();
+
+	  pJS.fn.vendors.start();
+	  
+
+
+	};
+
+	/* ---------- global functions - vendors ------------ */
+
+	Object.deepExtend = function(destination, source) {
+	  for (var property in source) {
+	    if (source[property] && source[property].constructor &&
+	     source[property].constructor === Object) {
+	      destination[property] = destination[property] || {};
+	      arguments.callee(destination[property], source[property]);
+	    } else {
+	      destination[property] = source[property];
+	    }
+	  }
+	  return destination;
+	};
+
+	window.requestAnimFrame = (function(){
+	  return  window.requestAnimationFrame ||
+	    window.webkitRequestAnimationFrame ||
+	    window.mozRequestAnimationFrame    ||
+	    window.oRequestAnimationFrame      ||
+	    window.msRequestAnimationFrame     ||
+	    function(callback){
+	      window.setTimeout(callback, 1000 / 60);
+	    };
+	})();
+
+	window.cancelRequestAnimFrame = ( function() {
+	  return window.cancelAnimationFrame         ||
+	    window.webkitCancelRequestAnimationFrame ||
+	    window.mozCancelRequestAnimationFrame    ||
+	    window.oCancelRequestAnimationFrame      ||
+	    window.msCancelRequestAnimationFrame     ||
+	    clearTimeout
+	} )();
+
+	function hexToRgb(hex){
+	  // By Tim Down - http://stackoverflow.com/a/5624139/3493650
+	  // Expand shorthand form (e.g. "03F") to full form (e.g. "0033FF")
+	  var shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
+	  hex = hex.replace(shorthandRegex, function(m, r, g, b) {
+	     return r + r + g + g + b + b;
+	  });
+	  var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+	  return result ? {
+	      r: parseInt(result[1], 16),
+	      g: parseInt(result[2], 16),
+	      b: parseInt(result[3], 16)
+	  } : null;
+	};
+
+	function clamp(number, min, max) {
+	  return Math.min(Math.max(number, min), max);
+	};
+
+	function isInArray(value, array) {
+	  return array.indexOf(value) > -1;
+	}
+
+
+	/* ---------- particles.js functions - start ------------ */
+
+	window.pJSDom = [];
+
+	window.particlesJS = function(tag_id, params){
+
+	  //console.log(params);
+
+	  /* no string id? so it's object params, and set the id with default id */
+	  if(typeof(tag_id) != 'string'){
+	    params = tag_id;
+	    tag_id = 'particles-js';
+	  }
+
+	  /* no id? set the id to default id */
+	  if(!tag_id){
+	    tag_id = 'particles-js';
+	  }
+
+	  /* pJS elements */
+	  var pJS_tag = document.getElementById(tag_id),
+	      pJS_canvas_class = 'particles-js-canvas-el',
+	      exist_canvas = pJS_tag.getElementsByClassName(pJS_canvas_class);
+
+	  /* remove canvas if exists into the pJS target tag */
+	  if(exist_canvas.length){
+	    while(exist_canvas.length > 0){
+	      pJS_tag.removeChild(exist_canvas[0]);
+	    }
+	  }
+
+	  /* create canvas element */
+	  var canvas_el = document.createElement('canvas');
+	  canvas_el.className = pJS_canvas_class;
+
+	  /* set size canvas */
+	  canvas_el.style.width = "100%";
+	  canvas_el.style.height = "100%";
+
+	  /* append canvas */
+	  var canvas = document.getElementById(tag_id).appendChild(canvas_el);
+
+	  /* launch particle.js */
+	  if(canvas != null){
+	    pJSDom.push(new pJS(tag_id, params));
+	  }
+
+	};
+
+	window.particlesJS.load = function(tag_id, path_config_json, callback){
+
+	  /* load json config */
+	  var xhr = new XMLHttpRequest();
+	  xhr.open('GET', path_config_json);
+	  xhr.onreadystatechange = function (data) {
+	    if(xhr.readyState == 4){
+	      if(xhr.status == 200){
+	        var params = JSON.parse(data.currentTarget.response);
+	        window.particlesJS(tag_id, params);
+	        if(callback) callback();
+	      }else{
+	        console.log('Error pJS - XMLHttpRequest status: '+xhr.status);
+	        console.log('Error pJS - File config not found');
+	      }
+	    }
+	  };
+	  xhr.send();
+
+	};
+
+/***/ }),
 /* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('div', [(this.$store.state.isPC) ? _c('div', {
 	    staticClass: "home_pc"
-	  }, [_vm._m(0)]) : _c('div', {
+	  }, [_c('div', {
+	    staticClass: "banner"
+	  }, [_c('div', {
+	    staticClass: "banner_bg",
+	    attrs: {
+	      "id": "particles-banner"
+	    }
+	  }), _vm._v(" "), _c('div', {
+	    staticClass: "banner_title"
+	  }, [_c('div', {
+	    staticClass: "user_icon",
+	    style: ({
+	      backgroundImage: ("url(" + (__webpack_require__(19)) + ")")
+	    })
+	  }), _vm._v(" "), _c('p', [_vm._v("welcome to my homepage")]), _vm._v(" "), _c('p', [_vm._v("I'm Zhang jicheng")])])])]) : _c('div', {
 	    staticClass: "home_mobile"
 	  }, [_c('div', {
 	    staticClass: "banner"
@@ -2096,12 +3764,8 @@ webpackJsonp([1,12],[
 	    style: ({
 	      backgroundImage: ("url(" + (__webpack_require__(19)) + ")")
 	    })
-	  }), _vm._v(" "), _vm._m(1)])])])])
+	  }), _vm._v(" "), _vm._m(0)])])])])
 	},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-	  return _c('div', {
-	    staticClass: "banner"
-	  }, [_c('p', [_vm._v("NOT YET OPEN 2018.8.7\n\t\t\t\t"), _c('span', [_vm._v("IN DEVELOPMENT")]), _vm._v("\n\t\t\t— PLEASE LOOK FORWARD —")])])
-	},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
 	  return _c('p', {
 	    staticClass: "banner_info"
 	  }, [_c('span', {

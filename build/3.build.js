@@ -7,7 +7,7 @@ webpackJsonp([3,12],{
 	/* styles */
 	__webpack_require__(68)
 
-	var Component = __webpack_require__(15)(
+	var Component = __webpack_require__(14)(
 	  /* script */
 	  __webpack_require__(70),
 	  /* template */
@@ -33,7 +33,7 @@ webpackJsonp([3,12],{
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	if(content.locals) module.exports = content.locals;
 	// add the styles to the DOM
-	var update = __webpack_require__(13)("3587e1db", content, true);
+	var update = __webpack_require__(12)("5c5506a8", content, true);
 
 /***/ }),
 

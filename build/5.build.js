@@ -1523,7 +1523,7 @@ webpackJsonp([5,12],Array(25).concat([
 	/* styles */
 	__webpack_require__(79)
 
-	var Component = __webpack_require__(15)(
+	var Component = __webpack_require__(14)(
 	  /* script */
 	  __webpack_require__(81),
 	  /* template */
@@ -1548,7 +1548,7 @@ webpackJsonp([5,12],Array(25).concat([
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	if(content.locals) module.exports = content.locals;
 	// add the styles to the DOM
-	var update = __webpack_require__(13)("102bf75a", content, true);
+	var update = __webpack_require__(12)("7ded1a2e", content, true);
 
 /***/ }),
 /* 80 */
@@ -1640,7 +1640,7 @@ webpackJsonp([5,12],Array(25).concat([
 	/* styles */
 	__webpack_require__(97)
 
-	var Component = __webpack_require__(15)(
+	var Component = __webpack_require__(14)(
 	  /* script */
 	  __webpack_require__(99),
 	  /* template */
@@ -1665,7 +1665,7 @@ webpackJsonp([5,12],Array(25).concat([
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	if(content.locals) module.exports = content.locals;
 	// add the styles to the DOM
-	var update = __webpack_require__(13)("32e1eb2b", content, true);
+	var update = __webpack_require__(12)("5cfb3f08", content, true);
 
 /***/ }),
 /* 98 */
@@ -2056,7 +2056,7 @@ webpackJsonp([5,12],Array(25).concat([
 	/* styles */
 	__webpack_require__(101)
 
-	var Component = __webpack_require__(15)(
+	var Component = __webpack_require__(14)(
 	  /* script */
 	  __webpack_require__(103),
 	  /* template */
@@ -2081,7 +2081,7 @@ webpackJsonp([5,12],Array(25).concat([
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	if(content.locals) module.exports = content.locals;
 	// add the styles to the DOM
-	var update = __webpack_require__(13)("435342e7", content, true);
+	var update = __webpack_require__(12)("700c2710", content, true);
 
 /***/ }),
 /* 102 */
@@ -2332,7 +2332,7 @@ webpackJsonp([5,12],Array(25).concat([
 	        "recomment": _vm.recommentClearId
 	      }
 	    }) : _vm._e()], 1)
-	  }))]), _vm._v(" "), _c('div', {
+	  }), 0)]), _vm._v(" "), _c('div', {
 	    staticClass: "recommentbox"
 	  }, [_c('p', [_vm._v("留下你的足迹:")]), _vm._v(" "), _c('re-ply', {
 	    attrs: {

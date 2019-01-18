@@ -102,7 +102,7 @@ module.exports = {
     inline: true,
     progress: true,
     host: 'localhost',
-    port: 8088,
+    port: 9000,
     open: true,  // 配置启动后自动调起浏览器
   },
   plugins: plugins

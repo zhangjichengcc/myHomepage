@@ -6,7 +6,7 @@ webpackJsonp([2,12],Array(20).concat([
 	/* styles */
 	__webpack_require__(21)
 
-	var Component = __webpack_require__(15)(
+	var Component = __webpack_require__(14)(
 	  /* script */
 	  __webpack_require__(24),
 	  /* template */
@@ -31,7 +31,7 @@ webpackJsonp([2,12],Array(20).concat([
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	if(content.locals) module.exports = content.locals;
 	// add the styles to the DOM
-	var update = __webpack_require__(13)("4fd3c260", content, true);
+	var update = __webpack_require__(12)("76f0b571", content, true);
 
 /***/ }),
 /* 22 */
@@ -1685,7 +1685,7 @@ webpackJsonp([2,12],Array(20).concat([
 	/* styles */
 	__webpack_require__(61)
 
-	var Component = __webpack_require__(15)(
+	var Component = __webpack_require__(14)(
 	  /* script */
 	  __webpack_require__(64),
 	  /* template */
@@ -1710,7 +1710,7 @@ webpackJsonp([2,12],Array(20).concat([
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	if(content.locals) module.exports = content.locals;
 	// add the styles to the DOM
-	var update = __webpack_require__(13)("33a38749", content, true);
+	var update = __webpack_require__(12)("ccda63cc", content, true);
 
 /***/ }),
 /* 62 */
